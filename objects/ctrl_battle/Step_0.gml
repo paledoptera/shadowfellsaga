@@ -1,0 +1,1 @@
+show_debug_message(global.enc_name[1]);

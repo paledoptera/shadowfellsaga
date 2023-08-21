@@ -1,0 +1,1 @@
+mus_stop(global.currentmus);

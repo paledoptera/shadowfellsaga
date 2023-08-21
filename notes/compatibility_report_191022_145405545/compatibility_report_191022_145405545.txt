@@ -1,0 +1,40 @@
+Converting GML script: ${project_dir}\scripts\newChat\newChat.gml
+Error: variable 'message' has same name as a built-in (function, constant or variable), it must be renamed to function correctly
+Converted description /// @description newChat(messageArray, Portrait);/// @param messageArray
+/// @param  Portrait
+
+!!! Font f_chat uses a font (Anonymous Pro) not installed on this system - Font has NOT been regenerated
+GameMaker Studio 1 font texture has been backed up at ${project_dir}\fonts\f_chat\f_chat.gms1.png
+Converting GML script: ${project_dir}\objects\README\Create_0.gml
+Converted description /// @description HOW TO USE
+
+Converting GML script: ${project_dir}\objects\obj_dialogue\Create_0.gml
+Converted description /// @description HOW TO USE
+
+Converting GML script: ${project_dir}\objects\obj_dialogue\Step_0.gml
+Converted description /// @description Done
+Converted string - line 7: 'R' -> "R"
+Converted string - line 10: 'S' -> "S"
+
+Converting GML script: ${project_dir}\objects\obj_dialogue\Draw_64.gml
+Error: variable 'message' has same name as a built-in (function, constant or variable), it must be renamed to function correctly
+Converted builtin - line 19: view_wview[0] -> __view_get( e__VW.WView, 0 )
+Converted builtin - line 48: view_wview[0] -> __view_get( e__VW.WView, 0 )
+Converted builtin - line 19: view_hview[0] -> __view_get( e__VW.HView, 0 )
+Converted builtin - line 21: view_hview[0] -> __view_get( e__VW.HView, 0 )
+Converted builtin - line 38: view_hview[0] -> __view_get( e__VW.HView, 0 )
+Converted builtin - line 48: view_hview[0] -> __view_get( e__VW.HView, 0 )
+Converted description /// @description Text
+Converted string - line 92: "\" -> "\\"
+
+Converting GML script: ${project_dir}\rooms\room0\RoomCreationCode.gml
+Error: variable 'message' has same name as a built-in (function, constant or variable), it must be renamed to function correctly
+Converted string - line 2: "\6Advanced \4Dialogue \1Box" -> "\\6Advanced \\4Dialogue \\1Box"
+
+Missing audiogroup for sound: 'so_chat' - setting to default audio group
+Added compatibility script 'instance/instance_create.gml'
+Added compatibility script 'object/object_get_depth.gml'
+Added compatibility script 'view/__view_get.gml'
+Added compatibility script 'view/__init_view.gml'
+Added compatibility script '__init_global.gml'
+Added compatibility script '__global_object_depths.gml'

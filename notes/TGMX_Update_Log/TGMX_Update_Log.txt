@@ -1,0 +1,69 @@
+
+
+[TweenGMX 1.0.2]
+
+	- Minor changes to help prevent unexpected crash
+		* "Randomly" affected TweenPlay() when using empty "" string as ease type
+		
+
+[TweenGMX 1.0.1]
+
+	- Reduced overhead for tween calls
+	
+	- Improved performance for tweens with more than 10 properties
+	
+	- Other minor optimisations
+
+	- Fixed TweenPlay() when using "off-rail" override with "-tags"
+	
+	- Fixed TweenMore() crash when attempting to use TP*() function as first "off-fail" argument
+	
+	- Fixed EaseOutExpo and EaseInOutExpo failing to fully reach destination values
+	
+	- Fixed TweenEvent*() functions to support "event" strings as intended
+		e.g. 
+			TweenEventClear(tween, "finish");
+	
+	- Fixed TweenSet() not properly handling multi-tween selection
+		* e.g.
+			TweenSet(all, "scale", 0.5);
+			TweenSet({group: 10}, "amount", 0.5, "scale", 2.0);
+	
+	- Error will now be reported if max argument count exceeded for callbacks
+		* Please set ( #macro TGMX_SUPPORT_LTS false ) in TGMX_9_Settings if needing high callback argument counts
+	
+	- Added more info for error when invalid key is used for duration calculation
+		* e.g. 
+			TweenFire(..., {avg: 100}, ...); // ok
+			TweenFire(..., {mango: 200}, ...); // Error: will report {mango: } as invalid key
+			
+	- TweenExists() and TweenIs*() functions now have multi 'tween[s]' support 
+		* These functions no longer support taking an array of tweens directly as a tween id
+		* Please note that this can be slow to use, especially when many tweens exist and if called many times each step
+		* Using {list: my_list_or_array} can be faster than checking against all, self, other, {group: my_group}, {target: my_target}, {tween: my_tween}
+		* e.g. 
+			// Check if any tween in group 5 is playing
+			is_playing = TweenIsPlaying({group: 5});
+			
+			// Check if any tween in a list or array is active
+			is_active = TweenIsActive({list: my_list_or_array_of_tweens});
+			
+	- Added TweensFetch() function for returning an array of desired tween ids
+		* e.g. 
+		    //--> CREATE EVENT
+			// Get an array of all tweens in group 5
+			group_5_tweens = TweensFetch({group: 5});
+			
+			//--> STEP EVENT
+			// Check if any tween in array/list is playing 
+			// (this can be faster than using {group:0} or {target:id} which compares against the entire global tweens list)
+			is_playing = TweenIsPlaying({list: group_5_tweens});
+			
+
+[1.0.0]
+
+	-Official Release!
+
+
+
+	

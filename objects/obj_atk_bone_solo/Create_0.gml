@@ -1,0 +1,2 @@
+target=obj_battle_enemy_semi_sheriff;
+moveSpeed=7;
