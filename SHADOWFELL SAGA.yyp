@@ -143,6 +143,7 @@
     {"id":{"name":"obj_interact","path":"objects/obj_interact/obj_interact.yy",},},
     {"id":{"name":"spr_eventtrigger","path":"sprites/spr_eventtrigger/spr_eventtrigger.yy",},},
     {"id":{"name":"obj_carrionisl_cantine","path":"objects/obj_carrionisl_cantine/obj_carrionisl_cantine.yy",},},
+    {"id":{"name":"scr_poopenfarten","path":"scripts/scr_poopenfarten/scr_poopenfarten.yy",},},
     {"id":{"name":"obj_savemenu","path":"objects/obj_savemenu/obj_savemenu.yy",},},
     {"id":{"name":"crv_vibrate_square_4","path":"animcurves/crv_vibrate_square_4/crv_vibrate_square_4.yy",},},
     {"id":{"name":"approach","path":"scripts/approach/approach.yy",},},

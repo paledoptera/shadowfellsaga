@@ -93,6 +93,7 @@
     {"name":"obj_interact","order":5,"path":"objects/obj_interact/obj_interact.yy",},
     {"name":"spr_eventtrigger","order":16,"path":"sprites/spr_eventtrigger/spr_eventtrigger.yy",},
     {"name":"obj_carrionisl_cantine","order":4,"path":"objects/obj_carrionisl_cantine/obj_carrionisl_cantine.yy",},
+    {"name":"scr_poopenfarten","order":11,"path":"scripts/scr_poopenfarten/scr_poopenfarten.yy",},
     {"name":"obj_savemenu","order":5,"path":"objects/obj_savemenu/obj_savemenu.yy",},
     {"name":"crv_vibrate_square_4","order":7,"path":"animcurves/crv_vibrate_square_4/crv_vibrate_square_4.yy",},
     {"name":"approach","order":1,"path":"scripts/approach/approach.yy",},
