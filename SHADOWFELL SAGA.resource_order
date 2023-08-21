@@ -128,6 +128,7 @@
     {"name":"STAGE_INIT","order":3,"path":"rooms/STAGE_INIT/STAGE_INIT.yy",},
     {"name":"border","order":11,"path":"scripts/border/border.yy",},
     {"name":"controls","order":13,"path":"scripts/controls/controls.yy",},
+    {"name":"skibidiyesyes","order":13,"path":"scripts/skibidiyesyes/skibidiyesyes.yy",},
     {"name":"spr_btintegersg","order":5,"path":"sprites/spr_btintegersg/spr_btintegersg.yy",},
     {"name":"obj_ow_cutscenetrigger","order":6,"path":"objects/obj_ow_cutscenetrigger/obj_ow_cutscenetrigger.yy",},
     {"name":"spr_savelamp","order":1,"path":"sprites/spr_savelamp/spr_savelamp.yy",},

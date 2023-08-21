@@ -180,6 +180,7 @@
     {"id":{"name":"STAGE_INIT","path":"rooms/STAGE_INIT/STAGE_INIT.yy",},},
     {"id":{"name":"border","path":"scripts/border/border.yy",},},
     {"id":{"name":"controls","path":"scripts/controls/controls.yy",},},
+    {"id":{"name":"skibidiyesyes","path":"scripts/skibidiyesyes/skibidiyesyes.yy",},},
     {"id":{"name":"spr_btintegersg","path":"sprites/spr_btintegersg/spr_btintegersg.yy",},},
     {"id":{"name":"obj_ow_cutscenetrigger","path":"objects/obj_ow_cutscenetrigger/obj_ow_cutscenetrigger.yy",},},
     {"id":{"name":"spr_speechbub","path":"sprites/spr_speechbub/spr_speechbub.yy",},},
