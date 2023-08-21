@@ -231,6 +231,7 @@
     {"id":{"name":"spr_wall","path":"sprites/spr_wall/spr_wall.yy",},},
     {"id":{"name":"obj_battle_ui","path":"objects/obj_battle_ui/obj_battle_ui.yy",},},
     {"id":{"name":"spr_paps_shout1","path":"sprites/spr_paps_shout1/spr_paps_shout1.yy",},},
+    {"id":{"name":"scr_fitnesspacergramtest","path":"scripts/scr_fitnesspacergramtest/scr_fitnesspacergramtest.yy",},},
     {"id":{"name":"spr_crashedboat","path":"sprites/spr_crashedboat/spr_crashedboat.yy",},},
     {"id":{"name":"GMLive_notOnce","path":"scripts/GMLive_notOnce/GMLive_notOnce.yy",},},
     {"id":{"name":"spr_paps_battle","path":"sprites/spr_paps_battle/spr_paps_battle.yy",},},
