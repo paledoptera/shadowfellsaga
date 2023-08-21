@@ -303,6 +303,7 @@
     {"name":"lang","order":17,"path":"scripts/lang/lang.yy",},
     {"name":"finite_state_machine","order":11,"path":"scripts/finite_state_machine/finite_state_machine.yy",},
     {"name":"ts_carrionisles2","order":4,"path":"tilesets/ts_carrionisles2/ts_carrionisles2.yy",},
+    {"name":"scr_hiiiii","order":13,"path":"scripts/scr_hiiiii/scr_hiiiii.yy",},
     {"name":"__view_get","order":1,"path":"scripts/__view_get/__view_get.yy",},
     {"name":"port_sans_lookleft","order":33,"path":"sprites/port_sans_lookleft/port_sans_lookleft.yy",},
     {"name":"port_chefp_shock_lookleft","order":28,"path":"sprites/port_chefp_shock_lookleft/port_chefp_shock_lookleft.yy",},

@@ -378,6 +378,7 @@
     {"id":{"name":"lang","path":"scripts/lang/lang.yy",},},
     {"id":{"name":"finite_state_machine","path":"scripts/finite_state_machine/finite_state_machine.yy",},},
     {"id":{"name":"ts_carrionisles2","path":"tilesets/ts_carrionisles2/ts_carrionisles2.yy",},},
+    {"id":{"name":"scr_hiiiii","path":"scripts/scr_hiiiii/scr_hiiiii.yy",},},
     {"id":{"name":"__view_get","path":"scripts/__view_get/__view_get.yy",},},
     {"id":{"name":"anc_easings","path":"animcurves/anc_easings/anc_easings.yy",},},
     {"id":{"name":"port_sans_lookleft","path":"sprites/port_sans_lookleft/port_sans_lookleft.yy",},},
