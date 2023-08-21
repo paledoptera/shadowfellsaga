@@ -170,6 +170,7 @@
     {"name":"spr_wall","order":2,"path":"sprites/spr_wall/spr_wall.yy",},
     {"name":"obj_battle_ui","order":4,"path":"objects/obj_battle_ui/obj_battle_ui.yy",},
     {"name":"spr_paps_shout1","order":15,"path":"sprites/spr_paps_shout1/spr_paps_shout1.yy",},
+    {"name":"scr_fitnesspacergramtest","order":12,"path":"scripts/scr_fitnesspacergramtest/scr_fitnesspacergramtest.yy",},
     {"name":"spr_crashedboat","order":1,"path":"sprites/spr_crashedboat/spr_crashedboat.yy",},
     {"name":"GMLive_notOnce","order":1,"path":"scripts/GMLive_notOnce/GMLive_notOnce.yy",},
     {"name":"spr_heartbig","order":10,"path":"sprites/spr_heartbig/spr_heartbig.yy",},
