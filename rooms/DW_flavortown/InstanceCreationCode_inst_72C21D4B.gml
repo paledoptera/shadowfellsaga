@@ -1,0 +1,1 @@
+target_door = 0;

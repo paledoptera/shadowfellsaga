@@ -57,8 +57,15 @@ switch(subState)
 				case 0:
 						if  input_key_pressed(global.key_action)||input_gp_button_pressed(global.gp_device,global.gp_action) && subState == 1 && subSelection==0{
 						snd_play(snd_save,8,false);	
-						loadgame(selection);	
-						room_goto(global.currentroom);
+						if file_exists("file"+string(selection)){
+							loadgame(selection);	
+							load_general()
+							global.loaded=true;
+							room_goto(global.currentroom);
+						} else {
+							// do nothing
+							// what? did you want an illegal buffer exception or something?
+						}
 					}
 				break;
 				case 1:

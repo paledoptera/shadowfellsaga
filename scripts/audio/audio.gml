@@ -1,7 +1,9 @@
 #region SND
 // This script plays a sound on a specific emitter.
 function snd_play(soundid, priority=8, loopable, volume = 1, offset = 0, pitch) {
-	return audio_play_sound(soundid, priority, loopable, volume, offset, pitch);
+	if(!audio_is_playing(soundid)){
+		audio_play_sound(soundid, priority, loopable, volume, offset, pitch);	
+	}
 }
 
 // This script stops a sound.

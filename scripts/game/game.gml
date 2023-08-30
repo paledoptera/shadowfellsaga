@@ -54,6 +54,7 @@ if (os_type != os_macosx)
 	global.currentareaname		=-1;
 	global.timeseconds				=-1; // In-game time stored in seconds
 	global.lpartyname					=0;
+	global.loaded							=false;
 	global.lcurrentarea				=0;
 	global.lloadedroom				=0;
 	global.ltime								=0;

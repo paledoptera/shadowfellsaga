@@ -47,8 +47,8 @@ z += zsp;
 if key_interact 
 {
 	//JUMPING
-	if z = zfloor {zsp = -jumpspeed;}
-	//instance_create(x,y,obj_interact);
+	//if z = zfloor {zsp = -jumpspeed;}
+	instance_create(x,y,obj_interact);
 }
 if (zsp < 0) && (!key_interact_held) zsp = max(zsp,(-jumpspeed/3))
 
@@ -123,11 +123,27 @@ if animated = true
 	var _old_sprite = sprite_index;
 	if (inputmagnitude != 0)
 	{
+		dir = "undefined"; // Set "dir" override variable to undefined so that we can manually set direction as we walk around the room
 		direction = inputdirection;
 		sprite_index = sprite_run;
 	}
 	else {sprite_index = sprite_idle;}
 	if (_old_sprite != sprite_index) local_frame = 0;
+	
+	//switch dir {
+	//	case "down":
+	//		direction = 270;
+	//	break;
+	//	case "up":
+	//		direction = 90;
+	//	break;
+	//	case "right":
+	//		direction = 360;
+	//	break;
+	//	case "left": 
+	//		direction = 180;
+	//	break;
+	//}
 	
 	if room = LW_skelekitchen {player_animate_sprite_half();} else player_animate_sprite();
 }

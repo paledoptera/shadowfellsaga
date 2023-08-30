@@ -5,6 +5,7 @@ depth=DEPTH_UI
 global.currentroom=room;
 global.currentarea=flag_get(global.pflags,"area")
 tempname=str_set_loc("[EMPTY]","DEVICE_SAVE_MENU_REVISED_Draw_64_slash_0_0")
+menulabel="Please select a file.";
 temparea="------------"
 temptime="--:--"  
 choice[0]=str_set_loc("Yes","DEVICE_MENU_CHOICE_REVISED_Draw_64_slash_2_0")
@@ -25,7 +26,11 @@ if(flag_get(global.flags,"world")==0){
 #endregion
 subState=-1;
 selection=0;
+copySelection=-1;
+copyBaseValue=-1;
 saved=0;
+erased=0;
+copied=0;
 subSelection=-1;
 choicemade=false;
 global.filechoice=selection;

@@ -17,3 +17,4 @@ battlesong_pitch = 1;
 song_volume = 0.6;
 
 newsong = 0;
+paused = false;
