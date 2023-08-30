@@ -120,7 +120,7 @@
   "maintainGms1Font": false,
   "parent": {
     "name": "ENGLISH",
-    "path": "folders/Objects/BATTLE/ENEMIES/Fonts/ENGLISH.yy",
+    "path": "folders/Fonts/ENGLISH.yy",
   },
   "pointRounding": 0,
   "ranges": [

@@ -18,4 +18,4 @@ if world_flag = 1
 	draw_set_alpha(1);
 }
 
-draw_text(10,10,string(fps));
+//draw_text(10,10,string(fps));

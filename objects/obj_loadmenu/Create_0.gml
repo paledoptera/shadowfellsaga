@@ -3,6 +3,7 @@ if(instance_count>1){
 }
 depth=DEPTH_UI
 global.currentroom=room;
+global.loaded=false;
 global.currentarea=flag_get(global.pflags,"area")
 tempname=str_set_loc("[EMPTY]","DEVICE_SAVE_MENU_REVISED_Draw_64_slash_0_0")
 temparea="------------"
