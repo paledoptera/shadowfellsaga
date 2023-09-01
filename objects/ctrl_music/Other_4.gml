@@ -1,7 +1,7 @@
-if(global.currentmus!=-1&&room!=STAGE_BATTLE){
+if(global.currentmus!=-1&&room!=STAGE_BATTLE&&paused){
 	mus_resume(global.currentmus)	
 	mus_set_volume(global.currentmus,song_volume,0.25,false)
-} else if(room!=STAGE_BATTLE) {
+} else if(room!=STAGE_BATTLE&&!paused) {
 	song = mus_playx(mus_load(areasong), true, song_volume,
 	areasong_pos, areasong_pitch);	
 } 

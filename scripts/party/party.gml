@@ -27,23 +27,35 @@ function party_add_follower(member){
 // If you need to adjust the name data, edit the default strings here
 // And the localized strings in the JSON file.
 function party_get_room_name(){
+//	 flavor_rms = [DW_flavortown]
+//	 carrion_rms = [DW_carrionisles_1,DW_carrionisles_2]
 	var rm=argument[0];	
-	var area=string(global.currentarea);
+	var area="";
 	var name="";
-	switch(rm){
-		case -1:
-			name="--";
-			break;
-		case DW_flavortown:
+	
+	#region ASSIGN ROOM NAMES FOR FLAVORTOWN
+    if (asset_has_tags(rm,"flavor",asset_room)){
+		area="Flavortown"
+		switch(rm){
+			case DW_flavortown:
 			name=string(area)+str_set_loc(" - ???","DEVICE_WORLD_DATA_FLAVORTOWN_REVISED_Draw_64_slash_9_1")
 			break;
-		case DW_carrionisles_1:
+		}
+	}
+	#endregion
+	#region ASSIGN ROOM NAMES FOR CARRIN ISLES
+	if (asset_has_tags(rm,"carrion",asset_room)){
+		area="Carrion Isles"
+		switch(rm){
+			case DW_carrionisles_1:
 			name=string(area)+str_set_loc(" - Beach","DEVICE_WORLD_DATA_CARRION ISLES_REVISED_Draw_64_slash_9_1")
 			break;
-		case DW_carrionisles_2:
-			name=string(area)+str_set_loc(" - Docks","DEVICE_WORLD_DATA_CARRION ISLES_REVISED_Draw_64_slash_9_2")
-			break;
+			case DW_carrionisles_2:
+				name=string(area)+str_set_loc(" - Docks","DEVICE_WORLD_DATA_CARRION ISLES_REVISED_Draw_64_slash_9_2")
+				break;
+		}
 	}
+	#endregion
 	return name;
 	
 }

@@ -30,6 +30,7 @@
     {"name":"inst_61312C05","path":"rooms/DW_flavortown/DW_flavortown.yy",},
     {"name":"inst_72C21D4B","path":"rooms/DW_flavortown/DW_flavortown.yy",},
     {"name":"inst_781456AC","path":"rooms/DW_flavortown/DW_flavortown.yy",},
+    {"name":"inst_6A76B66D","path":"rooms/DW_flavortown/DW_flavortown.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -64,6 +65,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_61312C05","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_savelamp","path":"objects/obj_savelamp/obj_savelamp.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":544.0,"y":416.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_72C21D4B","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_player_spawn","path":"objects/obj_player_spawn/obj_player_spawn.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":58.0,"y":494.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_781456AC","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_door","path":"objects/obj_door/obj_door.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":4.925,"x":-20.0,"y":383.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6A76B66D","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_ow_interacttriggerb","path":"objects/obj_ow_interacttriggerb/obj_ow_interacttriggerb.yy",},"properties":[],"rotation":0.0,"scaleX":2.0,"scaleY":4.0,"x":510.0,"y":288.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background_1","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":0,"effectEnabled":true,"effectType":"none","gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"spriteId":{"name":"bkg_flavortown","path":"sprites/bkg_flavortown/bkg_flavortown.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":true,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":100,},
     {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"foreground","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":0,"effectEnabled":true,"effectType":"none","gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"spriteId":{"name":"bkg_flavortown_buildings","path":"sprites/bkg_flavortown_buildings/bkg_flavortown_buildings.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":100,},
@@ -91,6 +93,7 @@
   "sequenceId": null,
   "tags": [
     "dark_world",
+    "flavor",
   ],
   "views": [
     {"hborder":-1,"hport":480,"hspeed":-1,"hview":480,"inherit":false,"objectId":null,"vborder":-1,"visible":false,"vspeed":-1,"wport":640,"wview":640,"xport":0,"xview":0,"yport":0,"yview":0,},
