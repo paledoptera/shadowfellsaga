@@ -60,6 +60,23 @@ function newChat(argument0) {
 			else if argument0[i].port = "wary" {text.portrait[i] = port_sans_wary;}
 			else if argument0[i].port = "wink" {text.portrait[i] = port_sans_wink;}
 		}
+		else if _char = "papy"
+		{
+			text.font[i] = fnt_papyrus;
+			text.talksound[i] = snd_txtpapyrus;
+			if !struct_exists(argument0[i],"port") {text.portrait[i] = port_papy;}
+			else if argument0[i].port = "goofycry" {text.portrait[i] = port_papy_goofycry;}
+			else if argument0[i].port = "confident" {text.portrait[i] = port_chefp_confident;}
+			else if argument0[i].port = "confident2" {text.portrait[i] = port_chefp_confident2;}
+			else if argument0[i].port = "displeased" {text.portrait[i] = port_chefp_displeased;}
+			else if argument0[i].port = "nervous" {text.portrait[i] = port_chefp_nervous;}
+			else if argument0[i].port = "shock" {text.portrait[i] = port_chefp_shock;}
+			else if argument0[i].port = "shock_lookleft" {text.portrait[i] = port_chefp_shock_lookleft;}
+			else if argument0[i].port = "sly" {text.portrait[i] = port_chefp_sly;}
+			else if argument0[i].port = "trousle" {text.portrait[i] = port_chefp_trousle;}
+			else if argument0[i].port = "wacky" {text.portrait[i] = port_chefp_wacky;}
+		}
+		
 		#endregion
 		
 		if struct_exists(argument0[i],"runcode") {text._runcode[i] = argument0[i].runcode;} else {text._runcode[i] = function () {var doodoofart = 1; /*do nothing*/}}
