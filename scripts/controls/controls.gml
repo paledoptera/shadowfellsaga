@@ -69,6 +69,8 @@ function input_keyboard_defaults(){
 	global.key_left			=vk_left;
 	global.key_right		=vk_right;
 	global.key_action	=ord("Z");
+	global.key_swap1 = ord("A");
+	global.key_swap2 = ord("S");
 	global.key_cancel	=ord("X");
 	global.key_menu	=ord("C");
 	global.key_run		=vk_shift;	

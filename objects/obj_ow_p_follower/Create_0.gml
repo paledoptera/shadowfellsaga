@@ -2,6 +2,9 @@ record = 11;
 
 imgspd = 1;
 
+
+spawn = true;
+
 global.pfX=0;
 global.pfY=0;
 

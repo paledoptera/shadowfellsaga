@@ -69,6 +69,7 @@ if (os_type != os_macosx)
 	global.partydf							= array_create(2,-1);
 	global.partyequippedwep	= array_create(2,-1);
 	global.partyequippedarm	=array_create(6,-1);
+	global.leadchar = 0;
 	global.exp								=0; // No experience gained
 	global.money							=0; //D$
 	global.bp									=0; // No bone points

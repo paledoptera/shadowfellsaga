@@ -1,6 +1,4 @@
 //INPUT
-if active = true
-{
 	if(!gamepad_is_connected(global.gp_device)){
 	key_left				= input_key_held(global.key_left);
 	key_right			 = input_key_held(global.key_right);
@@ -8,6 +6,8 @@ if active = true
 	key_down			= input_key_held(global.key_down);
 	key_interact		= input_key_pressed(global.key_action);
 	key_interact_held	= input_key_held(global.key_action);
+	key_switchmode		= input_key_pressed(global.key_swap1);
+	key_switchchar		= input_key_pressed(global.key_swap2);
 	key_cancel		= input_key_pressed(global.key_cancel);
 	key_run				= input_key_held(global.key_run);
 	
@@ -28,7 +28,35 @@ if active = true
 	
 	inputdirection = point_direction(0,0,x_axis, y_axis);
 	inputmagnitude = (x_axis != 0) || (y_axis != 0);
-	
+
+
+//CHAR SWITCHING
+if key_switchchar and z = zfloor and inputmagnitude = 0 and !key_run //and FOLLOWER.z = FOLLOWER.zfloor
+{
+	if global.leadchar = 0
+	{
+		global.leadchar = 1;
+		sprite_run = spr_sans_ow_move;
+		sprite_idle = spr_sans_ow_idle;
+		FOLLOWER.sprite_run = spr_paps_ow_move;
+		FOLLOWER.sprite_idle = spr_paps_ow_idle;
+	}
+	else
+	{
+		global.leadchar = 0;
+		sprite_run = spr_paps_ow_move;
+		sprite_idle = spr_paps_ow_idle;
+		FOLLOWER.sprite_run = spr_sans_ow_move;
+		FOLLOWER.sprite_idle = spr_sans_ow_idle;
+	}
+}
+
+
+
+
+//ACTIVE GAMEPLAY
+if active = true
+{	
 	//SPEED
 	var mvspeed = movespeed
 	if key_run {image_speed = 1.6; mvspeed = movespeed*1.5} else {image_speed = 1;}
@@ -47,11 +75,10 @@ z += zsp;
 if key_interact 
 {
 	//JUMPING
-	//if z = zfloor {zsp = -jumpspeed;}
-	instance_create(x,y,obj_interact);
+	if z = zfloor {zsp = -jumpspeed;}
+	//instance_create(x,y,obj_interact);
 }
 if (zsp < 0) && (!key_interact_held) zsp = max(zsp,(-jumpspeed/3))
-
 
 //MOVEMENT
 if active = true 
@@ -99,11 +126,11 @@ if (x!= xprevious or y!= yprevious)
 		pos_y[i] = pos_y[i-1];
 		pos_run[i] = pos_run[i-1];
 	}
+	
 	pos_x[0] = x;
 	pos_y[0] = y;
 	pos_run[0] = key_run;
 }
-
 }
 else
 {
@@ -116,6 +143,7 @@ if cutscene_paused = false
 	inputmagnitude = 0
 	}
 }
+
 
 //ANIMATION
 if animated = true
@@ -147,4 +175,5 @@ if animated = true
 	
 	if room = LW_skelekitchen {player_animate_sprite_half();} else player_animate_sprite();
 }
+
 depth = -y;

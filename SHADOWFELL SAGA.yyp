@@ -549,6 +549,7 @@
     {"id":{"name":"player_is_in_battle","path":"scripts/player_is_in_battle/player_is_in_battle.yy",},},
     {"id":{"name":"obj_carrionisl_crashedboat","path":"objects/obj_carrionisl_crashedboat/obj_carrionisl_crashedboat.yy",},},
     {"id":{"name":"STAGE_BATTLE","path":"rooms/STAGE_BATTLE/STAGE_BATTLE.yy",},},
+    {"id":{"name":"cutscene_run_code","path":"scripts/cutscene_run_code/cutscene_run_code.yy",},},
     {"id":{"name":"multi_chance","path":"scripts/multi_chance/multi_chance.yy",},},
     {"id":{"name":"GMLive_new","path":"scripts/GMLive_new/GMLive_new.yy",},},
     {"id":{"name":"TGMX_Experimental","path":"scripts/TGMX_Experimental/TGMX_Experimental.yy",},},
@@ -635,9 +636,9 @@
   ],
   "RoomOrderNodes": [
     {"roomId":{"name":"STAGE_INIT","path":"rooms/STAGE_INIT/STAGE_INIT.yy",},},
+    {"roomId":{"name":"DW_carrionisles_1","path":"rooms/DW_carrionisles_1/DW_carrionisles_1.yy",},},
     {"roomId":{"name":"DW_flavortown","path":"rooms/DW_flavortown/DW_flavortown.yy",},},
     {"roomId":{"name":"LW_skelekitchen","path":"rooms/LW_skelekitchen/LW_skelekitchen.yy",},},
-    {"roomId":{"name":"DW_carrionisles_1","path":"rooms/DW_carrionisles_1/DW_carrionisles_1.yy",},},
     {"roomId":{"name":"DW_wildcliffs1","path":"rooms/DW_wildcliffs1/DW_wildcliffs1.yy",},},
     {"roomId":{"name":"STAGE_TESTROOM","path":"rooms/STAGE_TESTROOM/STAGE_TESTROOM.yy",},},
     {"roomId":{"name":"DW_carrionisles_intro","path":"rooms/DW_carrionisles_intro/DW_carrionisles_intro.yy",},},

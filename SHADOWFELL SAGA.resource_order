@@ -456,6 +456,7 @@
     {"name":"player_is_in_battle","order":23,"path":"scripts/player_is_in_battle/player_is_in_battle.yy",},
     {"name":"obj_carrionisl_crashedboat","order":1,"path":"objects/obj_carrionisl_crashedboat/obj_carrionisl_crashedboat.yy",},
     {"name":"STAGE_BATTLE","order":4,"path":"rooms/STAGE_BATTLE/STAGE_BATTLE.yy",},
+    {"name":"cutscene_run_code","order":40,"path":"scripts/cutscene_run_code/cutscene_run_code.yy",},
     {"name":"multi_chance","order":6,"path":"scripts/multi_chance/multi_chance.yy",},
     {"name":"GMLive_new","order":2,"path":"scripts/GMLive_new/GMLive_new.yy",},
     {"name":"TGMX_Experimental","order":12,"path":"scripts/TGMX_Experimental/TGMX_Experimental.yy",},
