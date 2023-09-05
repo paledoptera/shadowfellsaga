@@ -324,6 +324,7 @@
     {"name":"spr_flavortown_archway_bot2","order":12,"path":"sprites/spr_flavortown_archway_bot2/spr_flavortown_archway_bot2.yy",},
     {"name":"GMLive_parser","order":4,"path":"scripts/GMLive_parser/GMLive_parser.yy",},
     {"name":"obj_loadmenu_backup","order":6,"path":"objects/obj_loadmenu_backup/obj_loadmenu_backup.yy",},
+    {"name":"obj_interact_sensor","order":15,"path":"objects/obj_interact_sensor/obj_interact_sensor.yy",},
     {"name":"approach_smooth","order":2,"path":"scripts/approach_smooth/approach_smooth.yy",},
     {"name":"crv_vibrate_square_3","order":6,"path":"animcurves/crv_vibrate_square_3/crv_vibrate_square_3.yy",},
     {"name":"PAPYRUS___Portraits","order":7,"path":"sprites/PAPYRUS___Portraits/PAPYRUS___Portraits.yy",},

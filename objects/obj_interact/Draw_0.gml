@@ -1,0 +1,1 @@
+if instance_exists(ctrl_debug) {draw_self();}

@@ -9,6 +9,7 @@
 	key_switchmode		= input_key_pressed(global.key_swap1);
 	key_switchchar		= input_key_pressed(global.key_swap2);
 	key_cancel		= input_key_pressed(global.key_cancel);
+	key_cancel_held		= input_key_held(global.key_cancel);
 	key_run				= input_key_held(global.key_run);
 	
 	x_axis = key_right-key_left;
@@ -31,7 +32,7 @@
 
 
 //CHAR SWITCHING
-if key_switchchar and z = zfloor and inputmagnitude = 0 and !key_run //and FOLLOWER.z = FOLLOWER.zfloor
+if key_switchchar and z = zfloor and inputmagnitude = 0 //and FOLLOWER.z = FOLLOWER.zfloor
 {
 	if global.leadchar = 0
 	{
@@ -71,20 +72,22 @@ if z+zsp > zfloor {zsp = 0; z = zfloor;}
 z += zsp;
 
 //INTERACTIONS
+//setting player mode
+mode = defaultmode;
+with obj_interact_sensor
+{if place_meeting(x,y,obj_ow_interacttrigger) or place_meeting(x,y,obj_ow_interacttriggerb) {PLAYER.mode = 1; alpha = 1} else {alpha = 0.3;}}
 
 if key_interact 
 {
-	//JUMPING
-	if z = zfloor {zsp = -jumpspeed;}
-	//instance_create(x,y,obj_interact);
+	if mode = 0 {if z = zfloor {zsp = -jumpspeed;}} //JUMPING
+	
+	if mode = 1 {instance_create(x,y,obj_interact);} //INTERACTING WITH OBJECTS
 }
-if (zsp < 0) && (!key_interact_held) zsp = max(zsp,(-jumpspeed/3))
+if mode = 0 && (zsp < 0) && (!key_interact_held) zsp = max(zsp,(-jumpspeed/3)) //HELD JUMP
 
 //MOVEMENT
-if active = true 
-{	
-	//establishing if the player is at a z level higher than any platforms
-	if instance_exists(obj_wall_h1) with obj_wall_h1
+//establishing if the player is at a z level higher than any platforms
+if instance_exists(obj_wall_h1) with obj_wall_h1
 	{
 		//all this is being executed in "obj_wall_h1"
 		if floor(obj_ow_player.z) < -height
@@ -104,18 +107,28 @@ if active = true
 			walkable = false;
 		}
 	}
-	//setting collissions
-	var wall_h1 = instance_place(x, y, obj_wall_h1)
-	var wall_h2 = instance_place(x, y, obj_wall_h2)
-	var wall_h3 = instance_place(x, y, obj_wall_h3)
-	if wall_h1 != noone {if wall_h1.walkable = true {zfloor = -wall_h1.height-0.1}}
-	else {zfloor = 0;}
-	if wall_h2 != noone {if wall_h2.walkable = true {zfloor = -wall_h2.height-0.1}}
-	if wall_h3 != noone {if wall_h3.walkable = true {zfloor = -wall_h3.height-0.1}}
+//setting collissions
+var wall_h1 = instance_place(x, y, obj_wall_h1)
+var wall_h2 = instance_place(x, y, obj_wall_h2)
+var wall_h3 = instance_place(x, y, obj_wall_h3)
+if wall_h1 != noone {if wall_h1.walkable = true {zfloor = -wall_h1.height-0.1}}
+else {zfloor = 0;}
+if wall_h2 != noone {if wall_h2.walkable = true {zfloor = -wall_h2.height-0.1}}
+if wall_h3 != noone {if wall_h3.walkable = true {zfloor = -wall_h3.height-0.1}}
 	
-	//EXECUTING MOVEMENT + COLLISION
-	move_and_collide(hsp,vsp,obj_wall,20);
-}
+//EXECUTING MOVEMENT + COLLISION
+//checking if player CAN move
+//var _can_move = true
+//with obj_ow_p_follower 
+/*{
+	if place_meeting(x+PLAYER.hsp,y,obj_wall) {PLAYER._can_move = false; PLAYER.hsp = 0;}
+	if place_meeting(x,y+PLAYER.vsp,obj_wall) {PLAYER._can_move = false; PLAYER.vsp = 0;}	
+	if place_meeting(x+PLAYER.hsp,y,obj_wall_h1) and z < PLAYER.z {PLAYER._can_move = false; PLAYER.hsp = 0;}
+	if place_meeting(x,y+PLAYER.vsp,obj_wall_h1) and z < PLAYER.z {PLAYER._can_move = false; PLAYER.vsp = 0;}
+}*/
+//moving
+move_and_collide(hsp,vsp,obj_wall,20);
+
 
 //PLAYER FOLLOWERS
 if (x!= xprevious or y!= yprevious)

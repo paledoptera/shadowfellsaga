@@ -405,6 +405,7 @@
     {"id":{"name":"GMLive_parser","path":"scripts/GMLive_parser/GMLive_parser.yy",},},
     {"id":{"name":"obj_loadmenu_backup","path":"objects/obj_loadmenu_backup/obj_loadmenu_backup.yy",},},
     {"id":{"name":"spr_ctrl_cutscene","path":"sprites/spr_ctrl_cutscene/spr_ctrl_cutscene.yy",},},
+    {"id":{"name":"obj_interact_sensor","path":"objects/obj_interact_sensor/obj_interact_sensor.yy",},},
     {"id":{"name":"approach_smooth","path":"scripts/approach_smooth/approach_smooth.yy",},},
     {"id":{"name":"crv_vibrate_square_3","path":"animcurves/crv_vibrate_square_3/crv_vibrate_square_3.yy",},},
     {"id":{"name":"PAPYRUS___Portraits","path":"sprites/PAPYRUS___Portraits/PAPYRUS___Portraits.yy",},},

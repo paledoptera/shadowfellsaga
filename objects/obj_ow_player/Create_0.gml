@@ -50,7 +50,10 @@ shadowalpha = 1;
 global.pX=0;
 global.pY=0;
 
+instance_create(x,y,obj_interact_sensor);
 
+mode = 0;
+defaultmode = 0;
 
 if room = LW_skelekitchen {sprite_run = spr_paps_lw_move; sprite_idle = spr_paps_lw_idle;}
 
