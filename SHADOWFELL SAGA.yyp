@@ -125,7 +125,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.6.0.92",
+    "IDEVersion": "2023.8.0.98",
   },
   "resources": [
     {"id":{"name":"perlinnoise_2_squashed","path":"sprites/perlinnoise_2_squashed/perlinnoise_2_squashed.yy",},},
@@ -651,6 +651,7 @@
     {"roomId":{"name":"STAGE_GAMEOVER","path":"rooms/STAGE_GAMEOVER/STAGE_GAMEOVER.yy",},},
     {"roomId":{"name":"STAGE_TITLE","path":"rooms/STAGE_TITLE/STAGE_TITLE.yy",},},
   ],
+  "templateType": null,
   "TextureGroups": [
     {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","autocrop":false,"border":8,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":-1,"targets":-1,},
     {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"FONTS","autocrop":true,"border":8,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":false,"loadType":"default","mipsToGenerate":-1,"targets":-1,},

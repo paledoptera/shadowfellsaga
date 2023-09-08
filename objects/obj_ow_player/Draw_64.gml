@@ -1,21 +1,29 @@
-//----------JUMP CODE--------------
 world_flag = flag_get(global.flags,"world")
 if world_flag = 1
 {
-	//key_interact = input_key_pressed(global.key_action);
-	if active = true {draw_sprite_ext(spr_jumpbuttons_wheel,0,525+30,27+46,1.3,1.3,-20,c_white,0.35);}
+	key_interact = input_key_held(global.key_action);
+	key_cancel = input_key_held(global.key_cancel);
 
 	draw_set_alpha(1);
-	if z != zfloor draw_set_alpha(0.4);
-	if active = true {draw_sprite(spr_jumpbuttons,key_interact,600-90-15+32,5+10+32);}
-
-
-	//key_cancel = input_key_pressed(global.key_cancel);
-
-	draw_set_alpha(1);
-	//if obj_ow_p_follower.zsp != 0 draw_set_alpha(0.7);
-	if active = true {draw_sprite(spr_jumpbuttons,2+key_cancel,600-30-15+32,30+10+32);}
-	draw_set_alpha(1);
+	if active = true 
+	{
+		//drawing bkg
+		draw_sprite_ext(spr_jumpbuttons_wheel,0,525+30,27+47,1.4,1.4,-20,c_white,0.35);
+		//drawing papyrus' buttons
+		if global.leadchar = 0 {draw_sprite(spr_jumpbuttons,key_interact,600-90-15+32,5+10+32);}
+		else {draw_sprite(spr_jumpbuttons,2+key_interact,600-90-15+32,5+10+32);}
+		if mode = 0 {draw_sprite(spr_jumpbuttons,6,600-90-15+32,5+10+32);}
+		else if mode = 1
+		{
+			if gui_local_frame < 1.9 {gui_local_frame += 0.1} else {gui_local_frame = 0}
+			if global.leadchar = 0 {draw_sprite(spr_jumpbuttons,7+gui_local_frame,600-90-15+32,5+10+32);}
+			else {draw_sprite(spr_jumpbuttons,9,600-90-15+32,5+10+32);}
+		}
+		draw_sprite(spr_jumpbuttons,4,600-90-15+32,5+10+32);
+		//drawing sans' buttons
+		if global.leadchar = 0 {draw_sprite(spr_jumpbuttons,2+key_cancel,600-30-15+32,30+10+32);}
+		else {draw_sprite(spr_jumpbuttons,key_cancel,600-30-15+32,30+10+32);}
+		draw_sprite(spr_jumpbuttons,6,600-30-15+32,30+10+32);
+		draw_sprite(spr_jumpbuttons,5,600-30-15+32,30+10+32);
+	}
 }
-
-//draw_text(10,10,string(fps));

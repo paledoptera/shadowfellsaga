@@ -127,6 +127,34 @@ if wall_h3 != noone {if wall_h3.walkable = true {zfloor = -wall_h3.height-0.1}}
 	if place_meeting(x,y+PLAYER.vsp,obj_wall_h1) and z < PLAYER.z {PLAYER._can_move = false; PLAYER.vsp = 0;}
 }*/
 //moving
+
+hsp = round(hsp);
+vsp = round(vsp);
+
+x = round(x);
+y = round(y);
+
+//checking if follower can go up to obj_wallh1
+/*with FOLLOWER
+{
+	if place_meeting(PLAYER.x-(PLAYER.hsp*2),PLAYER.y,obj_wall_h1) {if z > PLAYER.zfloor {PLAYER.hsp = 0;} else {zfloor = PLAYER.zfloor}}
+	if place_meeting(PLAYER.x,PLAYER.y-(PLAYER.vsp*2),obj_wall_h1) {if z > PLAYER.zfloor {PLAYER.vsp = 0;} else {zfloor = PLAYER.zfloor}}
+	
+	if place_meeting(x,y,obj_wall_h1)
+	{
+		var wall_h1 = instance_place(x, y, obj_wall_h1)
+		var wall_h2 = instance_place(x, y, obj_wall_h2)
+		var wall_h3 = instance_place(x, y, obj_wall_h3)
+		if wall_h1 != noone {zfloor = -wall_h1.height-0.1}
+		else {zfloor = 0;}
+		if wall_h2 != noone {zfloor = -wall_h2.height-0.1}
+		if wall_h3 != noone {zfloor = -wall_h3.height-0.1}
+	}
+	else {zfloor = 0;}
+	
+	
+}*/
+
 move_and_collide(hsp,vsp,obj_wall,20);
 
 

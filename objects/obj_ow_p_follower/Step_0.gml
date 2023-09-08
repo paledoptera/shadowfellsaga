@@ -47,13 +47,13 @@ if !instance_exists(ctrl_cutscene)
 	//MOVEMENT
 	//establishing if the player is at a z level higher than any platforms
 	//setting collissions
-	var wall_h1 = instance_place(x, y, obj_wall_h1)
-	var wall_h2 = instance_place(x, y, obj_wall_h2)
-	var wall_h3 = instance_place(x, y, obj_wall_h3)
-	if wall_h1 != noone {if wall_h1.walkable = true {zfloor = -wall_h1.height-0.1}}
-	else {zfloor = 0;}
-	if wall_h2 != noone {if wall_h2.walkable = true {zfloor = -wall_h2.height-0.1}}
-	if wall_h3 != noone {if wall_h3.walkable = true {zfloor = -wall_h3.height-0.1}}
+	//var wall_h1 = instance_place(x, y, obj_wall_h1)
+	//var wall_h2 = instance_place(x, y, obj_wall_h2)
+	//var wall_h3 = instance_place(x, y, obj_wall_h3)
+	//if wall_h1 != noone {if wall_h1.walkable = true {zfloor = -wall_h1.height-0.1}}
+	//else {zfloor = 0;}
+	//if wall_h2 != noone {if wall_h2.walkable = true {zfloor = -wall_h2.height-0.1}}
+	//if wall_h3 != noone {if wall_h3.walkable = true {zfloor = -wall_h3.height-0.1}}
 	
 	var inputmagnitude = 0;
 

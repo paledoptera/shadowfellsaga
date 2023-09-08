@@ -47,6 +47,8 @@ local_frame = 0;
 
 shadowalpha = 1;
 
+gui_local_frame = 0;
+
 global.pX=0;
 global.pY=0;
 
