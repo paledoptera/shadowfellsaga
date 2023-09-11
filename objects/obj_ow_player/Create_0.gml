@@ -30,6 +30,9 @@ animated = true;
 inputdirection = 3;
 inputmagnitude = 0;
 
+follower_canfollow_x = "YES";
+follower_canfollow_y = "YES";
+
 cutscene_paused = false;
 
 if global.leadchar = 0
@@ -48,6 +51,10 @@ local_frame = 0;
 shadowalpha = 1;
 
 gui_local_frame = 0;
+
+fol_input_x = 0;
+fol_input_y = 0;
+fol_input_run = 0;
 
 global.pX=0;
 global.pY=0;

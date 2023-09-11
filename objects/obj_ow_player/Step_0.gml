@@ -90,9 +90,10 @@ if mode = 0 && (zsp < 0) && (!key_interact_held) zsp = max(zsp,(-jumpspeed/3)) /
 if instance_exists(obj_wall_h1) with obj_wall_h1
 	{
 		//all this is being executed in "obj_wall_h1"
+		//SETTING PLAYER HEIGHT AND WALLS
 		if floor(obj_ow_player.z) < -height
 		{
-			if instance_exists(obj_tempwall) {with obj_tempwall {if x = other.x and y = other.y {instance_destroy();}}}
+			if instance_exists(obj_walltemp) {with obj_walltemp {if x = other.x and y = other.y {instance_destroy();}}}
 			walkable = true;
 			wallspawn = false;
 		}
@@ -100,11 +101,28 @@ if instance_exists(obj_wall_h1) with obj_wall_h1
 		{	
 			if wallspawn = false 
 			{
-				___inst = instance_create(x,y,obj_tempwall);
+				___inst = instance_create(x,y,obj_walltemp);
 				___inst.depth = depth-1
 			}
 			wallspawn = true;
 			walkable = false;
+		}
+		//SETTING FOLLOWER HEIGHT AND WALLS
+		if floor(FOLLOWER.z) < -height
+		{
+			if instance_exists(obj_walltemp_f) {with obj_walltemp_f {if x = other.x and y = other.y {instance_destroy();}}}
+			fol_walkable = true;
+			fol_wallspawn = false;
+		}
+		else 
+		{	
+			if fol_wallspawn = false 
+			{
+				___inst2 = instance_create(x,y,obj_walltemp_f);
+				___inst2.depth = depth-1
+			}
+			fol_wallspawn = true;
+			fol_walkable = false;
 		}
 	}
 //setting collissions
@@ -115,18 +133,6 @@ if wall_h1 != noone {if wall_h1.walkable = true {zfloor = -wall_h1.height-0.1}}
 else {zfloor = 0;}
 if wall_h2 != noone {if wall_h2.walkable = true {zfloor = -wall_h2.height-0.1}}
 if wall_h3 != noone {if wall_h3.walkable = true {zfloor = -wall_h3.height-0.1}}
-	
-//EXECUTING MOVEMENT + COLLISION
-//checking if player CAN move
-//var _can_move = true
-//with obj_ow_p_follower 
-/*{
-	if place_meeting(x+PLAYER.hsp,y,obj_wall) {PLAYER._can_move = false; PLAYER.hsp = 0;}
-	if place_meeting(x,y+PLAYER.vsp,obj_wall) {PLAYER._can_move = false; PLAYER.vsp = 0;}	
-	if place_meeting(x+PLAYER.hsp,y,obj_wall_h1) and z < PLAYER.z {PLAYER._can_move = false; PLAYER.hsp = 0;}
-	if place_meeting(x,y+PLAYER.vsp,obj_wall_h1) and z < PLAYER.z {PLAYER._can_move = false; PLAYER.vsp = 0;}
-}*/
-//moving
 
 hsp = round(hsp);
 vsp = round(vsp);
@@ -134,44 +140,66 @@ vsp = round(vsp);
 x = round(x);
 y = round(y);
 
+
 //checking if follower can go up to obj_wallh1
-/*with FOLLOWER
+with FOLLOWER
 {
-	if place_meeting(PLAYER.x-(PLAYER.hsp*2),PLAYER.y,obj_wall_h1) {if z > PLAYER.zfloor {PLAYER.hsp = 0;} else {zfloor = PLAYER.zfloor}}
-	if place_meeting(PLAYER.x,PLAYER.y-(PLAYER.vsp*2),obj_wall_h1) {if z > PLAYER.zfloor {PLAYER.vsp = 0;} else {zfloor = PLAYER.zfloor}}
+	//if z is below player's, say follower can't follow
+	if z > PLAYER.zfloor
+	{
+		//horizontal collision check
+		if place_meeting(x+(PLAYER.hsp*1.2),y,obj_wall_h1) 
+		{
+			if PLAYER.hsp > 0 {PLAYER.follower_canfollow_x = "NOT PLUS"}
+			if PLAYER.hsp < 0 {PLAYER.follower_canfollow_x = "NOT MINUS"}
+		}
+		else {PLAYER.follower_canfollow_x = "YES"}
+		
+		//vertical collision check
+		if place_meeting(x,y+(PLAYER.vsp*1.2),obj_wall_h1)
+		{
+			if PLAYER.vsp > 0 {PLAYER.follower_canfollow_y = "NOT PLUS"}
+			if PLAYER.vsp < 0 {PLAYER.follower_canfollow_y = "NOT MINUS"}
+		}
+		else {PLAYER.follower_canfollow_y = "YES"}
+	}
+	else
+	{PLAYER.follower_canfollow_y = "YES"; PLAYER.follower_canfollow_x = "YES"}
 	
+	//if place meeting with a heighted wall, make zfloor the height of the wall.
+	//place meeting with a heighted wall should NEVER happen UNLESS sans is on top of the wall, which is why we set his zfloor.
 	if place_meeting(x,y,obj_wall_h1)
 	{
 		var wall_h1 = instance_place(x, y, obj_wall_h1)
 		var wall_h2 = instance_place(x, y, obj_wall_h2)
 		var wall_h3 = instance_place(x, y, obj_wall_h3)
-		if wall_h1 != noone {zfloor = -wall_h1.height-0.1}
+		if wall_h1 != noone {if wall_h1.fol_walkable = true {zfloor = -wall_h1.height-0.1}}
 		else {zfloor = 0;}
-		if wall_h2 != noone {zfloor = -wall_h2.height-0.1}
-		if wall_h3 != noone {zfloor = -wall_h3.height-0.1}
+		if wall_h2 != noone {if wall_h1.fol_walkable = true {zfloor = -wall_h2.height-0.1}}
+		if wall_h3 != noone {if wall_h1.fol_walkable = true {zfloor = -wall_h3.height-0.1}}
+	
 	}
-	else {zfloor = 0;}
-	
-	
-}*/
+	else {zfloor = 0;}	
+}
 
+//final adjustments to hsp and vsp
+if follower_canfollow_x = "NOT PLUS" {if hsp > 0 {hsp = 0}}
+else if follower_canfollow_x = "NOT MINUS" {if hsp < 0 {hsp = 0}}
+if follower_canfollow_y = "NOT PLUS" {if vsp > 0 {vsp = 0}}
+else if follower_canfollow_y = "NOT MINUS" {if vsp < 0 {vsp = 0}}
+
+//execute movement and regular collisions
 move_and_collide(hsp,vsp,obj_wall,20);
 
 
-//PLAYER FOLLOWERS
+//EXECUTING MOVEMENT FOR FOLLOWER
 if (x!= xprevious or y!= yprevious)
 {
-	for(i = 50; i > 0; i--)
-	{
-		pos_x[i] = pos_x[i-1];
-		pos_y[i] = pos_y[i-1];
-		pos_run[i] = pos_run[i-1];
-	}
-	
-	pos_x[0] = x;
-	pos_y[0] = y;
-	pos_run[0] = key_run;
+	fol_input_x = x_axis;
+	fol_input_y = y_axis;
+	fol_input_run = key_run;
 }
+
 }
 else
 {

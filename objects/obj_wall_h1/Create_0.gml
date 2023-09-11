@@ -2,14 +2,19 @@ depth = -y;
 height = 40;
 
 wallspawn = true;
+fol_wallspawn = true;
 walkable = false;
+fol_walkable = false;
 sprite_index = spr_ts_carrionisles_platforms1
 
 _img_top = 0;
 _img_wall = 14;
 
-___inst = instance_create(x,y,obj_tempwall);
+___inst = instance_create(x,y,obj_walltemp);
 ___inst.depth = depth-1
+
+___inst2 = instance_create(x,y,obj_walltemp_f);
+___inst2.depth = depth-1
 
 //-SETTING TOP FACE SPRITE-
 //DEFAULT, top left corner

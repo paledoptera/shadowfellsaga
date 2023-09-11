@@ -31,10 +31,3 @@ if room != LW_skelekitchen and room != DW_wildcliffs1
 {
 	instance_create(x,y,obj_ow_p_follower);
 }
-
-for(i = 50; i >=0; i--)
-{
-	pos_x[i] = x;
-	pos_y[i] = y;
-	pos_run[i] = 0;
-}

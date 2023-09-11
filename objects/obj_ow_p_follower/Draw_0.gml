@@ -1,5 +1,5 @@
 drawx = x;
-drawy = y+5+zfloor;
+drawy = y+6+zfloor;
 
 
 draw_sprite_ext(spr_shadow,0,drawx,drawy,0.9,0.9,0,c_white,PLAYER.shadowalpha);
