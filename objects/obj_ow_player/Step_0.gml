@@ -142,30 +142,19 @@ y = round(y);
 
 
 //checking if follower can go up to obj_wallh1
+if distance_to_point(FOLLOWER.x,y) > 35
+{
+	if FOLLOWER.x < PLAYER.x and hsp > 0 {hsp = 0}
+	if FOLLOWER.x > PLAYER.x and hsp < 0 {hsp = 0}
+}
+if distance_to_point(x,FOLLOWER.y) > 35
+{
+	if FOLLOWER.y < PLAYER.y and vsp > 0 {vsp = 0}
+	if FOLLOWER.y > PLAYER.y and vsp < 0 {vsp = 0}
+}
+
 with FOLLOWER
 {
-	//if z is below player's, say follower can't follow
-	if z > PLAYER.zfloor
-	{
-		//horizontal collision check
-		if place_meeting(x+(PLAYER.hsp*1.2),y,obj_wall_h1) 
-		{
-			if PLAYER.hsp > 0 {PLAYER.follower_canfollow_x = "NOT PLUS"}
-			if PLAYER.hsp < 0 {PLAYER.follower_canfollow_x = "NOT MINUS"}
-		}
-		else {PLAYER.follower_canfollow_x = "YES"}
-		
-		//vertical collision check
-		if place_meeting(x,y+(PLAYER.vsp*1.2),obj_wall_h1)
-		{
-			if PLAYER.vsp > 0 {PLAYER.follower_canfollow_y = "NOT PLUS"}
-			if PLAYER.vsp < 0 {PLAYER.follower_canfollow_y = "NOT MINUS"}
-		}
-		else {PLAYER.follower_canfollow_y = "YES"}
-	}
-	else
-	{PLAYER.follower_canfollow_y = "YES"; PLAYER.follower_canfollow_x = "YES"}
-	
 	//if place meeting with a heighted wall, make zfloor the height of the wall.
 	//place meeting with a heighted wall should NEVER happen UNLESS sans is on top of the wall, which is why we set his zfloor.
 	if place_meeting(x,y,obj_wall_h1)
@@ -177,16 +166,9 @@ with FOLLOWER
 		else {zfloor = 0;}
 		if wall_h2 != noone {if wall_h1.fol_walkable = true {zfloor = -wall_h2.height-0.1}}
 		if wall_h3 != noone {if wall_h1.fol_walkable = true {zfloor = -wall_h3.height-0.1}}
-	
 	}
 	else {zfloor = 0;}	
 }
-
-//final adjustments to hsp and vsp
-if follower_canfollow_x = "NOT PLUS" {if hsp > 0 {hsp = 0}}
-else if follower_canfollow_x = "NOT MINUS" {if hsp < 0 {hsp = 0}}
-if follower_canfollow_y = "NOT PLUS" {if vsp > 0 {vsp = 0}}
-else if follower_canfollow_y = "NOT MINUS" {if vsp < 0 {vsp = 0}}
 
 //execute movement and regular collisions
 move_and_collide(hsp,vsp,obj_wall,20);
@@ -226,21 +208,6 @@ if animated = true
 	}
 	else {sprite_index = sprite_idle;}
 	if (_old_sprite != sprite_index) local_frame = 0;
-	
-	//switch dir {
-	//	case "down":
-	//		direction = 270;
-	//	break;
-	//	case "up":
-	//		direction = 90;
-	//	break;
-	//	case "right":
-	//		direction = 360;
-	//	break;
-	//	case "left": 
-	//		direction = 180;
-	//	break;
-	//}
 	
 	if room = LW_skelekitchen {player_animate_sprite_half();} else player_animate_sprite();
 }

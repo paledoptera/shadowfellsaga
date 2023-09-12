@@ -15,13 +15,7 @@ if !instance_exists(ctrl_cutscene)
 	if PLAYER.x != PLAYER.xprevious {target_x = PLAYER.x-(lastinput_x*20); target_y = PLAYER.y}
 	else if PLAYER.y != PLAYER.yprevious {target_y = PLAYER.y-(lastinput_y*20); target_x = PLAYER.x}	
 	if PLAYER.x != PLAYER.xprevious and PLAYER.y != PLAYER.yprevious {target_x = PLAYER.x-(lastinput_x*10); target_y = PLAYER.y-(lastinput_y*10);}
-	
-	//checking if CAN follow
-	if PLAYER.follower_canfollow_x = "NOT PLUS" {if target_x > x {target_x = x}}
-	if PLAYER.follower_canfollow_x = "NOT MINUS" {if target_x < x {target_x = x}}
-	if PLAYER.follower_canfollow_y = "NOT PLUS" {if target_y > y {target_y = y}}
-	if PLAYER.follower_canfollow_y = "NOT MINUS" {if target_y < y {target_y = y}}
-	
+
 	//MATH SHIT
 	var xx = x
 	var yy = y

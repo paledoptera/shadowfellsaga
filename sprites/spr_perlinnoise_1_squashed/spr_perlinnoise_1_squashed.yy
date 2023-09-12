@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "perlinnoise_squashed",
+  "name": "spr_perlinnoise_1_squashed",
   "bbox_bottom": 311,
   "bbox_left": 0,
   "bbox_right": 511,
@@ -32,7 +32,7 @@
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "perlinnoise_squashed",
+    "name": "spr_perlinnoise_1_squashed",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"41abb6a5-937d-431b-b11e-2d8c2412877c","path":"sprites/perlinnoise_squashed/perlinnoise_squashed.yy",},},},"Disabled":false,"id":"03a567d5-1077-4e45-b886-64656e4ddde8","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"41abb6a5-937d-431b-b11e-2d8c2412877c","path":"sprites/spr_perlinnoise_1_squashed/spr_perlinnoise_1_squashed.yy",},},},"Disabled":false,"id":"03a567d5-1077-4e45-b886-64656e4ddde8","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

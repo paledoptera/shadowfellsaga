@@ -5,8 +5,9 @@ if active = false and shadowalpha > 0 {shadowalpha -= 0.05}
 drawx = x;
 drawy = y+5+zfloor;
 
+var shadowmultiplier = (zfloor-z)/300
 
-draw_sprite_ext(spr_shadow,0,drawx,drawy,0.9,0.9,0,c_white,shadowalpha);
+draw_sprite_ext(spr_shadow,0,drawx,drawy,0.9-shadowmultiplier,0.9-shadowmultiplier,0,c_white,shadowalpha);
 draw_sprite(sprite_index,image_index,x,y+z);
 
 //debug

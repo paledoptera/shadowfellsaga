@@ -2,7 +2,9 @@ drawx = x;
 drawy = y+6+zfloor;
 
 
-draw_sprite_ext(spr_shadow,0,drawx,drawy,0.9,0.9,0,c_white,PLAYER.shadowalpha);
+var shadowmultiplier = (zfloor-z)/300
+
+draw_sprite_ext(spr_shadow,0,drawx,drawy,0.9-shadowmultiplier,0.9-shadowmultiplier,0,c_white,PLAYER.shadowalpha);
 draw_sprite(sprite_index,image_index,x,y+z);
 
 if instance_exists(ctrl_debug)
