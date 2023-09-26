@@ -1,3 +1,4 @@
 sprite_index=noone;
 
-ca=360
+_async_type="";  
+_async_msg="";

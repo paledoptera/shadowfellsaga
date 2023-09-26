@@ -1,12 +1,11 @@
 /// Enables or disables the border system
 /// @arg enabled - When enabled, change the game resolution and allow the usage of borders
 function border_setEnabled(enabled){
-		///@arg enabled
 		if(enabled){
-			window_set_size(960,540);	
+			window_set_size(640/2,360/2);	
 			BORDER._enabled=true;
 		} else {
-			window_set_size(RES_W,RES_H);	
+			window_set_size(global.game_res_w,global.game_res_w);	
 			BORDER._enabled=false;
 			if(sprite_exists(BORDER._sprite)){
 			sprite_flush(BORDER._sprite);

@@ -1,6 +1,6 @@
 //get current camera position
 var camX = camera_get_view_x(camera);
-var camY = camera_get_view_y(camera);
+var camY = camera_get_view_y(camera)-40;
 var camW = camera_get_view_width(camera);
 var camH = camera_get_view_height(camera);
 

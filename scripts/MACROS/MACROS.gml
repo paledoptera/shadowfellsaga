@@ -2,7 +2,7 @@
 #macro GAME_VERSION ="v0.05"
 
 #macro RES_W 640
-#macro RES_H 480
+#macro RES_H 360
 #macro RES_SCALE 1
 
 // Shortcut macros, saves time when writing out code with these objects

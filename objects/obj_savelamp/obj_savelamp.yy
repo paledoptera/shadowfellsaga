@@ -35,5 +35,8 @@
     "path": "sprites/spr_savelamp/spr_savelamp.yy",
   },
   "spriteMaskId": null,
+  "tags": [
+    "save_lamp",
+  ],
   "visible": true,
 }

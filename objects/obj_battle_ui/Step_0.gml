@@ -103,7 +103,7 @@ if(actionType<0){
 					FIGHT.depth=-100;
 				}
 			}
-			if(input_key_pressed(global.key_action)){
+			if(pressed("action")){
 				fsm.change("choice_bros");
 			}
 			break;

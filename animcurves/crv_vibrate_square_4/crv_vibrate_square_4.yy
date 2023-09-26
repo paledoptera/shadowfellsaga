@@ -23,6 +23,6 @@
   "function": 0,
   "parent": {
     "name": "Vibration",
-    "path": "folders/Scripts/Additional Scripts/Libraries/Vibration.yy",
+    "path": "folders/Libraries/Vibration.yy",
   },
 }

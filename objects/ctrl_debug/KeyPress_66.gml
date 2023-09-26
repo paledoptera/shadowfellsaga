@@ -1,0 +1,1 @@
+with(GAME){borderEnabled = !borderEnabled}

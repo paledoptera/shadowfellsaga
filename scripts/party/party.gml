@@ -4,7 +4,7 @@ function party_init(){
 	global.partynames[0]=str_set_loc("PAPYRUS","DEVICE_WORLD_DATA_MEMBERPAP_REVISED_Draw_64_slash_8_0");
 	global.partynames[1]=str_set_loc("sans","DEVICE_WORLD_DATA_MEMBERSANS_REVISED_Draw_64_slash_8_0");
 	global.partynames[2]=str_set_loc("SKELEBROS","DEVICE_WORLD_DATA_TEAMNAME_REVISED_Draw_64_slash_8_0");
-	global.partyhp[0]={_curr:120,_max:120};
+	global.partyhp[0]={_curr:10,_max:120};
 	global.partyhp[1]={_curr:1,_max:1};
 	global.partylv[0]=1; 
 	global.partylv[1]=1;

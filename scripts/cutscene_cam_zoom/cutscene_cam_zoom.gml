@@ -13,8 +13,8 @@ var obj = ctrl_camera;
 
 if(player_is_in_battle()) { obj = ctrl_battlecamera };
 
-var targ_width = 640/factor;
-var targ_height = 480/factor;
+var targ_width = global.window_res_w/factor;
+var targ_height = global.window_res_h/factor;
 
 if zooming = false
 {
@@ -22,8 +22,8 @@ if zooming = false
 	timer = 0;
 	//figuring out spd
 	zoom_time = argument2
-	zoom_spd_w = (640-targ_width)/zoom_time
-	zoom_spd_y = (480-targ_height)/zoom_time
+	zoom_spd_w = (global.window_res_w-targ_width)/zoom_time
+	zoom_spd_y = (global.window_res_h-targ_height)/zoom_time
 }
 
 

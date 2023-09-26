@@ -5,7 +5,7 @@
   "bbox_bottom": 78,
   "bbox_left": 4,
   "bbox_right": 291,
-  "bbox_top": 4,
+  "bbox_top": 2,
   "bboxMode": 0,
   "collisionKind": 1,
   "collisionTolerance": 0,
@@ -14,6 +14,7 @@
   "For3D": false,
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2a720285-7c12-4a6d-a295-ccc638099ac7",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2ef92dd4-546f-4707-8c3b-3a1025f52f78",},
   ],
   "gridX": 0,
   "gridY": 0,
@@ -48,8 +49,8 @@
   },
   "origin": 4,
   "parent": {
-    "name": "CMENU",
-    "path": "folders/Sprites/UI/CMENU.yy",
+    "name": "core",
+    "path": "folders/Sprites/UI/CMENU/core.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -66,7 +67,7 @@
     "events": {"resourceType":"KeyframeStore<MessageEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "eventStubScript": null,
     "eventToFunction": {},
-    "length": 1.0,
+    "length": 2.0,
     "lockOrigin": false,
     "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "playback": 1,
@@ -78,6 +79,7 @@
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"2a720285-7c12-4a6d-a295-ccc638099ac7","path":"sprites/spr_cemnubox/spr_cemnubox.yy",},},},"Disabled":false,"id":"1ebb99be-4c7b-4233-9b44-8a123f65910e","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"2ef92dd4-546f-4707-8c3b-3a1025f52f78","path":"sprites/spr_cemnubox/spr_cemnubox.yy",},},},"Disabled":false,"id":"6860523c-c8b4-409f-a3d0-955c2945a0b8","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

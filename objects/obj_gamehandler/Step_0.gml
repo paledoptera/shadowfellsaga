@@ -14,6 +14,6 @@ if(instance_exists(FOLLOWER)){
 display_set_gui_maximize();
 
 if(global.canusemenu==true){
-	if input_key_pressed(global.key_menu) || input_gp_button_pressed(global.gp_menu) 
-	{instance_create(0,0,obj_cmenu); if(instance_exists(obj_cmenu)) {active=true} }
+	if pressed("menu") and !instance_exists(obj_cmenu)
+	{instance_create(0,0,obj_cmenu); }
 } 

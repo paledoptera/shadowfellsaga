@@ -4,7 +4,7 @@ draw_set_color(c_black);
 draw_rectangle(x,y,RES_W*RES_SCALE,RES_H*RES_SCALE,false)
 
 if(!obj_gamehandler.borderEnabled){
-	display_set_gui_size(640,480)	
+	display_set_gui_size(856, 480);
 }
 
 if subState == 6 {
@@ -44,7 +44,7 @@ for (i = 0; i < 3; i += 1){
 	#endregion
     draw_set_alpha(0.5)
    draw_set_color(c_black)
-   draw_sprite_ext(spr_textbox,style,box_x2-XL/2,box_y2-YL/2,1.5,1.5,0,image_blend,_alpha);
+   draw_sprite_ext(spr_textbox,style,box_x2-XL/3,box_y2-YL/2,1.5,1.5,0,image_blend,_alpha);
 }
 switch(subState){
 	#region BASIC MENU STATE
@@ -61,26 +61,26 @@ switch(subState){
 	if!(_overwrite){
 		#region Draw label and horizontal menu options (greyed out for now)
 		draw_text_transformed_shadow_ext(
-		menu_soul_x2-XL/2-270,
+		menu_soul_x2-XL/3-270,
 		menu_soul_y2-YL/2-210 ,
 		menulabel,
 		0,240,26,2,2,0,c_white,1,fnt_main)
 		
 		if(selection!=3){
 			draw_text_transformed_shadow_ext(
-			menu_soul_x2-XL/2-160,
+			menu_soul_x2-XL/3-160,
 			menu_soul_y2-YL/2-(-190) ,
 			string("Copy"),
 			0,240,26,2,2,0,c_gray,1,fnt_main)
 		
 			draw_text_transformed_shadow_ext(
-			menu_soul_x2-XL/2-40,
+			menu_soul_x2-XL/3-40,
 			menu_soul_y2-YL/2-(-190) ,
 			string("Erase"),
 			0,240,26,2,2,0,c_gray,1,fnt_main)
 			
 			draw_text_transformed_shadow_ext(
-			menu_soul_x2-XL/2-(-100),
+			menu_soul_x2-XL/3-(-100),
 			menu_soul_y2-YL/2-(-190) ,
 			string("Quit"),
 			0,240,26,2,2,0,c_gray,1,fnt_main)
@@ -94,7 +94,7 @@ switch(subState){
 						#region Slot 1 Unselected
 						if(!file_exists("file1")){
 							 draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							menu_soul_y2-YL/2-36 ,
 							string(tempname),
 							0,12,24,2,2,0,c_gray,_alpha,fnt_main)
@@ -102,7 +102,7 @@ switch(subState){
 							if(file_exists("file1")){
 							  ini_open("sfsaga.ini");
 							 draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							 menu_soul_y2-YL/2-38,
 							ini_read_string("Party-SL1","Name2","ERROR"),
 							0,12,24,2,2,0,c_gray,_alpha,fnt_papyrus)
@@ -110,7 +110,7 @@ switch(subState){
 						}
 							if(!file_exists("file1")){
 							draw_text_transformed_shadow_ext(
-						   menu_soul_x2-XL/2-(-100),
+						   menu_soul_x2-XL/3-(-100),
 						   menu_soul_y2-YL/2-38,
 						   string(temptime),
 						   0,24,32,2,2,0,
@@ -127,7 +127,7 @@ switch(subState){
 									_dsec=string(seconds)
 								
 							draw_text_transformed_shadow_ext(
-						   menu_soul_x2-XL/2-(-100),
+						   menu_soul_x2-XL/3-(-100),
 						   menu_soul_y2-YL/2-38,
 						  string(minutes)+ ":" + string(_dsec),
 						   0,24,32,2,2,0,
@@ -136,7 +136,7 @@ switch(subState){
 							}
 							if(!file_exists("file1")){
 						   	draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							menu_soul_y2-YL/2-(-3),
 							string(temparea),
 							0,240,-40,2,2,0,c_gray,_alpha,fnt_main)
@@ -147,7 +147,7 @@ switch(subState){
 							ini_open("sfsaga.ini");
 							var area=ini_read_string("World-SL1","roomname","Carrion Isles - Beach")
 							draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							menu_soul_y2-YL/2-(-3),
 							area,
 							0,240,-40,2,2,0,c_gray,_alpha,fnt_main)
@@ -159,7 +159,7 @@ switch(subState){
 						#region Slot 2 Unselected
 									if(!file_exists("file2")){
 							 draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							menu_soul_y2-YL/2-(-85.4) ,
 							string(tempname),
 							0,12,24,2,2,0,c_gray,_alpha,fnt_main)
@@ -167,7 +167,7 @@ switch(subState){
 							if(file_exists("file2")){
 								 ini_open("sfsaga.ini");
 								 draw_text_transformed_shadow_ext(
-								menu_soul_x2-XL/2-180,
+								menu_soul_x2-XL/3-180,
 								menu_soul_y2-YL/2-(-85.4),
 								ini_read_string("Party-SL2","Name2","ERROR"),
 								0,12,24,2,2,0,c_gray,_alpha,fnt_papyrus)
@@ -175,7 +175,7 @@ switch(subState){
 							}
 							if(!file_exists("file2")){
 								draw_text_transformed_shadow_ext(
-							   menu_soul_x2-XL/2-(-100),
+							   menu_soul_x2-XL/3-(-100),
 				   				menu_soul_y2-YL/2-(-85.4),
 							   string(temptime),
 							   0,24,32,2,2,0,
@@ -191,7 +191,7 @@ switch(subState){
 									else 
 										_dsec=string(seconds)
 									draw_text_transformed_shadow_ext(
-									menu_soul_x2-XL/2-(-100),
+									menu_soul_x2-XL/3-(-100),
 					   				menu_soul_y2-YL/2-(-85.4),
 								  string(minutes)+ ":"+ string(_dsec),
 								   0,24,32,2,2,0,
@@ -200,7 +200,7 @@ switch(subState){
 						}
 						if(!file_exists("file2")){
 							   	draw_text_transformed_shadow_ext(
-								menu_soul_x2-XL/2-180,
+								menu_soul_x2-XL/3-180,
 								menu_soul_y2-YL/2-(-125),
 								string(temparea),
 								0,240,-40,2,2,0,c_gray,_alpha,fnt_main)
@@ -211,7 +211,7 @@ switch(subState){
 								ini_open("sfsaga.ini");
 								var area=ini_read_string("World-SL2","roomname","Carrion Isles - Beach")
 								draw_text_transformed_shadow_ext(
-								menu_soul_x2-XL/2-180,
+								menu_soul_x2-XL/3-180,
 								menu_soul_y2-YL/2-(-125),
 								area,
 								0,240,-40,2,2,0,c_gray,_alpha,fnt_main)
@@ -223,7 +223,7 @@ switch(subState){
 						event_user(1);
 							if(!file_exists("file0")){
 								 draw_text_transformed_shadow_ext(
-								menu_soul_x2-XL/2-180,
+								menu_soul_x2-XL/3-180,
 								menu_soul_y2-YL/2-156.4,
 								string(tempname),
 								0,12,24,2,2,0,color,_alpha,fnt_main)
@@ -231,7 +231,7 @@ switch(subState){
 						if(file_exists("file0")){
 							    ini_open("sfsaga.ini");
 								 draw_text_transformed_shadow_ext(
-								menu_soul_x2-XL/2-180,
+								menu_soul_x2-XL/3-180,
 								menu_soul_y2-YL/2-156.4,
 								ini_read_string("Party-SL0","Name2","ERROR"),
 								0,12,24,2,2,0,color,_alpha,fnt_papyrus)
@@ -239,7 +239,7 @@ switch(subState){
 						}
 						if(!file_exists("file0")){
 							draw_text_transformed_shadow_ext(
-						   menu_soul_x2-XL/2-(-100),
+						   menu_soul_x2-XL/3-(-100),
 						   menu_soul_y2-YL/2-156.4,
 						   string(temptime),
 						   0,24,32,2,2,0,
@@ -255,7 +255,7 @@ switch(subState){
 								else 
 									_dsec=string(seconds)
 							draw_text_transformed_shadow_ext(
-						   menu_soul_x2-XL/2-(-100),
+						   menu_soul_x2-XL/3-(-100),
 						   menu_soul_y2-YL/2-156.4,
 						  string(minutes) + ":" + string(_dsec),
 						   0,24,32,2,2,0,
@@ -264,7 +264,7 @@ switch(subState){
 						}
 						if(!file_exists("file0")){
 						   	draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							menu_soul_y2-YL/2-115,
 							string(temparea),
 							0,240,-40,2,2,0,color,_alpha,fnt_main)
@@ -275,7 +275,7 @@ switch(subState){
 							ini_open("sfsaga.ini");
 							var area=ini_read_string("World-SL0","roomname","Carrion Isles - Beach")
 							draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							menu_soul_y2-YL/2-115,
 							area,
 							0,240,-40,2,2,0,color,_alpha,fnt_main)
@@ -292,7 +292,7 @@ switch(subState){
 						#region Slot 0 Unselected
 								if(!file_exists("file0")){
 								 draw_text_transformed_shadow_ext(
-								menu_soul_x2-XL/2-180,
+								menu_soul_x2-XL/3-180,
 								menu_soul_y2-YL/2-156.4,
 								string(tempname),
 								0,12,24,2,2,0,c_gray,_alpha,fnt_main)
@@ -300,7 +300,7 @@ switch(subState){
 						if(file_exists("file0")){
 							    ini_open("sfsaga.ini");
 								 draw_text_transformed_shadow_ext(
-								menu_soul_x2-XL/2-180,
+								menu_soul_x2-XL/3-180,
 								menu_soul_y2-YL/2-156.4,
 								ini_read_string("Party-SL0","Name2","ERROR"),
 								0,12,24,2,2,0,c_gray,_alpha,fnt_papyrus)
@@ -308,7 +308,7 @@ switch(subState){
 						}
 						if(!file_exists("file0")){
 							draw_text_transformed_shadow_ext(
-						   menu_soul_x2-XL/2-(-100),
+						   menu_soul_x2-XL/3-(-100),
 						   menu_soul_y2-YL/2-156.4,
 						   string(temptime),
 						   0,24,32,2,2,0,
@@ -324,7 +324,7 @@ switch(subState){
 								else 
 									_dsec=string(seconds)
 							draw_text_transformed_shadow_ext(
-						   menu_soul_x2-XL/2-(-100),
+						   menu_soul_x2-XL/3-(-100),
 						   menu_soul_y2-YL/2-156.4,
 						  string(minutes) + ":" + string(_dsec),
 						   0,24,32,2,2,0,
@@ -333,7 +333,7 @@ switch(subState){
 						}
 						if(!file_exists("file0")){
 						   	draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							menu_soul_y2-YL/2-115,
 							string(temparea),
 							0,240,-40,2,2,0,c_gray,_alpha,fnt_main)
@@ -344,7 +344,7 @@ switch(subState){
 							ini_open("sfsaga.ini");
 							var area=ini_read_string("World-SL0","roomname","Carrion Isles - Beach")
 							draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							menu_soul_y2-YL/2-115,
 							area,
 							0,240,-40,2,2,0,c_gray,_alpha,fnt_main)
@@ -356,7 +356,7 @@ switch(subState){
 						#region Slot 2 Unselected
 									if(!file_exists("file2")){
 							 draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							menu_soul_y2-YL/2-(-85.4) ,
 							string(tempname),
 							0,12,24,2,2,0,c_gray,_alpha,fnt_main)
@@ -364,7 +364,7 @@ switch(subState){
 							if(file_exists("file2")){
 								 ini_open("sfsaga.ini");
 								 draw_text_transformed_shadow_ext(
-								menu_soul_x2-XL/2-180,
+								menu_soul_x2-XL/3-180,
 								menu_soul_y2-YL/2-(-85.4),
 								ini_read_string("Party-SL2","Name2","ERROR"),
 								0,12,24,2,2,0,c_gray,_alpha,fnt_papyrus)
@@ -372,7 +372,7 @@ switch(subState){
 							}
 							if(!file_exists("file2")){
 								draw_text_transformed_shadow_ext(
-							   menu_soul_x2-XL/2-(-100),
+							   menu_soul_x2-XL/3-(-100),
 				   				menu_soul_y2-YL/2-(-85.4),
 							   string(temptime),
 							   0,24,32,2,2,0,
@@ -388,7 +388,7 @@ switch(subState){
 									else 
 										_dsec=string(seconds)
 									draw_text_transformed_shadow_ext(
-									menu_soul_x2-XL/2-(-100),
+									menu_soul_x2-XL/3-(-100),
 					   				menu_soul_y2-YL/2-(-85.4),
 								  string(minutes)+ ":"+ string(_dsec),
 								   0,24,32,2,2,0,
@@ -397,7 +397,7 @@ switch(subState){
 						}
 						if(!file_exists("file2")){
 							   	draw_text_transformed_shadow_ext(
-								menu_soul_x2-XL/2-180,
+								menu_soul_x2-XL/3-180,
 								menu_soul_y2-YL/2-(-125),
 								string(temparea),
 								0,240,-40,2,2,0,c_gray,_alpha,fnt_main)
@@ -408,7 +408,7 @@ switch(subState){
 								ini_open("sfsaga.ini")
 								var area=ini_read_string("World-SL2","roomname","Carrion Isles - Beach")
 								draw_text_transformed_shadow_ext(
-								menu_soul_x2-XL/2-180,
+								menu_soul_x2-XL/3-180,
 								menu_soul_y2-YL/2-(-125),
 								area,
 								0,240,-40,2,2,0,c_gray,_alpha,fnt_main)
@@ -420,7 +420,7 @@ switch(subState){
 						event_user(1);
 							if(!file_exists("file1")){
 							 draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							menu_soul_y2-YL/2-36 ,
 							string(tempname),
 							0,12,24,2,2,0,color,_alpha,fnt_main)
@@ -428,7 +428,7 @@ switch(subState){
 							if(file_exists("file1")){
 							  ini_open("sfsaga.ini");
 							 draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							 menu_soul_y2-YL/2-38,
 							ini_read_string("Party-SL1","Name2","ERROR"),
 							0,12,24,2,2,0,color,_alpha,fnt_papyrus)
@@ -436,7 +436,7 @@ switch(subState){
 						}
 							if(!file_exists("file1")){
 							draw_text_transformed_shadow_ext(
-						   menu_soul_x2-XL/2-(-100),
+						   menu_soul_x2-XL/3-(-100),
 						   menu_soul_y2-YL/2-38,
 						   string(temptime),
 						   0,24,32,2,2,0,
@@ -453,7 +453,7 @@ switch(subState){
 									_dsec=string(seconds)
 								
 							draw_text_transformed_shadow_ext(
-						   menu_soul_x2-XL/2-(-100),
+						   menu_soul_x2-XL/3-(-100),
 						   menu_soul_y2-YL/2-38,
 						  string(minutes)+ ":" + string(_dsec),
 						   0,24,32,2,2,0,
@@ -462,7 +462,7 @@ switch(subState){
 							}
 							if(!file_exists("file1")){
 						   	draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							menu_soul_y2-YL/2-(-3),
 							string(temparea),
 							0,240,-40,2,2,0,color,_alpha,fnt_main)
@@ -473,7 +473,7 @@ switch(subState){
 							ini_open("sfsaga.ini");
 							var area=ini_read_string("World-SL1","roomname","Carrion Isles - Beach")
 							draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							menu_soul_y2-YL/2-(-3),
 							area,
 							0,240,-40,2,2,0,color,_alpha,fnt_main)
@@ -490,7 +490,7 @@ switch(subState){
 						#region Slot 0 Unselected
 								if(!file_exists("file0")){
 								 draw_text_transformed_shadow_ext(
-								menu_soul_x2-XL/2-180,
+								menu_soul_x2-XL/3-180,
 								menu_soul_y2-YL/2-156.4,
 								string(tempname),
 								0,12,24,2,2,0,c_gray,_alpha,fnt_main)
@@ -498,7 +498,7 @@ switch(subState){
 						if(file_exists("file0")){
 							    ini_open("sfsaga.ini");
 								 draw_text_transformed_shadow_ext(
-								menu_soul_x2-XL/2-180,
+								menu_soul_x2-XL/3-180,
 								menu_soul_y2-YL/2-156.4,
 								ini_read_string("Party-SL0","Name2","ERROR"),
 								0,12,24,2,2,0,c_gray,_alpha,fnt_papyrus)
@@ -506,7 +506,7 @@ switch(subState){
 						}
 						if(!file_exists("file0")){
 							draw_text_transformed_shadow_ext(
-						   menu_soul_x2-XL/2-(-100),
+						   menu_soul_x2-XL/3-(-100),
 						   menu_soul_y2-YL/2-156.4,
 						   string(temptime),
 						   0,24,32,2,2,0,
@@ -522,7 +522,7 @@ switch(subState){
 								else 
 									_dsec=string(seconds)
 							draw_text_transformed_shadow_ext(
-						   menu_soul_x2-XL/2-(-100),
+						   menu_soul_x2-XL/3-(-100),
 						   menu_soul_y2-YL/2-156.4,
 						  string(minutes) + ":" + string(_dsec),
 						   0,24,32,2,2,0,
@@ -531,7 +531,7 @@ switch(subState){
 						}
 						if(!file_exists("file0")){
 						   	draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							menu_soul_y2-YL/2-115,
 							string(temparea),
 							0,240,-40,2,2,0,c_gray,_alpha,fnt_main)
@@ -542,7 +542,7 @@ switch(subState){
 							ini_open("sfsaga.ini")
 							var area=ini_read_string("Woirld-SL0","roomname","Carrion Isles - Beach")
 							draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							menu_soul_y2-YL/2-115,
 							party_get_room_name(global.currentroom),
 							0,240,-40,2,2,0,c_gray,_alpha,fnt_main)
@@ -553,7 +553,7 @@ switch(subState){
 						#region Slot 1 Unselected
 								if(!file_exists("file1")){
 							 draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							menu_soul_y2-YL/2-36 ,
 							string(tempname),
 							0,12,24,2,2,0,c_gray,_alpha,fnt_main)
@@ -561,7 +561,7 @@ switch(subState){
 							if(file_exists("file1")){
 							  ini_open("sfsaga.ini");
 							 draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							 menu_soul_y2-YL/2-38,
 							ini_read_string("Party-SL1","Name2","ERROR"),
 							0,12,24,2,2,0,c_gray,_alpha,fnt_papyrus)
@@ -569,7 +569,7 @@ switch(subState){
 						}
 							if(!file_exists("file1")){
 							draw_text_transformed_shadow_ext(
-						   menu_soul_x2-XL/2-(-100),
+						   menu_soul_x2-XL/3-(-100),
 						   menu_soul_y2-YL/2-38,
 						   string(temptime),
 						   0,24,32,2,2,0,
@@ -586,7 +586,7 @@ switch(subState){
 									_dsec=string(seconds)
 								
 							draw_text_transformed_shadow_ext(
-						   menu_soul_x2-XL/2-(-100),
+						   menu_soul_x2-XL/3-(-100),
 						   menu_soul_y2-YL/2-38,
 						  string(minutes)+ ":" + string(_dsec),
 						   0,24,32,2,2,0,
@@ -595,7 +595,7 @@ switch(subState){
 							}
 							if(!file_exists("file1")){
 						   	draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							menu_soul_y2-YL/2-(-3),
 							string(temparea),
 							0,240,-40,2,2,0,c_gray,_alpha,fnt_main)
@@ -606,7 +606,7 @@ switch(subState){
 							ini_open("sfsaga.ini")
 							var area=ini_read_string("World-SL1","roomname","Carrion Isles - Beach")
 							draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							menu_soul_y2-YL/2-(-3),
 							area,
 							0,240,-40,2,2,0,c_gray,_alpha,fnt_main)
@@ -618,7 +618,7 @@ switch(subState){
 					event_user(1);
 						if(!file_exists("file2")){
 							 draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							menu_soul_y2-YL/2-(-85.4) ,
 							string(tempname),
 							0,12,24,2,2,0,color,_alpha,fnt_main)
@@ -626,7 +626,7 @@ switch(subState){
 							if(file_exists("file2")){
 								 ini_open("sfsaga.ini");
 								 draw_text_transformed_shadow_ext(
-								menu_soul_x2-XL/2-180,
+								menu_soul_x2-XL/3-180,
 								menu_soul_y2-YL/2-(-85.4),
 								ini_read_string("Party-SL2","Name2","ERROR"),
 								0,12,24,2,2,0,color,_alpha,fnt_papyrus)
@@ -634,7 +634,7 @@ switch(subState){
 							}
 							if(!file_exists("file2")){
 								draw_text_transformed_shadow_ext(
-							   menu_soul_x2-XL/2-(-100),
+							   menu_soul_x2-XL/3-(-100),
 				   				menu_soul_y2-YL/2-(-85.4),
 							   string(temptime),
 							   0,24,32,2,2,0,
@@ -650,7 +650,7 @@ switch(subState){
 									else 
 										_dsec=string(seconds)
 									draw_text_transformed_shadow_ext(
-									menu_soul_x2-XL/2-(-100),
+									menu_soul_x2-XL/3-(-100),
 					   				menu_soul_y2-YL/2-(-85.4),
 								  string(minutes)+ ":"+ string(_dsec),
 								   0,24,32,2,2,0,
@@ -659,7 +659,7 @@ switch(subState){
 						}
 						if(!file_exists("file2")){
 							   	draw_text_transformed_shadow_ext(
-								menu_soul_x2-XL/2-180,
+								menu_soul_x2-XL/3-180,
 								menu_soul_y2-YL/2-(-125),
 								string(temparea),
 								0,240,-40,2,2,0,color,_alpha,fnt_main)
@@ -670,7 +670,7 @@ switch(subState){
 								ini_open("sfsaga.ini")
 								var area=ini_read_string("World-SL2","roomname","Carrion Isles - Beach")
 								draw_text_transformed_shadow_ext(
-								menu_soul_x2-XL/2-180,
+								menu_soul_x2-XL/3-180,
 								menu_soul_y2-YL/2-(-125),
 								area,
 								0,240,-40,2,2,0,color,_alpha,fnt_main)
@@ -687,7 +687,7 @@ switch(subState){
 					#region Slot 0 Unselected
 								if(!file_exists("file0")){
 								 draw_text_transformed_shadow_ext(
-								menu_soul_x2-XL/2-180,
+								menu_soul_x2-XL/3-180,
 								menu_soul_y2-YL/2-156.4,
 								string(tempname),
 								0,12,24,2,2,0,c_gray,_alpha,fnt_main)
@@ -695,7 +695,7 @@ switch(subState){
 						if(file_exists("file0")){
 							    ini_open("sfsaga.ini");
 								 draw_text_transformed_shadow_ext(
-								menu_soul_x2-XL/2-180,
+								menu_soul_x2-XL/3-180,
 								menu_soul_y2-YL/2-156.4,
 								ini_read_string("Party-SL0","Name2","ERROR"),
 								0,12,24,2,2,0,c_gray,_alpha,fnt_papyrus)
@@ -703,7 +703,7 @@ switch(subState){
 						}
 						if(!file_exists("file0")){
 							draw_text_transformed_shadow_ext(
-						   menu_soul_x2-XL/2-(-100),
+						   menu_soul_x2-XL/3-(-100),
 						   menu_soul_y2-YL/2-156.4,
 						   string(temptime),
 						   0,24,32,2,2,0,
@@ -719,7 +719,7 @@ switch(subState){
 								else 
 									_dsec=string(seconds)
 							draw_text_transformed_shadow_ext(
-						   menu_soul_x2-XL/2-(-100),
+						   menu_soul_x2-XL/3-(-100),
 						   menu_soul_y2-YL/2-156.4,
 						  string(minutes) + ":" + string(_dsec),
 						   0,24,32,2,2,0,
@@ -728,7 +728,7 @@ switch(subState){
 						}
 						if(!file_exists("file0")){
 						   	draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							menu_soul_y2-YL/2-115,
 							string(temparea),
 							0,240,-40,2,2,0,c_gray,_alpha,fnt_main)
@@ -739,7 +739,7 @@ switch(subState){
 							ini_open("sfsaga.ini")
 							var area=ini_read_string("Woirld-SL0","roomname","Carrion Isles - Beach")
 							draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							menu_soul_y2-YL/2-115,
 							party_get_room_name(global.currentroom),
 							0,240,-40,2,2,0,c_gray,_alpha,fnt_main)
@@ -750,7 +750,7 @@ switch(subState){
 					#region Slot 1 Unselected
 								if(!file_exists("file1")){
 							 draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							menu_soul_y2-YL/2-36 ,
 							string(tempname),
 							0,12,24,2,2,0,c_gray,_alpha,fnt_main)
@@ -758,7 +758,7 @@ switch(subState){
 							if(file_exists("file1")){
 							  ini_open("sfsaga.ini");
 							 draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							 menu_soul_y2-YL/2-38,
 							ini_read_string("Party-SL1","Name2","ERROR"),
 							0,12,24,2,2,0,c_gray,_alpha,fnt_papyrus)
@@ -766,7 +766,7 @@ switch(subState){
 						}
 							if(!file_exists("file1")){
 							draw_text_transformed_shadow_ext(
-						   menu_soul_x2-XL/2-(-100),
+						   menu_soul_x2-XL/3-(-100),
 						   menu_soul_y2-YL/2-38,
 						   string(temptime),
 						   0,24,32,2,2,0,
@@ -783,7 +783,7 @@ switch(subState){
 									_dsec=string(seconds)
 								
 							draw_text_transformed_shadow_ext(
-						   menu_soul_x2-XL/2-(-100),
+						   menu_soul_x2-XL/3-(-100),
 						   menu_soul_y2-YL/2-38,
 						  string(minutes)+ ":" + string(_dsec),
 						   0,24,32,2,2,0,
@@ -792,7 +792,7 @@ switch(subState){
 							}
 							if(!file_exists("file1")){
 						   	draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							menu_soul_y2-YL/2-(-3),
 							string(temparea),
 							0,240,-40,2,2,0,c_gray,_alpha,fnt_main)
@@ -803,7 +803,7 @@ switch(subState){
 							ini_open("sfsaga.ini")
 							var area=ini_read_string("World-SL1","roomname","Carrion Isles - Beach")
 							draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							menu_soul_y2-YL/2-(-3),
 							area,
 							0,240,-40,2,2,0,c_gray,_alpha,fnt_main)
@@ -816,7 +816,7 @@ switch(subState){
 					#region Slot 2 Unselected
 						if(!file_exists("file2")){
 							 draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							menu_soul_y2-YL/2-(-85.4) ,
 							string(tempname),
 							0,12,24,2,2,0,c_gray,_alpha,fnt_main)
@@ -824,7 +824,7 @@ switch(subState){
 							if(file_exists("file2")){
 								 ini_open("sfsaga.ini");
 								 draw_text_transformed_shadow_ext(
-								menu_soul_x2-XL/2-180,
+								menu_soul_x2-XL/3-180,
 								menu_soul_y2-YL/2-(-85.4),
 								ini_read_string("Party-SL2","Name2","ERROR"),
 								0,12,24,2,2,0,c_gray,_alpha,fnt_papyrus)
@@ -832,7 +832,7 @@ switch(subState){
 							}
 							if(!file_exists("file2")){
 								draw_text_transformed_shadow_ext(
-							   menu_soul_x2-XL/2-(-100),
+							   menu_soul_x2-XL/3-(-100),
 				   				menu_soul_y2-YL/2-(-85.4),
 							   string(temptime),
 							   0,24,32,2,2,0,
@@ -848,7 +848,7 @@ switch(subState){
 									else 
 										_dsec=string(seconds)
 									draw_text_transformed_shadow_ext(
-									menu_soul_x2-XL/2-(-100),
+									menu_soul_x2-XL/3-(-100),
 					   				menu_soul_y2-YL/2-(-85.4),
 								  string(minutes)+ ":"+ string(_dsec),
 								   0,24,32,2,2,0,
@@ -857,7 +857,7 @@ switch(subState){
 						}
 						if(!file_exists("file2")){
 							   	draw_text_transformed_shadow_ext(
-								menu_soul_x2-XL/2-180,
+								menu_soul_x2-XL/3-180,
 								menu_soul_y2-YL/2-(-125),
 								string(temparea),
 								0,240,-40,2,2,0,c_gray,_alpha,fnt_main)
@@ -868,7 +868,7 @@ switch(subState){
 								ini_open("sfsaga.ini")
 								var area=ini_read_string("World-SL2","roomname","Carrion Isles - Beach")
 								draw_text_transformed_shadow_ext(
-								menu_soul_x2-XL/2-180,
+								menu_soul_x2-XL/3-180,
 								menu_soul_y2-YL/2-(-125),
 								area,
 								0,240,-40,2,2,0,c_gray,_alpha,fnt_main)
@@ -893,21 +893,21 @@ switch(subState){
 				event_user(1);
 				#region Copy selected
 				draw_text_transformed_shadow_ext(
-				menu_soul_x2-XL/2-160,
+				menu_soul_x2-XL/3-160,
 				menu_soul_y2-YL/2-(-190) ,
 				str_set_loc("Copy","DEVICE_SAVE_MENU_REVISED_Draw_64_slash_4_0"),
 				0,240,26,2,2,0,c_yellow,1,fnt_main)
 				#endregion
 				#region Erase unselected
 				draw_text_transformed_shadow_ext(
-				menu_soul_x2-XL/2-40,
+				menu_soul_x2-XL/3-40,
 				menu_soul_y2-YL/2-(-190) ,
 				str_set_loc("Erase","DEVICE_SAVE_MENU_REVISED_Draw_64_slash_14_0"),
 				0,240,26,2,2,0,c_gray,1,fnt_main)
 				#endregion
 				#region Quit unselected
 				draw_text_transformed_shadow_ext(
-				menu_soul_x2-XL/2-(-100),
+				menu_soul_x2-XL/3-(-100),
 				menu_soul_y2-YL/2-(-190) ,
 				str_set_loc("Quit","DEVICE_SAVE_MENU_REVISED_Draw_64_slash_5_0"),
 				0,240,26,2,2,0,c_gray,1,fnt_main)
@@ -921,21 +921,21 @@ switch(subState){
 				event_user(1);
 				#region Copy selected
 				draw_text_transformed_shadow_ext(
-				menu_soul_x2-XL/2-160,
+				menu_soul_x2-XL/3-160,
 				menu_soul_y2-YL/2-(-190) ,
 				str_set_loc("Copy","DEVICE_SAVE_MENU_REVISED_Draw_64_slash_4_0"),
 				0,240,26,2,2,0,c_gray,1,fnt_main)
 				#endregion
 				#region Erase unselected
 				draw_text_transformed_shadow_ext(
-				menu_soul_x2-XL/2-40,
+				menu_soul_x2-XL/3-40,
 				menu_soul_y2-YL/2-(-190) ,
 				str_set_loc("Erase","DEVICE_SAVE_MENU_REVISED_Draw_64_slash_14_0"),
 				0,240,26,2,2,0,c_yellow,1,fnt_main)
 				#endregion
 				#region Quit unselected
 				draw_text_transformed_shadow_ext(
-				menu_soul_x2-XL/2-(-100),
+				menu_soul_x2-XL/3-(-100),
 				menu_soul_y2-YL/2-(-190) ,
 				str_set_loc("Quit","DEVICE_SAVE_MENU_REVISED_Draw_64_slash_5_0"),
 				0,240,26,2,2,0,c_gray,1,fnt_main)
@@ -944,26 +944,26 @@ switch(subState){
 				case 2:
 				canscale=true
 				menu_soul_dest_scale=2;
-				menu_soul_dest_x=menu_soul_x2-XL/2-400;
+				menu_soul_dest_x=menu_soul_x2-XL/2-390;
 				menu_soul_dest_y=menu_soul_y2-YL*4.72;
 				event_user(1);
 				#region Copy selected
 				draw_text_transformed_shadow_ext(
-				menu_soul_x2-XL/2-160,
+				menu_soul_x2-XL/3-160,
 				menu_soul_y2-YL/2-(-190) ,
 				str_set_loc("Copy","DEVICE_SAVE_MENU_REVISED_Draw_64_slash_4_0"),
 				0,240,26,2,2,0,c_gray,1,fnt_main)
 				#endregion
 				#region Erase unselected
 				draw_text_transformed_shadow_ext(
-				menu_soul_x2-XL/2-40,
+				menu_soul_x2-XL/3-40,
 				menu_soul_y2-YL/2-(-190) ,
 				str_set_loc("Erase","DEVICE_SAVE_MENU_REVISED_Draw_64_slash_14_0"),
 				0,240,26,2,2,0,c_gray,1,fnt_main)
 				#endregion
 				#region Quit unselected
 				draw_text_transformed_shadow_ext(
-				menu_soul_x2-XL/2-(-100),
+				menu_soul_x2-XL/3-(-100),
 				menu_soul_y2-YL/2-(-190) ,
 				str_set_loc("Quit","DEVICE_SAVE_MENU_REVISED_Draw_64_slash_5_0"),
 				0,240,26,2,2,0,c_yellow,1,fnt_main)
@@ -987,7 +987,7 @@ switch(subState){
 				menu_soul_dest_scale=2.4;
 
 				draw_text_transformed_shadow_ext(
-				menu_soul_x2-XL/2-270,
+				menu_soul_x2-XL/3-270,
 				menu_soul_y2-YL/2-210 ,
 				menulabel,
 				0,360,26,2,2,0,c_white,1,fnt_main)
@@ -995,21 +995,21 @@ switch(subState){
 				event_user(1);
 				#region Copy unselected
 				draw_text_transformed_shadow_ext(
-				menu_soul_x2-XL/2-160,
+				menu_soul_x2-XL/3-160,
 				menu_soul_y2-YL/2-(-190) ,
 				str_set_loc("Copy","DEVICE_SAVE_MENU_REVISED_Draw_64_slash_4_0"),
 				0,240,26,2,2,0,c_gray,1,fnt_main)
 				#endregion
 				#region Erase selected
 				draw_text_transformed_shadow_ext(
-				menu_soul_x2-XL/2-40,
+				menu_soul_x2-XL/3-40,
 				menu_soul_y2-YL/2-(-190) ,
 				str_set_loc("Erase","DEVICE_SAVE_MENU_REVISED_Draw_64_slash_14_0"),
 				0,240,26,2,2,0,c_silver,1,fnt_main)
 				#endregion
 				#region Quit unselected
 				draw_text_transformed_shadow_ext(
-				menu_soul_x2-XL/2-(-100),
+				menu_soul_x2-XL/3-(-100),
 				menu_soul_y2-YL/2-(-190) ,
 				str_set_loc("Quit","DEVICE_SAVE_MENU_REVISED_Draw_64_slash_5_0"),
 				0,240,26,2,2,0,c_gray,1,fnt_main)
@@ -1022,7 +1022,7 @@ switch(subState){
 						#region Slot 1 Unselected
 						if(!file_exists("file1")){
 							 draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							menu_soul_y2-YL/2-36 ,
 							string(tempname),
 							0,12,24,2,2,0,c_gray,_alpha,fnt_main)
@@ -1030,7 +1030,7 @@ switch(subState){
 							if(file_exists("file1")){
 							  ini_open("sfsaga.ini");
 							 draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							 menu_soul_y2-YL/2-38,
 							ini_read_string("Party-SL1","Name2","ERROR"),
 							0,12,24,2,2,0,c_gray,_alpha,fnt_papyrus)
@@ -1038,7 +1038,7 @@ switch(subState){
 						}
 							if(!file_exists("file1")){
 							draw_text_transformed_shadow_ext(
-						   menu_soul_x2-XL/2-(-100),
+						   menu_soul_x2-XL/3-(-100),
 						   menu_soul_y2-YL/2-38,
 						   string(temptime),
 						   0,24,32,2,2,0,
@@ -1055,7 +1055,7 @@ switch(subState){
 									_dsec=string(seconds)
 								
 							draw_text_transformed_shadow_ext(
-						   menu_soul_x2-XL/2-(-100),
+						   menu_soul_x2-XL/3-(-100),
 						   menu_soul_y2-YL/2-38,
 						  string(minutes)+ ":" + string(_dsec),
 						   0,24,32,2,2,0,
@@ -1064,7 +1064,7 @@ switch(subState){
 							}
 							if(!file_exists("file1")){
 						   	draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							menu_soul_y2-YL/2-(-3),
 							string(temparea),
 							0,240,-40,2,2,0,c_gray,_alpha,fnt_main)
@@ -1075,7 +1075,7 @@ switch(subState){
 							ini_open("sfsaga.ini");
 							var area=ini_read_string("World-SL1","roomname","Carrion Isles - Beach")
 							draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							menu_soul_y2-YL/2-(-3),
 							area,
 							0,240,-40,2,2,0,c_gray,_alpha,fnt_main)
@@ -1087,7 +1087,7 @@ switch(subState){
 						#region Slot 2 Unselected
 									if(!file_exists("file2")){
 							 draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							menu_soul_y2-YL/2-(-85.4) ,
 							string(tempname),
 							0,12,24,2,2,0,c_gray,_alpha,fnt_main)
@@ -1095,7 +1095,7 @@ switch(subState){
 							if(file_exists("file2")){
 								 ini_open("sfsaga.ini");
 								 draw_text_transformed_shadow_ext(
-								menu_soul_x2-XL/2-180,
+								menu_soul_x2-XL/3-180,
 								menu_soul_y2-YL/2-(-85.4),
 								ini_read_string("Party-SL2","Name2","ERROR"),
 								0,12,24,2,2,0,c_gray,_alpha,fnt_papyrus)
@@ -1103,7 +1103,7 @@ switch(subState){
 							}
 							if(!file_exists("file2")){
 								draw_text_transformed_shadow_ext(
-							   menu_soul_x2-XL/2-(-100),
+							   menu_soul_x2-XL/3-(-100),
 				   				menu_soul_y2-YL/2-(-85.4),
 							   string(temptime),
 							   0,24,32,2,2,0,
@@ -1119,7 +1119,7 @@ switch(subState){
 									else 
 										_dsec=string(seconds)
 									draw_text_transformed_shadow_ext(
-									menu_soul_x2-XL/2-(-100),
+									menu_soul_x2-XL/3-(-100),
 					   				menu_soul_y2-YL/2-(-85.4),
 								  string(minutes)+ ":"+ string(_dsec),
 								   0,24,32,2,2,0,
@@ -1128,7 +1128,7 @@ switch(subState){
 						}
 						if(!file_exists("file2")){
 							   	draw_text_transformed_shadow_ext(
-								menu_soul_x2-XL/2-180,
+								menu_soul_x2-XL/3-180,
 								menu_soul_y2-YL/2-(-125),
 								string(temparea),
 								0,240,-40,2,2,0,c_gray,_alpha,fnt_main)
@@ -1139,7 +1139,7 @@ switch(subState){
 								ini_open("sfsaga.ini");
 								var area=ini_read_string("World-SL2","roomname","Carrion Isles - Beach")
 								draw_text_transformed_shadow_ext(
-								menu_soul_x2-XL/2-180,
+								menu_soul_x2-XL/3-180,
 								menu_soul_y2-YL/2-(-125),
 								area,
 								0,240,-40,2,2,0,c_gray,_alpha,fnt_main)
@@ -1152,7 +1152,7 @@ switch(subState){
 						#region Slot 0 Selected
 							if(!file_exists("file0")){
 								 draw_text_transformed_shadow_ext(
-								menu_soul_x2-XL/2-180,
+								menu_soul_x2-XL/3-180,
 								menu_soul_y2-YL/2-156.4,
 								string(tempname),
 								0,12,24,2,2,0,color,_alpha,fnt_main)
@@ -1160,7 +1160,7 @@ switch(subState){
 						if(file_exists("file0")){
 							    ini_open("sfsaga.ini");
 								 draw_text_transformed_shadow_ext(
-								menu_soul_x2-XL/2-180,
+								menu_soul_x2-XL/3-180,
 								menu_soul_y2-YL/2-156.4,
 								ini_read_string("Party-SL0","Name2","ERROR"),
 								0,12,24,2,2,0,color,_alpha,fnt_papyrus)
@@ -1168,7 +1168,7 @@ switch(subState){
 						}
 						if(!file_exists("file0")){
 							draw_text_transformed_shadow_ext(
-						   menu_soul_x2-XL/2-(-100),
+						   menu_soul_x2-XL/3-(-100),
 						   menu_soul_y2-YL/2-156.4,
 						   string(temptime),
 						   0,24,32,2,2,0,
@@ -1184,7 +1184,7 @@ switch(subState){
 								else 
 									_dsec=string(seconds)
 							draw_text_transformed_shadow_ext(
-						   menu_soul_x2-XL/2-(-100),
+						   menu_soul_x2-XL/3-(-100),
 						   menu_soul_y2-YL/2-156.4,
 						  string(minutes) + ":" + string(_dsec),
 						   0,24,32,2,2,0,
@@ -1193,7 +1193,7 @@ switch(subState){
 						}
 						if(!file_exists("file0")){
 						   	draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							menu_soul_y2-YL/2-115,
 							string(temparea),
 							0,240,-40,2,2,0,color,_alpha,fnt_main)
@@ -1204,7 +1204,7 @@ switch(subState){
 							ini_open("sfsaga.ini");
 							var area=ini_read_string("World-SL0","roomname","Carrion Isles - Beach")
 							draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							menu_soul_y2-YL/2-115,
 							area,
 							0,240,-40,2,2,0,color,_alpha,fnt_main)
@@ -1222,7 +1222,7 @@ switch(subState){
 						#region Slot 0 Unselected
 								if(!file_exists("file0")){
 								 draw_text_transformed_shadow_ext(
-								menu_soul_x2-XL/2-180,
+								menu_soul_x2-XL/3-180,
 								menu_soul_y2-YL/2-156.4,
 								string(tempname),
 								0,12,24,2,2,0,c_gray,_alpha,fnt_main)
@@ -1230,7 +1230,7 @@ switch(subState){
 						if(file_exists("file0")){
 							    ini_open("sfsaga.ini");
 								 draw_text_transformed_shadow_ext(
-								menu_soul_x2-XL/2-180,
+								menu_soul_x2-XL/3-180,
 								menu_soul_y2-YL/2-156.4,
 								ini_read_string("Party-SL0","Name2","ERROR"),
 								0,12,24,2,2,0,c_gray,_alpha,fnt_papyrus)
@@ -1238,7 +1238,7 @@ switch(subState){
 						}
 						if(!file_exists("file0")){
 							draw_text_transformed_shadow_ext(
-						   menu_soul_x2-XL/2-(-100),
+						   menu_soul_x2-XL/3-(-100),
 						   menu_soul_y2-YL/2-156.4,
 						   string(temptime),
 						   0,24,32,2,2,0,
@@ -1254,7 +1254,7 @@ switch(subState){
 								else 
 									_dsec=string(seconds)
 							draw_text_transformed_shadow_ext(
-						   menu_soul_x2-XL/2-(-100),
+						   menu_soul_x2-XL/3-(-100),
 						   menu_soul_y2-YL/2-156.4,
 						  string(minutes) + ":" + string(_dsec),
 						   0,24,32,2,2,0,
@@ -1263,7 +1263,7 @@ switch(subState){
 						}
 						if(!file_exists("file0")){
 						   	draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							menu_soul_y2-YL/2-115,
 							string(temparea),
 							0,240,-40,2,2,0,c_gray,_alpha,fnt_main)
@@ -1274,7 +1274,7 @@ switch(subState){
 							ini_open("sfsaga.ini");
 							var area=ini_read_string("World-SL0","roomname","Carrion Isles - Beach")
 							draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							menu_soul_y2-YL/2-115,
 							area,
 							0,240,-40,2,2,0,c_gray,_alpha,fnt_main)
@@ -1286,7 +1286,7 @@ switch(subState){
 						#region Slot 2 Unselected
 									if(!file_exists("file2")){
 							 draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							menu_soul_y2-YL/2-(-85.4) ,
 							string(tempname),
 							0,12,24,2,2,0,c_gray,_alpha,fnt_main)
@@ -1294,7 +1294,7 @@ switch(subState){
 							if(file_exists("file2")){
 								 ini_open("sfsaga.ini");
 								 draw_text_transformed_shadow_ext(
-								menu_soul_x2-XL/2-180,
+								menu_soul_x2-XL/3-180,
 								menu_soul_y2-YL/2-(-85.4),
 								ini_read_string("Party-SL2","Name2","ERROR"),
 								0,12,24,2,2,0,c_gray,_alpha,fnt_papyrus)
@@ -1302,7 +1302,7 @@ switch(subState){
 							}
 							if(!file_exists("file2")){
 								draw_text_transformed_shadow_ext(
-							   menu_soul_x2-XL/2-(-100),
+							   menu_soul_x2-XL/3-(-100),
 				   				menu_soul_y2-YL/2-(-85.4),
 							   string(temptime),
 							   0,24,32,2,2,0,
@@ -1318,7 +1318,7 @@ switch(subState){
 									else 
 										_dsec=string(seconds)
 									draw_text_transformed_shadow_ext(
-									menu_soul_x2-XL/2-(-100),
+									menu_soul_x2-XL/3-(-100),
 					   				menu_soul_y2-YL/2-(-85.4),
 								  string(minutes)+ ":"+ string(_dsec),
 								   0,24,32,2,2,0,
@@ -1327,7 +1327,7 @@ switch(subState){
 						}
 						if(!file_exists("file2")){
 							   	draw_text_transformed_shadow_ext(
-								menu_soul_x2-XL/2-180,
+								menu_soul_x2-XL/3-180,
 								menu_soul_y2-YL/2-(-125),
 								string(temparea),
 								0,240,-40,2,2,0,c_gray,_alpha,fnt_main)
@@ -1338,7 +1338,7 @@ switch(subState){
 								ini_open("sfsaga.ini")
 								var area=ini_read_string("World-SL2","roomname","Carrion Isles - Beach")
 								draw_text_transformed_shadow_ext(
-								menu_soul_x2-XL/2-180,
+								menu_soul_x2-XL/3-180,
 								menu_soul_y2-YL/2-(-125),
 								area,
 								0,240,-40,2,2,0,c_gray,_alpha,fnt_main)
@@ -1351,7 +1351,7 @@ switch(subState){
 						#region Slot 1 Selected
 							if(!file_exists("file1")){
 							 draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							menu_soul_y2-YL/2-36 ,
 							string(tempname),
 							0,12,24,2,2,0,color,_alpha,fnt_main)
@@ -1359,7 +1359,7 @@ switch(subState){
 							if(file_exists("file1")){
 							  ini_open("sfsaga.ini");
 							 draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							 menu_soul_y2-YL/2-38,
 							ini_read_string("Party-SL1","Name2","ERROR"),
 							0,12,24,2,2,0,color,_alpha,fnt_papyrus)
@@ -1367,7 +1367,7 @@ switch(subState){
 						}
 							if(!file_exists("file1")){
 							draw_text_transformed_shadow_ext(
-						   menu_soul_x2-XL/2-(-100),
+						   menu_soul_x2-XL/3-(-100),
 						   menu_soul_y2-YL/2-38,
 						   string(temptime),
 						   0,24,32,2,2,0,
@@ -1384,7 +1384,7 @@ switch(subState){
 									_dsec=string(seconds)
 								
 							draw_text_transformed_shadow_ext(
-						   menu_soul_x2-XL/2-(-100),
+						   menu_soul_x2-XL/3-(-100),
 						   menu_soul_y2-YL/2-38,
 						  string(minutes)+ ":" + string(_dsec),
 						   0,24,32,2,2,0,
@@ -1393,7 +1393,7 @@ switch(subState){
 							}
 							if(!file_exists("file1")){
 						   	draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							menu_soul_y2-YL/2-(-3),
 							string(temparea),
 							0,240,-40,2,2,0,color,_alpha,fnt_main)
@@ -1404,7 +1404,7 @@ switch(subState){
 							ini_open("sfsaga.ini");
 							var area=ini_read_string("World-SL1","roomname","Carrion Isles - Beach")
 							draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							menu_soul_y2-YL/2-(-3),
 							area,
 							0,240,-40,2,2,0,color,_alpha,fnt_main)
@@ -1422,7 +1422,7 @@ switch(subState){
 						#region Slot 0 Unselected
 								if(!file_exists("file0")){
 								 draw_text_transformed_shadow_ext(
-								menu_soul_x2-XL/2-180,
+								menu_soul_x2-XL/3-180,
 								menu_soul_y2-YL/2-156.4,
 								string(tempname),
 								0,12,24,2,2,0,c_gray,_alpha,fnt_main)
@@ -1430,7 +1430,7 @@ switch(subState){
 						if(file_exists("file0")){
 							    ini_open("sfsaga.ini");
 								 draw_text_transformed_shadow_ext(
-								menu_soul_x2-XL/2-180,
+								menu_soul_x2-XL/3-180,
 								menu_soul_y2-YL/2-156.4,
 								ini_read_string("Party-SL0","Name2","ERROR"),
 								0,12,24,2,2,0,c_gray,_alpha,fnt_papyrus)
@@ -1438,7 +1438,7 @@ switch(subState){
 						}
 						if(!file_exists("file0")){
 							draw_text_transformed_shadow_ext(
-						   menu_soul_x2-XL/2-(-100),
+						   menu_soul_x2-XL/3-(-100),
 						   menu_soul_y2-YL/2-156.4,
 						   string(temptime),
 						   0,24,32,2,2,0,
@@ -1454,7 +1454,7 @@ switch(subState){
 								else 
 									_dsec=string(seconds)
 							draw_text_transformed_shadow_ext(
-						   menu_soul_x2-XL/2-(-100),
+						   menu_soul_x2-XL/3-(-100),
 						   menu_soul_y2-YL/2-156.4,
 						  string(minutes) + ":" + string(_dsec),
 						   0,24,32,2,2,0,
@@ -1463,7 +1463,7 @@ switch(subState){
 						}
 						if(!file_exists("file0")){
 						   	draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							menu_soul_y2-YL/2-115,
 							string(temparea),
 							0,240,-40,2,2,0,c_gray,_alpha,fnt_main)
@@ -1474,7 +1474,7 @@ switch(subState){
 							ini_open("sfsaga.ini")
 							var area=ini_read_string("Woirld-SL0","roomname","Carrion Isles - Beach")
 							draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							menu_soul_y2-YL/2-115,
 							party_get_room_name(global.currentroom),
 							0,240,-40,2,2,0,c_gray,_alpha,fnt_main)
@@ -1485,7 +1485,7 @@ switch(subState){
 						#region Slot 1 Unselected
 								if(!file_exists("file1")){
 							 draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							menu_soul_y2-YL/2-36 ,
 							string(tempname),
 							0,12,24,2,2,0,c_gray,_alpha,fnt_main)
@@ -1493,7 +1493,7 @@ switch(subState){
 							if(file_exists("file1")){
 							  ini_open("sfsaga.ini");
 							 draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							 menu_soul_y2-YL/2-38,
 							ini_read_string("Party-SL1","Name2","ERROR"),
 							0,12,24,2,2,0,c_gray,_alpha,fnt_papyrus)
@@ -1501,7 +1501,7 @@ switch(subState){
 						}
 							if(!file_exists("file1")){
 							draw_text_transformed_shadow_ext(
-						   menu_soul_x2-XL/2-(-100),
+						   menu_soul_x2-XL/3-(-100),
 						   menu_soul_y2-YL/2-38,
 						   string(temptime),
 						   0,24,32,2,2,0,
@@ -1518,7 +1518,7 @@ switch(subState){
 									_dsec=string(seconds)
 								
 							draw_text_transformed_shadow_ext(
-						   menu_soul_x2-XL/2-(-100),
+						   menu_soul_x2-XL/3-(-100),
 						   menu_soul_y2-YL/2-38,
 						  string(minutes)+ ":" + string(_dsec),
 						   0,24,32,2,2,0,
@@ -1527,7 +1527,7 @@ switch(subState){
 							}
 							if(!file_exists("file1")){
 						   	draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							menu_soul_y2-YL/2-(-3),
 							string(temparea),
 							0,240,-40,2,2,0,c_gray,_alpha,fnt_main)
@@ -1538,7 +1538,7 @@ switch(subState){
 							ini_open("sfsaga.ini")
 							var area=ini_read_string("World-SL1","roomname","Carrion Isles - Beach")
 							draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							menu_soul_y2-YL/2-(-3),
 							area,
 							0,240,-40,2,2,0,c_gray,_alpha,fnt_main)
@@ -1551,7 +1551,7 @@ switch(subState){
 						#region Slot 2 Selected
 						if(!file_exists("file2")){
 							 draw_text_transformed_shadow_ext(
-							menu_soul_x2-XL/2-180,
+							menu_soul_x2-XL/3-180,
 							menu_soul_y2-YL/2-(-85.4) ,
 							string(tempname),
 							0,12,24,2,2,0,color,_alpha,fnt_main)
@@ -1559,7 +1559,7 @@ switch(subState){
 							if(file_exists("file2")){
 								 ini_open("sfsaga.ini");
 								 draw_text_transformed_shadow_ext(
-								menu_soul_x2-XL/2-180,
+								menu_soul_x2-XL/3-180,
 								menu_soul_y2-YL/2-(-85.4),
 								ini_read_string("Party-SL2","Name2","ERROR"),
 								0,12,24,2,2,0,color,_alpha,fnt_papyrus)
@@ -1567,7 +1567,7 @@ switch(subState){
 							}
 							if(!file_exists("file2")){
 								draw_text_transformed_shadow_ext(
-							   menu_soul_x2-XL/2-(-100),
+							   menu_soul_x2-XL/3-(-100),
 				   				menu_soul_y2-YL/2-(-85.4),
 							   string(temptime),
 							   0,24,32,2,2,0,
@@ -1583,7 +1583,7 @@ switch(subState){
 									else 
 										_dsec=string(seconds)
 									draw_text_transformed_shadow_ext(
-									menu_soul_x2-XL/2-(-100),
+									menu_soul_x2-XL/3-(-100),
 					   				menu_soul_y2-YL/2-(-85.4),
 								  string(minutes)+ ":"+ string(_dsec),
 								   0,24,32,2,2,0,
@@ -1592,7 +1592,7 @@ switch(subState){
 						}
 						if(!file_exists("file2")){
 							   	draw_text_transformed_shadow_ext(
-								menu_soul_x2-XL/2-180,
+								menu_soul_x2-XL/3-180,
 								menu_soul_y2-YL/2-(-125),
 								string(temparea),
 								0,240,-40,2,2,0,color,_alpha,fnt_main)
@@ -1603,7 +1603,7 @@ switch(subState){
 								ini_open("sfsaga.ini")
 								var area=ini_read_string("World-SL2","roomname","Carrion Isles - Beach")
 								draw_text_transformed_shadow_ext(
-								menu_soul_x2-XL/2-180,
+								menu_soul_x2-XL/3-180,
 								menu_soul_y2-YL/2-(-125),
 								area,
 								0,240,-40,2,2,0,color,_alpha,fnt_main)
@@ -1721,7 +1721,7 @@ switch(subState){
 				case 0:
 				color=c_yellow;
 				draw_text_transformed_shadow_ext(
-				menu_soul_x4-XL/2-180,
+				menu_soul_x4-XL/3-180,
 				menu_soul_y4-YL/2-156.4,
 				str_set_loc("File erased","DEVICE_SAVE_MENU_REVISED_Draw_64_slash_9_0")
 				,0,240,24,2,2,0,color,_alpha,fnt_main)
@@ -1761,7 +1761,7 @@ switch(subState){
 			case 1:
 				color=c_yellow
 				draw_text_transformed_shadow_ext(
-				menu_soul_x4-XL/2-180,
+				menu_soul_x4-XL/3-180,
 				menu_soul_y4-YL/2-36 ,
 				str_set_loc("File erased","DEVICE_SAVE_MENU_REVISED_Draw_64_slash_9_0")
 				,0,240,24,2,2,0,color,_alpha,fnt_main)
@@ -1801,7 +1801,7 @@ switch(subState){
 			case 2:
 				color=c_yellow;
 				draw_text_transformed_shadow_ext(
-				menu_soul_x2-XL/2-180,
+				menu_soul_x2-XL/3-180,
 				menu_soul_y2-YL/2-(-85.4) ,
 				str_set_loc("File erased","DEVICE_SAVE_MENU_REVISED_Draw_64_slash_9_0")
 				,0,240,24,2,2,0,color,_alpha,fnt_main)
@@ -1848,7 +1848,7 @@ switch(subState){
 			canscale=true;
 			
 			x_shift_allowed=true;
-			menu_soul_dest_x=menu_soul_x4-XL/2-_menu_soul_xposh;				
+			menu_soul_dest_x=menu_soul_x4-XL/3-_menu_soul_xposh;				
 			menu_soul_dest_scale=2.4;
 	switch(selection){
 		#region Slot 0
@@ -1860,18 +1860,18 @@ switch(subState){
 				index=spr_heartsmallarrow
 				draw_set_alpha(1)
 				draw_text_transformed_shadow_ext(
-				menu_soul_x4-XL/2-180,
+				menu_soul_x4-XL/3-180,
 				menu_soul_y4-YL/2-156.4,
 				str_set_loc("Save to this file?","DEVICE_SAVE_MENU_REVISED_Draw_64_slash_1_0"),0,240,24,2,2,0,color,_alpha,fnt_main)
 			
 			   	draw_text_transformed_shadow_ext(
-				menu_soul_x4-XL/2-140,
+				menu_soul_x4-XL/3-140,
 				menu_soul_y4-YL/2-115,
 				string(choice[0]),
 				0,240,-40,2,2,0,subSelection == 0 && subState==5 && choicemade==true ? c_yellow : c_white,_alpha,fnt_main)
 				
 				draw_text_transformed_shadow_ext(
-				menu_soul_x2-XL/2-(-30),
+				menu_soul_x2-XL/3-(-30),
 				menu_soul_y2-YL/2-115,
 				string(choice[1]),
 				0,240,-40,2,2,0,subSelection == 1 && subState==5 && choicemade==true ? c_yellow : c_white,_alpha,fnt_main)
@@ -1882,23 +1882,23 @@ switch(subState){
 		case 1:
 				_menu_soul_yposh=-8;
 				menu_soul_dest_y=menu_soul_y4-YL/2-_menu_soul_yposh;
-				menu_soul_dest_x=menu_soul_x4-XL/2-_menu_soul_xposh;		
+				menu_soul_dest_x=menu_soul_x4-XL/3-_menu_soul_xposh;		
 				event_user(1);
 				index=spr_heartsmallarrow
 				draw_set_alpha(1)
 				draw_text_transformed_shadow_ext(
-				menu_soul_x4-XL/2-180,
+				menu_soul_x4-XL/3-180,
 				menu_soul_y4-YL/2-36 ,
 				str_set_loc("Save to this file?","DEVICE_SAVE_MENU_REVISED_Draw_64_slash_1_0"),0,240,24,2,2,0,color,_alpha,fnt_main)
 			
 			   	draw_text_transformed_shadow_ext(
-				menu_soul_x4-XL/2-140,
+				menu_soul_x4-XL/3-140,
 				menu_soul_y4-YL/2-(-5),
 				string(choice[0]),
 				0,240,-40,2,2,0,subSelection == 0 && subState== 5 && choicemade==true ? c_yellow : c_white,_alpha,fnt_main)
 				
 				draw_text_transformed_shadow_ext(
-				menu_soul_x4-XL/2-(-30),
+				menu_soul_x4-XL/3-(-30),
 				menu_soul_y4-YL/2-(-5),
 				string(choice[1]),
 				0,240,-40,2,2,0,subSelection == 1 && subState==5 && choicemade==true ? c_yellow : c_white,_alpha,fnt_main)
@@ -1908,25 +1908,25 @@ switch(subState){
 		case 2:
 			_menu_soul_yposh=-128;
 			menu_soul_dest_y=menu_soul_y4-YL/2-_menu_soul_yposh;
-			menu_soul_dest_x=menu_soul_x4-XL/2-_menu_soul_xposh;		
+			menu_soul_dest_x=menu_soul_x4-XL/3-_menu_soul_xposh;		
 			event_user(1);
 				index=spr_heartsmallarrow
 				draw_set_alpha(1)
 				switch(saved){
 					case 0:
 						draw_text_transformed_shadow_ext(
-						menu_soul_x4-XL/2-180,
+						menu_soul_x4-XL/3-180,
 						menu_soul_y4-YL/2-(-85) ,
 						str_set_loc("Save to this file?","DEVICE_SAVE_MENU_REVISED_Draw_64_slash_1_0"),0,240,24,2,2,0,color,_alpha,fnt_main)
 			
 					   	draw_text_transformed_shadow_ext(
-						menu_soul_x4-XL/2-140,
+						menu_soul_x4-XL/3-140,
 						menu_soul_y4-YL/2-(-125),
 						string(choice[0]),
 						0,240,-40,2,2,0,subSelection == 0 && subState==5 && choicemade==true ? c_yellow : c_white,_alpha,fnt_main)
 				
 						draw_text_transformed_shadow_ext(
-						menu_soul_x4-XL/2-(-30),
+						menu_soul_x4-XL/3-(-30),
 						menu_soul_y4-YL/2-(-125),
 						string(choice[1]),
 						0,240,-40,2,2,0,subSelection == 1 && subState=5  && choicemade==true ? c_yellow : c_white,_alpha,fnt_main)
@@ -1946,7 +1946,7 @@ switch(subState){
 				case 0:
 				color=c_yellow;
 				draw_text_transformed_shadow_ext(
-				menu_soul_x4-XL/2-180,
+				menu_soul_x4-XL/3-180,
 				menu_soul_y4-YL/2-156.4,
 				str_set_loc("File saved","DEVICE_SAVE_MENU_REVISED_Draw_64_slash_7_0")
 				,0,240,24,2,2,0,color,_alpha,fnt_main)
@@ -1960,13 +1960,13 @@ switch(subState){
 									_dsec=string(seconds)
 					
 				draw_text_transformed_shadow_ext(
-				menu_soul_x2-XL/2-(-100),
+				menu_soul_x2-XL/3-(-100),
 				menu_soul_y2-YL/2-156.4,
 				string(minutes) + ":" + string(_dsec),
 				0,24,32,2,2,0,color,_alpha,fnt_main)
 				var area=ini_read_string("World-SL0","roomname","Carrion Isles - Beach")
 				draw_text_transformed_shadow_ext(
-				menu_soul_x2-XL/2-180,
+				menu_soul_x2-XL/3-180,
 				menu_soul_y2-YL/2-115,
 				area,
 				0,240,-40,2,2,0,color,_alpha,fnt_main)			
@@ -1977,7 +1977,7 @@ switch(subState){
 			case 1:
 				color=c_yellow
 				draw_text_transformed_shadow_ext(
-				menu_soul_x4-XL/2-180,
+				menu_soul_x4-XL/3-180,
 				menu_soul_y4-YL/2-36 ,
 				str_set_loc("File saved","DEVICE_SAVE_MENU_REVISED_Draw_64_slash_7_0")
 				,0,240,24,2,2,0,color,_alpha,fnt_main)
@@ -1991,13 +1991,13 @@ switch(subState){
 									_dsec=string(seconds)
 					
 				 draw_text_transformed_shadow_ext(
-				 menu_soul_x2-XL/2-(-100),
+				 menu_soul_x2-XL/3-(-100),
 				 menu_soul_y2-YL/2-38,
 				  string(minutes) + ":" + string(_dsec),
 				  0,24,32,2,2,0,color,_alpha,fnt_main)
 				 var area=ini_read_string("World-SL1","roomname","Carrion Isles - Beach")
 				  draw_text_transformed_shadow_ext(
-				  menu_soul_x2-XL/2-180,
+				  menu_soul_x2-XL/3-180,
 				  menu_soul_y2-YL/2-(-3),
 				  area,
 				  0,240,-40,2,2,0,color,_alpha,fnt_main)
@@ -2009,7 +2009,7 @@ switch(subState){
 			case 2:
 				color=c_yellow;
 				draw_text_transformed_shadow_ext(
-				menu_soul_x2-XL/2-180,
+				menu_soul_x2-XL/3-180,
 				menu_soul_y2-YL/2-(-85.4) ,
 				str_set_loc("File saved","DEVICE_SAVE_MENU_REVISED_Draw_64_slash_7_0"),
 				0,240,24,2,2,0,color,_alpha,fnt_main)
@@ -2024,14 +2024,14 @@ switch(subState){
 						_dsec=string(seconds)	
 				
 			   draw_text_transformed_shadow_ext(
-			   menu_soul_x2-XL/2-(-100),
+			   menu_soul_x2-XL/3-(-100),
 			   menu_soul_y2-YL/2-(-85.4),
 			   string(minutes) + ":" + string(_dsec),
 			   0,24,32,2,2,0,color,_alpha,fnt_main)
 			   
 			   	var area=ini_read_string("World-SL2","roomname","Carrion Isles - Beach")
 			   	draw_text_transformed_shadow_ext(
-				menu_soul_x2-XL/2-180,
+				menu_soul_x2-XL/3-180,
 				menu_soul_y2-YL/2-(-125),
 				area,
 				0,240,-40,2,2,0,color,_alpha,fnt_main)
@@ -4081,7 +4081,7 @@ switch(subState){
 
 #region DRAW SOUL
 draw_sprite_ext(index,image_index/10,
-menu_soul_x2-XL/2-_menu_soul_xpos,
+menu_soul_x2-XL/3-_menu_soul_xpos,
 menu_soul_y2-YL/2-_menu_soul_ypos,
 SS,SS,0,
 c_white,subState==1 ? 0 : _alpha);

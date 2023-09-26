@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "snd_txtpapyrus",
   "audioGroupId": {
-    "name": "Talksounds",
-    "path": "audiogroups/Talksounds",
+    "name": "sfx",
+    "path": "audiogroups/sfx",
   },
   "bitDepth": 1,
   "bitRate": 512,
