@@ -1,33 +1,20 @@
 //INPUT
-	if(!gamepad_is_connected(global.gp_device)){
-	key_left				= input_key_held(global.key_left);
-	key_right			 = input_key_held(global.key_right);
-	key_up				= input_key_held(global.key_up);
-	key_down			= input_key_held(global.key_down);
-	key_interact		= input_key_pressed(global.key_action);
-	key_interact_held	= input_key_held(global.key_action);
-	key_switchmode		= input_key_pressed(global.key_swap1);
-	key_switchchar		= input_key_pressed(global.key_swap2);
-	key_cancel		= input_key_pressed(global.key_cancel);
-	key_cancel_held		= input_key_held(global.key_cancel);
-	key_run				= input_key_held(global.key_run);
-	
+	key_left				= check("left");
+	key_right			 = check("right");
+	key_up				= check("up");
+	key_down			= check("down");
+	key_interact		= pressed("action");
+	key_interact_held	= check("action");
+	key_switchmode		= pressed("swap1");
+	key_switchchar		= pressed("swap2");
+	key_cancel		= pressed("cancel");
+	key_cancel_held		= check("cancel");
+	key_run				= check("run");
 	x_axis = key_right-key_left;
 	y_axis = key_down-key_up;
 	
-	} else if(gamepad_is_connected(global.gp_device)) {
-		key_left				= input_gp_button_held(global.gp_device,global.gp_left) 
-		key_right			= input_gp_button_held(global.gp_device,global.gp_right) 
-		key_up				= input_gp_button_held(global.gp_device,global.gp_up) 
-		key_down			= input_gp_button_held(global.gp_device,global.gp_down) 
-		key_interact		= input_gp_button_pressed(global.gp_device,global.gp_action);
-		key_cancel			= input_gp_button_pressed(global.gp_device,global.gp_cancel);
-		key_run				= input_gp_button_held(global.gp_device,global.gp_run);
-		x_axis = key_right-key_left;
-		y_axis = key_down-key_up;
-	}
-	
-	inputdirection = point_direction(0,0,x_axis, y_axis);
+if input.target == "overworld" {
+	inputdirection = input_direction(0, "left","right","up","down");
 	inputmagnitude = (x_axis != 0) || (y_axis != 0);
 
 
@@ -39,16 +26,20 @@ if key_switchchar and z = zfloor and inputmagnitude = 0 //and FOLLOWER.z = FOLLO
 		global.leadchar = 1;
 		sprite_run = spr_sans_ow_move;
 		sprite_idle = spr_sans_ow_idle;
+		if instance_exists(FOLLOWER){
 		FOLLOWER.sprite_run = spr_paps_ow_move;
 		FOLLOWER.sprite_idle = spr_paps_ow_idle;
+		}
 	}
 	else
 	{
 		global.leadchar = 0;
 		sprite_run = spr_paps_ow_move;
 		sprite_idle = spr_paps_ow_idle;
+		if instance_exists(FOLLOWER){
 		FOLLOWER.sprite_run = spr_sans_ow_move;
 		FOLLOWER.sprite_idle = spr_sans_ow_idle;
+		}
 	}
 }
 
@@ -75,15 +66,16 @@ z += zsp;
 //setting player mode
 mode = defaultmode;
 with obj_interact_sensor
-{if place_meeting(x,y,obj_ow_interacttrigger) or place_meeting(x,y,obj_ow_interacttriggerb) {PLAYER.mode = 1; alpha = 1} else {alpha = 0.3;}}
+{if place_meeting(x,y,obj_ow_interacttrigger) or place_meeting(x,y,obj_ow_interacttriggerb) or place_meeting(x,y,obj_savelamp){PLAYER.mode = 1; alpha = 1} else {alpha = 0.3;}}
 
-if key_interact 
+if key_interact
 {
 	if mode = 0 {if z = zfloor {zsp = -jumpspeed;}} //JUMPING
 	
 	if mode = 1 {instance_create(x,y,obj_interact);} //INTERACTING WITH OBJECTS
 }
 if mode = 0 && (zsp < 0) && (!key_interact_held) zsp = max(zsp,(-jumpspeed/3)) //HELD JUMP
+}
 
 //MOVEMENT
 //establishing if the player is at a z level higher than any platforms
@@ -108,21 +100,23 @@ if instance_exists(obj_wall_h1) with obj_wall_h1
 			walkable = false;
 		}
 		//SETTING FOLLOWER HEIGHT AND WALLS
-		if floor(FOLLOWER.z) < -height
-		{
-			if instance_exists(obj_walltemp_f) {with obj_walltemp_f {if x = other.x and y = other.y {instance_destroy();}}}
-			fol_walkable = true;
-			fol_wallspawn = false;
-		}
-		else 
-		{	
-			if fol_wallspawn = false 
+		if instance_exists(FOLLOWER){
+			if floor(FOLLOWER.z) < -height
 			{
-				___inst2 = instance_create(x,y,obj_walltemp_f);
-				___inst2.depth = depth-1
+				if instance_exists(obj_walltemp_f) {with obj_walltemp_f {if x = other.x and y = other.y {instance_destroy();}}}
+				fol_walkable = true;
+				fol_wallspawn = false;
 			}
-			fol_wallspawn = true;
-			fol_walkable = false;
+			else 
+			{	
+				if fol_wallspawn = false 
+				{
+					___inst2 = instance_create(x,y,obj_walltemp_f);
+					___inst2.depth = depth-1
+				}
+				fol_wallspawn = true;
+				fol_walkable = false;
+			}
 		}
 	}
 //setting collissions
@@ -142,6 +136,7 @@ y = round(y);
 
 
 //checking if follower can go up to obj_wallh1
+if instance_exists(FOLLOWER){
 if distance_to_point(FOLLOWER.x,y) > 35
 {
 	if FOLLOWER.x < PLAYER.x and hsp > 0 {hsp = 0}
@@ -154,7 +149,7 @@ if distance_to_point(x,FOLLOWER.y) > 35
 }
 
 with FOLLOWER
-{
+{	
 	//if place meeting with a heighted wall, make zfloor the height of the wall.
 	//place meeting with a heighted wall should NEVER happen UNLESS sans is on top of the wall, which is why we set his zfloor.
 	if place_meeting(x,y,obj_wall_h1)
@@ -166,12 +161,16 @@ with FOLLOWER
 		else {zfloor = 0;}
 		if wall_h2 != noone {if wall_h1.fol_walkable = true {zfloor = -wall_h2.height-0.1}}
 		if wall_h3 != noone {if wall_h1.fol_walkable = true {zfloor = -wall_h3.height-0.1}}
+	
 	}
 	else {zfloor = 0;}	
 }
+}
 
 //execute movement and regular collisions
+if !instance_exists(obj_cmenu) && !instance_exists(obj_savemenu) && !instance_exists(obj_loadmenu){
 move_and_collide(hsp,vsp,obj_wall,20);
+}
 
 
 //EXECUTING MOVEMENT FOR FOLLOWER
@@ -197,7 +196,7 @@ if cutscene_paused = false
 
 
 //ANIMATION
-if animated = true
+if animated = true && !instance_exists(obj_cmenu) && !instance_exists(obj_savemenu) && !instance_exists(obj_loadmenu)
 {
 	var _old_sprite = sprite_index;
 	if (inputmagnitude != 0)

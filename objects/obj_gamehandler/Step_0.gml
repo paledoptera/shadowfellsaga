@@ -14,6 +14,10 @@ if(instance_exists(FOLLOWER)){
 display_set_gui_maximize();
 
 if(global.canusemenu==true){
-	if input_key_pressed(global.key_menu) || input_gp_button_pressed(global.gp_menu) 
-	{instance_create(0,0,obj_cmenu); if(instance_exists(obj_cmenu)) {active=true} }
+	if pressed("menu") and !instance_exists(obj_cmenu) and !instance_exists(obj_cmenu_mini) and global.aspect_ratio == "16:9"
+	{instance_create(0,0,obj_cmenu); input.target="cmenu"}
+	if pressed("menu") and !instance_exists(obj_cmenu) and !instance_exists(obj_cmenu_mini) and global.aspect_ratio == "4:3"
+	{instance_create(0,0,obj_cmenu_mini); input.target="cmenu"}
 } 
+
+//if global.camasp == 1 { obj_borderhandler._enabled = false; } else {obj_borderhandler._enabled = true; } 

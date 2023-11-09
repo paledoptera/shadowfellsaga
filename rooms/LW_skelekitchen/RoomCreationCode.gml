@@ -115,7 +115,9 @@ dialogue_5 =
 ]
 #endregion
 
+if instance_exists(BORDER){
 BORDER._sprite=-1;
+}
 
 mus_playx(mus_load("warmup"),true,0.6,0,1)
 audio_group_load(Talksounds);
@@ -141,7 +143,7 @@ t_scene_info = [
 	[cutscene_wait,0.3],
 	[cutscene_change_variable, obj_ow_player, "animated", false],
 	[cutscene_sprite_index_static,obj_ow_player,spr_paps_lw_cooking2,0],
-	[cutscene_cam_zoom,1.5,false,20],
+	[cutscene_cam_zoom,3,false,20],
 	[cutscene_newChat, dialogue_0],
 	[cutscene_wait_for_dialogue],
 	[cutscene_sprite_index_static,obj_ow_player,spr_paps_lw_cooking2,2],
@@ -149,7 +151,7 @@ t_scene_info = [
 	[cutscene_sprite_index_static,obj_ow_player,spr_paps_lw_cooking2,1],
 	[cutscene_newChat, dialogue_1],
 	[cutscene_wait_for_dialogue,0],
-	[cutscene_cam_zoom,1,false,20],
+	[cutscene_cam_zoom,2,false,20],
 	[cutscene_play_sound, snd_txtsans, 10, false],
 	[cutscene_wait,0.1],
 	[cutscene_play_sound, snd_txtsans, 10, false],

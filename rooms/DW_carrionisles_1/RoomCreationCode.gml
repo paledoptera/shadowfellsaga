@@ -1,8 +1,6 @@
 global.canusemene=true;
 global.area = "CI-01";
 
-
-
 /*dialogue[0] = "HMMM... &LET'S SEE..."
 dialogue[1] = "''SAUTE THE ONIONS &AND GARLIC UNTIL &THEY SHIMMER WITH-"
 dialogue[2] = "A DEEP &... &GOLDEN BROWN''"

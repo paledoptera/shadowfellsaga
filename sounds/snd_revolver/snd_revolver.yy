@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "snd_revolver",
   "audioGroupId": {
-    "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default",
+    "name": "sfx",
+    "path": "audiogroups/sfx",
   },
   "bitDepth": 1,
   "bitRate": 512,
@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 5.428571,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "world",
+    "path": "folders/Sounds/sfx/world.yy",
   },
   "preload": true,
   "sampleRate": 44100,

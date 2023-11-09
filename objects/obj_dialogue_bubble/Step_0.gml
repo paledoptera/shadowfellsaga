@@ -7,4 +7,4 @@ if (done)
 	with(obj_speech_bubble){instance_destroy();};
 	instance_destroy();
 }
-input = input_key_pressed(global.key_action);
+_input =  input.interact_pressed;

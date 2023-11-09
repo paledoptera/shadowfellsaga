@@ -32,5 +32,8 @@
     "path": "sprites/spr_interacttrigger/spr_interacttrigger.yy",
   },
   "spriteMaskId": null,
+  "tags": [
+    "interact_generic",
+  ],
   "visible": false,
 }

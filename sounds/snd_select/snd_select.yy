@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "snd_select",
   "audioGroupId": {
-    "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default",
+    "name": "sfx",
+    "path": "audiogroups/sfx",
   },
   "bitDepth": 1,
   "bitRate": 128,
@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 0.187166,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "ui",
+    "path": "folders/Sounds/sfx/ui.yy",
   },
   "preload": false,
   "sampleRate": 44100,

@@ -12,6 +12,6 @@
   "function": 2,
   "parent": {
     "name": "Curves",
-    "path": "folders/Scripts/Additional Scripts/Libraries/TweenGMX/User/Curves.yy",
+    "path": "folders/Libraries/TweenGMX/User/Curves.yy",
   },
 }

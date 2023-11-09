@@ -1,4 +1,4 @@
-if(_enabled){
+if(_enabled) {
 	var SW=(window_get_fullscreen() ? display_get_width() : window_get_width());
 	var SH=(window_get_fullscreen() ? display_get_height() : window_get_height());
 	var SX=SW/960;

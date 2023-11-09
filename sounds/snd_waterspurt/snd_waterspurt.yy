@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "snd_waterspurt",
   "audioGroupId": {
-    "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default",
+    "name": "sfx",
+    "path": "audiogroups/sfx",
   },
   "bitDepth": 1,
   "bitRate": 512,
@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 1.538458,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "voice",
+    "path": "folders/Sounds/sfx/voice.yy",
   },
   "preload": true,
   "sampleRate": 44100,

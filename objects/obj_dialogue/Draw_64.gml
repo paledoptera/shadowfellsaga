@@ -85,7 +85,7 @@ if (message_end > 0)
         if (timer > 30) timer = 0;
         
         //Check player input
-        if (input)
+        if (_input)
         {
 			facetimer = 1;
             //If we still have messages left, go to next message
@@ -121,7 +121,7 @@ if (message_end > 0)
         
 		
         //If player presses button, display the entire message.
-        if (input && cutoff > 2)
+        if (_input && cutoff > 2)
         {
            cutoff = string_length(message[message_current]);
         }

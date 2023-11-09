@@ -42,3 +42,13 @@ function flag_set(type,flag,value){
 function flag_get(type,flag){
 	return ds_map_find_value(type,flag);	
 }
+
+// Returns true if the flag exists
+// @arg type - DS Map stored within global variable, normal flags are global.flags,
+// @arg flag - The actual flag id, must be a string (e.g "area")
+function flag_exists(type,flag){
+	if ds_map_exists(type,flag){
+		return true;	
+	}
+	return false;
+}

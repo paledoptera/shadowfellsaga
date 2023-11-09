@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "SnowState",
-    "path": "folders/Scripts/Additional Scripts/Libraries/SnowState.yy",
+    "path": "folders/Libraries/SnowState.yy",
   },
 }

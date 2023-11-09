@@ -27,8 +27,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "CMENU",
-    "path": "folders/Sprites/UI/CMENU.yy",
+    "name": "core",
+    "path": "folders/Sprites/UI/CMENU/core.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

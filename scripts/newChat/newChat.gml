@@ -29,6 +29,13 @@ function newChat(argument0) {
 		}
 		else _char = argument0[i].char
 		
+		// if CHAR is GENERIC
+		if _char = "gen"
+		{
+			text.font[i] = fnt_main_sm
+			text.talksound[i] = snd_txt
+			if !struct_exists(argument0[i],"port") {text.portrait[i] = "none";}
+		}
 		// if CHAR is CHEF PAPYRUS
 		if _char = "chefp"
 		{

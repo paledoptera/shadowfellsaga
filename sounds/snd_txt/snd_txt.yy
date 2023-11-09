@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "snd_txt",
   "audioGroupId": {
-    "name": "Talksounds",
-    "path": "audiogroups/Talksounds",
+    "name": "sfx",
+    "path": "audiogroups/sfx",
   },
   "bitDepth": 1,
   "bitRate": 128,
@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 1.714286,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "voice",
+    "path": "folders/Sounds/sfx/voice.yy",
   },
   "preload": false,
   "sampleRate": 44100,

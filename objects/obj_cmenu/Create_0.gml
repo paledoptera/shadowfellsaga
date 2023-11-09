@@ -1,6 +1,3 @@
-if(instance_count>1){
-	instance_destroy(instance_number);	
-}
 depth=DEPTH_UI
 selection=0;
 cmenuActive=false;
@@ -10,11 +7,15 @@ cmenuState= (0 << 0);
 cellAvailable=true;
 selectedItem=0;
 selectedInventory=0;
+res_length = array_length(global.resolutions);
 storedText=-4;
 subState=-1;
 subSelection=0;
 optSelection=-1;
 targetSelection=-1;
+charSelection=-1;
+configHubSelection=-1;
+configHubSoulY=142;
 tempState=0;
 targetOverride=false; // overrides the target selection, best used for items that affect everyone
 optSoulAlpha=1;
@@ -35,7 +36,7 @@ invopt[2]="KEY";
 
 _slide_in_tween_executed_once=false;
 
-_itembt_index=0;
+_opt_index=0;
 
 _menu_opt_start_y=-65; // Black BG
 _menu_opttxt_start_y=-100;
@@ -57,6 +58,14 @@ _menu_stat_alpha=0;
 _cmenu_tween_executed_once=false;
 _cmenu_fade_out_ready=false;
 
+rebinding_verb = undefined;
+pause = false;
+is_rebinding = false;
+
+res_sel = global.resolution_index;	
+win_label = "Windowed";
+cam_label = "Smooth";
+vfx_label = "Off";
 // DO NOT UNCOMMENT THESE LINES
 // These are commented out variables for later use once the rest of the buttons
 // Are implemented

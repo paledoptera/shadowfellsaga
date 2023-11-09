@@ -4,5 +4,3 @@ if place_meeting(x,y,obj_interact)
 {
 	create_cutscene(scene_info);
 }
-
-show_debug_message(string(interactcount));

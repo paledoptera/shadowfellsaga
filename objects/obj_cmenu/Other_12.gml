@@ -19,3 +19,7 @@ if instance_exists(FOLLOWER) {FOLLOWER.image_speed = 1;}
 
 disable=true;
 enable=false;
+cmenuActive = false;
+
+instance_destroy()
+global.canusemenu = true
