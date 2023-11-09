@@ -5,4 +5,5 @@ if (done)
 	if followerExists and !instance_exists(ctrl_cutscene) {FOLLOWER.image_speed = 1;}
 	instance_destroy();
 }
-input = input_key_pressed(global.key_action);
+
+_input = pressed("action");

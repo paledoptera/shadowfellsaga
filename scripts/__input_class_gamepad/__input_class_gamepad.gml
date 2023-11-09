@@ -179,7 +179,7 @@ function __input_class_gamepad(_index) constructor
         {
             if ((_gm == gp_axislh) || (_gm == gp_axislv) || (_gm == gp_axisrh) || (_gm == gp_axisrv))
             {
-                return gamepad_axis_value(index, _gm);
+                return clamp(gamepad_axis_value(index, _gm), -1.0, 1.0);
             }
             else
             {
@@ -208,7 +208,7 @@ function __input_class_gamepad(_index) constructor
         {
             if ((_gm == gp_shoulderlb) || (_gm == gp_shoulderrb))
             {
-                return (!__INPUT_ON_SWITCH);
+                return !__INPUT_DIGITAL_TRIGGER;
             }
             else
             {

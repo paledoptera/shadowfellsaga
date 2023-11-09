@@ -115,7 +115,9 @@ dialogue_5 =
 ]
 #endregion
 
+if instance_exists(BORDER){
 BORDER._sprite=-1;
+}
 
 mus_playx(mus_load("warmup"),true,0.6,0,1)
 audio_group_load(Talksounds);

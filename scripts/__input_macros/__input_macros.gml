@@ -1,6 +1,7 @@
 // Feather disable all
-#macro __INPUT_VERSION "6.0.5"
-#macro __INPUT_DATE    "2023-08-17"
+
+#macro __INPUT_VERSION "6.1.2"
+#macro __INPUT_DATE    "2023-09-28"
 #macro __INPUT_DEBUG   false
 
 
@@ -75,6 +76,7 @@
 
 
 #macro __INPUT_SDL2_SUPPORT         (!INPUT_ON_WEB && (INPUT_ON_PC || __INPUT_ON_ANDROID))
+#macro __INPUT_DIGITAL_TRIGGER      (__INPUT_ON_SWITCH || (__INPUT_ON_IOS && !INPUT_ON_WEB))
 #macro __INPUT_KEYBOARD_NORMATIVE   (INPUT_ON_PC || INPUT_ON_WEB || __INPUT_ON_SWITCH)
 #macro __INPUT_LED_PATTERN_SUPPORT  ((os_type == os_ps5) || __INPUT_ON_SWITCH || __INPUT_ON_IOS || (__INPUT_ON_WINDOWS && !INPUT_ON_WEB))
 #macro __INPUT_STEAMWORKS_SUPPORT   ((__INPUT_ON_LINUX || __INPUT_ON_WINDOWS) && !INPUT_ON_WEB)
@@ -192,6 +194,7 @@ enum __INPUT_VERB_TYPE
 {
     __BASIC,
     __CHORD,
+    __COMBO,
 }
 
 enum __INPUT_TRIGGER_EFFECT
@@ -200,6 +203,15 @@ enum __INPUT_TRIGGER_EFFECT
     __TYPE_FEEDBACK,
     __TYPE_WEAPON,
     __TYPE_VIBRATION,
+}
+
+enum __INPUT_COMBO_PHASE
+{
+    __PRESS,
+    __RELEASE,
+    __PRESS_OR_RELEASE,
+    __HOLD,
+    __CHARGE,
 }
 
 //INPUT_STATUS.DISCONNECTED *must* be zero so that array_size() initializes gamepad status to disconnected
@@ -297,6 +309,7 @@ enum INPUT_VIRTUAL_RELEASE
                                        }
 
 #macro __INPUT_VERIFY_BASIC_VERB_NAME  if (variable_struct_exists(_global.__chord_verb_dict, _verb_name)) __input_error("\"", _verb_name, "\" is a chord verb. Verbs passed to this function must be basic verb");\
+                                       if (variable_struct_exists(_global.__combo_verb_dict, _verb_name)) __input_error("\"", _verb_name, "\" is a combo verb. Verbs passed to this function must be basic verb");\
                                        if (!variable_struct_exists(_global.__basic_verb_dict, _verb_name)) __input_error("Verb \"", _verb_name, "\" not recognised");
                                        
                                        

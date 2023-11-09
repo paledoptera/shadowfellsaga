@@ -83,7 +83,7 @@ freq = 2;
 done = false;
 
 //Input
-input = false;
+_input = false;
 
 /* */
 /*  */

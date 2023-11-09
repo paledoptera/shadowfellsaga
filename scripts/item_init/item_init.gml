@@ -54,6 +54,28 @@ global.item[0] = 0
     global.armor[11] = 0
     global.armor[12] = 0
 	
+	global.armequip[0] = 0;
+	global.armequip[1] = 0;
+	global.armequip[2] = 0;
+	global.armequip[3] = 0;
+	global.armequip[4] = 0;
+	global.armequip[5] = 0;
+	
+	global.armequipname[0] = 0;
+	global.armequipname[1] = 0;
+	global.armequipname[2] = 0;
+	global.armequipname[3] = 0;
+	global.armequipname[4] = 0;
+	global.armequipname[5] = 0;
+	
+	global.wepequip[0] = 0;
+	global.wepequip[1] = 0;
+	global.wepequip[2] = 0;
+	
+	global.wepequipname[0] = "(Nothing)";
+	global.wepequipname[1] = "(Nothing)";
+	global.wepequipname[2] = "(Nothing)";
+	
 	global.charselect=0;
 	global.itempocketlimit=99;
 	
@@ -67,5 +89,17 @@ global.item[0] = 0
 		global.itemsellvalue[i] = sellvalue
         global.itemusable[i] = usable
 		global.itempocketed[i] = pocketed
+		
+		keyitemid = global.keyitem[i]
+		key_item_info(keyitemid)
+		global.keyitemnameb[i] = keyitemname
+		global.keyitemdescb[i] =  keyitemdesc
+		global.keyitemusable[i] = keyitemusable
+		
+		armorid =global.armor[i]
+		armor_info(armorid)
+		global.armornameb[i] = armorname;
+		global.armordescb[i] = armordesc 
+		global.armoricon[i] = armorsubimg
     }
 }

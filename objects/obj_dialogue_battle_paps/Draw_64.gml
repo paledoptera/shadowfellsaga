@@ -2,7 +2,7 @@
 
 //Gui maximise
 if(!obj_gamehandler.borderEnabled){
-	display_set_gui_size(640,480);
+	display_set_gui_size(global.gui_res_w,global.gui_res_h);
 }
 
 //t is for modifiers

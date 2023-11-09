@@ -49,7 +49,7 @@ if !instance_exists(ctrl_cutscene)
 
 	z += zsp;
 	
-	if PLAYER.key_cancel  && !instance_exists(obj_cmenu) && !instance_exists(obj_savemenu) && !instance_exists(obj_loadmenu)
+	if PLAYER.key_cancel  && !instance_exists(obj_cmenu) && !instance_exists(obj_cmenu_mini) && !instance_exists(obj_savemenu) && !instance_exists(obj_loadmenu)
 	{
 		if PLAYER.mode = 0 {if z = zfloor {zsp = -jumpspeed;}} //JUMPING
 	}

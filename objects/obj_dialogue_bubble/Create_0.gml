@@ -111,7 +111,7 @@ if (playerExists)  {PLAYER.image_speed = 0; PLAYER.active = false;}
 if (followerExists) {FOLLOWER.image_speed = 0}
 
 //Input
-input = false;
+_input = false;
 
 if(flag_get(global.flags,"world")==0){
 	boxtype=0;

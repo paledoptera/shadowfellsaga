@@ -6,7 +6,7 @@ function key_item_get(key_item){
 	while (loop==1){
 		if(global.keyitem[i] == 0)
 		{
-				global.keyitem[i] = item;	
+				global.keyitem[i] = keyitem;	
 				break;
 		} else if (i == 12){
 			nr=1;

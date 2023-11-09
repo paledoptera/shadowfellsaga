@@ -1,6 +1,3 @@
-if(instance_count>1){
-	instance_destroy(instance_number);	
-}
 depth=DEPTH_UI
 selection=0;
 cmenuActive=false;

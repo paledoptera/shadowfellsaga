@@ -1,5 +1,5 @@
 /// @description Text
-if(live_call()) return live_result;
+
 if ran_creation_runcode = false
 {
 	ran_creation_runcode = true;
@@ -8,7 +8,7 @@ if ran_creation_runcode = false
 
 //Gui maximise
 if(!obj_gamehandler.borderEnabled){
-	display_set_gui_size(856, 480);
+	display_set_gui_size(640,480);
 }
 
 //t is for modifiers
@@ -36,10 +36,10 @@ if (message_end > 0)
 	
 	cam = view_get_camera(ctrl_camera.camera);
 	
-	draw_sprite_ext(spr_textbox, boxtype==1 ? 1 : 0 , 420, textboxy,2,2,0,c_white,1);
+	draw_sprite_ext(spr_textbox, boxtype==1 ? 1 : 0 , 640/2, textboxy,2,2,0,c_white,1);
 	//Draw portrait
 	if (portrait[message_current] != "none") {if portrait[message_current] = port_semi {port_scale_multi = 1.3}}
-	if (portrait[message_current] != "none") draw_sprite_ext(portrait[message_current], facetimer, 150, textboxy-4,2*port_scale_multi,2*port_scale_multi,0,c_white,1);
+	if (portrait[message_current] != "none") draw_sprite_ext(portrait[message_current], facetimer, 52, textboxy-4,2*port_scale_multi,2*port_scale_multi,0,c_white,1);
 	//Animating portrait
 	if (cutoff != string_length(message[message_current]))
 	{
@@ -74,18 +74,18 @@ if (message_end > 0)
 	
     //Change the horizontal position if there is a portrait
     if (portrait[message_current] == "none") var tX = 60;
-    else var tX = 260;
+    else var tX = 180;
     
     //If we are done printing out the current message
     if (cutoff == string_length(message[message_current]))
     {
         //draw blinking cursor
         timer++;
-        if (timer < 15) draw_sprite_ext(spr_cursor, 0, 723-40, textboxy+100-44,2,2,0,c_white,1);
+        if (timer < 15) draw_sprite_ext(spr_cursor, 0, 640-52, textboxy+100-44,2,2,0,c_white,1);
         if (timer > 30) timer = 0;
         
         //Check player input
-        if (input)
+        if (_input)
         {
 			facetimer = 1;
             //If we still have messages left, go to next message
@@ -121,7 +121,7 @@ if (message_end > 0)
         
 		
         //If player presses button, display the entire message.
-        if (input && cutoff > 2)
+        if (_input && cutoff > 2)
         {
            cutoff = string_length(message[message_current]);
         }
@@ -135,8 +135,8 @@ if (message_end > 0)
 		if (string_char_at(message[message_current], i) == "&")
         {
             line += 1;
-			if (portrait[message_current] == "none") var tX = 40;
-			else var tX = 260;
+			if (portrait[message_current] == "none") var tX = 60;
+			else var tX = 180;
 			if string_char_at(message[message_current], i) != "*" and font[message_current] != fnt_papyrus {space = 2;} else space = 0;
 			++i;
         }

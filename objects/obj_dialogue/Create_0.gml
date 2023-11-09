@@ -74,6 +74,7 @@ message[0] = "\0Normal \1Shaky \2Color \4Wavy";
 ///Initialize Variables
 message_current = 0;
 boxtype = -1; // Are we in the dark world or light world?
+style = spr_textbox
 
 xxscale=2;
 yyscale=2;
@@ -104,12 +105,14 @@ if (playerExists)  {PLAYER.image_speed = 0; PLAYER.active = false;}
 if (followerExists) {FOLLOWER.image_speed = 0}
 
 //Input
-input = false;
+_input = false;
 
 if(flag_get(global.flags,"world")==0){
 	boxtype=0;
+	style= spr_textbox 
 } else if(flag_get(global.flags,"world")==1){
 	boxtype=1;
+	style = spr_textbox_DW
 }
 /* */
 /*  */

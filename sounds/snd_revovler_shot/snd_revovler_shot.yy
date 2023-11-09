@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 1.985306,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "world",
+    "path": "folders/Sounds/sfx/world.yy",
   },
   "preload": false,
   "sampleRate": 44100,

@@ -1,10 +1,10 @@
 if(live_call()) return live_result;
 draw_set_alpha(_bg_alpha/2)
 draw_set_color(c_black);
-draw_rectangle(x,y,RES_W*RES_SCALE,RES_H*RES_SCALE,false)
+draw_rectangle(x,y,global.window_res_w*RES_SCALE,global.window_res_h*RES_SCALE,false)
 
 if(!obj_gamehandler.borderEnabled){
-	display_set_gui_size(856, 480);
+	display_set_gui_size(global.gui_res_w, global.gui_res_h);
 }
 
 if subState == 6 {
@@ -44,7 +44,7 @@ for (i = 0; i < 3; i += 1){
 	#endregion
     draw_set_alpha(0.5)
    draw_set_color(c_black)
-   draw_sprite_ext(spr_textbox,style,box_x2-XL/3,box_y2-YL/2,1.5,1.5,0,image_blend,_alpha);
+   draw_sprite_ext(spr_textbox_DW,image_index/16,box_x2-XL/3,box_y2-YL/2,1.5,1.5,0,image_blend,_alpha);
 }
 switch(subState){
 	#region BASIC MENU STATE

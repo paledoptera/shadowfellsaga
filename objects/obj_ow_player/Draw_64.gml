@@ -1,7 +1,7 @@
 //----------JUMP CODE--------------
 if(live_call()) return live_result;
 if(!obj_gamehandler.borderEnabled){
-	display_set_gui_size(640, 360);
+	display_set_gui_size(global.gui_res_w, global.gui_res_h);
 }  
 world_flag = flag_get(global.flags,"world")
 if world_flag = 1
@@ -9,7 +9,7 @@ if world_flag = 1
 	//key_interact = input_key_pressed(global.key_action);;}
 
 	draw_set_alpha(1);
-	if active = true 
+	if active = true  && input.target="overworld"
 	{
 		var jumpmultiplier = (zfloor-z)/10
 		var jumpmultiplier2 = (FOLLOWER.zfloor-FOLLOWER.z)/10

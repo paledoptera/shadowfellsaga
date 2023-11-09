@@ -6,6 +6,12 @@ function party_init(){
 	global.partynames[2]=str_set_loc("SKELEBROS","DEVICE_WORLD_DATA_TEAMNAME_REVISED_Draw_64_slash_8_0");
 	global.partyhp[0]={_curr:10,_max:120};
 	global.partyhp[1]={_curr:1,_max:1};
+	global.partyat[0] = 5;
+	global.partyat[1] = 1;
+	global.partydf[0] = 3;
+	global.partydf[1] = 5;
+	global.partymagic[0] = 1;
+	global.partymagic[1] = 1;
 	global.partylv[0]=1; 
 	global.partylv[1]=1;
 	global.partyequippedwep=[-1,-1];

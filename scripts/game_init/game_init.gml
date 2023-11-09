@@ -45,17 +45,29 @@ if (os_type != os_macosx)
     global.windowmode_returnto = global.windowmode;
 	
 	global.window_res_w = 1280;
-	global.window_res_h = 720;
+	global.window_res_h = 960;
 	
-	global.gui_res_w = 856;  // same size as camera
+	global.gui_res_w = 640;  // same size as camera
 	global.gui_res_h = 480; 
+	
+	global.aspect_ratio = "4:3"
+	
+	global.camasp = 0; // 0 - 4:3 1 - 16:9
 	
 	
 #region Define accessible window resolutions
-global.resolutions = [
+#region Widescreen Resolutions
+global.resolutions2 = [
 { w:320 ,  h:180 }, //16:9
 { w:640 ,  h:360 },
+{ w:800,   h:450 },
+{ w:960,   h:540 },
+{ w:1024, h:576 },
+{ w:1152, h:648 },
 { w:1280 , h:720 },
+{ w:1440, h:810 },
+{ w:1600, h:900 },
+{ w:1856, h:1044 },
 { w:1920 , h:1080 },
 { w:2048,  h:1152},
 { w:2560 , h:1440 },
@@ -68,9 +80,39 @@ global.resolutions = [
 { w:7680,  h:4320},
 { w:8192,  h:4608}
 ]
+#endregion
+#region Non-widescreen resoltuons
+global.resolutions = [ 
+{ w:320,	 h:240 }, // 4:3
+{ w:640,   h:480 },
+{ w:800,   h:600 },
+{ w:960,   h:720 },
+{ w:1024, h:768 },
+{ w:1152, h:864 },
+{ w:1280, h:960 },
+{ w:1400, h:1050 },
+{ w:1440, h:1080 },
+{ w:1600, h:1200 },
+{ w:1856, h:1392 },
+{ w:1920, h:1440 },
+{ w:2048, h:1536 },
+{ w:2560, h:1920 },
+{ w:2880, h:2160 },
+{ w:3072, h:2304 },
+{ w:3840, h:2880 },
+{ w:4096, h:3072 },
+{ w:5120, h:3840 },
+{ w:6144, h:4608 },
+{ w:7680, h:5760 },
+{ w:8192, h:6144 }, 
+]
+#endregion
 
-global.resolution_index = 2;
+global.resolution_index = 6;
+if global.camasp == 0 {
 global.resolution_current = global.resolutions[global.resolution_index];
+} else {  global.resolution_current = global.resolutions2[global.resolution_index];
+}
 #endregion
 	#endregion
 	global.flush_textures			=1;
@@ -79,6 +121,8 @@ global.resolution_current = global.resolutions[global.resolution_index];
 	global.camtype						=1;
 	global.canusemenu				=true;
 	global.selecteditem				=-1;
+	global.selectedarm				=-1;
+	global.selectedwep				=-1;
 	if(global.flush_textures==1){
 		texture_flush("FONTS");
 		texture_flush("PORTRAITS");
@@ -103,6 +147,7 @@ global.resolution_current = global.resolutions[global.resolution_index];
 	global.party								=array_create(2, -1);
 	global.partynames				=array_create(2,-1);
 	global.partyhp						=array_create(2,-1);
+	global.partyat							=array_create(2,-1);
 	global.partydf							= array_create(2,-1);
 	global.partyequippedwep	= array_create(2,-1);
 	global.partyequippedarm	=array_create(6,-1);
@@ -110,17 +155,24 @@ global.resolution_current = global.resolutions[global.resolution_index];
 	global.exp								=0; // No experience gained
 	global.money							=0; //D$
 	global.bp									=0; // No bone points
+	
+	global.gp_supported=gamepad_is_supported();
+	global.gp_index=0;	
+	global.gp_device=-1;
 	#endregion
 	encounter_init();
 	elements_init();
 	flags_init(true);
 	stats_init(true);
 	item_init();
-	item_add(0,1,90);
-	//item_add(0,1,1);
-	//item_add(0,1,1);
-	//item_add(0,1,1);
-	input_init();
+	item_add(0,1,99);
+	item_add(1,1,99);	item_add(2,1,99);
+		item_add(3,1,99); 	item_add(4,1,99);
+			item_add(5,1,99); 	item_add(6,1,99);	item_add(7,1,99);
+				item_add(8,1,99); 	item_add(9,1,99);  	item_add(10,1,99); 	item_add(11,1,99);
+				key_item_add(0,100)
+	armor_add(0, 200)
+	weapon_add(0, 300)
 	party_init();
 	fsm_init(); // Initialize the finite state machine
 	if file_exists("file9")
@@ -162,7 +214,7 @@ global.resolution_current = global.resolutions[global.resolution_index];
 	#endregion
 	#endregion
 	if(GAME.borderEnabled){
-	//	surface_resize(application_surface,1280,960)
+		//surface_resize(application_surface,640,480)
 		application_surface_enable(true)
 		application_surface_draw_enable(false)
 	} 

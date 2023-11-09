@@ -2,7 +2,7 @@ function item_name_list(){
 	var __count_min=1;
 	switch itemid {
 		case 0:
-			global.itemname[i] = "----------"
+			global.itemname[i] = "---------"
 		break;
 		case 1:
 			if(global.itempocketed[i]>__count_min){

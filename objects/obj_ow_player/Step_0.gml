@@ -13,6 +13,7 @@
 	x_axis = key_right-key_left;
 	y_axis = key_down-key_up;
 	
+if input.target == "overworld" {
 	inputdirection = input_direction(0, "left","right","up","down");
 	inputmagnitude = (x_axis != 0) || (y_axis != 0);
 
@@ -25,16 +26,20 @@ if key_switchchar and z = zfloor and inputmagnitude = 0 //and FOLLOWER.z = FOLLO
 		global.leadchar = 1;
 		sprite_run = spr_sans_ow_move;
 		sprite_idle = spr_sans_ow_idle;
+		if instance_exists(FOLLOWER){
 		FOLLOWER.sprite_run = spr_paps_ow_move;
 		FOLLOWER.sprite_idle = spr_paps_ow_idle;
+		}
 	}
 	else
 	{
 		global.leadchar = 0;
 		sprite_run = spr_paps_ow_move;
 		sprite_idle = spr_paps_ow_idle;
+		if instance_exists(FOLLOWER){
 		FOLLOWER.sprite_run = spr_sans_ow_move;
 		FOLLOWER.sprite_idle = spr_sans_ow_idle;
+		}
 	}
 }
 
@@ -63,13 +68,14 @@ mode = defaultmode;
 with obj_interact_sensor
 {if place_meeting(x,y,obj_ow_interacttrigger) or place_meeting(x,y,obj_ow_interacttriggerb) or place_meeting(x,y,obj_savelamp){PLAYER.mode = 1; alpha = 1} else {alpha = 0.3;}}
 
-if key_interact  && !instance_exists(obj_cmenu) && !instance_exists(obj_savemenu) && !instance_exists(obj_loadmenu)
+if key_interact
 {
 	if mode = 0 {if z = zfloor {zsp = -jumpspeed;}} //JUMPING
 	
 	if mode = 1 {instance_create(x,y,obj_interact);} //INTERACTING WITH OBJECTS
 }
 if mode = 0 && (zsp < 0) && (!key_interact_held) zsp = max(zsp,(-jumpspeed/3)) //HELD JUMP
+}
 
 //MOVEMENT
 //establishing if the player is at a z level higher than any platforms
@@ -94,21 +100,23 @@ if instance_exists(obj_wall_h1) with obj_wall_h1
 			walkable = false;
 		}
 		//SETTING FOLLOWER HEIGHT AND WALLS
-		if floor(FOLLOWER.z) < -height
-		{
-			if instance_exists(obj_walltemp_f) {with obj_walltemp_f {if x = other.x and y = other.y {instance_destroy();}}}
-			fol_walkable = true;
-			fol_wallspawn = false;
-		}
-		else 
-		{	
-			if fol_wallspawn = false 
+		if instance_exists(FOLLOWER){
+			if floor(FOLLOWER.z) < -height
 			{
-				___inst2 = instance_create(x,y,obj_walltemp_f);
-				___inst2.depth = depth-1
+				if instance_exists(obj_walltemp_f) {with obj_walltemp_f {if x = other.x and y = other.y {instance_destroy();}}}
+				fol_walkable = true;
+				fol_wallspawn = false;
 			}
-			fol_wallspawn = true;
-			fol_walkable = false;
+			else 
+			{	
+				if fol_wallspawn = false 
+				{
+					___inst2 = instance_create(x,y,obj_walltemp_f);
+					___inst2.depth = depth-1
+				}
+				fol_wallspawn = true;
+				fol_walkable = false;
+			}
 		}
 	}
 //setting collissions
@@ -128,6 +136,7 @@ y = round(y);
 
 
 //checking if follower can go up to obj_wallh1
+if instance_exists(FOLLOWER){
 if distance_to_point(FOLLOWER.x,y) > 35
 {
 	if FOLLOWER.x < PLAYER.x and hsp > 0 {hsp = 0}
@@ -155,6 +164,7 @@ with FOLLOWER
 	
 	}
 	else {zfloor = 0;}	
+}
 }
 
 //execute movement and regular collisions
@@ -197,21 +207,6 @@ if animated = true && !instance_exists(obj_cmenu) && !instance_exists(obj_saveme
 	}
 	else {sprite_index = sprite_idle;}
 	if (_old_sprite != sprite_index) local_frame = 0;
-	
-	//switch dir {
-	//	case "down":
-	//		direction = 270;
-	//	break;
-	//	case "up":
-	//		direction = 90;
-	//	break;
-	//	case "right":
-	//		direction = 360;
-	//	break;
-	//	case "left": 
-	//		direction = 180;
-	//	break;
-	//}
 	
 	if room = LW_skelekitchen {player_animate_sprite_half();} else player_animate_sprite();
 }

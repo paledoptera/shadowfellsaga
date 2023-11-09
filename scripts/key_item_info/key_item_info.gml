@@ -1,16 +1,18 @@
 function key_item_info(key_item){
-	tempkeyitemdesc="---";
-	tempkeyitemname= " ";
-	tempkeyitemusable=0
+	keyitemdesc="---";
+	keyitemname= " ";
+	keyitemusable=0
 	switch(key_item){
 		case 0:
-			tempkeyitemdesc="---";
-			tempkeyitemname= " ";
+			keyitemdesc="---";
+			keyitemname= " ";
 			break;
-		case 1:
-			tempkeyitemdesc="It can be used to make calls.";
-			tempkeyitemname= "Cell Phone";
-			tempkeyitemusable=1
+		case 100:
+			var _cellPhone = new CellPhone()
+			keyitemname= _cellPhone.longName;
+			keyitemdesc= _cellPhone.checkText;
+			keyitemusable=1
 			break;
 	}
+	return;
 }
