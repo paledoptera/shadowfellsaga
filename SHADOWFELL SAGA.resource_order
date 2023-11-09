@@ -957,6 +957,7 @@
     {"name":"obj_dialogue_battle_sans","order":12,"path":"objects/obj_dialogue_battle_sans/obj_dialogue_battle_sans.yy",},
     {"name":"key_item_name_list","order":4,"path":"scripts/key_item_name_list/key_item_name_list.yy",},
     {"name":"scr_debugger","order":31,"path":"scripts/scr_debugger/scr_debugger.yy",},
+    {"name":"obj_wall_f","order":19,"path":"objects/obj_wall_f/obj_wall_f.yy",},
     {"name":"player_calculate_damage","order":29,"path":"scripts/player_calculate_damage/player_calculate_damage.yy",},
     {"name":"__input_key_is_ignored","order":1,"path":"scripts/__input_key_is_ignored/__input_key_is_ignored.yy",},
     {"name":"spr_intro_boat_papyrus","order":16,"path":"sprites/spr_intro_boat_papyrus/spr_intro_boat_papyrus.yy",},

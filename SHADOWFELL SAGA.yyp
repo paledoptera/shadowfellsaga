@@ -1539,7 +1539,6 @@
     {"roomId":{"name":"DW_wildcliffs1","path":"rooms/DW_wildcliffs1/DW_wildcliffs1.yy",},},
     {"roomId":{"name":"STAGE_TESTROOM","path":"rooms/STAGE_TESTROOM/STAGE_TESTROOM.yy",},},
     {"roomId":{"name":"DW_carrionisles_intro","path":"rooms/DW_carrionisles_intro/DW_carrionisles_intro.yy",},},
-    {"roomId":{"name":"DW_carrionisles_2","path":"rooms/DW_carrionisles_2/DW_carrionisles_2.yy",},},
     {"roomId":{"name":"STAGE_BATTLE_ML_TEST","path":"rooms/STAGE_BATTLE_ML_TEST/STAGE_BATTLE_ML_TEST.yy",},},
     {"roomId":{"name":"STAGE_DEBUG_SANDBOX","path":"rooms/STAGE_DEBUG_SANDBOX/STAGE_DEBUG_SANDBOX.yy",},},
     {"roomId":{"name":"STAGE_GAME_BROKE","path":"rooms/STAGE_GAME_BROKE/STAGE_GAME_BROKE.yy",},},
