@@ -62,4 +62,6 @@ canscale=false;
 x_shift_allowed=false;
 
 buffer=-1; // Save buffer
+
+target = "cmenu"
 if instance_exists(PLAYER) {PLAYER.image_speed = 0;  PLAYER.active = false;}

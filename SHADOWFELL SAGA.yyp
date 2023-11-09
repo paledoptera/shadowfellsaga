@@ -262,7 +262,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.8.0.98",
+    "IDEVersion": "2023.8.2.108",
   },
   "resources": [
     {"id":{"name":"ease_in_circ","path":"scripts/ease_in_circ/ease_in_circ.yy",},},
@@ -1533,9 +1533,9 @@
   ],
   "RoomOrderNodes": [
     {"roomId":{"name":"STAGE_INIT","path":"rooms/STAGE_INIT/STAGE_INIT.yy",},},
-    {"roomId":{"name":"DW_flavortown","path":"rooms/DW_flavortown/DW_flavortown.yy",},},
-    {"roomId":{"name":"LW_skelekitchen","path":"rooms/LW_skelekitchen/LW_skelekitchen.yy",},},
     {"roomId":{"name":"DW_carrionisles_1","path":"rooms/DW_carrionisles_1/DW_carrionisles_1.yy",},},
+    {"roomId":{"name":"LW_skelekitchen","path":"rooms/LW_skelekitchen/LW_skelekitchen.yy",},},
+    {"roomId":{"name":"DW_flavortown","path":"rooms/DW_flavortown/DW_flavortown.yy",},},
     {"roomId":{"name":"DW_wildcliffs1","path":"rooms/DW_wildcliffs1/DW_wildcliffs1.yy",},},
     {"roomId":{"name":"STAGE_TESTROOM","path":"rooms/STAGE_TESTROOM/STAGE_TESTROOM.yy",},},
     {"roomId":{"name":"DW_carrionisles_intro","path":"rooms/DW_carrionisles_intro/DW_carrionisles_intro.yy",},},
@@ -1545,6 +1545,7 @@
     {"roomId":{"name":"STAGE_BATTLE","path":"rooms/STAGE_BATTLE/STAGE_BATTLE.yy",},},
     {"roomId":{"name":"STAGE_GAMEOVER","path":"rooms/STAGE_GAMEOVER/STAGE_GAMEOVER.yy",},},
     {"roomId":{"name":"STAGE_TITLE","path":"rooms/STAGE_TITLE/STAGE_TITLE.yy",},},
+    {"roomId":{"name":"DW_carrionisles_2","path":"rooms/DW_carrionisles_2/DW_carrionisles_2.yy",},},
   ],
   "templateType": null,
   "TextureGroups": [

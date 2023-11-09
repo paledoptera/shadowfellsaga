@@ -5,7 +5,7 @@ draw_rectangle(x,y,global.window_res_w*RES_SCALE,global.window_res_h*RES_SCALE,f
 
 if(!obj_gamehandler.borderEnabled){
 	display_set_gui_size(global.gui_res_w, global.gui_res_h);
-}
+}  
 
 if subState == 6 {
 	index = spr_blank
