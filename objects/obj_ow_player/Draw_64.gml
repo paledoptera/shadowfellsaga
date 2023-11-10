@@ -1,4 +1,3 @@
-//----------JUMP CODE--------------
 if(live_call()) return live_result;
 if(!obj_gamehandler.borderEnabled){
 	display_set_gui_size(global.gui_res_w, global.gui_res_h);
@@ -17,10 +16,10 @@ if world_flag = 1
 		if jumpmultiplier2 > 2 {jumpmultiplier2 = 2}
 		
 		//drawing bkg
-		draw_sprite_ext(spr_jumpbuttons_wheel,0,525+30,27+48,1.4,1.35,-20,c_white,0.35);
+		draw_sprite_ext(spr_jumpbuttons_wheel,0,525+30+2,27+48+4,1,1,0,c_white,1);
 		//drawing papyrus' buttons
-		if global.leadchar = 0 {draw_sprite(spr_jumpbuttons,key_interact,600-90-15+32,5+10+32);}
-		else {draw_sprite(spr_jumpbuttons,2+key_interact,600-90-15+32,5+10+32);}
+		if global.leadchar = 0 {draw_sprite(spr_jumpbuttons,input.interact,600-90-15+32,5+10+32);}
+		else {draw_sprite(spr_jumpbuttons,2+input.interact,600-90-15+32,5+10+32);}
 		if mode = 0 {draw_sprite(spr_jumpbuttons,6,600-90-15+32,5+10+32-jumpmultiplier);}
 		else if mode = 1
 		{
@@ -38,10 +37,10 @@ if world_flag = 1
 		}
 		draw_sprite(spr_jumpbuttons,4,600-90-15+32,5+10+32);
 		//drawing sans' buttons
-		if global.leadchar = 0 {draw_sprite(spr_jumpbuttons,2+key_cancel,600-30-15+32,30+10+32);}
-		else {draw_sprite(spr_jumpbuttons,key_cancel,600-30-15+32,30+10+32);}
-		draw_sprite(spr_jumpbuttons,6,600-30-15+32,30+10+32-jumpmultiplier2);
-		draw_sprite(spr_jumpbuttons,5,600-30-15+32,30+10+32);
+		if global.leadchar = 0 {draw_sprite(spr_jumpbuttons,2+input.cancel,600-30-15+32-2,30+10+32+3);}
+		else {draw_sprite(spr_jumpbuttons,input.cancel,600-30-15+32-2,30+10+32+3);}
+		draw_sprite(spr_jumpbuttons,6,600-30-15+32-2,30+10+32+3-jumpmultiplier2);
+		draw_sprite(spr_jumpbuttons,5,600-30-15+32-2,30+10+32+3);
 	}
 }
 

@@ -49,12 +49,14 @@ if !instance_exists(ctrl_cutscene)
 
 	z += zsp;
 	
-	if PLAYER.key_cancel  && !instance_exists(obj_cmenu) && !instance_exists(obj_cmenu_mini) && !instance_exists(obj_savemenu) && !instance_exists(obj_loadmenu)
+	if input.target = "overworld"
 	{
-		if PLAYER.mode = 0 {if z = zfloor {zsp = -jumpspeed;}} //JUMPING
+		if input.cancel_pressed
+		{
+			if PLAYER.mode = 0 {if z = zfloor {zsp = -jumpspeed;}} //JUMPING
+		}
+		if PLAYER.mode = 0 && (zsp < 0) && (!input.cancel) zsp = max(zsp,(-jumpspeed/3)) //HELD JUMP
 	}
-	if PLAYER.mode = 0 && (zsp < 0) && (!PLAYER.key_cancel_held) zsp = max(zsp,(-jumpspeed/3)) //HELD JUMP
-
 	
 	//MOVEMENT
 	//establishing if the player is at a z level higher than any platforms

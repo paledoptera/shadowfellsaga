@@ -262,7 +262,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.8.0.98",
+    "IDEVersion": "2023.8.2.108",
   },
   "resources": [
     {"id":{"name":"ease_in_circ","path":"scripts/ease_in_circ/ease_in_circ.yy",},},
@@ -441,6 +441,7 @@
     {"id":{"name":"TGMX_2_EaseFunctions","path":"scripts/TGMX_2_EaseFunctions/TGMX_2_EaseFunctions.yy",},},
     {"id":{"name":"obj_carrionisl_waterspout","path":"objects/obj_carrionisl_waterspout/obj_carrionisl_waterspout.yy",},},
     {"id":{"name":"scribble_fallback_bulletpoint","path":"sprites/scribble_fallback_bulletpoint/scribble_fallback_bulletpoint.yy",},},
+    {"id":{"name":"bkg_carrionisles_1","path":"sprites/bkg_carrionisles_1/bkg_carrionisles_1.yy",},},
     {"id":{"name":"ease_in_linear","path":"scripts/ease_in_linear/ease_in_linear.yy",},},
     {"id":{"name":"__input_load_sdl2_from_string_internal","path":"scripts/__input_load_sdl2_from_string_internal/__input_load_sdl2_from_string_internal.yy",},},
     {"id":{"name":"GMLive_token","path":"scripts/GMLive_token/GMLive_token.yy",},},
@@ -1064,7 +1065,6 @@
     {"id":{"name":"Boat_concept_OUR_MAIDEN_VOYAGE_NEW","path":"sprites/Boat_concept_OUR_MAIDEN_VOYAGE_NEW/Boat_concept_OUR_MAIDEN_VOYAGE_NEW.yy",},},
     {"id":{"name":"player_animate_sprite","path":"scripts/player_animate_sprite/player_animate_sprite.yy",},},
     {"id":{"name":"input_keyboard_virtual_show","path":"scripts/input_keyboard_virtual_show/input_keyboard_virtual_show.yy",},},
-    {"id":{"name":"obj_savemenu_mini","path":"objects/obj_savemenu_mini/obj_savemenu_mini.yy",},},
     {"id":{"name":"input_value","path":"scripts/input_value/input_value.yy",},},
     {"id":{"name":"TGMX_3_EventCallbacks","path":"scripts/TGMX_3_EventCallbacks/TGMX_3_EventCallbacks.yy",},},
     {"id":{"name":"string_pad","path":"scripts/string_pad/string_pad.yy",},},
@@ -1533,9 +1533,9 @@
   ],
   "RoomOrderNodes": [
     {"roomId":{"name":"STAGE_INIT","path":"rooms/STAGE_INIT/STAGE_INIT.yy",},},
+    {"roomId":{"name":"DW_carrionisles_1","path":"rooms/DW_carrionisles_1/DW_carrionisles_1.yy",},},
     {"roomId":{"name":"DW_flavortown","path":"rooms/DW_flavortown/DW_flavortown.yy",},},
     {"roomId":{"name":"LW_skelekitchen","path":"rooms/LW_skelekitchen/LW_skelekitchen.yy",},},
-    {"roomId":{"name":"DW_carrionisles_1","path":"rooms/DW_carrionisles_1/DW_carrionisles_1.yy",},},
     {"roomId":{"name":"DW_wildcliffs1","path":"rooms/DW_wildcliffs1/DW_wildcliffs1.yy",},},
     {"roomId":{"name":"STAGE_TESTROOM","path":"rooms/STAGE_TESTROOM/STAGE_TESTROOM.yy",},},
     {"roomId":{"name":"DW_carrionisles_intro","path":"rooms/DW_carrionisles_intro/DW_carrionisles_intro.yy",},},
@@ -1545,6 +1545,7 @@
     {"roomId":{"name":"STAGE_BATTLE","path":"rooms/STAGE_BATTLE/STAGE_BATTLE.yy",},},
     {"roomId":{"name":"STAGE_GAMEOVER","path":"rooms/STAGE_GAMEOVER/STAGE_GAMEOVER.yy",},},
     {"roomId":{"name":"STAGE_TITLE","path":"rooms/STAGE_TITLE/STAGE_TITLE.yy",},},
+    {"roomId":{"name":"DW_carrionisles_2","path":"rooms/DW_carrionisles_2/DW_carrionisles_2.yy",},},
   ],
   "templateType": null,
   "TextureGroups": [

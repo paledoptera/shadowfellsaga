@@ -30,9 +30,6 @@ animated = true;
 inputdirection = 3;
 inputmagnitude = 0;
 
-follower_canfollow_x = "YES";
-follower_canfollow_y = "YES";
-
 cutscene_paused = false;
 
 if global.leadchar = 0

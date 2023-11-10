@@ -12,31 +12,27 @@ switch(subState)
 	#region BASIC SELECTION
 	case 0:
 		if!(_overwrite){
-			if  input_key_pressed(global.key_down) ||input_gp_button_pressed(global.gp_device,global.gp_down)
-				selection++
+			if  input.down_pressed selection++
 				//snd_play(snd_squeak,8,false);
-			if  input_key_pressed(global.key_up) ||input_gp_button_pressed(global.gp_device,global.gp_up) 
-				selection--
+			if  input.up_pressed selection--
 			//	snd_play(snd_squeak,8,false);
 			selection = clamp(selection, 0,3);
 			if selection == 3 
 			{
-				if  input_key_pressed(global.key_right)||input_gp_button_pressed(global.gp_device,global.gp_right)
-					subSelection++;
+				if  input.right_pressed subSelection++;
 			//		snd_play(snd_squeak,8,false);
 					choicemade=true;
-				if  input_key_pressed(global.key_left)||input_gp_button_pressed(global.gp_device,global.gp_left)
-					subSelection--;		
+				if  input.left_pressed subSelection--;		
 			//		snd_play(snd_squeak,8,false);
 					choicemade=true;
 				subSelection=clamp(subSelection,0,2);
 			}
 			global.filechoice=selection;
-		 if(input_key_pressed(global.key_cancel)||input_gp_button_pressed(global.gp_device,global.gp_cancel)) && subState < 1{
+		 if(input.cancel_pressed && subState < 1){
 				_alpha=0;
 			 	instance_destroy();
 			} 
-			if( input_key_pressed(global.key_action)||input_gp_button_pressed(global.gp_device,global.gp_action)&& buffer<0){
+			if( input.interact_pressed && buffer<0){
 				if(selection==3 && subSelection == 1){
 					subState = 1;	
 				}
@@ -61,18 +57,16 @@ switch(subState)
 	#endregion
 	#region ERASE SAVED DATA
 	case 1:
-			if  input_key_pressed(global.key_down) ||input_gp_button_pressed(global.gp_device,global.gp_down)
-				selection++
+			if  input.down_pressed selection++
 				//snd_play(snd_squeak,8,false);
-			if  input_key_pressed(global.key_up) ||input_gp_button_pressed(global.gp_device,global.gp_up) 
-				selection--
+			if  input.up_pressed selection--
 			//	snd_play(snd_squeak,8,false);
-			if(input_key_pressed(global.key_cancel)||input_gp_button_pressed(global.gp_device,global.gp_cancel)) && subState == 1{
+			if(input.cancel_pressed && subState == 1){
 				subState = 0;
 				menulabel="Please select a file.";
 			} 	
 			selection = clamp(selection, 0,2);
-			if  input_key_pressed(global.key_action)||input_gp_button_pressed(global.gp_device,global.gp_action) && subState == 1 && subSelection==0{
+			if  input.interact_pressed && subState == 1 && subSelection==0{
 						snd_play(snd_save,8,false);	
 						if file_exists("file"+string(selection)){
 							file_delete("file"+string(selection));
@@ -85,19 +79,19 @@ switch(subState)
 	#endregion
 	#region RETURN TO BASIC SELECTION POST-ERASE
 	case 2: 
-			if  input_key_pressed(global.key_action)||input_gp_button_pressed(global.gp_device,global.gp_action) && subState == 3 && subSelection==1{
+			if  input.interact_pressed && subState == 3 && subSelection==1{
 				subState = 0;
 				snd_play(snd_select,8,false);
 			} 
 	break;
 	case 4:
-			if  input_key_pressed(global.key_action)||input_gp_button_pressed(global.gp_device,global.gp_action) && subState == 3 && subSelection==1{
+			if  input.interact_pressed && subState == 3 && subSelection==1{
 				subState = 0;
 				color = c_white;
 				snd_play(snd_select,8,false);
 				menulabel="Please select a file.";
 			} 
-		 if(input_key_pressed(global.key_cancel)||input_gp_button_pressed(global.gp_device,global.gp_cancel)) && subState < 1{
+		 if(input.cancel_pressed) && subState < 1{
 				_alpha=0;
 			 	instance_destroy();
 			} 
@@ -106,14 +100,10 @@ switch(subState)
 	#region CREATE SAVED DATA (NOT COPY!)
 	case 5:
 		subSelection=clamp(subSelection,0,1);
-		if  input_key_pressed(global.key_right)||input_gp_button_pressed(global.gp_device,global.gp_right)
-				subSelection++;
+		if  input.right_pressed {subSelection++; choicemade=true;}
 				//snd_play(snd_squeak,8,false);
-				choicemade=true;
-		if  input_key_pressed(global.key_left)||input_gp_button_pressed(global.gp_device,global.gp_left)
-				subSelection--;		
+		if  input.left_pressed {subSelection--;	choicemade=true;}
 			//	snd_play(snd_squeak,8,false);
-				choicemade=true;
 		if subSelection != 1 {
 			if  input_key_pressed(global.key_action)||input_gp_button_pressed(global.gp_device,global.gp_action) && subState == 5 && subSelection==0{
 							snd_play(snd_save,8,false);	

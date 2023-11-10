@@ -1,5 +1,5 @@
 if(instance_count>1){
-	instance_destroy(instance_number);	
+    instance_destroy(instance_number);    
 }
 depth=DEPTH_UI
 global.currentroom=room;
@@ -19,9 +19,9 @@ index=spr_heartsmall;
 style=-1;
 #region Are we in light world or dark world?
 if(flag_get(global.flags,"world")==0){
-	style=0;
+    style=0;
 } else if(flag_get(global.flags,"world")==1){
-	style=1;	
+    style=1;    
 }
 #endregion
 subState=-1;
@@ -62,4 +62,6 @@ canscale=false;
 x_shift_allowed=false;
 
 buffer=-1; // Save buffer
+
+target = "cmenu"
 if instance_exists(PLAYER) {PLAYER.image_speed = 0;  PLAYER.active = false;}
