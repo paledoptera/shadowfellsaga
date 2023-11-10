@@ -19,7 +19,6 @@
     {"name":"inst_3A77A1C","path":"rooms/LW_skelekitchen/LW_skelekitchen.yy",},
     {"name":"inst_40B0828A","path":"rooms/LW_skelekitchen/LW_skelekitchen.yy",},
     {"name":"inst_634E0207","path":"rooms/LW_skelekitchen/LW_skelekitchen.yy",},
-    {"name":"inst_796395DE","path":"rooms/LW_skelekitchen/LW_skelekitchen.yy",},
     {"name":"inst_17DD27F8","path":"rooms/LW_skelekitchen/LW_skelekitchen.yy",},
     {"name":"inst_74811403","path":"rooms/LW_skelekitchen/LW_skelekitchen.yy",},
     {"name":"inst_D4CD8ED","path":"rooms/LW_skelekitchen/LW_skelekitchen.yy",},
@@ -43,7 +42,6 @@
     {"name":"inst_4C9146B7","path":"rooms/LW_skelekitchen/LW_skelekitchen.yy",},
     {"name":"inst_14E860D0","path":"rooms/LW_skelekitchen/LW_skelekitchen.yy",},
     {"name":"inst_5672D417","path":"rooms/LW_skelekitchen/LW_skelekitchen.yy",},
-    {"name":"inst_30682E91","path":"rooms/LW_skelekitchen/LW_skelekitchen.yy",},
     {"name":"inst_16DC33BD","path":"rooms/LW_skelekitchen/LW_skelekitchen.yy",},
     {"name":"inst_49DF4B91","path":"rooms/LW_skelekitchen/LW_skelekitchen.yy",},
     {"name":"inst_2E8CC43A","path":"rooms/LW_skelekitchen/LW_skelekitchen.yy",},
@@ -51,9 +49,7 @@
   ],
   "isDnd": false,
   "layers": [
-    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Dialogue","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_796395DE","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"ctrl_debug","path":"objects/ctrl_debug/ctrl_debug.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":-93.0,"y":-71.0,},
-      ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
+    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Dialogue","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Colission","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_52CD610B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"properties":[],"rotation":0.0,"scaleX":2.7641015,"scaleY":0.12252951,"x":170.0,"y":347.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3E101C9A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"properties":[],"rotation":0.0,"scaleX":0.63501114,"scaleY":0.525,"x":88.0,"y":344.0,},
@@ -95,7 +91,6 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4C9146B7","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_ow_interacttriggerb","path":"objects/obj_ow_interacttriggerb/obj_ow_interacttriggerb.yy",},"properties":[],"rotation":0.0,"scaleX":0.8125,"scaleY":2.375,"x":462.0,"y":264.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_14E860D0","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_ow_interacttriggerb","path":"objects/obj_ow_interacttriggerb/obj_ow_interacttriggerb.yy",},"properties":[],"rotation":0.0,"scaleX":2.0,"scaleY":1.0,"x":192.0,"y":192.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5672D417","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_ow_interacttriggerb","path":"objects/obj_ow_interacttriggerb/obj_ow_interacttriggerb.yy",},"properties":[],"rotation":0.0,"scaleX":2.0,"scaleY":4.0,"x":64.0,"y":160.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_30682E91","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"ctrl_music","path":"objects/ctrl_music/ctrl_music.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":-96.0,"y":320.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_16DC33BD","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_kitchen_chair","path":"objects/obj_kitchen_chair/obj_kitchen_chair.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":552.0,"y":246.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"spriteId":{"name":"bkg_skeleton_kitchen","path":"sprites/bkg_skeleton_kitchen/bkg_skeleton_kitchen.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},

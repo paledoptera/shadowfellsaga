@@ -279,25 +279,25 @@ fsm
 					#region CHECK INPUTS AND UPDATE SELECTION
 					switch(optionsAvailable){
 						case 1:
-							if(input_key_pressed(global.key_right)){
+							if(input.right_pressed){
 								selectedAction=number_add(selectedAction,1,1);
 							}
-							if(input_key_pressed(global.key_left)){
+							if(input.left_pressed){
 								selectedAction=number_sub(selectedAction,0,1)
 							}
 						break;
 						case 2:
-							if(input_key_pressed(global.key_right)){
+							if(input.right_pressed){
 								selectedAction=number_add(selectedAction,2,1);
 							}
-							if(input_key_pressed(global.key_left)){
+							if(input.left_pressed){
 								selectedAction=number_sub(selectedAction,0,1)
 							}
 						case 3:
-							if(input_key_pressed(global.key_right)){
+							if(input.right_pressed){
 								selectedAction=number_add(selectedAction,3,1);
 							}
-							if(input_key_pressed(global.key_left)){
+							if(input.left_pressed){
 								selectedAction=number_sub(selectedAction,0,1)
 							}
 						break;
@@ -363,24 +363,24 @@ fsm
 								// "X" "X"    "X"    "X"
 								var boneShotIncrementable=false;
 								if lineX >= 24 && lineX < 26 {
-									if input_key_pressed(global.key_action) {
+									if input.interact_pressed {
 										boneShotIncrementable=true;	// Almost can shoot one bone
 									}
 								}
 								if lineX >= 27 && lineX < 33 {
-									if input_key_pressed(global.key_action) {
+									if input.interact_pressed {
 										if(boneShotIncrementable==true)
 											bonesToShoot+=1;	// Can now shoot one bones
 									}
 								}
 								if lineX >= 94 && lineX < 120 {
-									if input_key_pressed(global.key_action) {
+									if input.interact_pressed {
 										bonesToShoot+=1;	// Can now shoot two bones
 														// * gettin' awfully close to that sweet bonus damage
 									}
 								}
 								if lineX >= 160 && lineX < 180 {
-									if input_key_pressed(global.key_action) {
+									if input.interact_pressed {
 										bonesToShoot+=1;	// Can now shoot two bones
 														// * gettin' awfully close to that sweet bonus damage
 									}
@@ -391,18 +391,18 @@ fsm
 								// "Z"       "Z"   "Z"
 								// "X"		"X"   "X"
 								if lineX>=18 && lineX < 30 {
-									if input_key_pressed(global.key_action) {
+									if input.interact_pressed {
 										bonesToShoot+=1;	// Can now shoot one bone
 									}
 								}
 								if lineX>=107 && lineX < 160 {
-									if input_key_pressed(global.key_action) {
+									if input.interact_pressed {
 										bonesToShoot+=1;	// Can now shoot two bones
 														// * gettin' awfully close to that sweet bonus damage
 									}
 								}
 								if lineX>=170 && lineX < 200 {
-									if input_key_pressed(global.key_action) {
+									if input.interact_pressed {
 										bonesToShoot+=1;	// Sweet, sweet bonus damage, at long last, we have you
 									}
 								}

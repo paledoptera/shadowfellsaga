@@ -1,2 +1,2 @@
 global.canusemenu=true;
-//encounter_start(99)
+encounter_start(99)

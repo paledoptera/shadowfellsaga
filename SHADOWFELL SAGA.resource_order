@@ -2,5 +2,9 @@
   "FolderOrderSettings": [],
   "ResourceOrderSettings": [
     {"name":"bkg_carrionisles_1","order":1,"path":"sprites/bkg_carrionisles_1/bkg_carrionisles_1.yy",},
+    {"name":"port_papy_messedup","order":1,"path":"sprites/port_papy_messedup/port_papy_messedup.yy",},
+    {"name":"port_papy_messedup_happy","order":4,"path":"sprites/port_papy_messedup_happy/port_papy_messedup_happy.yy",},
+    {"name":"port_papy_messedup_sly","order":3,"path":"sprites/port_papy_messedup_sly/port_papy_messedup_sly.yy",},
+    {"name":"port_papy_messedup_displeased","order":2,"path":"sprites/port_papy_messedup_displeased/port_papy_messedup_displeased.yy",},
   ],
 }

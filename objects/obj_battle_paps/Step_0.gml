@@ -1,5 +1,5 @@
 #region JUMP/DODGE INPUT PROCESSING
-var jump = input_key_pressed(global.key_action);
+var jump = input.interact_pressed;
 
 if jump && zSpeed == 0 && canDodge {
 	zSpeed = jumpHeight;	

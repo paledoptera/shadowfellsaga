@@ -1,6 +1,6 @@
 #region Dialogue Data
 #region Lines
-dialogue_0[0,0]=str_set_loc("HMMM...&LET'S SEE...", "COOKING_WITH_PAPYRUS_FIRSTPASS_slash_0_0")
+/*dialogue_0[0,0]=str_set_loc("HMMM...&LET'S SEE...", "COOKING_WITH_PAPYRUS_FIRSTPASS_slash_0_0")
 dialogue_0[1,0] =str_set_loc("'SAUTE THE ONIONS&AND GARLIC UNTIL&THEY SHIMMER WITH-", "COOKING_WITH_PAPYRUS_FIRSTPASS_slash_1_0")
 dialogue_0[2,0] = str_set_loc("A DEEP&... &GOLDEN BROWN...'", "COOKING_WITH_PAPYRUS_FIRSTPASS_slash_2_0")
 // PAUSE ///////////////////////////////////////////
@@ -34,8 +34,7 @@ dialogue_4[7,0] = str_set_loc("AND YOU ARE&DAMAGING&MY STREAK!!!", "COOKING_WITH
 dialogue_4[8,0] = str_set_loc("* knock em dead, bro.", "COOKING_WITH_PAPYRUS_FIRSTPASS_slash_27_0")
 // PAUSE ///////////////////////////////////////////
 dialogue_5[0,0] =str_set_loc("NOW, WHERE WAS I....", "COOKING_WITH_PAPYRUS_FIRSTPASS_slash_28_0")
-#endregion
-
+*/ #endregion
 #region DIALOGUE DATA
 key1 = "COOKING_WITH_PAPYRUS_FIRSTPASS_"
 
@@ -143,10 +142,10 @@ t_scene_info = [
 	[cutscene_wait,0.3],
 	[cutscene_change_variable, obj_ow_player, "animated", false],
 	[cutscene_sprite_index_static,obj_ow_player,spr_paps_lw_cooking2,0],
-	[cutscene_cam_zoom,3,false,20],
+	//[cutscene_cam_zoom,3,false,20],
 	[cutscene_newChat, dialogue_0],
 	[cutscene_wait_for_dialogue],
-	[cutscene_sprite_index_static,obj_ow_player,spr_paps_lw_cooking2,2],
+	/*[cutscene_sprite_index_static,obj_ow_player,spr_paps_lw_cooking2,2],
 	[cutscene_wait,0.8],
 	[cutscene_sprite_index_static,obj_ow_player,spr_paps_lw_cooking2,1],
 	[cutscene_newChat, dialogue_1],
@@ -172,6 +171,11 @@ t_scene_info = [
 	[cutscene_wait,0.5],
 	[cutscene_newChat, dialogue_5],
 	[cutscene_wait_for_dialogue],
+	
+	*/
+		[cutscene_change_variable, obj_ow_player, "animated", true],
+		[cutscene_change_variable, obj_ow_player, "active", true],
+		[cutscene_move_instance, obj_ow_player, 0, 20, true, 3],
 	[cutscene_end]
 ];
 

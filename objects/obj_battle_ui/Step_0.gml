@@ -59,12 +59,12 @@ if(actionType<0){
 				}
 			}
 			if(papyrusTurnReady==true){
-				if(input_key_pressed(global.key_action)){
+				if(input.interact_pressed){
 					fsm.change("choice_solo");
 				}
 			}
 			if(sansTurnReady==true){
-				if(input_key_pressed(global.key_action)){
+				if(input.interact_pressed){
 					fsm.change("choice_solo");
 				}
 			}
