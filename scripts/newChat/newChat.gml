@@ -83,6 +83,15 @@ function newChat(argument0) {
 			else if argument0[i].port = "trousle" {text.portrait[i] = port_chefp_trousle;}
 			else if argument0[i].port = "wacky" {text.portrait[i] = port_chefp_wacky;}
 		}
+		else if _char = "papy_messedup"
+		{
+			text.font[i] = fnt_papyrus;
+			text.talksound[i] = snd_txtpapyrus;
+			if !struct_exists(argument0[i],"port") {text.portrait[i] = port_papy_messedup;}
+			else if argument0[i].port = "displeased" {text.portrait[i] = port_papy_messedup_displeased;}
+			else if argument0[i].port = "happy" {text.portrait[i] = port_papy_messedup_happy;}
+			else if argument0[i].port = "sly" {text.portrait[i] = port_papy_messedup_sly;}
+		}
 		
 		#endregion
 		
