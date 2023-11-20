@@ -23,7 +23,7 @@ if z+zsp > zfloor {zsp = 0; z = zfloor;}
 z += zsp;
 #endregion
 
-#region INTERACTIONS + JUMPING
+#region INTERACTIONS + JUMPING + C MENU
 //setting player mode
 mode = defaultmode;
 with obj_interact_sensor
@@ -35,6 +35,8 @@ if input.interact_pressed
     
     if mode = 1 {instance_create(x,y,obj_interact);} //INTERACTING WITH OBJECTS
 }
+
+//if input.menu_pressed {instance_create(x,y,obj_cmenu_mini)}
 if mode = 0 && (zsp < 0) && (!input.interact) zsp = max(zsp,(-jumpspeed/3)) //HELD JUMP
 #endregion
 
