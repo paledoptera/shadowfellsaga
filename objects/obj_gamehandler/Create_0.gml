@@ -1,4 +1,3 @@
-global.chapter=0;
 global.activeLandmark=-1;
 
 _game_res_scale = 0.72;

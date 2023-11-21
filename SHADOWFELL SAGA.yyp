@@ -1205,6 +1205,7 @@
     {"id":{"name":"ef_fadein_black_slow","path":"objects/ef_fadein_black_slow/ef_fadein_black_slow.yy",},},
     {"id":{"name":"scribble_super_create","path":"scripts/scribble_super_create/scribble_super_create.yy",},},
     {"id":{"name":"cutscene_music_play","path":"scripts/cutscene_music_play/cutscene_music_play.yy",},},
+    {"id":{"name":"spr_input","path":"sprites/spr_input/spr_input.yy",},},
     {"id":{"name":"input_join_params_get","path":"scripts/input_join_params_get/input_join_params_get.yy",},},
     {"id":{"name":"snd_txt","path":"sounds/snd_txt/snd_txt.yy",},},
     {"id":{"name":"spr_gamepad_ps4_small_dpad_right","path":"sprites/spr_gamepad_ps4_small_dpad_right/spr_gamepad_ps4_small_dpad_right.yy",},},
