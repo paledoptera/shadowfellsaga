@@ -17,9 +17,4 @@ execute_tween(id,"_menu_stat_alpha",0,"easeInOut",0.5)
 if instance_exists(PLAYER) {PLAYER.image_speed = 1;  PLAYER.active = true;}
 if instance_exists(FOLLOWER) {FOLLOWER.image_speed = 1;} 
 
-disable=true;
-enable=false;
-cmenuActive = false;
-
-instance_destroy()
-global.canusemenu = true
+killMenu = true;

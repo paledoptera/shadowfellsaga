@@ -8,13 +8,15 @@ if(instance_exists(FOLLOWER)){
 
 display_set_gui_maximize();
 
+if(!instance_exists(input)){
+	instance_create(0,0,input)	
+}
 if(global.canusemenu==true){
 	/*if input.menu and !instance_exists(obj_cmenu) and !instance_exists(obj_cmenu_mini) and global.aspect_ratio == "16:9"
 	{instance_create(0,0,obj_cmenu); input.target="cmenu"}
 	if input.menu and !instance_exists(obj_cmenu) and !instance_exists(obj_cmenu_mini) and global.aspect_ratio == "4:3"
 	{instance_create(0,0,obj_cmenu_mini); input.target="cmenu"}*/
-	if input.menu and !instance_exists(obj_cmenu) {instance_create(0,0,obj_cmenu); input.target="cmenu"}
-	
+	if input.menu_pressed and !instance_exists(obj_cmenu) {instance_create(0,0,obj_cmenu); input.target="cmenu"}
 } 
 
 //if global.camasp == 1 { obj_borderhandler._enabled = false; } else {obj_borderhandler._enabled = true; } 

@@ -1,19 +1,30 @@
+if(instance_count>1){
+	instance_destroy(instance_number);	
+}
 depth=DEPTH_UI
 selection=0;
 cmenuActive=false;
+killMenu = false;
 disable=true;
 enable=false;
 cmenuState= (0 << 0);
 cellAvailable=true;
 selectedItem=0;
 selectedInventory=0;
+equipChar = -1;
 res_length = array_length(global.resolutions);
+global.show_equip_name= false;
 storedText=-4;
 subState=-1;
 subSelection=0;
 optSelection=-1;
 targetSelection=-1;
 charSelection=-1;
+slotSelectionEquip=-1;
+slotSelectionSoulYOffset = 0;
+slotEquippable=-1;
+slotEquippableType = "unassigned";
+slotSel = -1;
 configHubSelection=-1;
 configHubSoulY=142;
 tempState=0;
@@ -23,6 +34,7 @@ optAlpha=1;
 optSoulSY=0;
 optSoulSX=0;
 itemPocketed=-1;
+s_siner = 0;
 
 hpdmg=c_red;
 hpcolor[0]=make_color_rgb(223,113,38)
@@ -60,15 +72,15 @@ _cmenu_fade_out_ready=false;
 
 rebinding_verb = undefined;
 pause = false;
-is_rebinding = false;
+rebind_ready   = false;
 
 res_sel = global.resolution_index;	
 win_label = "Windowed";
-cam_label = "Smooth";
+cam_label = "4:3";
 vfx_label = "Off";
-// DO NOT UNCOMMENT THESE LINES
-// These are commented out variables for later use once the rest of the buttons
-// Are implemented
-//_equipbt_index=0;
-//_taskbt_index=0;
-//_configbt_index;
+
+objectives  = ds_list_create()
+ds_list_add(objectives,"Explore Flavortown")
+ds_list_add(objectives,"Eat sans")
+
+instance_create(0,0,input)

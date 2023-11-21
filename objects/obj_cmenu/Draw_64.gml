@@ -1,6 +1,6 @@
 if(live_call()) return live_result;
 if(!obj_gamehandler.borderEnabled){
-	display_set_gui_size(global.gui_res_w, global.gui_res_h);
+	display_set_gui_size(global.gui_res_w*2, global.gui_res_h*2);
 }  
 draw_sprite_ext(spr_cemnubox,  0 , 640/2, _menu_stat_start_y+7,4,0.9,0,c_white,_menu_opt_alpha);
 draw_sprite_ext(spr_cemnubox,  0 , 640/2, _menu_opt_start_y-18,4,1.01,0,c_white,_menu_stat_alpha);
