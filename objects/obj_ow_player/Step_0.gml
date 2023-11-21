@@ -1,8 +1,8 @@
 #region INPUT
 x_axis = input.right-input.left;
 y_axis = input.down-input.up;
-	
-if input.target == "overworld" {
+if input.target == "overworld" 
+{
 	inputdirection = input_direction(0, "left","right","up","down");
 	inputmagnitude = (x_axis != 0) || (y_axis != 0);
 }
@@ -36,8 +36,9 @@ if input.interact_pressed
     if mode = 1 {instance_create(x,y,obj_interact);} //INTERACTING WITH OBJECTS
 }
 
-//if input.menu_pressed {instance_create(x,y,obj_cmenu_mini)}
+if input.menu_pressed {instance_create(x,y,obj_cmenu)}
 if mode = 0 && (zsp < 0) && (!input.interact) zsp = max(zsp,(-jumpspeed/3)) //HELD JUMP
+
 #endregion
 
 #region SETTING 2.5D PLATFORM COLLISION

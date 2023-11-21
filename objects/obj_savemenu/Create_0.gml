@@ -1,6 +1,6 @@
-if(instance_count>1){
+/*if(instance_count>1){
     instance_destroy(instance_number);    
-}
+}*/
 depth=DEPTH_UI
 global.currentroom=room;
 global.currentarea=flag_get(global.pflags,"area")

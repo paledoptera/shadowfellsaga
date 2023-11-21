@@ -1,6 +1,3 @@
-if(instance_count>1){
-	instance_destroy(instance_number);	
-}
 depth=DEPTH_UI
 selection=0;
 cmenuActive=false;
@@ -82,5 +79,3 @@ vfx_label = "Off";
 objectives  = ds_list_create()
 ds_list_add(objectives,"Explore Flavortown")
 ds_list_add(objectives,"Eat sans")
-
-instance_create(0,0,input)
