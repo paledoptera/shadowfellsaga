@@ -38,4 +38,6 @@ swap2_pressed = 0
 swap2 = 0
 swap2_released = 0
 
+movement_dir = 0
+
 target = 0

@@ -38,4 +38,7 @@ swap2_pressed = input_check_pressed("swap2")
 swap2 = input_check("swap2")
 swap2_released = input_check_released("swap2")
 
+movement_dir = input_direction(0, "left","right","up","down");
+
 target = "overworld";
+if instance_exists(obj_savemenu) {target = "savemenu"}

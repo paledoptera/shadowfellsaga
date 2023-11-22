@@ -23,7 +23,7 @@ function draw_text_transformed_shadow_ext(xx,yy,str,sep,w,sw,xscale,yscale,angle
 	
 	draw_set_font(font);
 	draw_text_ext_transformed_color(
-	xx+4,yy+4,str,sep,w-sw,
+	xx+2,yy+2,str,sep,w-sw,
 	xscale,xscale,angle,color_shadow,
 	color_shadow,color_shadow,color_shadow,
 	alpha);

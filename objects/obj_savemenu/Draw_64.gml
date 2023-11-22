@@ -1971,6 +1971,7 @@ switch(subState){
 				area,
 				0,240,-40,2,2,0,color,_alpha,fnt_main)			
 				ini_close();
+				if quitting = false {quitting = true; alarm[0] = 60; }
 				break;
 			#endregion
 			#region Saved Slot 1
@@ -2003,6 +2004,7 @@ switch(subState){
 				  0,240,-40,2,2,0,color,_alpha,fnt_main)
 				  draw_set_alpha(1);
 				  ini_close();
+					if quitting = false {quitting = true; alarm[0] = 60;}
 			break;
 			#endregion
 			#region Saved Slot 2
@@ -2037,6 +2039,7 @@ switch(subState){
 				0,240,-40,2,2,0,color,_alpha,fnt_main)
 				draw_set_alpha(1);
 							   ini_close();
+				if quitting = false {quitting = true; alarm[0] = 60;}			   
 			break;
 			#endregion
 			

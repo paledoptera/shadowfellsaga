@@ -1,6 +1,3 @@
-/*if(instance_count>1){
-    instance_destroy(instance_number);    
-}*/
 depth=DEPTH_UI
 global.currentroom=room;
 global.currentarea=flag_get(global.pflags,"area")
@@ -62,6 +59,6 @@ canscale=false;
 x_shift_allowed=false;
 
 buffer=-1; // Save buffer
+quitting = false;
 
-target = "cmenu"
 if instance_exists(PLAYER) {PLAYER.image_speed = 0;  PLAYER.active = false;}

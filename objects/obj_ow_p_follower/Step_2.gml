@@ -53,9 +53,9 @@ if !instance_exists(ctrl_cutscene)
 	{
 		if input.cancel_pressed
 		{
-			if PLAYER.mode = 0 {if z = zfloor {zsp = -jumpspeed;}} //JUMPING
+			if PLAYER.interact_mode = 0 {if z = zfloor {zsp = -jumpspeed;}} //JUMPING
 		}
-		if PLAYER.mode = 0 && (zsp < 0) && (!input.cancel) zsp = max(zsp,(-jumpspeed/3)) //HELD JUMP
+		if PLAYER.interact_mode = 0 && (zsp < 0) && (!input.cancel) zsp = max(zsp,(-jumpspeed/3)) //HELD JUMP
 	}
 	
 	//MOVEMENT

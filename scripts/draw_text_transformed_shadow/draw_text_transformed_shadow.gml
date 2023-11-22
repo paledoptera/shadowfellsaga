@@ -18,7 +18,7 @@ function draw_text_transformed_shadow(xx,yy,str,xscale,yscale,angle,color,alpha=
 	
 	draw_set_font(font);
 	draw_text_transformed_color(
-	xx+4,yy+4,str,
+	xx+2,yy+2,str,
 	xscale,yscale,angle,color_shadow,
 	color_shadow,color_shadow,color_shadow,
 	alpha);

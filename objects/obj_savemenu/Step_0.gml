@@ -244,3 +244,6 @@ switch(subState)
 	break;
 	#endregion
 }
+
+
+if quitting = true {if input.interact_pressed or input.cancel_pressed {instance_destroy();}}

@@ -1035,6 +1035,7 @@
     {"id":{"name":"spr_gamepad_xbox_large_A","path":"sprites/spr_gamepad_xbox_large_A/spr_gamepad_xbox_large_A.yy",},},
     {"id":{"name":"port_chefp_confident","path":"sprites/port_chefp_confident/port_chefp_confident.yy",},},
     {"id":{"name":"WATER_TEST","path":"sprites/WATER_TEST/WATER_TEST.yy",},},
+    {"id":{"name":"obj_blank","path":"objects/obj_blank/obj_blank.yy",},},
     {"id":{"name":"gfx_sys_disk0","path":"sprites/gfx_sys_disk0/gfx_sys_disk0.yy",},},
     {"id":{"name":"input_mouse_dx","path":"scripts/input_mouse_dx/input_mouse_dx.yy",},},
     {"id":{"name":"input_player_active_set","path":"scripts/input_player_active_set/input_player_active_set.yy",},},
@@ -1283,6 +1284,7 @@
     {"id":{"name":"__scribble_font_add_msdf_from_project","path":"scripts/__scribble_font_add_msdf_from_project/__scribble_font_add_msdf_from_project.yy",},},
     {"id":{"name":"obj_walltemp_f","path":"objects/obj_walltemp_f/obj_walltemp_f.yy",},},
     {"id":{"name":"player_animate_sprite_half","path":"scripts/player_animate_sprite_half/player_animate_sprite_half.yy",},},
+    {"id":{"name":"rm_blank","path":"rooms/rm_blank/rm_blank.yy",},},
     {"id":{"name":"get_y","path":"scripts/get_y/get_y.yy",},},
     {"id":{"name":"string_combine","path":"scripts/string_combine/string_combine.yy",},},
     {"id":{"name":"dialogue_setup","path":"scripts/dialogue_setup/dialogue_setup.yy",},},
@@ -1548,6 +1550,7 @@
     {"roomId":{"name":"STAGE_GAMEOVER","path":"rooms/STAGE_GAMEOVER/STAGE_GAMEOVER.yy",},},
     {"roomId":{"name":"STAGE_TITLE","path":"rooms/STAGE_TITLE/STAGE_TITLE.yy",},},
     {"roomId":{"name":"DW_carrionisles_2","path":"rooms/DW_carrionisles_2/DW_carrionisles_2.yy",},},
+    {"roomId":{"name":"rm_blank","path":"rooms/rm_blank/rm_blank.yy",},},
   ],
   "templateType": null,
   "TextureGroups": [
