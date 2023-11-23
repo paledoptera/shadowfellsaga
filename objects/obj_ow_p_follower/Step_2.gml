@@ -1,41 +1,34 @@
+if (live_call()) return live_result;
+
 if !instance_exists(ctrl_cutscene)
 {
-	if PLAYER.fol_input_run = 1 
-	//if PLAYER.pos_run[record] = 1 
-	{image_speed = 1.7;}
-	else {image_speed = 1;}
-	
-	//setting target x & y
-	//getting input from player
-	if PLAYER.fol_input_x != 0 and PLAYER.fol_input_y = 0 {lastinput_x = PLAYER.fol_input_x; lastinput_y = 0;}
-	if PLAYER.fol_input_y != 0 and PLAYER.fol_input_x = 0 {lastinput_y = PLAYER.fol_input_y; lastinput_x = 0;}
-	if PLAYER.fol_input_x != 0 and PLAYER.fol_input_y != 0 {lastinput_x = PLAYER.fol_input_x; lastinput_y = PLAYER.fol_input_y;}
-	//setting base target x & y to behind player
-	target_x = PLAYER.x-(lastinput_x*38); target_y = PLAYER.y-(lastinput_y*38);
-	if PLAYER.x != PLAYER.xprevious {target_x = PLAYER.x-(lastinput_x*20); target_y = PLAYER.y}
-	else if PLAYER.y != PLAYER.yprevious {target_y = PLAYER.y-(lastinput_y*20); target_x = PLAYER.x}	
-	if PLAYER.x != PLAYER.xprevious and PLAYER.y != PLAYER.yprevious {target_x = PLAYER.x-(lastinput_x*10); target_y = PLAYER.y-(lastinput_y*10);}
+	record = 10;
+	image_speed = 1;
 
+	//setting base target x & y to behind player
+	target_x = PLAYER.fol_pos_x[record]; target_y = PLAYER.fol_pos_y[record]; target_z = PLAYER.fol_pos_z[record];
 	//MATH SHIT
-	var xx = x
-	var yy = y
-	xx += (target_x-x)/5;
-	yy += (target_y-y)/5;
+	if target_z = z or target_z < z
+	{
+		x = target_x
+		y = target_y	
+	}
+
+	
+	
+	/*xx += (target_x-x)/2
+	yy += (target_y-y)/2
 	
 	xx = round(xx);
 	yy = round(yy);
 	
-	var mvspeed = movespeed;
-	if PLAYER.fol_input_run != 0 {mvspeed = mvspeed *1.5}
-	
-	hsp = approach(0, xx-x, mvspeed);
-	vsp = approach(0,yy-y,mvspeed);
+	hsp = approach(0, xx-x, movespeed);
+	vsp = approach(0, yy-y, movespeed);
 	
 	hsp = round(hsp);
 	vsp = round(vsp);
-
 	x = round(x);
-	y = round(y);
+	y = round(y);*/
 	
 	move_and_collide(hsp,vsp,obj_wall_f,20);
 
@@ -53,9 +46,8 @@ if !instance_exists(ctrl_cutscene)
 	{
 		if input.cancel_pressed
 		{
-			if PLAYER.interact_mode = 0 {if z = zfloor {zsp = -jumpspeed;}} //JUMPING
+			if PLAYER.interact_mode = 0 {if z = zfloor {zsp = -jumpspeed;  audio_play_sound(snd_txtsans,1,false,0.5);}} //JUMPING
 		}
-		if PLAYER.interact_mode = 0 && (zsp < 0) && (!input.cancel) zsp = max(zsp,(-jumpspeed/3)) //HELD JUMP
 	}
 	
 	//MOVEMENT
@@ -87,6 +79,9 @@ if !instance_exists(ctrl_cutscene)
 	}
 	
 	else {sprite_index = sprite_idle;}
+	
+
+	if z != zfloor {sprite_index = sprite_jump;}
 	
 	
 	if (_old_sprite != sprite_index) local_frame = 0;

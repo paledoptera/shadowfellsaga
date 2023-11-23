@@ -20,8 +20,8 @@ hsp = 0;
 vsp = 0;
 zsp = 0;
 movespeed = 4;
-jumpspeed = 13.5;
-grav = 0.9;
+jumpspeed = 12;
+grav = 0.91;
 z = 0;
 zheight = -sprite_height / 2;
 zfloor = 0;
@@ -31,9 +31,16 @@ inputmagnitude = 0;
 state = -1;
 
 //----FOLLOWER INPUT----
-fol_input_x = 0;
-fol_input_y = 0;
-fol_input_run = 0;
+fol_array_size = 30;
+for (var i = fol_array_size-1; i >= 0; i--)
+{
+	fol_pos_x[i] = x;
+	fol_pos_y[i] = y;
+	fol_pos_z[i] = z;	
+}
+//fol_input_x = 0;
+//fol_input_y = 0;
+//fol_input_run = 0;
 
 //----GLOBAL POSITION----
 global.pX=0;

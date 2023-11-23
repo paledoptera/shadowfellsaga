@@ -15,7 +15,7 @@ dialogue_port5[0] = port_ferry_angry
 
 
 scene_info = [
-	[cutscene_sprite_index_static,obj_ow_p_follower,spr_sans_ow_idle,5],
+	[cutscene_sprite_index_static,obj_ow_p_follower,spr_sans_ow_jump,5],
 	[cutscene_sprite_index_static,obj_ow_player,spr_paps_ow_idle,5],
 	[cutscene_move_instances_2,obj_ow_player,1020,530,false,13,obj_ow_p_follower,969,464,false,13],
 	[cutscene_wait, 0.5],

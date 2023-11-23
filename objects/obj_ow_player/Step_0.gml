@@ -11,7 +11,6 @@ active = function()
 	{
 		x_axis = input.right-input.left;
 		y_axis = input.down-input.up;
-		var run = input.run;
 		var movement_dir = input.movement_dir
 		var interact = input.interact_pressed
 		
@@ -21,7 +20,6 @@ active = function()
 	{
 		x_axis = 0;
 		y_axis = 0;
-		var run = 0;
 		var movement_dir = 0;
 		var interact = 0;
 		inputmagnitude = 0;
@@ -30,11 +28,8 @@ active = function()
 
 	#region MOVEMENT
 	//SPEED
-	var mvspeed = movespeed
-	if run {image_speed = 1.6; mvspeed = movespeed*1.5} else {image_speed = 1;}
-
-	hsp = lengthdir_x(inputmagnitude * mvspeed, movement_dir);
-	vsp = lengthdir_y(inputmagnitude * mvspeed, movement_dir);
+	hsp = lengthdir_x(inputmagnitude * movespeed, movement_dir);
+	vsp = lengthdir_y(inputmagnitude * movespeed, movement_dir);
 
 	//Z AXIS
 	if zsp < 20 {zsp += grav;}
@@ -51,7 +46,7 @@ active = function()
 
 	if interact
 	{
-		if interact_mode = 0 {if z = zfloor {zsp = -jumpspeed;}} //JUMPING
+		if interact_mode = 0 {if z = zfloor {zsp = -jumpspeed; audio_play_sound(snd_txtpapyrus,1,false,0.5);}} //JUMPING
 		if interact_mode = 1 {instance_create(x,y,obj_interact);} //INTERACTING WITH OBJECTS
 	}
 
@@ -116,7 +111,7 @@ active = function()
 
 	#region SETTING FOLLOWER 2.5D PLATFORM COLLISION
 	//checking if follower can go up to obj_wallh1
-	if instance_exists(FOLLOWER) and distance_to_point(FOLLOWER.x,y) > 35
+	if instance_exists(FOLLOWER) and fol_pos.z[FOLLOWER.record] > FOLLOWER.z
 	{
 		if FOLLOWER.x < PLAYER.x and hsp > 0 {hsp = 0}
 		if FOLLOWER.x > PLAYER.x and hsp < 0 {hsp = 0}
@@ -125,6 +120,7 @@ active = function()
 	{
 		if FOLLOWER.y < PLAYER.y and vsp > 0 {vsp = 0}
 		if FOLLOWER.y > PLAYER.y and vsp < 0 {vsp = 0}
+	}
 	}
 
 	with FOLLOWER
@@ -151,9 +147,15 @@ active = function()
 	//EXECUTING MOVEMENT FOR FOLLOWER
 	if (x!= xprevious or y!= yprevious)
 	{
-		fol_input_x = x_axis;
-		fol_input_y = y_axis;
-		fol_input_run = input.run;
+		for (var i = fol_array_size-1; i>0;i--)
+		{
+			fol_pos_x[i] = fol_pos_x[i-1];
+			fol_pos_y[i] = fol_pos_y[i-1];
+			fol_pos_z[i] = fol_pos_z[i-1];			
+		}
+		fol_pos_x[0] = x;
+		fol_pos_y[0] = y;
+		fol_pos_z[0] = z;
 	}
 
 	#region ANIMATION
