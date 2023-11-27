@@ -19,13 +19,14 @@ ui_opacity = 0;
 hsp = 0;
 vsp = 0;
 zsp = 0;
-movespeed = 4;
-jumpspeed = 12;
-grav = 0.91;
+movespeed = 5;
+jumpspeed = 13;
+grav = 0.95;
 z = 0;
 zheight = -sprite_height / 2;
 zfloor = 0;
 inputmagnitude = 0;
+spawned = false;
 
 //----PLAYER STATE----
 state = -1;

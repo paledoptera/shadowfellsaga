@@ -1,5 +1,3 @@
-if (live_call()) return live_result;
-
 if keyboard_check(vk_f12)
 {
 	surface_save(application_surface, "screenshot_window.png")

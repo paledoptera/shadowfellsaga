@@ -1,5 +1,3 @@
-if (live_call()) return live_result;
-
 //SETTING BORDER SIZE
 if(!obj_gamehandler.borderEnabled) {display_set_gui_size(global.gui_res_w, global.gui_res_h);}  
 

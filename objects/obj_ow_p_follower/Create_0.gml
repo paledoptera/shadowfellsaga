@@ -1,8 +1,6 @@
-record = 9;
-
+if (live_call()) return live_result;
+record = 7;
 imgspd = 1;
-
-movespeed = 4;
 
 target_x = x;
 target_y = y;

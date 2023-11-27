@@ -1,5 +1,3 @@
-if (live_call()) return live_result;
-
 drawx = x;
 drawy = y+6+zfloor;
 

@@ -1,5 +1,3 @@
-if (live_call()) return live_result;
-
 if state = active {if shadowalpha < 1 {shadowalpha += 0.05}}
 else if shadowalpha > 0 {shadowalpha -= 0.05}
 
