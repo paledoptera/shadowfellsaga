@@ -45,7 +45,7 @@ shaking = true; // Is the camera shaking?
 // end shake variables
 
 //resize window & application surface
-if(!obj_gamehandler.borderEnabled){
+if(!ctrl_global.borderEnabled){
 	window_set_size(global.resolution_current.w * RES_SCALE, global.resolution_current.h * RES_SCALE);
 } 
 surface_resize(application_surface, global.window_res_w * RES_SCALE, global.window_res_h * RES_SCALE);

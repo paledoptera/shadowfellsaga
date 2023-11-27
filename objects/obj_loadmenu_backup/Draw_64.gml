@@ -2,7 +2,7 @@ draw_set_alpha(_bg_alpha/2)
 draw_set_color(c_black);
 draw_rectangle(x,y,RES_W*RES_SCALE,RES_H*RES_SCALE,false)
 
-if(!obj_gamehandler.borderEnabled){
+if(!ctrl_global.borderEnabled){
 	display_set_gui_size(640,480)	
 }
 

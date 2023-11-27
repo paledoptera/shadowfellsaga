@@ -1,6 +1,3 @@
-if instance_exists(PLAYER) {PLAYER.image_speed = 0;  PLAYER.active = false;}
-if instance_exists(FOLLOWER) {FOLLOWER.image_speed = 0}
-
 switch(subState)
 {
 	#region FADE MENU IN

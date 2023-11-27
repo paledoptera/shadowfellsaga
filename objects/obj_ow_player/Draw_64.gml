@@ -1,5 +1,5 @@
 //SETTING BORDER SIZE
-if(!obj_gamehandler.borderEnabled) {display_set_gui_size(global.gui_res_w, global.gui_res_h);}  
+if(!ctrl_global.borderEnabled) {display_set_gui_size(global.gui_res_w, global.gui_res_h);}  
 
 // !!! UI IS ONLY VISIBLE IN DARK WORLD !!!
 world_flag = flag_get(global.flags,"world")
@@ -23,7 +23,8 @@ if world_flag = 1
 	
 	//little jump animation for the jump arrows
 	var jumpmultiplier = (zfloor-z)/10
-	var jumpmultiplier2 = (FOLLOWER.zfloor-FOLLOWER.z)/10
+	if instance_exists(FOLLOWER) var jumpmultiplier2 = (FOLLOWER.zfloor-FOLLOWER.z)/10
+	else var jumpmultiplier2 = 0;
 	if jumpmultiplier > 2 {jumpmultiplier = 2}
 	if jumpmultiplier2 > 2 {jumpmultiplier2 = 2}
 		

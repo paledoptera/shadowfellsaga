@@ -19,7 +19,7 @@ target_h = 360;
 
 
 //resize window & application surface
-if(!obj_gamehandler.borderEnabled){
+if(!ctrl_global.borderEnabled){
 	window_set_size(global.resolution_current.w * RES_SCALE, global.resolution_current.h * RES_SCALE);
 } else {
 	window_set_size(global.resolution_current.w*2*RES_SCALE,global.resolution_current.w*2*RES_SCALE);	

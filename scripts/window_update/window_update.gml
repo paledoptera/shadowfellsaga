@@ -8,7 +8,7 @@ function window_update(){
         if (!window_get_fullscreen())
         {
             if (os_type == os_linux && (!global.window_init))
-				obj_gamehandler.alarm[1] = 30
+				ctrl_global.alarm[1] = 30
             else
                 window_set_fullscreen(true)
         }
@@ -80,7 +80,7 @@ function window_update(){
     }
 
     if recenter
-        obj_gamehandler.alarm[0] = 2
+        ctrl_global.alarm[0] = 2
     return;
 }
 

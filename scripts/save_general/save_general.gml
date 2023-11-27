@@ -3,8 +3,8 @@
 // Does not take any arguments
 function save_general(slot){
 	var savroom;
-	obj_gamehandler.drawnseconds = obj_gamehandler.seconds
-	obj_gamehandler.drawnminutes = obj_gamehandler.minutes
+	ctrl_global.drawnseconds = ctrl_global.seconds
+	ctrl_global.drawnminutes = ctrl_global.minutes
 	ini_open("sfsaga.ini");
 	savroom=global.currentroom;
 	global.loadroom=savroom;
@@ -30,11 +30,11 @@ function save_general(slot){
 					ini_write_string("Party-SL0", "Name1",global.partynames[1]) 
 					ini_write_string("Party-SL0", "Name2",global.partynames[2]) 
 					ini_write_string("World-SL0", "roomname",party_get_room_name(savroom));
-					ini_write_real("World-SL0","SP",obj_gamehandler.ticks)	
-					ini_write_real("World-SL0","MN",obj_gamehandler.minutes)
-					ini_write_real("World-SL0","SC",obj_gamehandler.seconds)
-					ini_write_real("World-SL0","MN2",obj_gamehandler.drawmninutes)
-					ini_write_real("World-SL0","SC2",obj_gamehandler.drawnseconds)
+					ini_write_real("World-SL0","SP",ctrl_global.ticks)	
+					ini_write_real("World-SL0","MN",ctrl_global.minutes)
+					ini_write_real("World-SL0","SC",ctrl_global.seconds)
+					ini_write_real("World-SL0","MN2",ctrl_global.drawmninutes)
+					ini_write_real("World-SL0","SC2",ctrl_global.drawnseconds)
 					#endregion
 		break;
 		case 1:
@@ -58,11 +58,11 @@ function save_general(slot){
 					ini_write_string("Party-SL1", "Name1",global.partynames[1]) 
 					ini_write_string("Party-SL1", "Name2",global.partynames[2]) 
 					ini_write_string("World-SL1", "roomname",party_get_room_name(savroom));
-					ini_write_real("World-SL1","SP",obj_gamehandler.ticks)	
-					ini_write_real("World-SL1","MN",obj_gamehandler.minutes)
-					ini_write_real("World-SL1","SC",obj_gamehandler.seconds)
-					ini_write_real("World-SL1","MN2",obj_gamehandler.drawmninutes)
-					ini_write_real("World-SL1","SC2",obj_gamehandler.drawnseconds)
+					ini_write_real("World-SL1","SP",ctrl_global.ticks)	
+					ini_write_real("World-SL1","MN",ctrl_global.minutes)
+					ini_write_real("World-SL1","SC",ctrl_global.seconds)
+					ini_write_real("World-SL1","MN2",ctrl_global.drawmninutes)
+					ini_write_real("World-SL1","SC2",ctrl_global.drawnseconds)
 					#endregion
 		break;
 		case 2:
@@ -86,11 +86,11 @@ function save_general(slot){
 						ini_write_string("Party-SL2", "Name1",global.partynames[1]) 
 						ini_write_string("Party-SL2", "Name2",global.partynames[2]) 
 						ini_write_string("World-SL2", "roomname",party_get_room_name(savroom));
-						ini_write_real("World-SL2","SP",obj_gamehandler.ticks)	
-						ini_write_real("World-SL2","MN",obj_gamehandler.minutes)
-						ini_write_real("World-SL2","SC",obj_gamehandler.seconds)
-						ini_write_real("World-SL2","MN2",obj_gamehandler.drawmninutes)
-						ini_write_real("World-SL2","SC2",obj_gamehandler.drawnseconds)
+						ini_write_real("World-SL2","SP",ctrl_global.ticks)	
+						ini_write_real("World-SL2","MN",ctrl_global.minutes)
+						ini_write_real("World-SL2","SC",ctrl_global.seconds)
+						ini_write_real("World-SL2","MN2",ctrl_global.drawmninutes)
+						ini_write_real("World-SL2","SC2",ctrl_global.drawnseconds)
 						#endregion
 		break;
 	}

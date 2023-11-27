@@ -19,8 +19,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "UTILITY",
-    "path": "folders/Objects/UTILITY.yy",
+    "name": "CONTROLLERS",
+    "path": "folders/Objects/UTILITY/CONTROLLERS.yy",
   },
   "parentObjectId": null,
   "persistent": true,

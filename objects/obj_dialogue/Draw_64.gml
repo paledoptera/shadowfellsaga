@@ -7,7 +7,7 @@ if ran_creation_runcode = false
 }
 
 //Gui maximise
-if(!obj_gamehandler.borderEnabled){
+if(!ctrl_global.borderEnabled){
 	display_set_gui_size(640,480);
 }
 

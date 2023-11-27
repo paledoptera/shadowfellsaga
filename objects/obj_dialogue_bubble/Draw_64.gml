@@ -1,7 +1,7 @@
 /// @description Text
 
 //Gui maximise
-if(!obj_gamehandler.borderEnabled){
+if(!ctrl_global.borderEnabled){
 	display_set_gui_size(global.gui_res_w,global.gui_res_h);
 }
 

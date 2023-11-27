@@ -29,11 +29,11 @@ function load_general(){
 		#endregion
 		
 		#region World Data
-		obj_gamehandler.ticks			= ini_read_real("World-SL0","SP",0)
-		obj_gamehandler.minutes	 =ini_read_real("World-SL0","MN",0)
-		obj_gamehandler.seconds    =ini_read_real("World-SL0","SC",0)
-		obj_gamehandler.drawnminutes = ini_read_real("World-SL0","MN2",0)
-		obj_gamehandler.drawnseconds = ini_read_real("World-SL0","SC2",0)
+		ctrl_global.ticks			= ini_read_real("World-SL0","SP",0)
+		ctrl_global.minutes	 =ini_read_real("World-SL0","MN",0)
+		ctrl_global.seconds    =ini_read_real("World-SL0","SC",0)
+		ctrl_global.drawnminutes = ini_read_real("World-SL0","MN2",0)
+		ctrl_global.drawnseconds = ini_read_real("World-SL0","SC2",0)
 		#endregion
 		#endregion
 		#region Slot 1
@@ -61,11 +61,11 @@ function load_general(){
 		#endregion
 		
 		#region World Data
-		obj_gamehandler.ticks			= ini_read_real("World-SL1","SP",0)
-		obj_gamehandler.minutes	 =ini_read_real("World-SL1","MN",0)
-		obj_gamehandler.seconds    =ini_read_real("World-SL1","SC",0)
-		obj_gamehandler.drawnminutes = ini_read_real("World-SL1","MN2",0)
-		obj_gamehandler.drawnseconds = ini_read_real("World-SL1","SC2",0)
+		ctrl_global.ticks			= ini_read_real("World-SL1","SP",0)
+		ctrl_global.minutes	 =ini_read_real("World-SL1","MN",0)
+		ctrl_global.seconds    =ini_read_real("World-SL1","SC",0)
+		ctrl_global.drawnminutes = ini_read_real("World-SL1","MN2",0)
+		ctrl_global.drawnseconds = ini_read_real("World-SL1","SC2",0)
 		#endregion
 		#endregion
 		#region Slot 2
@@ -93,11 +93,11 @@ function load_general(){
 		#endregion
 		
 		#region World Data
-		obj_gamehandler.ticks			= ini_read_real("World-SL2","SP",0)
-		obj_gamehandler.minutes	 =ini_read_real("World-SL2","MN",0)
-		obj_gamehandler.seconds    =ini_read_real("World-SL2","SC",0)
-		obj_gamehandler.drawnminutes = ini_read_real("World-SL2","MN2",0)
-		obj_gamehandler.drawnseconds = ini_read_real("World-SL2","SC2",0)
+		ctrl_global.ticks			= ini_read_real("World-SL2","SP",0)
+		ctrl_global.minutes	 =ini_read_real("World-SL2","MN",0)
+		ctrl_global.seconds    =ini_read_real("World-SL2","SC",0)
+		ctrl_global.drawnminutes = ini_read_real("World-SL2","MN2",0)
+		ctrl_global.drawnseconds = ini_read_real("World-SL2","SC2",0)
 		#endregion
 		#endregion
 		ini_close();

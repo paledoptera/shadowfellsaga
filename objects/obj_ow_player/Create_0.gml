@@ -29,7 +29,8 @@ inputmagnitude = 0;
 spawned = false;
 
 //----PLAYER STATE----
-state = -1;
+state = "active";
+
 
 //----FOLLOWER INPUT----
 fol_array_size = 30;

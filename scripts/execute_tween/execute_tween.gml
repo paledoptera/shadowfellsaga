@@ -13,7 +13,7 @@
 /// @arg delay - Set a delay before tween begins
 function execute_tween(instance, variable, targetValue, curveSubName = "linear", seconds = 1, relative = false, delay = 0){
 	// Set the values
-	with (instance_create_depth(0, 0, 0, obj_tweenhandler)) {
+	with (instance_create_depth(0, 0, 0, handler_tween)) {
 		curveTimer = 0;
 		curveName = curveSubName;
 		targetInstance = instance;

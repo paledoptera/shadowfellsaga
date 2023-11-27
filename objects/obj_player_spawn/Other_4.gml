@@ -3,15 +3,8 @@ PLAYER.x = x;
 PLAYER.y = y;
 }
 
-FOLLOWER.x = x;
-FOLLOWER.y = y;
-
-with PLAYER
+if instance_exists(FOLLOWER)
 {
-	for(i = 50; i >=0; i--)
-	{
-		pos_x[i] = x;
-		pos_y[i] = y;
-		pos_run[i] = 0;
-	}
+	FOLLOWER.x = x;
+	FOLLOWER.y = y;
 }

@@ -91,6 +91,7 @@ function newChat(argument0) {
 			else if argument0[i].port = "displeased" {text.portrait[i] = port_papy_messedup_displeased;}
 			else if argument0[i].port = "happy" {text.portrait[i] = port_papy_messedup_happy;}
 			else if argument0[i].port = "sly" {text.portrait[i] = port_papy_messedup_sly;}
+			else if argument0[i].port = "goofycry" {text.portrait[i] = port_papy_messedup_goofycry;}	
 		}
 		
 		#endregion

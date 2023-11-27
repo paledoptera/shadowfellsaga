@@ -9,13 +9,13 @@ function cutscene_sprite_create(){
 ///@arg anim_speed
 ///@arg animation_loops?
 
-with obj_ow_object_temp
+with obj_cutscene_prop
 {
 	if x = argument0 and y = argument1 {instance_destroy();}
 }
 
 
-var inst = instance_create_layer(argument0, argument1, argument2, obj_ow_object_temp)
+var inst = instance_create_layer(argument0, argument1, argument2, obj_cutscene_prop)
 inst.sprite_index = argument3;
 inst.image_index_start = argument4;
 inst.image_index_end = argument5;

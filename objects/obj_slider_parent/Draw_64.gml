@@ -1,5 +1,5 @@
 /// @description Draw the slider
-if(!obj_gamehandler.borderEnabled){
+if(!ctrl_global.borderEnabled){
 	display_set_gui_size(856, 480);
 }  
 draw_self();

@@ -6,7 +6,7 @@ if timer > 13 {fade = 0.3;}
 if timer > 15 {fade = 0.1;}
 if timer > 17 {instance_destroy();}
 
-if(!obj_gamehandler.borderEnabled){
+if(!ctrl_global.borderEnabled){
 	display_set_gui_size(640,480)	
 }
 

@@ -1,23 +1,8 @@
-if (live_call()) return live_result;
-
 // --------ACTIVE STATE: used for basic overworld gameplay.
 // - the bulk of the code is in here
 // - input is also in here, but is only checked if interact.target is overworld.
 //   this is in cases like opening the c menu or savemenu, where you don't necassarily want the player
 //   to be in an inactive state, but just to be unable to use controls.
-
-
-if spawned = false
-{
-	//CORRECTING FOLLOWER SPAWN POSITION
-	for (var i = fol_array_size-1; i >= 0; i--)
-	{
-		fol_pos_x[i] = x;
-		fol_pos_y[i] = y;
-		fol_pos_z[i] = z;	
-	}
-	spawned = true
-}
 
 active = function()
 {
@@ -29,6 +14,7 @@ active = function()
 		y_axis = input.down-input.up;
 		var movement_dir = input.movement_dir
 		var interact = input.interact_pressed
+		var thought = input.thought_pressed
 		
 		inputmagnitude = (x_axis != 0) || (y_axis != 0);
 	}
@@ -38,6 +24,7 @@ active = function()
 		y_axis = 0;
 		var movement_dir = 0;
 		var interact = 0;
+		var thought = 0;
 		inputmagnitude = 0;
 	}
 	#endregion
@@ -54,17 +41,19 @@ active = function()
 	z += zsp;
 	#endregion
 
-	#region INTERACTIONS + JUMPING + C MENU
+	#region INTERACTIONS + JUMPING + MENU
 	//setting player mode
 	interact_mode = interact_defaultmode;
 	with obj_interact_sensor
 	{if place_meeting(x,y,obj_ow_interacttrigger) or place_meeting(x,y,obj_ow_interacttriggerb) or place_meeting(x,y,obj_savelamp){PLAYER.interact_mode = 1; alpha = 1} else {alpha = 0.3;}}
-
+	//interacting + jumping (papyrus)
 	if interact
 	{
 		if interact_mode = 0 {if z = zfloor {zsp = -jumpspeed; audio_play_sound(snd_txtpapyrus,1,false,0.5);}} //JUMPING
 		if interact_mode = 1 {instance_create(x,y,obj_interact);} //INTERACTING WITH OBJECTS
 	}
+	//full party jump
+	if thought and z = zfloor and FOLLOWER.z = FOLLOWER.zfloor {zsp = -jumpspeed; FOLLOWER.zsp = -jumpspeed; audio_play_sound(snd_txtpapyrus,1,false,0.5); audio_play_sound(snd_txtsans,1,false,0.5);}
 
 	if input.menu_pressed {instance_create(x,y,obj_cmenu)}
 	#endregion
@@ -275,12 +264,31 @@ inactive = function()
 	//do nothing
 }
 
+//SPAWNING PLAYER
+if spawned = false
+{
+	//CORRECTING FOLLOWER SPAWN POSITION
+	for (var i = fol_array_size-1; i >= 0; i--)
+	{
+		fol_pos_x[i] = x;
+		fol_pos_y[i] = y;
+		fol_pos_z[i] = z;	
+	}
+	spawned = true
+}
 
-if !instance_exists(ctrl_cutscene) state = active;
-if instance_exists(obj_savemenu) state = cutscene_actor;
+
+//DECIPHERING STATE
+if instance_exists(obj_savemenu) or instance_exists(obj_cmenu) state = "cutscene_actor";
+if state = "active" state = active;
+if state = "inactive" state = inactive;
+if state = "cutscene_actor" state = cutscene_actor;
+//
+
 
 state(); //executing the state
 //choosing the state is done by other objects, but active is the default.
+
 
 //SETTING DEPTH
 //this is important regardless of state

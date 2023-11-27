@@ -12,8 +12,8 @@
   "managed": false,
   "overriddenProperties": [],
   "parent": {
-    "name": "UTILITY",
-    "path": "folders/Objects/UTILITY.yy",
+    "name": "CONTROLLERS",
+    "path": "folders/Objects/UTILITY/CONTROLLERS.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -32,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_ctrl_music",
-    "path": "sprites/spr_ctrl_music/spr_ctrl_music.yy",
+    "name": "spr_ctrl_battle",
+    "path": "sprites/spr_ctrl_battle/spr_ctrl_battle.yy",
   },
   "spriteMaskId": null,
   "visible": false,

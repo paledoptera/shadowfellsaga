@@ -9,8 +9,8 @@
 #macro PLAYER obj_ow_player
 #macro FOLLOWER obj_ow_p_follower
 #macro WALL obj_wall
-#macro BORDER obj_borderhandler
-#macro GAME obj_gamehandler
+#macro BORDER handler_border
+#macro GAME ctrl_global
 
 #macro BTUI    obj_battle_ui
 #macro FIGHT obj_battle_fight_button

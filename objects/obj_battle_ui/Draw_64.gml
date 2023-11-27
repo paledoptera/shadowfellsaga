@@ -1,5 +1,5 @@
 if(live_call()) return live_result;
-if(!obj_gamehandler.borderEnabled){
+if(!ctrl_global.borderEnabled){
 	display_set_gui_size(global.gui_res_w,global.gui_res_h);
 }
 //draw_sprite_ext(spr_battlesect,  0 , 641/2, 445,2.22,1.5,0,c_white,1);

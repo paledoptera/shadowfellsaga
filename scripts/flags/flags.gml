@@ -24,6 +24,12 @@ function flags_init(argument0){
 		ds_map_set(global.pflags,"item6",-1);
 		ds_map_set(global.pflags,"item7",-1);
 		ds_map_set(global.pflags,"item8",-1);
+		if argument0==true
+			global.cflags	=	ds_map_create();
+		ds_map_set(global.cflags, "wildcliffs_intro",-1);
+		ds_map_set(global.cflags, "papyrus_jump_enabled",-1);
+		ds_map_set(global.cflags, "sans_acquired",-1);
+		ds_map_set(global.cflags, "sans_jump_enabled",-1);
 }
 
 // Sets a flag

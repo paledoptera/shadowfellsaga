@@ -5,7 +5,7 @@ if timer > 10 {fade = 0.5;}
 if timer > 13 {fade = 0.8;}
 if timer > 15 {fade = 1;}
 
-if(!obj_gamehandler.borderEnabled){
+if(!ctrl_global.borderEnabled){
 	display_set_gui_size(640,480)	
 }
 

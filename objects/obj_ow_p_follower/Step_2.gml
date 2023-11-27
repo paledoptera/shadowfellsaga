@@ -1,5 +1,3 @@
-if (live_call()) return live_result;
-
 if !instance_exists(ctrl_cutscene)
 {
 	image_speed = 1;
@@ -36,18 +34,9 @@ if !instance_exists(ctrl_cutscene)
 		}
 	}
 	
-	var inputmagnitude = 0;
-
-	if round(x) != round(xprevious) or round(y) != round(yprevious) 
-	{
-		inputmagnitude = 1;
-
-	}
-	//if zsp != 0 {inputmagnitude = 1;}
-
 	var _old_sprite = sprite_index;
 	
-	if (inputmagnitude != 0)
+	if (PLAYER.inputmagnitude != 0)
 	{
 		direction = point_direction(x,y,obj_ow_player.x,obj_ow_player.y);
 		sprite_index = sprite_run;

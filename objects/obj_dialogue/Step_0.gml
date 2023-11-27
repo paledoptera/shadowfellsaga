@@ -6,4 +6,4 @@ if (done)
 	instance_destroy();
 }
 
-_input = pressed("action");
+_input = input.interact_pressed;

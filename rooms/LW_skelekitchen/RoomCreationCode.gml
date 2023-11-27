@@ -131,7 +131,7 @@ t_scene_info = [
 	[cutscene_move_camera, 640/2, 480/2, false, 3],
 	[cutscene_wait,1.1],
 	[cutscene_move_instance, obj_ow_player, 0, -1, true, 999],
-	[cutscene_replace_instance_nearest, obj_ow_object_temp, obj_ow_player, 225, 280],
+	[cutscene_replace_instance_nearest, obj_cutscene_prop, obj_ow_player, 225, 280],
 	[cutscene_move_instance, obj_ow_player, 0, -16, true, 4],
 	[cutscene_wait,0.3],
 	[cutscene_instance_create, 210, 194, "Instances", obj_kitchen_pan],

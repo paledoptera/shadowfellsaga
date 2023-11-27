@@ -26,7 +26,7 @@ function VibrateExtended() {
 		
 	VibrateStop(_device); //override any previous vibration
 	
-	with (instance_create_depth(0, 0, 0, obj_vibrationhandler))
+	with (instance_create_depth(0, 0, 0, handler_vibration))
 	{				
 		strengthL = _strengthL;
 		strengthR = _strengthR;
@@ -72,7 +72,7 @@ function VibrateExtended() {
 /// @param [device]
 function VibrateStop() {
     var _device = ((argument_count > 0) && (argument[0] != undefined))? argument[0] : 0;
-	with (obj_vibrationhandler)
+	with (handler_vibration)
 	{
 		if (device == _device)
 			instance_destroy(id);

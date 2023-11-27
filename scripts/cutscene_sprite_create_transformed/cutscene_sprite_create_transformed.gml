@@ -10,7 +10,7 @@ function cutscene_sprite_create_transformed(){
 ///@arg image_xscale
 ///@arg image_yscale
 
-var inst = instance_create_layer(argument0, argument1, argument2, obj_ow_object_temp)
+var inst = instance_create_layer(argument0, argument1, argument2, obj_cutscene_prop)
 inst.sprite_index = argument3;
 inst.image_index = argument4;
 inst.image_speed = argument5;

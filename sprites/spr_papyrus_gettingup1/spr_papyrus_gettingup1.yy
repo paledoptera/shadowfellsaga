@@ -61,8 +61,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "CHAR_SKELEBROS",
-    "path": "folders/Sprites/CHAR_SKELEBROS.yy",
+    "name": "2 - Flavortown",
+    "path": "folders/Sprites/CUTSCENE PROPS/2 - Flavortown.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

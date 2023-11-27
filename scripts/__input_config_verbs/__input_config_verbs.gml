@@ -13,21 +13,20 @@ return {
     
     keyboard_and_mouse:
     {
-        up:   [input_binding_key(vk_up),input_binding_key(vk_numpad8)],
-        down:  [input_binding_key(vk_down),input_binding_key(vk_numpad2)],
-        left:  [input_binding_key(vk_left),input_binding_key(vk_numpad4)],
-        right: [input_binding_key(vk_right),input_binding_key(vk_numpad6)],
-		
-		run: input_binding_key(vk_shift),
-		
-		pause: input_binding_key(vk_backspace), // Used solely to cancel rebinding
+        up:   input_binding_key(vk_up),
+        down:  input_binding_key(vk_down),
+        left:  input_binding_key(vk_left),
+        right: input_binding_key(vk_right),
         
-		action:  [input_binding_key("Z"),input_binding_key(vk_enter)],
+		interact:  input_binding_key("Z"),
         cancel:  input_binding_key("X"),
-        menu: [input_binding_key("C"),input_binding_key(vk_control)],
+		forward: input_binding_key("A"),
+		thought: input_binding_key("S"),
 		
-		swap1: input_binding_key("A"), // Swap Interaction Mode
- 		swap2: input_binding_key("S")  // Swap Leader
+        menu: input_binding_key("C"),
+		
+		swap_l: input_binding_key(vk_shift), // Swap Interaction Mode
+ 		swap_r: input_binding_key("V")  // Swap Leader
     },
     
     gamepad:
@@ -36,15 +35,16 @@ return {
         down:  [input_binding_gamepad_axis(gp_axislv, false), input_binding_gamepad_button(gp_padd)],
         left:  [input_binding_gamepad_axis(gp_axislh, true),  input_binding_gamepad_button(gp_padl)],
         right: [input_binding_gamepad_axis(gp_axislh, false), input_binding_gamepad_button(gp_padr)],
-        
-		run: input_binding_gamepad_button(gp_shoulderlb),
 				
-        action:  input_binding_gamepad_button(gp_face1),
+        interact:  input_binding_gamepad_button(gp_face1),
         cancel:  input_binding_gamepad_button(gp_face2),
-        menu: input_binding_gamepad_button(gp_face4),
+		forward:  input_binding_gamepad_button(gp_face3),
+		thought:  input_binding_gamepad_button(gp_face4),
+        
+		menu: input_binding_gamepad_button(gp_start),
 		
-		swap1: input_binding_gamepad_button(gp_shoulderl),
-		swap2: input_binding_gamepad_button(gp_shoulderr)            
+		swap_l: input_binding_gamepad_button(gp_shoulderl),
+		swap_r: input_binding_gamepad_button(gp_shoulderr)            
     },
     
     touch:
@@ -53,15 +53,16 @@ return {
         down:  input_binding_virtual_button(),
         left:  input_binding_virtual_button(),
         right: input_binding_virtual_button(),
-		
-		run: input_binding_virtual_button(),
         
-        action: input_binding_virtual_button(),
+        interact: input_binding_virtual_button(),
         cancel:  input_binding_virtual_button(),
-        menu: input_binding_virtual_button(),
+        forward: input_binding_virtual_button(),
+		thought: input_binding_virtual_button(),
 		
-		swap1: input_binding_virtual_button(),
-		swap2: input_binding_virtual_button(),     
+		menu: input_binding_virtual_button(),
+		
+		swap_l: input_binding_virtual_button(),
+		swap_r: input_binding_virtual_button()
     }
     
 };
