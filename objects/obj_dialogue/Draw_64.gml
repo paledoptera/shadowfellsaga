@@ -36,7 +36,7 @@ if (message_end > 0)
 	
 	cam = view_get_camera(ctrl_camera.camera);
 	
-	draw_sprite_ext(spr_textbox, boxtype==1 ? 1 : 0 , 640/2, textboxy,2,2,0,c_white,1);
+	draw_sprite_ext(style, 0, 640/2, textboxy,2,2,0,c_white,1);
 	//Draw portrait
 	if (portrait[message_current] != "none") {if portrait[message_current] = port_semi {port_scale_multi = 1.3}}
 	if (portrait[message_current] != "none") draw_sprite_ext(portrait[message_current], facetimer, 52, textboxy-4,2*port_scale_multi,2*port_scale_multi,0,c_white,1);

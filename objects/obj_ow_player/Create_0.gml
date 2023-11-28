@@ -26,6 +26,7 @@ z = 0;
 zheight = -sprite_height / 2;
 zfloor = 0;
 inputmagnitude = 0;
+direction = 270;
 spawned = false;
 
 //----PLAYER STATE----

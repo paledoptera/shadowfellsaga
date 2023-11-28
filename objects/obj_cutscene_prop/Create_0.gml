@@ -9,3 +9,4 @@ _draw_x = x;
 _draw_y = y;
 
 stage = 0;
+stage_last = 0;

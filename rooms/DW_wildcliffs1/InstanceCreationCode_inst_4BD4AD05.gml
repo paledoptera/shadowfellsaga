@@ -1,2 +1,2 @@
 areasong = "wind";
-song_volume = 0.4;
+song_volume = 0.25;

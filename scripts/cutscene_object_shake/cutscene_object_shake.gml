@@ -1,4 +1,4 @@
-function cutscene_object_shake(argument0,argument1,argument2,argument3,argument4 = true,argument5 = false, argument6 = false){
+function cutscene_object_shake(argument0,argument1,argument2,argument3,argument4 = true,argument5 = false, argument6 = false, argument7 = "_draw_x", argument8 = "_draw_y"){
 ///@description cutscene_object_shake
 ///@arg object
 ///@arg shake_amplitude
@@ -7,6 +7,8 @@ function cutscene_object_shake(argument0,argument1,argument2,argument3,argument4
 ///@arg x_shake?
 ///@arg y_shake?
 ///@arg chaotic_shake?
+///@arg _draw_x_variable
+///@arg _draw_y_variable
 
 
 //NOTICE: this will ONLY work in objects with "draw_x" and "draw_y" variables.
@@ -24,24 +26,32 @@ var _dur = argument3 * FRAME_RATE;
 var _x_sh = argument4;
 var _y_sh = argument5;
 var _chaos = argument6;
+var _draw_x_var = argument7;
+var _draw_y_var = argument8;
 
-var _dur_ = _dur - timer
+var _amp_dur = ((_dur - timer)/_dur)*_amp
 
 if _chaos = false
 {
-	if _x_sh = true {_obj.draw_x = _obj.x + wave(-_dur_,_dur_,_freq,0);}
-	if _y_sh = true {_obj.draw_y = _obj.y + wave(-_dur_,_dur_,_freq,0);}
+	if _x_sh = true {variable_instance_set(_obj,_draw_x_var,round((_obj.x + wave(-_amp_dur,_amp_dur,_freq,0))/3)*3);}
+	if _y_sh = true {variable_instance_set(_obj,_draw_y_var,round((_obj.y + wave(-_amp_dur,_amp_dur,_freq,0))/3)*3);}
 }
 else
 {
 	randomize();
 	if timer mod 2 = 0
 	{
-		if _x_sh = true {_obj.draw_x = _obj.x + random_range(-_dur_,_dur_)}		
-		if _y_sh = true {_obj.draw_y = _obj.y + random_range(-_dur_,_dur_)}				
+		if _x_sh = true {variable_instance_set(_obj,_draw_x_var,round(_obj.x + random_range(-_dur_,_dur_)))};
+		if _y_sh = true {variable_instance_set(_obj,_draw_y_var,round(_obj.y + random_range(-_dur_,_dur_)))}				
 	}
 }
 
 timer++;
-if (timer >= _dur) {timer = 0; cutscene_end_action();}
+if (timer >= _dur) 
+{
+	variable_instance_set(_obj,_draw_x_var,_obj.x)
+	variable_instance_set(_obj,_draw_y_var,_obj.y)
+	timer = 0; 
+	cutscene_end_action();
+}
 }

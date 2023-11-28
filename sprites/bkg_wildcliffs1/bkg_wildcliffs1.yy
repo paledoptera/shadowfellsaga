@@ -2,10 +2,10 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "bkg_wildcliffs1",
-  "bbox_bottom": 799,
-  "bbox_left": 0,
-  "bbox_right": 799,
-  "bbox_top": 0,
+  "bbox_bottom": 399,
+  "bbox_left": 4,
+  "bbox_right": 399,
+  "bbox_top": 235,
   "bboxMode": 0,
   "collisionKind": 1,
   "collisionTolerance": 0,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"93f291f4-1d23-4f88-9e9f-c41a1fdbde37",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1783b05b-3a18-4e02-9c98-13f22022daa1",},
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 800,
+  "height": 400,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"4996534a-0046-499a-93fc-9cdce616155f","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"8f6972c9-ea8c-4592-8baa-ff1677d54918","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"93f291f4-1d23-4f88-9e9f-c41a1fdbde37","path":"sprites/bkg_wildcliffs1/bkg_wildcliffs1.yy",},},},"Disabled":false,"id":"e9764d19-04af-43d6-a165-50e881ca68b3","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1783b05b-3a18-4e02-9c98-13f22022daa1","path":"sprites/bkg_wildcliffs1/bkg_wildcliffs1.yy",},},},"Disabled":false,"id":"cd48b548-2e76-4fe5-bd0d-614eb9de7886","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 800,
+  "width": 400,
 }

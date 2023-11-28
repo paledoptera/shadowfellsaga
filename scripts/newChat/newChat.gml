@@ -13,7 +13,6 @@ function newChat(argument0) {
 	text.pos = _pos;
 	
 	var _char = -1;
-	
 	for (i = 0; i < array_length(argument0); i++)
 	{
 		#region DEFINING CHARACTERS
@@ -27,8 +26,10 @@ function newChat(argument0) {
 				if struct_exists(argument0[d],"char") {_char = argument0[d].char; break;}
 			}
 		}
-		else _char = argument0[i].char
-		
+		else _char = argument0[i].char	
+		//////////////////////////////////////////
+		//////////////////////////////////////////
+		//////////////////////////////////////////
 		// if CHAR is GENERIC
 		if _char = "gen"
 		{
@@ -73,15 +74,11 @@ function newChat(argument0) {
 			text.talksound[i] = snd_txtpapyrus;
 			if !struct_exists(argument0[i],"port") {text.portrait[i] = port_papy;}
 			else if argument0[i].port = "goofycry" {text.portrait[i] = port_papy_goofycry;}
-			else if argument0[i].port = "confident" {text.portrait[i] = port_chefp_confident;}
-			else if argument0[i].port = "confident2" {text.portrait[i] = port_chefp_confident2;}
-			else if argument0[i].port = "displeased" {text.portrait[i] = port_chefp_displeased;}
-			else if argument0[i].port = "nervous" {text.portrait[i] = port_chefp_nervous;}
-			else if argument0[i].port = "shock" {text.portrait[i] = port_chefp_shock;}
-			else if argument0[i].port = "shock_lookleft" {text.portrait[i] = port_chefp_shock_lookleft;}
-			else if argument0[i].port = "sly" {text.portrait[i] = port_chefp_sly;}
-			else if argument0[i].port = "trousle" {text.portrait[i] = port_chefp_trousle;}
-			else if argument0[i].port = "wacky" {text.portrait[i] = port_chefp_wacky;}
+			else if argument0[i].port = "confident" {text.portrait[i] = port_papy_confident;}
+			else if argument0[i].port = "displeased" {text.portrait[i] = port_papy_displeased;}
+			else if argument0[i].port = "nervous" {text.portrait[i] = port_papy_nervous;}
+			else if argument0[i].port = "sly" {text.portrait[i] = port_papy_sly;}
+			else if argument0[i].port = "wacky" {text.portrait[i] = port_papy_wacky;}
 		}
 		else if _char = "papy_messedup"
 		{
@@ -95,7 +92,7 @@ function newChat(argument0) {
 		}
 		
 		#endregion
-		
+		if struct_exists(argument0[i],"talksound") {text.talksound[i] = argument0[i].talksound;}
 		if struct_exists(argument0[i],"runcode") {text._runcode[i] = argument0[i].runcode;} else {text._runcode[i] = function () {var doodoofart = 1; /*do nothing*/}}
 		
 	    text.message[i] = argument0[i].line

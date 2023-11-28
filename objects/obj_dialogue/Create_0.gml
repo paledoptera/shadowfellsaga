@@ -12,7 +12,7 @@ message[0] = "This is the second message!";
 // Secondly, if you have a portrait sprite, write the name of the sprite
 // as the second parameter. The default sprite size is 50x50.
 // If you don't want a portrait just write "none"
-
+textbox
 // Then when you're ready call this script to start the chat in game:
 newChat(message, portrait, font);
 

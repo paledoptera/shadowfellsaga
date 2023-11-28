@@ -53,8 +53,8 @@ active = function()
 		if interact_mode = 1 {instance_create(x,y,obj_interact);} //INTERACTING WITH OBJECTS
 	}
 	//full party jump
-	if thought and z = zfloor and FOLLOWER.z = FOLLOWER.zfloor {zsp = -jumpspeed; FOLLOWER.zsp = -jumpspeed; audio_play_sound(snd_txtpapyrus,1,false,0.5); audio_play_sound(snd_txtsans,1,false,0.5);}
-
+	if instance_exists(FOLLOWER) {if thought and z = zfloor and FOLLOWER.z = FOLLOWER.zfloor {zsp = -jumpspeed; FOLLOWER.zsp = -jumpspeed; audio_play_sound(snd_txtpapyrus,1,false,0.5); audio_play_sound(snd_txtsans,1,false,0.5);}}
+	
 	if input.menu_pressed {instance_create(x,y,obj_cmenu)}
 	#endregion
 
