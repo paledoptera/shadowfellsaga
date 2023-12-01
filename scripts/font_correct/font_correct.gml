@@ -14,7 +14,7 @@ function font_correct(){
 	if argument0 = fnt_sans {char_small_value = 8;}
 	
 	//FONT SPECIFIC - Establishing which characters are larger than normal, which are smaller
-	if font = fnt_papyrus {char_big[0] = "O"; char_big[1] = "A"; char_big[2] = "B"; char_big[3] = "Q"; char_big[4] = "W"; char_big[5] = "G"; char_big[6] = "M";
-						   char_small[0] = "I"; char_small[1] = "'"; char_small[2] = "P"; char_small[3] = "L"; char_small[4] = "'"}
+	if font[message_current] = fnt_papyrus {char_big[0] = "O"; char_big[1] = "A"; char_big[2] = "B"; char_big[3] = "Q"; char_big[4] = "W"; char_big[5] = "G"; char_big[6] = "M"; char_big[7] = "L"; char_big[8] = "S";
+						   char_small[0] = "I"; char_small[1] = "'"; char_small[2] = "P"; char_small[3] = "L"; char_small[4] = "'";  char_small[5] = "!"; char_small[6] = ".";}
 	else {char_small[0] = "_"; char_big[0] = "_";}
 }

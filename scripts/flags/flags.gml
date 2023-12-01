@@ -3,7 +3,6 @@
 function flags_init(argument0){
 		if argument0==true
 			global.flags	=	ds_map_create();
-		ds_map_set(global.flags, "plot",-1);
 		ds_map_set(global.flags, "world",0);
 		ds_map_set(global.flags, "enc", -1);
 		if argument0==true

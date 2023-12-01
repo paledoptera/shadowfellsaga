@@ -15,7 +15,7 @@ function data_check_integrity(){
             return 0;
         }
     }
-	var langList=["lang_en_ch1"]
+	/*var langList=["lang_en_ch1"]
 	 l = array_length(langList)
     for (i = 0; i < l; i++)
     {
@@ -24,6 +24,6 @@ function data_check_integrity(){
             global.integrity_fail = langList[i];
             return 0;
         }
-    }
+    }*/
     return 1;	
 }

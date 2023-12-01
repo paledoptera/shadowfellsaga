@@ -95,7 +95,13 @@ function newChat(argument0) {
 		if struct_exists(argument0[i],"talksound") {text.talksound[i] = argument0[i].talksound;}
 		if struct_exists(argument0[i],"runcode") {text._runcode[i] = argument0[i].runcode;} else {text._runcode[i] = function () {var doodoofart = 1; /*do nothing*/}}
 		
-	    text.message[i] = argument0[i].line
+		if struct_exists(argument0[i],"color1") {text.color1[i] = argument0[i].color1;}
+		else {text.color1[i] = c_yellow;}
+		
+		if struct_exists(argument0[i],"color2") {text.color2[i] = argument0[i].color2;}
+		else {text.color2[i] = c_red;}
+	    
+		text.message[i] = argument0[i].line
 	}
 
 

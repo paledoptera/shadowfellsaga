@@ -44,8 +44,8 @@ if (os_type != os_macosx)
 	global.windowmode			= 1;
     global.windowmode_returnto = global.windowmode;
 	
-	global.window_res_w = 1280;
-	global.window_res_h = 960;
+	global.window_res_w = 640; //1280
+	global.window_res_h = 480; //960
 	
 	global.gui_res_w = 640;  // same size as camera
 	global.gui_res_h = 480; 
@@ -53,6 +53,7 @@ if (os_type != os_macosx)
 	global.aspect_ratio = "4:3"
 	
 	global.camasp = 0; // 0 - 4:3 1 - 16:9
+	
 	
 	
 #region Define accessible window resolutions
@@ -218,4 +219,5 @@ global.resolution_current = global.resolutions[global.resolution_index];
 		application_surface_enable(true)
 		application_surface_draw_enable(false)
 	} 
+	window_center();
 }

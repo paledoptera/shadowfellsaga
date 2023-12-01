@@ -28,15 +28,15 @@ newChat(message, portrait, font);
 // correct modifier code. For example:
 message[0] = "\4Wavy text";
 
-// The modifier code is "\" followed by the number for the corresponding effect.
+// The modifier code is "#" followed by the number for the corresponding effect.
 // The modifiers are as follows:
-\0 - Normal text
-\1 - Shaky text
-\2 - Color text
-\3 - Color & shake text
-\4 - Wavy text
-\5 - Gradient text
-\6 - Gradient & wavy text
+#0 - Normal text
+#1 - Shaky text
+#2 - Color text
+#3 - Color & shake text
+#4 - Wavy text
+#5 - Gradient text
+#6 - Gradient & wavy text
 
 // We can mix and match the effects by doing the following:
 message[0] = "\0Normal \1Shaky \2Color \4Wavy";

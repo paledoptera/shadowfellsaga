@@ -63,6 +63,7 @@ if (message_end > 0)
     else var lineEnd = 52;
     //Variables for spacing characters
     var line = 0;
+	var lastline = line;
     var space = 0;
     var i = 1;
 	
@@ -144,7 +145,7 @@ if (message_end > 0)
 		if string_char_at(message[message_current], i) = "~" {done = true; break;}
 		///////////////////////////////
 		//check for modifier
-        if (string_char_at(message[message_current], i) == "\\")
+        if (string_char_at(message[message_current], i) == "#")
         {
             modifier = real(string_char_at(message[message_current], ++i));
             ++i;
@@ -159,7 +160,10 @@ if (message_end > 0)
             i++;
             length++;
         }
-        //Check if the current word fits inside the text box, and if not we go to the next line
+        
+		
+		
+		//Check if the current word fits inside the text box, and if not we go to the next line
 		//If there's no * symbol on a new line, shift the letters forward 2 spaces.
         if (space+length > lineEnd)
         {
@@ -169,97 +173,69 @@ if (message_end > 0)
 			else tX = 180;
         }
         i -= length;
-        
-        //Accounting for character specific widths (ie "i", "l" etc)
-		for(s=0; s<array_length(char_small); s++;)
+		
+
+		
+		
+		//Accounting for character specific widths (ie "i", "l" etc)
+		if i>1
 		{
-			if string_char_at(message[message_current], i-1) = char_small[s] {tX -= char_small_value} 
-		}
-		s = 0;
-		for(s=0; s<array_length(char_big); s++;)
-		{
-			if string_char_at(message[message_current], i-1) = char_big[s] {tX += char_big_value} 
+			for(s=0; s<array_length(char_small); s++;)
+			{
+				if string_char_at(message[message_current], i-1) = char_small[s] {tX -= char_small_value; break;} 
+			}
+			s = 0;
+			for(s=0; s<array_length(char_big); s++;)
+			{
+				if string_char_at(message[message_current], i-1) = char_big[s] {tX += char_big_value; break;} 
+			}
 		}
 		
 		
 
 		//Draw Text
-        switch(modifier)
+		draw_set_colour(c_white);
+		
+		switch(modifier)
         {
+
             case 0: //normal
             {
-                draw_set_colour(c_white);
-				if(flag_get(global.flags,"world")==0){
-					 draw_text_transformed(tX+(space*charWidth), tY+(26*line)+(line*charLineSep), string_hash_to_newline(string_char_at(message[message_current], i)),2,2,0);
-				} else if(flag_get(global.flags,"world")==1){
-					 draw_text_transformed_shadow(tX+(space*charWidth), tY+(26*line)+(line*charLineSep), string_hash_to_newline(string_char_at(message[message_current], i)),2,2,0,c_white,1,font[message_current]);
-				}
+				draw_text_transformed_shadow(tX+(space*charWidth), tY+(26*line)+(line*charLineSep), string_hash_to_newline(string_char_at(message[message_current], i)),2,2,0,c_white,1,font[message_current]);
                 break;
             }
             case 1: //shaky
             {
-                draw_set_colour(c_white);
-				if(flag_get(global.flags,"world")==0){
-					draw_text(tX+(space*charWidth)+round(random_range(-2, 2)), tY+(26*line)+(line*charLineSep)+round(random_range(-2, 2)), string_hash_to_newline(string_char_at(message[message_current], i)));
-				} else if(flag_get(global.flags,"world")==1){
-					draw_text_transformed_shadow(tX+(space*charWidth)+round(random_range(-2, 2)), tY+(26*line)+(line*charLineSep)+round(random_range(-2, 2)), string_hash_to_newline(string_char_at(message[message_current], i)),2,2,0,c_white,1,font[message_current]);
-				}
+				draw_text_transformed_shadow(tX+(space*charWidth)+round(random_range(-2, 2)), tY+(26*line)+(line*charLineSep)+round(random_range(-2, 2)), string_hash_to_newline(string_char_at(message[message_current], i)),2,2,0,c_white,1,font[message_current]);
                 break;
             }
             case 2: //color
             {
-                draw_set_colour(c_lime);
-				if(flag_get(global.flags,"world")==0){
-					 draw_text(tX+(space*charWidth), tY+(26*line)+(line*charLineSep), string_hash_to_newline(string_char_at(message[message_current], i)));
-				} else if(flag_get(global.flags,"world")==1){
-					draw_text_transformed_shadow(tX+(space*charWidth), tY+(26*line)+(line*charLineSep), string_hash_to_newline(string_char_at(message[message_current], i)),2,2,0,c_lime,1,font[message_current]);
-				}
+				draw_text_transformed_shadow(tX+(space*charWidth), tY+(26*line)+(line*charLineSep), string_hash_to_newline(string_char_at(message[message_current], i)),2,2,0,color1[message_current],1,font[message_current]);
                 break;
             }
             case 3: //color and shake
             {
-                draw_set_colour(c_red);
-				if(flag_get(global.flags,"world")==0){
-					draw_text(tX+(space*charWidth)+round(random_range(-2, 2)), tY+(26*line)+(line*charLineSep)+round(random_range(-2, 2)), string_hash_to_newline(string_char_at(message[message_current], i)));
-				} else if(flag_get(global.flags,"world")==1){
-					draw_text_transformed_shadow(tX+(space*charWidth)+round(random_range(-2, 2)), tY+(26*line)+(line*charLineSep)+round(random_range(-2, 2)), string_hash_to_newline(string_char_at(message[message_current], i)),2,2,0,c_red,1,font[message_current]);
-				}
+				draw_text_transformed_shadow(tX+(space*charWidth)+round(random_range(-2, 2)), tY+(26*line)+(line*charLineSep)+round(random_range(-2, 2)), string_hash_to_newline(string_char_at(message[message_current], i)),2,2,0,color1[message_current],1,font[message_current]);
                 break;
             }
             case 4: //Sine movement
             {
                 var so = t + i;
                 var shift = sin(so*pi*freq/room_speed)*amplitude;
-                draw_set_colour(c_white);
-				if(flag_get(global.flags,"world")==0){
-					 draw_text(tX+(space*charWidth), tY+(26*line)+shift+(line*charLineSep), string_hash_to_newline(string_char_at(message[message_current], i)));
-				} else if(flag_get(global.flags,"world")==1){
-					 draw_text_transformed_shadow(tX+(space*charWidth), tY+(26*line)+shift+(line*charLineSep), string_hash_to_newline(string_char_at(message[message_current], i)),2,2,0,c_white,1,font[message_current]);
-				}
+				draw_text_transformed_shadow(tX+(space*charWidth), tY+(26*line)+shift+(line*charLineSep), string_hash_to_newline(string_char_at(message[message_current], i)),2,2,0,c_white,1,font[message_current]);
                 break;
             }
             case 5: //Gradient Text
             {
-                draw_set_colour(make_colour_hsv(t+i, 255, 255));
-				gradientcol=make_colour_hsv(t+i, 255, 255);
-				if(flag_get(global.flags,"world")==0){
-					draw_text(tX+(space*charWidth), tY+(26*line)+(line*charLineSep), string_hash_to_newline(string_char_at(message[message_current], i)));
-				} else if(flag_get(global.flags, "world")==1){
-					draw_text_transformed_shadow(tX+(space*charWidth), tY+(26*line)+(line*charLineSep), string_hash_to_newline(string_char_at(message[message_current], i)),2,2,0,gradientcol,1,font[message_current]);
-				}
+				draw_text_transformed_gradient_shadow(tX+(space*charWidth), tY+(26*line)+(line*charLineSep), string_hash_to_newline(string_char_at(message[message_current], i)),2,2,0,color1[message_current],color1[message_current],color2[message_current],color2[message_current],1,font[message_current]);
                 break;
             }
             case 6: //Gradient & Sine
             {
-                draw_set_colour(make_colour_hsv(t+i, 255, 255));
-				gradientcol=make_colour_hsv(t+i, 255, 255);
                 var so = t + i;
                 var shift = sin(so*pi*freq/room_speed)*amplitude;
-				if(flag_get(global.flags, "world")==0){
-					 draw_text(tX+(space*charWidth), tY+(26*line)+shift, string_hash_to_newline(string_char_at(message[message_current], i)));
-				} else if(flag_get(global.flags, "world")==1){
-					 draw_text_transformed_shadow(tX+(space*charWidth), tY+(26*line)+shift, string_hash_to_newline(string_char_at(message[message_current], i)),2,2,0,gradientcol,1,font[message_current]);
-				}
+				draw_text_transformed_gradient_shadow(tX+(space*charWidth), tY+(26*line)+shift, string_hash_to_newline(string_char_at(message[message_current], i)),2,2,0,color1[message_current],color1[message_current],color2[message_current],color2[message_current],1,font[message_current]);
                 break;
             }
         }
@@ -267,6 +243,8 @@ if (message_end > 0)
         //Move to next character
         space++;
         i++;
+		lastline = line;
     }
+	draw_text(300,300,string(i))
 	
 }

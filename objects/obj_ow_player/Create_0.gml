@@ -41,9 +41,6 @@ for (var i = fol_array_size-1; i >= 0; i--)
 	fol_pos_y[i] = y;
 	fol_pos_z[i] = z;	
 }
-//fol_input_x = 0;
-//fol_input_y = 0;
-//fol_input_run = 0;
 
 //----GLOBAL POSITION----
 global.pX=0;

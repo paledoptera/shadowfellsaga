@@ -9,6 +9,7 @@ seconds=0;
 drawnseconds=0;
 drawmninutes=0;
 hideScreen=false
+target_door = -1;
 
 invSlot=0;
 itemID=0;

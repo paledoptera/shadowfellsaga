@@ -1,5 +1,8 @@
 global.activeLandmark = target_door;
 if instance_exists(PLAYER) {
+	
+	ctrl_global.target_door = target_door;
+	
 	var sdir = "down"
 	if player_dir == -1{
 		sdir =	PLAYER.dir;

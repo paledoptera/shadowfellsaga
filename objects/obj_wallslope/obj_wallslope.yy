@@ -33,5 +33,5 @@
     "path": "sprites/spr_wallslope/spr_wallslope.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }

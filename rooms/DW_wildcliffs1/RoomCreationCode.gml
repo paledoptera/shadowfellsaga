@@ -1,10 +1,18 @@
 if (live_call()) return live_result;
 
 instance_create(0,0,handler_parallax);
-handler_parallax.finetune_y1 = 30;
+handler_parallax.finetune_y1 = 90;
 handler_parallax.finetune_x1 = 200;
-handler_parallax.finetune_y2 = -90;
-handler_parallax.finetune_y3 = -110;
+handler_parallax.finetune_y2 = -50;
+handler_parallax.finetune_y3 = -190;
+
+//UNCOMMENT THIS IF YOU WANT TO SKIP INTRO
+flag_set(global.cflags,"wildcliffs_intro",0);
+global.canusemenu=true;
+flag_set(global.flags,"world",1);
+PLAYER.state = "active"
+PLAYER.x = 404-20
+PLAYER.y = 600+8
 
 var _flag = flag_get(global.cflags,"wildcliffs_intro")
 if _flag = 0 {instance_destroy(obj_cutsc_bonepile);}
@@ -55,7 +63,7 @@ dialogue_2 =
 	 line: "NO CRACKS, &THANK GOODNESS!!!", port: "happy"},
 	{line: "...BUT MY CRANIUM &FEELS ODDLY...", port: "sly",
 	 runcode : function() {obj_cutsc_bonepile.base_frame = 18;}},
-	{line: "...HAIRIER THAN &USUAL.", port: "sly"},
+	{line: "...#2HAIRIER #0THAN &USUAL.", port: "sly",},
 	{line: "HAVE THOSE LONG &YEARS OF APPLYING &HAIR-GROWTH SPRAY", port: "sly"},
 	{line: "...FINALLY &PAID OFF?!", port: "happy",
 	 runcode : function() {obj_cutsc_bonepile.base_frame = 16;}},
