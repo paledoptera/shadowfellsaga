@@ -1,3 +1,3 @@
-BORDER._sprite=-1;
+//BORDER._sprite=-1;
 
 

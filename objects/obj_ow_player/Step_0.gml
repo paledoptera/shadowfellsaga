@@ -58,61 +58,13 @@ active = function()
 	if input.menu_pressed {instance_create(x,y,obj_cmenu)}
 	#endregion
 
-	#region SETTING 2.5D PLATFORM COLLISION
-	//establishing if the player is at a z level higher than any platforms
-	if instance_exists(obj_wall_h1) with obj_wall_h1
-	{	 
-		//all this is being executed in "obj_wall_h1"
-		//SETTING PLAYER HEIGHT AND WALLS
-		if floor(obj_ow_player.z) < -height
-		{
-			if instance_exists(obj_walltemp) {with obj_walltemp {if x = other.x and y = other.y {instance_destroy();}}}
-			walkable = true;
-			wallspawn = false;
-		}
-		else 
-		{	
-			if wallspawn = false 
-			{
-				___inst = instance_create(x,y,obj_walltemp);
-				___inst.depth = depth-1
-			}
-			wallspawn = true;
-			walkable = false;
-		}
-		//SETTING FOLLOWER HEIGHT AND WALLS
-		if floor(FOLLOWER.z) < -height
-		{
-			if instance_exists(obj_walltemp_f) {with obj_walltemp_f {if x = other.x and y = other.y {instance_destroy();}}}
-			fol_walkable = true;
-			fol_wallspawn = false;
-		}
-		else 
-		{	
-			if fol_wallspawn = false 
-			{
-				___inst2 = instance_create(x,y,obj_walltemp_f);
-				___inst2.depth = depth-1
-			}
-			fol_wallspawn = true;
-			fol_walkable = false;
-		}
-	}
-	//setting collissions
-	var wall_h1 = instance_place(x, y, obj_wall_h1)
-	var wall_h2 = instance_place(x, y, obj_wall_h2)
-	var wall_h3 = instance_place(x, y, obj_wall_h3)
-	if wall_h1 != noone {if wall_h1.walkable = true {zfloor = -wall_h1.height-0.1}}
-	else {zfloor = 0;}
-	if wall_h2 != noone {if wall_h2.walkable = true {zfloor = -wall_h2.height-0.1}}
-	if wall_h3 != noone {if wall_h3.walkable = true {zfloor = -wall_h3.height-0.1}}
-	#endregion
+	// SETTING 2.5D PLATFORM COLLISION
+	check_z_collision();
 
-
-	#region SETTING FOLLOWER 2.5D PLATFORM COLLISION
-	//checking if follower can go up to obj_wallh1
+	// MAKE SURE FOLLOWER DOESN'T LAG BEHIND
 	if instance_exists(FOLLOWER)
 	{
+		with FOLLOWER {check_z_collision();}
 		if point_distance(x,y,FOLLOWER.x,y)>40
 		{
 			if FOLLOWER.x < PLAYER.x and hsp > 0 {hsp = 0}
@@ -123,25 +75,7 @@ active = function()
 			if FOLLOWER.y < PLAYER.y and vsp > 0 {vsp = 0}
 			if FOLLOWER.y > PLAYER.y and vsp < 0 {vsp = 0}
 		}
-		
-		with FOLLOWER
-		{
-			//if place meeting with a heighted wall, make zfloor the height of the wall.
-			//place meeting with a heighted wall should NEVER happen UNLESS sans is on top of the wall, which is why we set his zfloor.
-			if place_meeting(x,y,obj_wall_h1)
-			{
-				var wall_h1 = instance_place(x, y, obj_wall_h1)
-				var wall_h2 = instance_place(x, y, obj_wall_h2)
-				var wall_h3 = instance_place(x, y, obj_wall_h3)
-				if wall_h1 != noone {if wall_h1.fol_walkable = true {zfloor = -wall_h1.height-0.1}}
-				else {zfloor = 0;}
-				if wall_h2 != noone {if wall_h1.fol_walkable = true {zfloor = -wall_h2.height-0.1}}
-				if wall_h3 != noone {if wall_h1.fol_walkable = true {zfloor = -wall_h3.height-0.1}}
-			}
-			else {zfloor = 0;}	
-		}
 	}
-	#endregion
 
 	//EXECUTE MOVEMENT AND REGULAR COLLISIONS
 	move_and_collide(hsp,vsp,obj_wall,20,0,0,movespeed,movespeed);

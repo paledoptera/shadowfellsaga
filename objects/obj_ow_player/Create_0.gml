@@ -52,6 +52,7 @@ interact_mode = 0;
 interact_defaultmode = 0;
 
 instance_create(x,y,obj_interact_sensor);
+instance_create(x,y,obj_platformrange);
 
 
 

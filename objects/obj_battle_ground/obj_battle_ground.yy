@@ -27,10 +27,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_wall_z",
-    "path": "sprites/spr_wall_z/spr_wall_z.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": false,
 }

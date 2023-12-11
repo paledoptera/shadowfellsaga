@@ -245,6 +245,4 @@ if (message_end > 0)
         i++;
 		lastline = line;
     }
-	draw_text(300,300,string(i))
-	
 }

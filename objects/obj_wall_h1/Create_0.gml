@@ -1,60 +1,35 @@
 depth = -y;
 height = 40;
 
+_inst = obj_wall;
+_inst_fol = obj_wall_f
+
+_inst_spawn = -1;
+_inst_spawn_fol = -1;
+
+//if you're wondering why these are functions, it's so that i can make changes to them if need be
+//without going over and replacing multiple instances of code
+spawn_walls = function()
+{
+	_inst_spawn = instance_create(x,y,_inst);
+	_inst_spawn.depth = depth-1
+	_inst_spawn.image_xscale = image_xscale;
+}
+
+spawn_fol_walls = function()
+{
+	_inst_spawn_fol = instance_create(x,y,_inst_fol);
+	_inst_spawn_fol.depth = depth-1
+	_inst_spawn_fol.image_xscale = image_xscale;
+}
+
+
 wallspawn = true;
 fol_wallspawn = true;
+
+in_range = false;
+
 walkable = false;
 fol_walkable = false;
-sprite_index = spr_ts_carrionisles_platforms1
 
-_img_top = 0;
-_img_wall = 14;
-
-___inst = instance_create(x,y,obj_walltemp);
-___inst.depth = depth-1
-
-___inst2 = instance_create(x,y,obj_walltemp_f);
-___inst2.depth = depth-1
-
-//-SETTING TOP FACE SPRITE-
-//DEFAULT, top left corner
-_img_top = 0; bottomcovered = true;
-//bottom left corner
-if place_meeting(x,y-40,obj_wall_h1) {_img_top = 2; _img_wall = 13; bottomcovered = false;} 
-//top right corner
-if place_meeting(x-40,y,obj_wall_h1) and place_meeting(x,y+40,obj_wall_h1) {_img_top = 6; bottomcovered = true;} 
-//bottom right corner
-if place_meeting(x-40,y,obj_wall_h1) and place_meeting(x,y-40,obj_wall_h1) {_img_top = 8; _img_wall = 15; bottomcovered = false;}
-//middle left edge
-if place_meeting(x,y-40,obj_wall_h1) and place_meeting(x,y+40,obj_wall_h1) {_img_top = 1; bottomcovered = true;} 
-//top middle edge
-if place_meeting(x-40,y,obj_wall_h1) and place_meeting(x+40,y,obj_wall_h1) {_img_top = 3; bottomcovered = true;} 
-//bottom middle edge
-if place_meeting(x-40,y,obj_wall_h1) and place_meeting(x+40,y,obj_wall_h1) and place_meeting(x,y-40,obj_wall_h1) {_img_top = 5; _img_wall = 14; bottomcovered = false;} 
-//middle right edge
-if place_meeting(x,y-40,obj_wall_h1) and place_meeting(x,y+40,obj_wall_h1) and place_meeting(x-40,y,obj_wall_h1) {_img_top = 7; bottomcovered = true;} 
-
-//connecting top left corner to top left corner
-if !place_meeting(x-40,y-40,obj_wall_h1) and place_meeting(x,y-40,obj_wall_h1) and place_meeting(x+40,y-40,obj_wall_h1) 
-and place_meeting(x-40,y,obj_wall_h1)										 and place_meeting(x+40,y,obj_wall_h1) 
-and place_meeting(x-40,y+40,obj_wall_h1) and place_meeting(x,y+40,obj_wall_h1) and place_meeting(x+40,y+40,obj_wall_h1) {_img_top = 9; bottomcovered = true;}
-
-//connecting top right corner to top right corner
-if place_meeting(x-40,y-40,obj_wall_h1) and place_meeting(x,y-40,obj_wall_h1) and !place_meeting(x+40,y-40,obj_wall_h1) 
-and place_meeting(x-40,y,obj_wall_h1)										 and place_meeting(x+40,y,obj_wall_h1) 
-and place_meeting(x-40,y+40,obj_wall_h1) and place_meeting(x,y+40,obj_wall_h1) and place_meeting(x+40,y+40,obj_wall_h1) {_img_top = 10; bottomcovered = true;}
-
-//connecting bottom left corner to bottom left corner
-if place_meeting(x-40,y-40,obj_wall_h1) and place_meeting(x,y-40,obj_wall_h1) and place_meeting(x+40,y-40,obj_wall_h1) 
-and place_meeting(x-40,y,obj_wall_h1)										 and place_meeting(x+40,y,obj_wall_h1) 
-and !place_meeting(x-40,y+40,obj_wall_h1) and place_meeting(x,y+40,obj_wall_h1) and place_meeting(x+40,y+40,obj_wall_h1) {_img_top = 11; _img_wall = 14; bottomcovered = false;}
-
-//connecting bottom right corner to bottom right corner
-if place_meeting(x-40,y-40,obj_wall_h1) and place_meeting(x,y-40,obj_wall_h1) and place_meeting(x+40,y-40,obj_wall_h1) 
-and place_meeting(x-40,y,obj_wall_h1)										 and place_meeting(x+40,y,obj_wall_h1) 
-and place_meeting(x-40,y+40,obj_wall_h1) and place_meeting(x,y+40,obj_wall_h1) and !place_meeting(x+40,y+40,obj_wall_h1) {_img_top = 12; _img_wall = 14; bottomcovered = false;}
-
-//dead center
-if place_meeting(x-40,y-40,obj_wall_h1) and place_meeting(x,y-40,obj_wall_h1) and place_meeting(x+40,y-40,obj_wall_h1) 
-and place_meeting(x-40,y,obj_wall_h1)										 and place_meeting(x+40,y,obj_wall_h1) 
-and place_meeting(x-40,y+40,obj_wall_h1) and place_meeting(x,y+40,obj_wall_h1) and place_meeting(x+40,y+40,obj_wall_h1) {_img_top = 4; bottomcovered = true;}
+direction = image_angle;

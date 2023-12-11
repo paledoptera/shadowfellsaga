@@ -4,7 +4,6 @@
   "name": "obj_wall_h4",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -32,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_wall_h3",
-    "path": "sprites/spr_wall_h3/spr_wall_h3.yy",
+    "name": "spr_wall_h4",
+    "path": "sprites/spr_wall_h4/spr_wall_h4.yy",
   },
   "spriteMaskId": {
     "name": "spr_wall",

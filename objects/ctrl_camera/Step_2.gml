@@ -21,7 +21,7 @@ switch(camera_state){
 				if target = obj_ow_player
 				{ 
 					targetY -= 40
-					if obj_ow_player.z = obj_ow_player.zfloor {zoffset = obj_ow_player.zfloor/2}
+					if obj_ow_player.z = obj_ow_player.zfloor {zoffset = obj_ow_player.zfloor}
 				}
 
 				//clamp
@@ -29,8 +29,8 @@ switch(camera_state){
 				targetY = clamp(targetY,240,room_height-240);
 
 //				//smoooth shmoovin
-				x += (targetX-x)/3;
-				y += (targetY-y+zoffset)/3;
+				x += (targetX-x)/4;
+				y += (targetY-y+zoffset)/4;
 				}
 
 

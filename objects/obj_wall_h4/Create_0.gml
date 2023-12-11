@@ -1,3 +1,3 @@
 event_inherited()
 
-height = 120;
+height = 160;

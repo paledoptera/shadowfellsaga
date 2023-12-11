@@ -13,7 +13,7 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bd789cf4-9f6d-499a-bfb9-6a437a084bcf",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"26533673-288f-4070-9696-e5a68cc20dd0",},
   ],
   "gridX": 0,
   "gridY": 0,
@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "2 - Flavortown",
-    "path": "folders/Sprites/OVERWORLD ASSETS/2 - Flavortown.yy",
+    "name": "wildcliffs2",
+    "path": "folders/Sprites/OVERWORLD ASSETS/2 - Flavortown/wildcliffs2.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"bd789cf4-9f6d-499a-bfb9-6a437a084bcf","path":"sprites/bkg_wildcliffs2/bkg_wildcliffs2.yy",},},},"Disabled":false,"id":"91591f60-ea5e-4d91-8c75-78eabb93b27e","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"26533673-288f-4070-9696-e5a68cc20dd0","path":"sprites/bkg_wildcliffs2/bkg_wildcliffs2.yy",},},},"Disabled":false,"id":"140cb376-3c0c-4b7c-89c5-1faf92b1955c","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
