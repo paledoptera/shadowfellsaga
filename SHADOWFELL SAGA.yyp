@@ -270,7 +270,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.11.0.121",
+    "IDEVersion": "2023.11.1.129",
   },
   "resources": [
     {"id":{"name":"ease_in_circ","path":"scripts/ease_in_circ/ease_in_circ.yy",},},
@@ -312,9 +312,9 @@
     {"id":{"name":"log_notify","path":"scripts/log_notify/log_notify.yy",},},
     {"id":{"name":"font_sys_debug","path":"fonts/font_sys_debug/font_sys_debug.yy",},},
     {"id":{"name":"obj_interact","path":"objects/obj_interact/obj_interact.yy",},},
+    {"id":{"name":"spr_sans_ow_idle","path":"sprites/spr_sans_ow_idle/spr_sans_ow_idle.yy",},},
     {"id":{"name":"__input_load_sdl2_from_buffer_legacy","path":"scripts/__input_load_sdl2_from_buffer_legacy/__input_load_sdl2_from_buffer_legacy.yy",},},
     {"id":{"name":"snd_smile","path":"sounds/snd_smile/snd_smile.yy",},},
-    {"id":{"name":"spr_sans_ow_idle","path":"sprites/spr_sans_ow_idle/spr_sans_ow_idle.yy",},},
     {"id":{"name":"input_mouse_check_pressed","path":"scripts/input_mouse_check_pressed/input_mouse_check_pressed.yy",},},
     {"id":{"name":"__input_exception_handler","path":"scripts/__input_exception_handler/__input_exception_handler.yy",},},
     {"id":{"name":"spr_eventtrigger","path":"sprites/spr_eventtrigger/spr_eventtrigger.yy",},},
