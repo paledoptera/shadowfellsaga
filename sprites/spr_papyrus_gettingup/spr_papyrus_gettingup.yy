@@ -71,8 +71,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "2 - Flavortown",
-    "path": "folders/Sprites/CUTSCENE PROPS/2 - Flavortown.yy",
+    "name": "PAPYRUS",
+    "path": "folders/Sprites/CHARACTERS/PAPYRUS.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

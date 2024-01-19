@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 7,
   "parent": {
-    "name": "1 - Light World",
-    "path": "folders/Sprites/OVERWORLD ASSETS/1 - Light World.yy",
+    "name": "01 - Light World",
+    "path": "folders/Sprites/OVERWORLD ASSETS/01 - Light World.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

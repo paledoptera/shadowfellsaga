@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 7,
   "parent": {
-    "name": "CHAR_SKELEBROS",
-    "path": "folders/Sprites/CHAR_SKELEBROS.yy",
+    "name": "CHARACTERS",
+    "path": "folders/Sprites/CHARACTERS.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

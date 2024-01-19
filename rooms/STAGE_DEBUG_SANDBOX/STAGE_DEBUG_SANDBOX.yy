@@ -2,7 +2,7 @@
   "resourceType": "GMRoom",
   "resourceVersion": "1.0",
   "name": "STAGE_DEBUG_SANDBOX",
-  "creationCodeFile": "${project_dir}/rooms/STAGE_DEBUG_SANDBOX/RoomCreationCode.gml",
+  "creationCodeFile": "rooms/STAGE_DEBUG_SANDBOX/RoomCreationCode.gml",
   "inheritCode": false,
   "inheritCreationOrder": false,
   "inheritLayers": false,

@@ -57,8 +57,8 @@
   },
   "origin": 7,
   "parent": {
-    "name": "CHAR_SKELEBROS",
-    "path": "folders/Sprites/CHAR_SKELEBROS.yy",
+    "name": "SANS",
+    "path": "folders/Sprites/CHARACTERS/SANS.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

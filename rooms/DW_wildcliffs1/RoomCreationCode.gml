@@ -21,7 +21,6 @@ PLAYER.y = 600+8
 
 var _flag = flag_get(global.cflags,"wildcliffs_intro")
 if _flag = 0 {instance_destroy(obj_cutsc_bonepile);}
-
 else
 {
 global.canusemenu=true;
@@ -30,19 +29,19 @@ flag_set(global.flags,"world",1);
 #region DIALOGUE DATA
 dialogue_0 = 
 [
-    {char : "papy_messedup", position : "top",
-	 line : "UUUURGH...",},
-    {line : "AM I ALL BROKEN &UP AGAIN?", port : "sly",
-	 runcode : function() {obj_cutsc_bonepile.base_frame = 4;}}, 
-	{line : "I HATE WHEN &THIS HAPPENS!!!", port : "displeased",
-	 runcode : function() {obj_cutsc_bonepile.base_frame = 6;}},
+    {/*CHARACTER SWITCH --->*/ char : "papy_messedup", 
+	 /*TEXTBOX POSITION SWITCH --->*/ position : "top",
+	 line : "UUUURGH...",							/*--------------------*/}, //LINE 1 
+    {line : "AM I ALL BROKEN &UP AGAIN?",			/*--------------------*/ port : "sly", runcode : function() {obj_cutsc_bonepile.base_frame = 4;}}, //LINE 2
+	{line : "I HATE WHEN &THIS HAPPENS!!!",			/*--------------------*/ port : "displeased", runcode : function() {obj_cutsc_bonepile.base_frame = 6;}}, //LINE 3
+	{line : "///pause"								/*--------------------*/} //DIALOGUE PAUSE
 ]
 
 	base_frame = 10;
+	
 dialogue_1_0 =
 [
-	{char : "papy_messedup", position: "top",
-	 line : "FIRST THE FALL &FROM THE &STAIRS...", port : "displeased"},
+	{line : "FIRST THE FALL &FROM THE &STAIRS...", char : "papy_messedup", position: "top", port : "displeased"},
 ]
 
 dialogue_1_1 =
@@ -112,11 +111,9 @@ dialogue_3_4 =
 
 
 // PAUSE ///////////////////////////////////////////
-#endregion
-
+#endregion 
 runcode = 0;
 endcode = 0;
-
 t_scene_info = [
 	[cutscene_instance_create, 0, 0, "Instances", ef_fadein_black_veryslow],
 	[cutscene_change_player_state, "inactive"],
@@ -202,6 +199,7 @@ t_scene_info = [
 	[cutscene_change_player_state, "active"],
 	[cutscene_end]
 ];
+
 
 create_cutscene(t_scene_info);
 }

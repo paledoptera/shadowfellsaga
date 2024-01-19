@@ -8,6 +8,7 @@ target_y = y;
 hsp = 0;
 vsp = 0;
 zsp = 0;
+shadowalpha = 1;
 
 init = 0;
 

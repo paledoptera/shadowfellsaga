@@ -90,6 +90,12 @@ function newChat(argument0) {
 			else if argument0[i].port = "sly" {text.portrait[i] = port_papy_messedup_sly;}
 			else if argument0[i].port = "goofycry" {text.portrait[i] = port_papy_messedup_goofycry;}	
 		}
+		else if _char = "toquelle"
+		{
+			text.font[i] = fnt_main;
+			text.talksound[i] = snd_txttoquelle;
+			if !struct_exists(argument0[i],"port") {text.portrait[i] = "none";}
+		}
 		
 		#endregion
 		if struct_exists(argument0[i],"talksound") {text.talksound[i] = argument0[i].talksound;}

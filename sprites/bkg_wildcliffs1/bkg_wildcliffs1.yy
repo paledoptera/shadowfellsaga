@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "wildcliffs1",
-    "path": "folders/Sprites/OVERWORLD ASSETS/2 - Flavortown/wildcliffs1.yy",
+    "path": "folders/Sprites/OVERWORLD ASSETS/02 - Flavortown/wildcliffs1.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

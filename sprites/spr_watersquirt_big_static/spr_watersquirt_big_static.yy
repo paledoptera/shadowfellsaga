@@ -27,8 +27,8 @@
   "nineSlice": null,
   "origin": 7,
   "parent": {
-    "name": "4 - Carrion Isles",
-    "path": "folders/Sprites/OVERWORLD ASSETS/4 - Carrion Isles.yy",
+    "name": "04 - Carrion Isles",
+    "path": "folders/Sprites/OVERWORLD ASSETS/04 - Carrion Isles.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

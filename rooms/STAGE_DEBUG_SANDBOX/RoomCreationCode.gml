@@ -2,6 +2,9 @@
 dialogue[0]="TESTING 1"
 dialogue_port[0]= port_chefp;
 
+
+flag_set(global.flags,"world",1);
+
 dialogue1[0] = "TESTING 2"
 //dialogue_port[0]= port_chefp;
 

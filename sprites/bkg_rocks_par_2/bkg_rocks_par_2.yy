@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "2 - Flavortown",
-    "path": "folders/Sprites/OVERWORLD ASSETS/2 - Flavortown.yy",
+    "name": "02 - Flavortown",
+    "path": "folders/Sprites/OVERWORLD ASSETS/02 - Flavortown.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
