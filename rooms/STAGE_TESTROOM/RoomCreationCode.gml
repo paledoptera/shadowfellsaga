@@ -13,12 +13,12 @@ flag_set(global.flags,"world",1);
 
 cutscene =
 [
-	//{action : function()				/*-Camera Pan Down-*/ {cs_camera_pan(0,50,2);}},	
+	{action : function()				/*-Camera Establish-*/ {cs_camera_pan(0,-400,-1,true);}},		
+	{action : function()				/*-Camera Pan Up-*/ {cs_camera_pan(0,400,0.5,true);}},		
 	{action : function()				/*-Pause 3 seconds-*/ {cs_pause(3);}},
-	{action : function()				/*-Pause 3 seconds-*/ {cs_camera_pan(-40,0,true,2);}},
+	{action : function()				/*-Camera Pan Left-*/ {cs_camera_pan(-200,0,2,true);}},
 	{action : function()				/*-Pause 3 seconds-*/ {cs_pause(3);}},
-	{action : function()				/*-Pause 3 seconds-*/ {cs_camera_pan(40,0,true,2);}},	
-	//{action : function()				/*-Camera Pan Down-*/ {cs_camera_pan(0,-50,0.5);}},		
+	{action : function()				/*-Camera Pan Right-*/ {cs_camera_pan(200,0,2,true);}},		
 ]
 
 cs_start(cutscene)

@@ -14,6 +14,8 @@ _value[7] = -1;
 _value[8] = -1;
 _value[9] = -1;
 
+action_info = "";
+action_info_extra = -1;
 paused = false;
 
 stage = 0;

@@ -422,7 +422,7 @@
   "isDnd": false,
   "layers": [
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Instances","depth":0,"effectEnabled":true,"effectType":null,"gridX":40,"gridY":40,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_19DB7D06_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"ctrl_camera","path":"objects/ctrl_camera/ctrl_camera.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":40.0,"y":160.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_19DB7D06_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"ctrl_camera","path":"objects/ctrl_camera/ctrl_camera.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":-64.0,"y":192.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6EB229B2_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_ow_player","path":"objects/obj_ow_player/obj_ow_player.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":440.0,"y":440.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_59FA0FB4","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_wall_h1","path":"objects/obj_wall_h1/obj_wall_h1.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":200.0,"y":80.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_E4AF1A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_wall_h1","path":"objects/obj_wall_h1/obj_wall_h1.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":240.0,"y":80.0,},
@@ -868,7 +868,7 @@
   "viewSettings": {
     "clearDisplayBuffer": true,
     "clearViewBackground": false,
-    "enableViews": true,
+    "enableViews": false,
     "inheritViewSettings": false,
   },
   "volume": 1.0,

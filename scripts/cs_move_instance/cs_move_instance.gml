@@ -4,12 +4,13 @@ function cs_move_instance(){
 ///@arg obj
 ///@arg x
 ///@arg y
-///@arg relative?
 ///@arg spd
+///@arg relative?
 
-var obj = argument0, relative = argument3, spd = argument4;
+var obj = argument0, spd = argument3, relative = argument4;
 
-CS.time_end_action = CS.timer+999;
+CS.action_info = "movement"
+CS.action_info_extra = obj;
 
 if(CS.start_action = false)
 {	
@@ -25,11 +26,7 @@ with(obj)
 { 
 	x = approach(x,xx,spd);
 	y = approach(y,yy,spd);
-	
-	if x = xx and y = yy
-	{
-		with(CS) {event_user(0);}
-	}
+	if spd = -1 {x = xx; y = yy;}
 }
 
 }
