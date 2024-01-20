@@ -1,8 +1,8 @@
 #macro FRAME_RATE 60
-#macro GAME_VERSION ="v0.05"
+#macro GAME_VERSION ="ALPHA v0.7"
 
 #macro RES_W 640
-#macro RES_H 360
+#macro RES_H 480
 #macro RES_SCALE 1
 
 // Shortcut macros, saves time when writing out code with these objects
@@ -11,6 +11,8 @@
 #macro WALL obj_wall
 #macro BORDER handler_border
 #macro GAME ctrl_global
+#macro CAM ctrl_camera
+#macro CS ctrl_cutscene
 
 #macro BTUI    obj_battle_ui
 #macro FIGHT obj_battle_fight_button

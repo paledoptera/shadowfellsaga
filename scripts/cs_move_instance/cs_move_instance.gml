@@ -1,27 +1,27 @@
 
-function cs_camera_pan(){
-///@description cs_camera_pan
+function cs_move_instance(){
+///@description cutscene_move_instance
+///@arg obj
 ///@arg x
 ///@arg y
 ///@arg relative?
 ///@arg spd
 
-var relative = argument2, spd = argument3;
+var obj = argument0, relative = argument3, spd = argument4;
 
-CAM.following_target = false;
 CS.time_end_action = CS.timer+999;
 
 if(CS.start_action = false)
 {	
 	CS.start_action = true
-	if(!relative) {CS._value[0] = argument0; CS._value[1] = argument1;}
-	else {CS._value[0] = CAM.x + argument0; CS._value[1] = CAM.y + argument1;}
+	if(!relative) {CS._value[0] = argument1; CS._value[1] = argument2;}
+	else {CS._value[0] = obj.x + argument1; CS._value[1] = obj.y + argument2;}
 }
 
 var xx = CS._value[0]
 var yy = CS._value[1]
 
-with(CAM)
+with(obj)
 { 
 	x = approach(x,xx,spd);
 	y = approach(y,yy,spd);

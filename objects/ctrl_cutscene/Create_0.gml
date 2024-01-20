@@ -1,18 +1,20 @@
-scene_info = -1;
-scene = 0;
-
+globaltimer = 0;
 timer = 0;
+time_end_action = 1;
+start_action = false;
 
-x_dest = -1;
-y_dest = -1;
+_value[0] = -1; //this usually correlates to the X of an object
+_value[1] = -1; //this usually correlates to the Y of an object
+_value[2] = -1; //this usually correlates to the speed of an object
+_value[3] = -1;
+_value[4] = -1;
+_value[5] = -1;
+_value[6] = -1;
+_value[7] = -1;
+_value[8] = -1;
+_value[9] = -1;
 
-x_dest_2 = -1;
-y_dest_2 = -1;
+paused = false;
 
-stored_x = 0;
-stored_y = 0;
-
-zooming = false;
-zoom_time = 0;
-zoom_spd_w = 0;
-zoom_spd_h = 0;
+stage = 0;
+stage_end = 0;

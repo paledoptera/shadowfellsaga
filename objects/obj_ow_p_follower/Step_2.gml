@@ -30,7 +30,7 @@ if !instance_exists(ctrl_cutscene)
 	{
 		if input.cancel_pressed
 		{
-			if PLAYER.interact_mode = 0 {if z = zfloor {zsp = -jumpspeed;  audio_play_sound(snd_txtsans,1,false,0.5);}} //JUMPING
+			if PLAYER.interact_mode = 0 {if z = zfloor {zsp = -jumpspeed;  if audio_is_playing(snd_jump) {audio_stop_sound(snd_jump)}; audio_play_sound(snd_jump,1,false,0.5);}} //JUMPING
 		}
 	}
 	

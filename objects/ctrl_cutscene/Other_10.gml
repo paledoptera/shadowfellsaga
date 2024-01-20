@@ -1,7 +1,16 @@
-current_scene = scene_info[scene];
+/// @description Refresh Actions
+timer = 0;
+time_end_action = 1;
 
-var len = array_length_1d(current_scene) -1;
+start_action = false;
 
-current_scene_array = -1;
-current_scene_array = array_create(len, 0);
-array_copy(current_scene_array,0,current_scene,1,len);
+stage += 1
+if stage > stage_end {instance_destroy();}
+
+for (i=0;i<10;i++) {_value[i] = -1;}
+
+
+
+
+
+

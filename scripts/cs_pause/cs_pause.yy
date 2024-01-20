@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "cutscene_start",
+  "name": "cs_pause",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {

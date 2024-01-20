@@ -1,16 +1,9 @@
 if init = false
 {
-	camera_set_view_pos(camera,target.x,target.y);
+	init = true;
+	x = PLAYER.x
+	y = PLAYER.y
 }
-
-
-// Get current camera position (runs independent of state machine)
-var camX = camera_get_view_x(camera);
-var camY = camera_get_view_y(camera)-40;
-var camW = camera_get_view_width(camera);
-var camH = camera_get_view_height(camera);
-
-
 
 // Follows the player
 if instance_exists(target) and following_target = true
@@ -31,10 +24,6 @@ if instance_exists(target) and following_target = true
 	x += (targetX-x)/4;
 	y += (targetY-y+zoffset)/4;
 }
-
-camX = x - camW/2;
-camY = y - camH/2;
-
 
 // Calculates screen shake
 var shake_x = 0;
@@ -58,6 +47,4 @@ if(shaking)
 }
 
 //Sets view position
-camera_set_view_pos(camera,camX+shake_x,camY+shake_y);
-camera_set_view_size(camera,camW,camH);
-
+camera_set_view_pos(view_camera[0],x-(camWidth*0.5)+shake_x,y-(camHeight*0.5)+shake_y);
