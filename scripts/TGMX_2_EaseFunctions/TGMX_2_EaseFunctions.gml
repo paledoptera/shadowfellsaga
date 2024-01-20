@@ -22,7 +22,7 @@ function Ease(_value1, _value2, _amount, _ease)
 	// MAKE SURE SHARED TWEENER HAS BEEN CREATED AT LEAST ONCE
 	static _ = SharedTweener();
 
-	if (is_real(_ease))
+	if (!is_nan(real(_ease)))
 	{
 		if (_ease < 100000) // Animation Curve ID
 		{
@@ -58,7 +58,7 @@ function EaseToString(_name, _ease, _channel=0)
 {		
 	static _ = TGMX_Begin();
 	
-	if (is_real(_ease))
+	if (!is_nan(real(_ease)))
 	{
 		if (_ease < 100000)
 		{
@@ -68,6 +68,11 @@ function EaseToString(_name, _ease, _channel=0)
 		{
 			_ease = method(undefined, _ease);	
 		}
+	}
+	else
+	if (is_struct(_ease) || animcurve_get(_ease) != -1)
+	{
+		_ease = animcurve_get_channel(animcurve_get(_ease), _channel);
 	}
 	
 	_name = TGMX_StringStrip(_name);

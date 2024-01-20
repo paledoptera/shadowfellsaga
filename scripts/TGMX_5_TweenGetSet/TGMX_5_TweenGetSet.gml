@@ -453,7 +453,7 @@ function TweenSet(_t, _data_label)
 		        break;
 			
 				case TGMX_T_EASE:
-					if (is_real(_setValue))
+					if (!is_nan(real(_setValue)))
 					{	
 						if (_setValue < 100000) 
 						{	// Animation Curve ID
@@ -469,6 +469,10 @@ function TweenSet(_t, _data_label)
 		    		{
 						_setValue =  global.TGMX.ShortCodesEase[? TGMX_StringStrip(_setValue)];
 		    		}
+					else
+					{
+						// TODO: Update for asset ref for anim curve	
+					}
 		    		
 		    		// Update ease data
 		    		_t[@ TGMX_T_EASE] = _setValue;
@@ -604,7 +608,7 @@ function TweenSet(_t, _data_label)
 		            if (is_struct(_t[TGMX_T_TARGET]) || _t[TGMX_T_TARGET] != noone)
 		            {
 		            	_t[@ TGMX_T_TARGET] = (is_struct(_setValue)) ? weak_ref_create(_setValue) : _setValue.id;
-                
+				
 		                if (is_struct(_t[TGMX_T_STATE]) || real(_t[TGMX_T_STATE]) >= 0)
 		                {
 		                    _t[@ TGMX_T_STATE] = _t[TGMX_T_TARGET]; // set active state

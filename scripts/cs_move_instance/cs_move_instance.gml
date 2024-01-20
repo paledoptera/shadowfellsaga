@@ -1,6 +1,6 @@
 
-function cs_move_instance(){
-///@description cutscene_move_instance
+function cs_move_instance(argument0,argument1,argument2,argument3,argument4 = true){
+///@description cs_move_instance
 ///@arg obj
 ///@arg x
 ///@arg y

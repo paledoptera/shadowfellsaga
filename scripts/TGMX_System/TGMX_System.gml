@@ -950,15 +950,11 @@ function TGMX_Tween(_script, _args, _tID)
 		TGMX.GroupScales[? _t[TGMX_T_GROUP]] = _t[TGMX_T_GROUP_SCALE];
 	}
 	
+	
 	// FINALIZE USED EASE TYPE
 	if (is_string(_t[TGMX_T_EASE])) // CONVERT EASE TYPE IF A STRING
 	{
 		_t[@ TGMX_T_EASE] = TGMX.ShortCodesEase[? TGMX_Cache[? _t[TGMX_T_EASE]] ?? TGMX_StringStrip(_t[TGMX_T_EASE])];
-	}
-	else
-	if (is_real(_t[TGMX_T_EASE])) // CONVERT REAL TYPE
-	{						// IS CURVE ID		   // GET CURVE CHANNEL						  // CONVERT FUNCTION ID TO METHOD
-		_t[@ TGMX_T_EASE] = _t[TGMX_T_EASE] < 100000 ? animcurve_get_channel(_t[TGMX_T_EASE], 0) : method(undefined, _t[TGMX_T_EASE]);
 	}
 	else
 	if (is_array(_t[TGMX_T_EASE])) // HANDLE MULTI-EASE-TYPE TWEEN
@@ -968,9 +964,13 @@ function TGMX_Tween(_script, _args, _tID)
 			_t[TGMX_T_EASE][@ 0] = TGMX.ShortCodesEase[? TGMX_StringStrip(_t[TGMX_T_EASE][0])];
 		}
 		else
-		if (is_real(_t[TGMX_T_EASE][0]))	// CONVERT FUNCTION ID OR ANIMATION CURVE ID
+		if (!is_nan(real(_t[TGMX_T_EASE][0])))	// CONVERT FUNCTION ID OR ANIMATION CURVE ID
 		{								// IS CURVE ID		   // GET CURVE CHANNEL						  // CONVERT FUNCTION ID TO METHOD
-			_t[@ TGMX_T_EASE][@ 0] = _t[TGMX_T_EASE][0] < 100000 ? animcurve_get_channel(_t[TGMX_T_EASE][0], 0) : method(undefined, _t[TGMX_T_EASE][0]);
+			_t[@ TGMX_T_EASE][@ 0] = real(_t[TGMX_T_EASE][0]) < 100000 ? animcurve_get_channel(_t[TGMX_T_EASE][0], 0) : method(undefined, _t[TGMX_T_EASE][0]);
+		}
+		else
+		{
+			// TODO: Support asset ref changes for animation curve	
 		}
 		
 		if (is_string(_t[TGMX_T_EASE][1]))
@@ -978,15 +978,34 @@ function TGMX_Tween(_script, _args, _tID)
 			_t[TGMX_T_EASE][@ 1] = TGMX.ShortCodesEase[? TGMX_StringStrip(_t[TGMX_T_EASE][1])];
 		}
 		else
-		if (is_real(_t[TGMX_T_EASE][1]))
-		{							// IS CURVE ID		       // GET CURVE CHANNEL						     // CONVERT FUNCTION ID TO METHOD
-			_t[@ TGMX_T_EASE][@ 1] = _t[TGMX_T_EASE][1] < 100000 ? animcurve_get_channel(_t[TGMX_T_EASE][1], 0) : method(undefined, _t[TGMX_T_EASE][1]);
+		if (!is_nan(real(_t[TGMX_T_EASE][1])))
+		{
+			// IS CURVE ID		       // GET CURVE CHANNEL						     // CONVERT FUNCTION ID TO METHOD
+			_t[@ TGMX_T_EASE][@ 1] = real(_t[TGMX_T_EASE][1]) < 100000 ? animcurve_get_channel(_t[TGMX_T_EASE][1], 0) : method(undefined, _t[TGMX_T_EASE][1]);
+		}
+		else
+		{
+			// TODO: Support asset ref changes for animation curve	
 		}
 		
 		// STORE RAW TWEENS FOR SWAPPING
 		_t[@ TGMX_T_EASE_RAW] = _t[TGMX_T_EASE];
 		// SET ACTIVE EASE FUNCTION
 		_t[@ TGMX_T_EASE] = _t[TGMX_T_EASE][0];
+	}
+	else
+	if (!is_nan(real(_t[TGMX_T_EASE]))) // CONVERT REAL TYPE
+	{
+		// IS CURVE ID		   // GET CURVE CHANNEL						  // CONVERT FUNCTION ID TO METHOD	
+		_t[@ TGMX_T_EASE] = _t[TGMX_T_EASE] < 100000 ? animcurve_get_channel(_t[TGMX_T_EASE], 0) : method(undefined, _t[TGMX_T_EASE]);
+	}
+	else
+	if (is_struct(_t[TGMX_T_EASE]) || animcurve_get(_t[TGMX_T_EASE]) != -1)
+	{
+		if (struct_exists(_t[TGMX_T_EASE], "channels"))
+		{
+			_t[@ TGMX_T_EASE] = animcurve_get_channel(_t[TGMX_T_EASE], 0);
+		}
 	}
 	
 	// CONVERT MODE TYPE IF A STRING
@@ -1121,9 +1140,8 @@ function TGMX_Tween(_script, _args, _tID)
 		if (_sharedTweener.inUpdateLoop) { ds_queue_enqueue(_sharedTweener.stateChanger, _t, _t[TGMX_T_TARGET]); }
 		else							 { _t[@ TGMX_T_STATE] = _t[TGMX_T_TARGET]; } 
 		
-		// NOTE: I DONT THINK THE STATE CHANGER IS NEEDED ANYMORE BECAUSE OF EXPLICIT PROCESS COUNT
 		// SET TWEEN STATE AS TARGET
-		//_t[@ TGMX_T_STATE] = _t[TGMX_T_TARGET];
+		_t[@ TGMX_T_STATE] = _t[TGMX_T_TARGET];
 		
 		// Pre-process tween data
 		TGMX_TweenPreprocess(_t);
@@ -2068,6 +2086,15 @@ function TGMX_TweensExecute(_tStruct, _script)
 	
 				if (TGMX_TargetExists(_target))
 				{
+					if (!is_nan(real(_target)) && !is_struct(_selectionData)) //else // INSTANCE | OBJECT | CHILD
+					{
+						if (_target == _selectionData.id || _target.object_index == _selectionData || (is_struct(_selectionData) && object_is_ancestor(_target.object_index, _selectionData)))
+						{
+							_args[0] = _t;
+							script_execute_ext(_script, _args);
+						}
+					}
+					else
 					if (is_struct(_target)) // STRUCT TARGET
 					{
 						if (_target.ref == _selectionData)
@@ -2076,14 +2103,7 @@ function TGMX_TweensExecute(_tStruct, _script)
 							script_execute_ext(_script, _args);
 						}
 					}
-					else // INSTANCE | OBJECT | CHILD
-					{
-						if (_target == _selectionData.id || _target.object_index == _selectionData || object_is_ancestor(_target.object_index, _selectionData))
-						{
-							_args[0] = _t;
-							script_execute_ext(_script, _args);
-						}
-					}
+					
 				}
 			}
 		}

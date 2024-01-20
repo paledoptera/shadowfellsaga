@@ -651,16 +651,8 @@ function TGMX_7_Properties()
 	{
 		var _path, _xstart, _ystart, _xrelative, _yrelative;
 		
-		if (is_real(_path_data))
-		{	// ABSOLUTE
-			_path = _path_data;
-			_xstart = path_get_x(_path, 0);
-			_ystart = path_get_y(_path, 0);
-			_xrelative = 0;
-			_yrelative = 0;
-		}
-		else
-		{
+		if (is_array(_path_data))
+		{	
 			_path = _path_data[0];
 			_xstart = path_get_x(_path, 0);
 			_ystart = path_get_y(_path, 0);
@@ -683,6 +675,15 @@ function TGMX_7_Properties()
 				_path_data[@ 1] = _target.x; // Right... if I don't do this, it'll always use the update x/y position to offset.. which is wrong!
 				_path_data[@ 2] = _target.y;
 			}
+		}
+		else
+		{
+			// ABSOLUTE
+			_path = _path_data;
+			_xstart = path_get_x(_path, 0);
+			_ystart = path_get_y(_path, 0);
+			_xrelative = 0;
+			_yrelative = 0;
 		}
 	
 		if (_tween[TGMX_T_MODE] == TWEEN_MODE_REPEAT)

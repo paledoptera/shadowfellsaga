@@ -1,4 +1,4 @@
-function cs_camera_pan(argument0, argument1, argument2, argument3){
+function cs_camera_pan(argument0, argument1, argument2, argument3 = true){
 ///@description cs_camera_pan
 ///@arg x
 ///@arg y

@@ -1,19 +1,19 @@
 
-[TweenGMX 1.0.2]
+[TweenGMX 1.0.3]
 		
 
 ===================
 == Starter Guide ==
 ===================
 
-	https://stephenloney.com/_/TweenGMX/102/TGMX_Starter_Guide.html
+	https://stephenloney.com/_/TweenGMX/103/TGMX_Starter_Guide.html
 
 
 =====================
 == Reference Guide ==
 =====================
 
-	https://stephenloney.com/_/TweenGMX/102/TGMX_Reference_Guide.html
+	https://stephenloney.com/_/TweenGMX/103/TGMX_Reference_Guide.html
 	
 	
 =====================
@@ -27,14 +27,14 @@
 == Demo Project ==
 ==================
 	
-	https://stephenloney.com/_/TweenGMX/102/TGMX_Examples.yyz
+	https://stephenloney.com/_/TweenGMX/103/TGMX_Examples.yyz
 
 
 ==================
 == Example Game ==
 ==================
 	
-	https://stephenloney.com/_/TweenGMX/102/TGMX_Alien_Odds.yyz
+	https://stephenloney.com/_/TweenGMX/103/TGMX_Alien_Odds.yyz
 	
 	
 ====================

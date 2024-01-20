@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Admin",
-    "path": "folders/Libraries/TweenGMX/Admin.yy",
+    "path": "folders/TweenGMX/Admin.yy",
   },
 }

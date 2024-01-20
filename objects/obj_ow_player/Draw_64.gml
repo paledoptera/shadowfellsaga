@@ -10,14 +10,14 @@ if world_flag = 1
 	if state = active && input.target="overworld"
 	{
 		//smooth tween of buttons coming in from the top
-		execute_tween(id, "ui_y", 0, "easeInOut", 0.05, false);
-		execute_tween(id, "ui_opacity", 1, "easeInOut", 0.05, false);		
+		TweenFire(id,EaseInOutCubic,TWEEN_MODE_ONCE,true,0,0.5,"ui_y", ui_y, 0);
+		TweenFire(id,EaseInOutCubic,TWEEN_MODE_ONCE,true,0,0.5,"ui_opacity", ui_opacity, 1);
 	}
 	else
 	{
 		//smooth tween of buttons coming in from the top
-		execute_tween(id, "ui_y", -20, "easeInOut", 0.05, false)
-		execute_tween(id, "ui_opacity", 0, "easeInOut", 0.05, false);		
+		TweenFire(id,EaseInOutCubic,TWEEN_MODE_ONCE,true,0,0.5,"ui_y", ui_y, -20);
+		TweenFire(id,EaseInOutCubic,TWEEN_MODE_ONCE,true,0,0.5,"ui_opacity", ui_opacity, 0);	
 	}	
 	
 	

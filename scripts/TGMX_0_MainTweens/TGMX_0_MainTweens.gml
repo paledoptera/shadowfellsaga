@@ -42,6 +42,8 @@ function TweenFire()
 	// MAKE SURE TWEENER HAS BEEN CREATED AT LEAST ONCE
 	static _ = SharedTweener();
 	
+	
+	
 	// CHECK FIRST ARGUMENT FOR "OFF-RAIL" TWEEN CALL
 	if (is_string(argument[0]) || is_array(argument[0]))
 	{		
@@ -410,7 +412,7 @@ function TweenMore()
 			}
 		}
 	}
-	
+
 	var _tween = TGMX_FetchTween(argument[0]);
 	var _newTween = TGMX_Tween(TweenCreate, _args, 0);
 	TweenDestroyWhenDone(_newTween, _tween[TGMX_T_DESTROY]);
