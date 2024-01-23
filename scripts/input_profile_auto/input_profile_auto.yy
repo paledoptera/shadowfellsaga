@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "16  Profiles",
-    "path": "folders/Libraries/Input/16  Profiles.yy",
+    "path": "folders/Scripts (Third Party)/Input/16  Profiles.yy",
   },
 }

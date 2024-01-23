@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Functions",
-    "path": "folders/Libraries/FAST/Logging/Functions.yy",
+    "path": "folders/Scripts (Third Party)/FAST/Logging/Functions.yy",
   },
 }

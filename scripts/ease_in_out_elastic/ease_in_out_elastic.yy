@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Elastic",
-    "path": "folders/Libraries/FAST/Numbers/Functions/ease/Elastic.yy",
+    "path": "folders/Scripts (Third Party)/FAST/Numbers/Functions/ease/Elastic.yy",
   },
 }

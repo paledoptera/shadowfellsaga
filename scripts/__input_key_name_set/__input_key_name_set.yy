@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Keyboard and Mouse",
-    "path": "folders/Libraries/Input/(System)/Keyboard and Mouse.yy",
+    "path": "folders/Scripts (Third Party)/Input/(System)/Keyboard and Mouse.yy",
   },
 }

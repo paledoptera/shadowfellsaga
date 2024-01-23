@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "13  Exporting and Importing",
-    "path": "folders/Libraries/Input/13  Exporting and Importing.yy",
+    "path": "folders/Scripts (Third Party)/Input/13  Exporting and Importing.yy",
   },
 }

@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Icons",
-    "path": "folders/Libraries/Input/(System)/Icons.yy",
+    "path": "folders/Scripts (Third Party)/Input/(System)/Icons.yy",
   },
 }

@@ -4,7 +4,7 @@
   "name": "__shd_scribble_msdf",
   "parent": {
     "name": "Shaders",
-    "path": "folders/Libraries/Scribble/(System - don't call these functions)/Shaders.yy",
+    "path": "folders/Scripts (Third Party)/Scribble/(System - don't call these functions)/Shaders.yy",
   },
   "type": 1,
 }

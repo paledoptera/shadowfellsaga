@@ -123,7 +123,7 @@
   "maintainGms1Font": false,
   "parent": {
     "name": "Fonts",
-    "path": "folders/Libraries/FAST/Core/System/Fonts.yy",
+    "path": "folders/Scripts (Third Party)/FAST/Core/System/Fonts.yy",
   },
   "pointRounding": 0,
   "ranges": [

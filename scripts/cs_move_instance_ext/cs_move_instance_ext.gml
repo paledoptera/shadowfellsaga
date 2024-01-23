@@ -1,4 +1,4 @@
-function cs_move_instance_ext(argument0,argument1,argument2,argument3,argument4 = true,argument5 = EaseLinear){
+function cs_move_instance_ext(argument0,argument1,argument2,argument3,argument4 = true,argument5 = "linear"){
 ///@description cs_move_instance_ext
 ///@arg obj
 ///@arg x
@@ -24,10 +24,6 @@ var yy = CS._value[1];
 
 with(obj)
 { 
-	var tween1, tween2
-	TweenEasyUseDelta(true);
-	TweenEasyMove(x,y,xx,yy,0,time_in_seconds,anim_curve,TWEEN_MODE_ONCE);
-	
 	/*tween1 = TweenFire(obj,anim_curve,TWEEN_MODE_ONCE,true,0,time_in_seconds,"x", x, xx);
 	tween2 = TweenFire(obj,anim_curve,TWEEN_MODE_ONCE,true,0,time_in_seconds,"y", y, xx);*/
 }

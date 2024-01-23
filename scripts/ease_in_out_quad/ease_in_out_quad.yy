@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Quad",
-    "path": "folders/Libraries/FAST/Numbers/Functions/ease/Quad.yy",
+    "path": "folders/Scripts (Third Party)/FAST/Numbers/Functions/ease/Quad.yy",
   },
 }

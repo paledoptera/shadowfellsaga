@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Animation",
-    "path": "folders/Libraries/Scribble/Animation.yy",
+    "path": "folders/Scripts (Third Party)/Scribble/Animation.yy",
   },
 }

@@ -1,4 +1,4 @@
-function cs_camera_pan_ext(argument0, argument1, argument2, argument3 = true, argument4 = EaseLinear){
+function cs_camera_pan_ext(argument0, argument1, argument2, argument3 = true, argument4 = "linear"){
 ///@description cs_camera_pan_ext
 ///@arg x
 ///@arg y

@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "(System - don't call these functions)",
-    "path": "folders/Libraries/Scribble/(System - don't call these functions).yy",
+    "path": "folders/Scripts (Third Party)/Scribble/(System - don't call these functions).yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

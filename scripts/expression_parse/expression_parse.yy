@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "expression",
-    "path": "folders/Libraries/FAST/Core/Functions/expression.yy",
+    "path": "folders/Scripts (Third Party)/FAST/Core/Functions/expression.yy",
   },
 }

@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Utilities",
-    "path": "folders/Scripts/Additional Scripts/Utilities.yy",
+    "path": "folders/Scripts/Utilities.yy",
   },
 }

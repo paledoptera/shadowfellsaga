@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "System",
-    "path": "folders/Libraries/FAST/Core/System.yy",
+    "path": "folders/Scripts (Third Party)/FAST/Core/System.yy",
   },
 }

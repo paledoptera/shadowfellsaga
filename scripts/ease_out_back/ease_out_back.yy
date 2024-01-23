@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Back",
-    "path": "folders/Libraries/FAST/Numbers/Functions/ease/Back.yy",
+    "path": "folders/Scripts (Third Party)/FAST/Numbers/Functions/ease/Back.yy",
   },
 }

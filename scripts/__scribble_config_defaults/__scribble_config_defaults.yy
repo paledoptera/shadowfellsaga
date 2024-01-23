@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Configuration - Please edit these!",
-    "path": "folders/Libraries/Scribble/Configuration - Please edit these!.yy",
+    "path": "folders/Scripts (Third Party)/Scribble/Configuration - Please edit these!.yy",
   },
 }

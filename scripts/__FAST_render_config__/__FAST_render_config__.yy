@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Render",
-    "path": "folders/Libraries/FAST/Render.yy",
+    "path": "folders/Scripts (Third Party)/FAST/Render.yy",
   },
 }

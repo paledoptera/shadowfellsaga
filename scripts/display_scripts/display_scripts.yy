@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Display Scripts",
-    "path": "folders/Libraries/Display Scripts.yy",
+    "path": "folders/Scripts (Third Party)/Display Scripts.yy",
   },
 }

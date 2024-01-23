@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "array",
-    "path": "folders/Libraries/FAST/Core/Functions/array.yy",
+    "path": "folders/Scripts (Third Party)/FAST/Core/Functions/array.yy",
   },
 }

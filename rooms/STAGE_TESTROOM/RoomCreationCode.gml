@@ -14,7 +14,7 @@ flag_set(global.flags,"world",1);
 cutscene =
 [
 	{action : function()				/*-Camera Establish-*/ {cs_camera_pan(0,-400,-1,true);}},	
-	{action : function()				/*-Camera Pan Up-*/ {cs_camera_pan_ext(0,400,5.0);}},		
+	{action : function()				/*-Camera Pan Down-*/ {cs_camera_pan(0,400,2,true);}},		
 	{action : function()				/*-Pause 3 seconds-*/ {cs_pause(3);}},
 	{action : function()				/*-Camera Pan Left-*/ {cs_camera_pan(-200,0,2,true);}},
 	{action : function()				/*-Pause 3 seconds-*/ {cs_pause(3);}},

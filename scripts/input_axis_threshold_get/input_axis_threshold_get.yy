@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "12  Accessibility",
-    "path": "folders/Libraries/Input/12  Accessibility.yy",
+    "path": "folders/Scripts (Third Party)/Input/12  Accessibility.yy",
   },
 }

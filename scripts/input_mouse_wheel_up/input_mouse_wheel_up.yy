@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "24  Mouse (Direct)",
-    "path": "folders/Libraries/Input/24  Mouse (Direct).yy",
+    "path": "folders/Scripts (Third Party)/Input/24  Mouse (Direct).yy",
   },
 }

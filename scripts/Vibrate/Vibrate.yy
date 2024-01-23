@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Vibration",
-    "path": "folders/Libraries/Vibration.yy",
+    "path": "folders/Scripts (Third Party)/Vibration.yy",
   },
 }

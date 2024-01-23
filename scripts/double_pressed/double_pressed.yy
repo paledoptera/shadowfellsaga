@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "2 Advanced Checks",
-    "path": "folders/Libraries/Input/CUSTOM/2 Advanced Checks.yy",
+    "path": "folders/Scripts (Third Party)/Input/CUSTOM/2 Advanced Checks.yy",
   },
 }

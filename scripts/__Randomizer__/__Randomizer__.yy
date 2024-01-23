@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Abstract",
-    "path": "folders/Libraries/FAST/Numbers/Abstract.yy",
+    "path": "folders/Scripts (Third Party)/FAST/Numbers/Abstract.yy",
   },
 }

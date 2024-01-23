@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Circ",
-    "path": "folders/Libraries/FAST/Numbers/Functions/ease/Circ.yy",
+    "path": "folders/Scripts (Third Party)/FAST/Numbers/Functions/ease/Circ.yy",
   },
 }

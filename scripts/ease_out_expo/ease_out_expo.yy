@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Expo",
-    "path": "folders/Libraries/FAST/Numbers/Functions/ease/Expo.yy",
+    "path": "folders/Scripts (Third Party)/FAST/Numbers/Functions/ease/Expo.yy",
   },
 }

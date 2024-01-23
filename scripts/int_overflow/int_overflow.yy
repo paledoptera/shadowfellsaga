@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "int",
-    "path": "folders/Libraries/FAST/Numbers/Functions/int.yy",
+    "path": "folders/Scripts (Third Party)/FAST/Numbers/Functions/int.yy",
   },
 }

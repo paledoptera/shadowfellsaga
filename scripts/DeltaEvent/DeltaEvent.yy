@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Timing",
-    "path": "folders/Libraries/FAST/Core/Constructors/Timing.yy",
+    "path": "folders/Scripts (Third Party)/FAST/Core/Constructors/Timing.yy",
   },
 }

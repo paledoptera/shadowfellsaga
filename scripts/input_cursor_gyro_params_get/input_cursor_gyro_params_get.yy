@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "21  Gyro & Motion",
-    "path": "folders/Libraries/Input/21  Gyro & Motion.yy",
+    "path": "folders/Scripts (Third Party)/Input/21  Gyro & Motion.yy",
   },
 }

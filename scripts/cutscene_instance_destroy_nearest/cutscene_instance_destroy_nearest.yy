@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "CUTSCENES (OLD)",
-    "path": "folders/Scripts/Additional Scripts/Utilities/CUTSCENES (OLD).yy",
+    "path": "folders/Scripts/Utilities/CUTSCENES (OLD).yy",
   },
 }
