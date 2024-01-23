@@ -11,7 +11,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "(System)",
-    "path": "folders/Scripts (Third Party)/Input/(System).yy",
+    "path": "folders/Scripts (Third Party)/Input (by offalynne)/(System).yy",
   },
   "parentObjectId": null,
   "persistent": true,

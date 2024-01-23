@@ -1,8 +1,9 @@
-if(room!=STAGE_BATTLE){
+if(room!=STAGE_BATTLE)
+{
 	global.currentroom=room;	
 }
+
 check_world_type(); 
-party_get_room_name(global.currentroom);
 
 //ini_open("sfsaga.ini");
 //PLAYER.x									= ini_read_real("General","pX",320)

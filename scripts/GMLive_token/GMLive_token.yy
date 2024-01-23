@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Compiler",
-    "path": "folders/Extensions/GMLive/Internal/Compiler.yy",
+    "path": "folders/Scripts (Third Party)/GMLive (by YellowAfterlife)/Internal/Compiler.yy",
   },
 }

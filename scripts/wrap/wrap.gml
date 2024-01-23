@@ -8,6 +8,7 @@ function wrap(){
 /// @param max
 // Returns the value wrapped, values over or under will be wrapped around
  
+
 if (argument0 mod 1 == 0)
 {
     while (argument0 > argument2 || argument0 < argument1)

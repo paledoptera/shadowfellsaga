@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "10  Cursor Control",
-    "path": "folders/Scripts (Third Party)/Input/10  Cursor Control.yy",
+    "path": "folders/Scripts (Third Party)/Input (by offalynne)/10  Cursor Control.yy",
   },
 }

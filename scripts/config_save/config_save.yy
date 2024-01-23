@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "config",
-    "path": "folders/Scripts/Game Setup/config.yy",
+    "path": "folders/Scripts/!!! Game Setup !!!/config.yy",
   },
 }

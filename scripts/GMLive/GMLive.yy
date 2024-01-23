@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Internal",
-    "path": "folders/Extensions/GMLive/Internal.yy",
+    "path": "folders/Scripts (Third Party)/GMLive (by YellowAfterlife)/Internal.yy",
   },
 }

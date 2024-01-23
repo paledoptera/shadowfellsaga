@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Loading",
-    "path": "folders/Scripts/Game Setup/savedata/Loading.yy",
+    "path": "folders/Scripts/!!! Game Setup !!!/savedata/Loading.yy",
   },
 }

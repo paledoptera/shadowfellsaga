@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "15  Players",
-    "path": "folders/Scripts (Third Party)/Input/15  Players.yy",
+    "path": "folders/Scripts (Third Party)/Input (by offalynne)/15  Players.yy",
   },
 }

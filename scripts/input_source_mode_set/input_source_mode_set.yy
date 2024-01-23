@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "17  Source Modes",
-    "path": "folders/Scripts (Third Party)/Input/17  Source Modes.yy",
+    "path": "folders/Scripts (Third Party)/Input (by offalynne)/17  Source Modes.yy",
   },
 }

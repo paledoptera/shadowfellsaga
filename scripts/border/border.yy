@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Game Setup",
-    "path": "folders/Scripts/Game Setup.yy",
+    "name": "!!! Game Setup !!!",
+    "path": "folders/Scripts/!!! Game Setup !!!.yy",
   },
 }

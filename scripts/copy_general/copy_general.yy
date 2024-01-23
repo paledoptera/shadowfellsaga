@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Copying",
-    "path": "folders/Scripts/Game Setup/savedata/Copying.yy",
+    "path": "folders/Scripts/!!! Game Setup !!!/savedata/Copying.yy",
   },
 }

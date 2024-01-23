@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "wep",
-    "path": "folders/Scripts/Game Setup/items/equip/wep.yy",
+    "path": "folders/Scripts/!!! Game Setup !!!/items/equip/wep.yy",
   },
 }

@@ -1,6 +1,3 @@
-//SETTING BORDER SIZE
-if(!ctrl_global.borderEnabled) {display_set_gui_size(global.gui_res_w, global.gui_res_h);}  
-
 // !!! UI IS ONLY VISIBLE IN DARK WORLD !!!
 world_flag = flag_get(global.flags,"world")
 if world_flag = 1

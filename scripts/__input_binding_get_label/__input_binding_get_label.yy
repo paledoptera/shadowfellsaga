@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "(System)",
-    "path": "folders/Scripts (Third Party)/Input/(System).yy",
+    "path": "folders/Scripts (Third Party)/Input (by offalynne)/(System).yy",
   },
 }

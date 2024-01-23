@@ -3,9 +3,9 @@
 function wave(){
 /// @description wave(from, to, duration, offset);
 /// @param from
-/// @param  to
-/// @param  duration
-/// @param  offset
+/// @param to
+/// @param duration
+/// @param offset
 // Returns a value that will wave back and forth between [from-to] over [duration] seconds
 // Examples
 //      image_angle = Wave(-45,45,1,0)  -> rock back and forth 90 degrees in a second

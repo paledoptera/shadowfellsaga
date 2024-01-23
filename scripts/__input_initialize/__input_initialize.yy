@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Initialization",
-    "path": "folders/Scripts (Third Party)/Input/(System)/Initialization.yy",
+    "path": "folders/Scripts (Third Party)/Input (by offalynne)/(System)/Initialization.yy",
   },
 }

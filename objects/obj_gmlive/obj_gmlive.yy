@@ -11,8 +11,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "GMLive",
-    "path": "folders/Extensions/GMLive.yy",
+    "name": "GMLive (by YellowAfterlife)",
+    "path": "folders/Scripts (Third Party)/GMLive (by YellowAfterlife).yy",
   },
   "parentObjectId": null,
   "persistent": true,

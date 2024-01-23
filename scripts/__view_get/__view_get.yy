@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "view",
-    "path": "folders/Scripts/Utilities/compatibility/view.yy",
+    "path": "folders/Scripts (Third Party)/Compatability Scripts (by Yoyogames)/view.yy",
   },
 }

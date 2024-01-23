@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "3 Further Verb Functions",
-    "path": "folders/Scripts (Third Party)/Input/CUSTOM/3 Further Verb Functions.yy",
+    "path": "folders/Scripts (Third Party)/Input (by offalynne)/CUSTOM/3 Further Verb Functions.yy",
   },
 }

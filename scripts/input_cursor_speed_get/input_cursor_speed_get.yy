@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "09  Cursor",
-    "path": "folders/Scripts (Third Party)/Input/09  Cursor.yy",
+    "path": "folders/Scripts (Third Party)/Input (by offalynne)/09  Cursor.yy",
   },
 }

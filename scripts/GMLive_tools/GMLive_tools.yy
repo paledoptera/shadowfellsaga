@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Public",
-    "path": "folders/Extensions/GMLive/Public.yy",
+    "path": "folders/Scripts (Third Party)/GMLive (by YellowAfterlife)/Public.yy",
   },
 }

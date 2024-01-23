@@ -7,7 +7,9 @@ function item_info(item_id){
     itemtarget = 0
     itemnameb = " "
     itemdescb = " "
-	switch(item_id){
+	
+	switch(item_id)
+	{
 		case 0:
 			itemnameb = " "
             itemdescb = "---"

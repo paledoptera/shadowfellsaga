@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "gen",
-    "path": "folders/Scripts/Game Setup/items/gen.yy",
+    "path": "folders/Scripts/!!! Game Setup !!!/items/gen.yy",
   },
 }

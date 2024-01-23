@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "00  Configuration - Please edit these scripts!",
-    "path": "folders/Scripts (Third Party)/Input/00  Configuration - Please edit these scripts!.yy",
+    "path": "folders/Scripts (Third Party)/Input (by offalynne)/00  Configuration - Please edit these scripts!.yy",
   },
 }

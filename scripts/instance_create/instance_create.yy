@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "instance",
-    "path": "folders/Scripts/Utilities/compatibility/instance.yy",
+    "path": "folders/Scripts (Third Party)/Compatability Scripts (by Yoyogames)/instance.yy",
   },
 }

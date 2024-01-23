@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "03  Advanced Checkers",
-    "path": "folders/Scripts (Third Party)/Input/03  Advanced Checkers.yy",
+    "path": "folders/Scripts (Third Party)/Input (by offalynne)/03  Advanced Checkers.yy",
   },
 }
