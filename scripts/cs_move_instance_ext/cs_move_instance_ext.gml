@@ -17,15 +17,20 @@ if(CS.start_action = false)
 	CS.start_action = true
 	if(!relative) {CS._value[0] = argument1; CS._value[1] = argument2;}
 	else {CS._value[0] = obj.x + argument1; CS._value[1] = obj.y + argument2;}
+	CS._value[2] = obj.x; CS._value[3] = obj.y;
 }
 
 var xx = CS._value[0];
 var yy = CS._value[1];
+var xxstart = CS._value[2];
+var yystart = CS._value[3]; 
 
 with(obj)
 { 
-	/*tween1 = TweenFire(obj,anim_curve,TWEEN_MODE_ONCE,true,0,time_in_seconds,"x", x, xx);
-	tween2 = TweenFire(obj,anim_curve,TWEEN_MODE_ONCE,true,0,time_in_seconds,"y", y, xx);*/
+	x = tween(anim_curve,time_in_seconds,xxstart,xx,false,false,0);
+	y = tween(anim_curve,time_in_seconds,yystart,yy,false,false,1);
+	x = round(x);
+	y = round(y);
 }
 
 }

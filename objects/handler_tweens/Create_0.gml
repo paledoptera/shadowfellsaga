@@ -1,0 +1,1 @@
+tween_id = array_create(100, 0);

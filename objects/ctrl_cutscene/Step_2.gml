@@ -12,6 +12,9 @@ switch (action_info)
 	case "movement":
 		if 	action_info_extra.x = _value[0] and action_info_extra.y = _value[1] {event_user(0);}
 	break;
+	case "screenshake":
+		if CAM.shaking = false {event_user(0);}
+	break;
 }
 
 
