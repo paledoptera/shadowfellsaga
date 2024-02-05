@@ -1,6 +1,6 @@
-/// @description newChat(messageStruct);
+/// @description dialogue_start(messageStruct);
 /// @param messageStruct
-function newChat(argument0) {
+function dialogue_start(argument0) {
 	
 	
 	if struct_exists(argument0[0],"talkspeed") {var _txtdelay = argument0[0].talkspeed;}
@@ -8,7 +8,7 @@ function newChat(argument0) {
 	if struct_exists(argument0[0],"position") {var _pos = argument0[0].position;}
 	else {var _pos = "dynamic";}
 	
-	var text = instance_create(0, 0, obj_dialogue);	
+	var text = instance_create(0, 0, ctrl_dialogue);	
 	text.txtdelay = _txtdelay;
 	text.pos = _pos;
 	

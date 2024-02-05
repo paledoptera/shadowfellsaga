@@ -1,4 +1,8 @@
 /// @description Done
+
+//check for dialogue pause (cutscenes)
+
+
 if (done)
 {
 	if playerExists and !instance_exists(ctrl_cutscene) {PLAYER.active = true; PLAYER.image_speed = 1;}

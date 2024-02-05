@@ -15,6 +15,9 @@ switch (action_info)
 	case "screenshake":
 		if CAM.shaking = false {event_user(0);}
 	break;
+	case "dialogue":
+		if !instance_exists(ctrl_dialogue) {event_user(0);}
+	break;
 }
 
 

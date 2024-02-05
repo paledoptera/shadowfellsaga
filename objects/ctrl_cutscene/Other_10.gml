@@ -3,6 +3,7 @@ timer = 0;
 time_end_action = 1;
 
 start_action = false;
+action_info = "";
 
 stage += 1
 if stage > stage_end {instance_destroy();}

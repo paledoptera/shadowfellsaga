@@ -14,6 +14,9 @@ _value[7] = -1;
 _value[8] = -1;
 _value[9] = -1;
 
+stored_dialogue = 0;
+stored_dialogue_start = 0;
+
 action_info = "";
 action_info_extra = -1;
 paused = false;

@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "newChat",
+  "name": "cs_dialogue_start",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Utilities",
-    "path": "folders/Scripts/Utilities.yy",
+    "name": "Cutscenes",
+    "path": "folders/Scripts/Cutscenes.yy",
   },
 }

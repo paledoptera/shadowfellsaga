@@ -6,11 +6,6 @@ if ran_creation_runcode = false
 	_runcode[message_current]();
 }
 
-//Gui maximise
-if(!ctrl_global.borderEnabled){
-	display_set_gui_size(640,480);
-}
-
 //t is for modifiers
 t++;
 
@@ -33,8 +28,6 @@ if (message_end > 0)
 	if pos = "top" {textboxy = 100}
 	
 	font_correct(font[message_current]);
-	
-	cam = view_get_camera(ctrl_camera.camera);
 	
 	draw_sprite_ext(style, 0, 640/2, textboxy,2,2,0,c_white,1);
 	//Draw portrait
@@ -102,6 +95,13 @@ if (message_end > 0)
                 timer = 0;
 				done=true;
             }
+			//registering the pause
+			if message[message_current] = "^" and instance_exists(CS)
+			{
+				CS.stored_dialogue_start = message_current+1;
+				timer = 0;
+				done=true;
+			}
         }
     }
     //Typewriter

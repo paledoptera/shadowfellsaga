@@ -6,7 +6,7 @@ if stage = 0 {/*do nothing*/}
 //STAGE 1 - PAPYRUS STARTS TALKING
 if stage = 1 
 {
-	if instance_exists(obj_dialogue) image_index = base_frame+obj_dialogue.facetimer
+	if instance_exists(ctrl_dialogue) image_index = base_frame+ctrl_dialogue.facetimer
 	else {image_index = base_frame; image_index_end = base_frame;}
 	image_index_start = base_frame;
 	image_index_end = base_frame+1;
@@ -28,7 +28,7 @@ if stage = 2
 if stage = 3
 {
 	base_frame = 8;
-	if instance_exists(obj_dialogue) image_index = base_frame+obj_dialogue.facetimer
+	if instance_exists(ctrl_dialogue) image_index = base_frame+ctrl_dialogue.facetimer
 	else {image_index = base_frame; image_index_end = base_frame;}
 	image_index_start = base_frame;
 	image_index_end = base_frame+1;
@@ -42,7 +42,7 @@ if stage = 3
 //STAGE 4 - PAPYRUS PUTS ON HAND
 if stage = 4
 {
-	if instance_exists(obj_dialogue) image_index = base_frame+obj_dialogue.facetimer
+	if instance_exists(ctrl_dialogue) image_index = base_frame+ctrl_dialogue.facetimer
 	else {image_index = base_frame; image_index_end = base_frame;}
 	image_index_start = base_frame;
 	image_index_end = base_frame+1;
@@ -53,7 +53,7 @@ if stage = 4
 //STAGE 5 - PAPYRUS MONOLOGUES AFTER PUTTING ON HAND
 if stage = 5
 {
-	if instance_exists(obj_dialogue) image_index = base_frame+obj_dialogue.facetimer
+	if instance_exists(ctrl_dialogue) image_index = base_frame+ctrl_dialogue.facetimer
 	else {image_index = base_frame; image_index_end = base_frame;}
 	image_index_start = base_frame;
 	image_index_end = base_frame+1;
@@ -85,14 +85,14 @@ if stage = 7
 	_draw_x_1 = x;
 	image_index_start_1 = 13;
 	image_index_end_1 = 15;
-	if instance_exists(obj_dialogue) image_speed_1 = 1;
+	if instance_exists(ctrl_dialogue) image_speed_1 = 1;
 	animation_loops_1 = false;
 }
 //STAGE 8 - PAPYRUS TALKING HEAD
 if stage = 8
 {
 	//EXTRA SPRITE 1
-	if instance_exists(obj_dialogue) image_index_1 = base_frame+obj_dialogue.facetimer
+	if instance_exists(ctrl_dialogue) image_index_1 = base_frame+ctrl_dialogue.facetimer
 	else {image_index_1 = base_frame; image_index_end_1 = base_frame;}
 	image_index_start_1 = base_frame;
 	image_index_end_1 = base_frame+1;
@@ -119,7 +119,7 @@ if stage = 10
 if stage = 11
 {
 	//EXTRA SPRITE 1
-	if instance_exists(obj_dialogue) image_index_1 = base_frame+obj_dialogue.facetimer
+	if instance_exists(ctrl_dialogue) image_index_1 = base_frame+ctrl_dialogue.facetimer
 	else {image_index_1 = base_frame; image_index_end_1 = base_frame;}
 	image_index_start_1 = base_frame;
 	image_index_end_1 = base_frame+1;
@@ -137,7 +137,7 @@ if stage = 12
 if stage = 13
 {
 	//EXTRA SPRITE 1
-	if instance_exists(obj_dialogue) image_index_1 = base_frame+obj_dialogue.facetimer
+	if instance_exists(ctrl_dialogue) image_index_1 = base_frame+ctrl_dialogue.facetimer
 	else {image_index_1 = base_frame; image_index_end_1 = base_frame;}
 	image_index_start_1 = base_frame;
 	image_index_end_1 = base_frame+1;

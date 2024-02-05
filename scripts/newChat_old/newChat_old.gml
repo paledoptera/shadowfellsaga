@@ -3,7 +3,7 @@
 /// @param  Speed
 /// @param  TxtboxPosition
 function newChat_old(argument0, argument1 = 1, argument2 = "dynamic") {
-	var text = instance_create(0, 0, obj_dialogue);
+	var text = instance_create(0, 0, ctrl_dialogue);
 	text.txtdelay = argument1;
 	text.pos = argument2;
 

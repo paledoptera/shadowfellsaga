@@ -44,6 +44,7 @@ message[0] = "\0Normal \1Shaky \2Color \4Wavy";
 // The text functions follow the same principle.
 // Text functions are as follows:
 & - Line Break
+^ - Dialogue Pause (only used in cutscenes)
 */
 
 
@@ -57,6 +58,7 @@ message[0] = "\0Normal \1Shaky \2Color \4Wavy";
 // Not recommended unless you're an advanced user
 
 // Go to the listed line number in the Draw GUI event to edit
+// PALED'S NOTICE: these lines may not be 100% accurate after several changes in the code.
 
 // To move around the chat box go to line 19
 // To move around the portrait go to line 21
