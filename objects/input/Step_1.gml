@@ -47,3 +47,4 @@ movement_dir = input_direction(0, "left","right","up","down");
 target = "overworld";
 if instance_exists(obj_savemenu) {target = "savemenu"}
 if instance_exists(obj_cmenu) {target = "cmenu"}
+if instance_exists(ctrl_cutscene) or instance_exists(ctrl_dialogue) {target = "cutscene"}

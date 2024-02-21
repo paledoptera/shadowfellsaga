@@ -1,9 +1,12 @@
-function player_animate_sprite()
+function player_animate_sprite(_spritenumber = 8)
 {
+///@description player_animate_sprite
+///@arg number_of_directions
 
 //Update Sprite
-var _cardinal_direction = round(direction/45);
-var _total_frames = sprite_get_number(sprite_index) / 8;
+if _spritenumber = 8 {var _cardinal_direction = round(direction/45);}
+if _spritenumber = 4 {var _cardinal_direction = round(direction/90);}
+var _total_frames = sprite_get_number(sprite_index) / _spritenumber;
 var _is_airborne = -1;
 
 if z = zfloor {_is_airborne = -1;}

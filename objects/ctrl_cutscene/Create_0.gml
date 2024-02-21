@@ -23,3 +23,15 @@ paused = false;
 
 stage = 0;
 stage_end = 0;
+
+var _papactor = instance_create(PLAYER.x,PLAYER.y,actor_papyrus);
+PLAYER.x = -200;
+PLAYER.y = -200;
+
+if instance_exists(FOLLOWER)
+{
+	var _sansactor = instance_create(FOLLOWER.x,FOLLOWER.y,actor_sans);
+	FOLLOWER.x = -200;
+	FOLLOWER.y = -200;
+}
+

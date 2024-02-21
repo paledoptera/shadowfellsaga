@@ -30,11 +30,12 @@ function dialogue_start(argument0) {
 		//////////////////////////////////////////
 		//////////////////////////////////////////
 		//////////////////////////////////////////
-		// if CHAR is GENERIC
-		if _char = "gen"
+		// if CHAR is NOONE
+		if _char = "noone"
 		{
 			text.font[i] = fnt_main_sm
 			text.talksound[i] = snd_txt
+			text.char[i] = "noone"
 			if !struct_exists(argument0[i],"port") {text.portrait[i] = "none";}
 		}
 		// if CHAR is CHEF PAPYRUS
@@ -42,6 +43,7 @@ function dialogue_start(argument0) {
 		{
 			text.font[i] = fnt_papyrus;
 			text.talksound[i] = snd_txtpapyrus;
+			text.char[i] = "chefp"
 			if !struct_exists(argument0[i],"port") {text.portrait[i] = port_chefp;}
 			else if argument0[i].port = "confident" {text.portrait[i] = port_chefp_confident;}
 			else if argument0[i].port = "confident2" {text.portrait[i] = port_chefp_confident2;}
@@ -58,6 +60,7 @@ function dialogue_start(argument0) {
 		{
 			text.font[i] = fnt_sans;
 			text.talksound[i] = snd_txtsans;
+			text.char[i] = "sans"
 			if !struct_exists(argument0[i],"port") {text.portrait[i] = port_sans;}
 			else if argument0[i].port = "blankeyes" {text.portrait[i] = port_sans_blankeyes;}
 			else if argument0[i].port = "closedeyes" {text.portrait[i] = port_sans_closedeyes;}
@@ -72,6 +75,7 @@ function dialogue_start(argument0) {
 		{
 			text.font[i] = fnt_papyrus;
 			text.talksound[i] = snd_txtpapyrus;
+			text.char[i] = "papy"
 			if !struct_exists(argument0[i],"port") {text.portrait[i] = port_papy;}
 			else if argument0[i].port = "goofycry" {text.portrait[i] = port_papy_goofycry;}
 			else if argument0[i].port = "confident" {text.portrait[i] = port_papy_confident;}
@@ -84,6 +88,7 @@ function dialogue_start(argument0) {
 		{
 			text.font[i] = fnt_papyrus;
 			text.talksound[i] = snd_txtpapyrus;
+			text.char[i] = "papy_messedup"
 			if !struct_exists(argument0[i],"port") {text.portrait[i] = port_papy_messedup;}
 			else if argument0[i].port = "displeased" {text.portrait[i] = port_papy_messedup_displeased;}
 			else if argument0[i].port = "happy" {text.portrait[i] = port_papy_messedup_happy;}
@@ -94,6 +99,7 @@ function dialogue_start(argument0) {
 		{
 			text.font[i] = fnt_main;
 			text.talksound[i] = snd_txttoquelle;
+			text.char[i] = "toquelle"
 			if !struct_exists(argument0[i],"port") {text.portrait[i] = "none";}
 		}
 		

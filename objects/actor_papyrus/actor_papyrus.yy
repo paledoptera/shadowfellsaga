@@ -1,17 +1,20 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "handler_tweens",
+  "name": "actor_papyrus",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "HANDLERS",
-    "path": "folders/Objects/UTILITY/HANDLERS.yy",
+    "name": "CHARACTER ACTORS",
+    "path": "folders/Objects/OVERWORLD/CHARACTER ACTORS.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "actor_base",
+    "path": "objects/actor_base/actor_base.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -27,7 +30,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_paps_battle",
+    "path": "sprites/spr_paps_battle/spr_paps_battle.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

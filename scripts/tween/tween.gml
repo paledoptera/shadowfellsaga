@@ -11,21 +11,48 @@ function tween(anim_curve = "linear", time_in_seconds, var_start_value, var_end_
 	/// @arg loops?
 	/// @arg tween_id
 	
-	if !instance_exists(handler_tweens) {instance_create(0,0,handler_tweens);}
+	if !variable_instance_exists(self,"_tween") {_tween = array_create(20,0)}
 	
 	var curve = animcurve_get_channel(anc_easings,anim_curve);
-	var pos = animcurve_channel_evaluate(curve,handler_tweens.tween_id[tween_id]);
-	if pos = 1 and loops {pos = 0;}
+	var pos = animcurve_channel_evaluate(curve,_tween[tween_id]);
 	var distance = var_end_value - var_start_value;
 	
-	if pos < 1
+	if pos = 1 
 	{
-		var time_incr = ((1/60)/(time_in_seconds*2));
-
-		handler_tweens.tween_id[tween_id] += time_incr
-		if (handler_tweens.tween_id[tween_id] > 1) {handler_tweens.tween_id[tween_id] = 1}
+		if loops {tween_id = 0;}
+		else {return (var_start_value + (distance * 1));}
 	}
+	else if pos < 1
+	{
+		var time_incr = ((1/60)/(time_in_seconds));
 
-	return (var_start_value + (distance * pos));
+		_tween[tween_id] += time_incr
+		if (_tween[tween_id] > 1) {_tween[tween_id] = 1;}
+		return (var_start_value + (distance * pos));
+	}
+}
 
+function tween_setup(number = 20)
+{
+	/// @description tween_setup
+	/// @arg array_length
+	if !variable_instance_exists(self,"_tween") {_tween = array_create(number,0)}
+}
+
+function tween_reset(tween_id)
+{
+	/// @description tween_reset
+	/// @arg tween_id
+	if !variable_instance_exists(self,"_tween") {_tween = array_create(20,0)}
+	else {_tween[tween_id] = 0;}
+}
+
+function tween_reset_all()
+{
+	if !variable_instance_exists(self,"_tween") {_tween = array_create(20,0)}
+	
+	for (i=0;i<(array_length(_tween)+1);i++)
+	{
+		_tween[i] = 0;
+	}
 }

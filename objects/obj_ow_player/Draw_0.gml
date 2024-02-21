@@ -1,8 +1,8 @@
 
 
 //set drawx, drawy
-drawx = x;
-drawy = y+5+zfloor;
+shadow_draw_x = x;
+shadow_draw_y = y+5+zfloor;
 
 var shadowmultiplier = (zfloor-z)/400
 if z = zfloor {shadowalpha = 0;}
@@ -11,7 +11,9 @@ if z < zfloor-20 {shadowalpha = 0.5;}
 if z < zfloor-30 {shadowalpha = 0.7;}
 if z < zfloor-30 {shadowalpha = 1;}
 
-draw_sprite_ext(spr_shadow,0,drawx+1,drawy-2,0.62-(shadowmultiplier),0.62-(shadowmultiplier),0,c_white,shadowalpha);
+draw_sprite_ext(spr_shadow,0,shadow_draw_x+1,shadow_draw_y-2,0.62-(shadowmultiplier),0.62-(shadowmultiplier),0,c_white,shadowalpha);
+
+
 draw_sprite(sprite_index,image_index,x,y+z);
 
 //debug

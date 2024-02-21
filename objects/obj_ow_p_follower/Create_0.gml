@@ -1,6 +1,6 @@
-if (live_call()) return live_result;
+//----ANIMATION----
 record = 7;
-imgspd = 1;
+image_speed = 1;
 
 target_x = x;
 target_y = y;
@@ -29,11 +29,6 @@ sprite_jump = spr_sans_ow_jump;
 z = 0;
 zheight = -sprite_height / 2;
 zfloor = 0;
-
-
-
-jumpspeed = PLAYER.jumpspeed;
-grav = PLAYER.grav;
 
 local_frame = 0;
 
