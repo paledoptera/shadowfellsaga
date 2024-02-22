@@ -11,26 +11,25 @@ if world_flag = 1
 		tween_reset(11);
 		tween_reset(12);
 		//smooth tween of buttons coming in from the top
-		ui_y = tween("cubicInOut",1,-20,0,false,false,1);
-		ui_opacity = tween("cubicInOut",1,0,1,false,false,2);
+		ui_y = tween(1,-20,0,false,1,"cubicInOut");
+		ui_opacity = tween(1,0,1,false,2,"cubicInOut");
 	}
 	else
 	{
 		tween_reset(1);
 		tween_reset(2);
-		
 		//checking if ui isn't already hidden
 		if ui_y != -20
-		{
+		{	
 			//smooth tween of buttons going up from the bottom
-			ui_y = tween("cubicInOut",1,-20,0,false,false,11);
-			ui_opacity = tween("cubicInOut",1,1,0,false,false,12);
+			ui_y = tween(1,0,-20,false,11,"cubicInOut");
+			ui_opacity = tween(1,1,0,false,12,"cubicInOut");
 		}
 		
 
 	}	
 	
-	//draw_sprite_ext(spr_jumpbuttons_bkg,0,525-12,ui_y+48,1,1,0,c_white,ui_opacity);
+
 	//draw_sprite_ext(spr_jumpbuttons,2+input.cancel,537,ui_y+15,1,1,0,c_white,ui_opacity/2);
 	//POTENTIAL SEMI BUTTON????
 	
@@ -43,7 +42,6 @@ if world_flag = 1
 	if jumpmultiplier2 > 2 {jumpmultiplier2 = 2}
 		
 	//drawing bkg
-	draw_sprite_ext(spr_jumpbuttons_bkg,0,525+30+4,ui_y+27+48,1,1,0,c_white,ui_opacity);
 	draw_sprite_ext(spr_jumpbuttons_bkg,0,525+30+4,ui_y+27+48,1,1,0,c_white,ui_opacity);
 	
 	
@@ -65,4 +63,3 @@ if world_flag = 1
 }
 
 draw_set_alpha(1);
-//draw_text(10,10,string(fps));

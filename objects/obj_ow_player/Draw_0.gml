@@ -14,7 +14,7 @@ if z < zfloor-30 {shadowalpha = 1;}
 draw_sprite_ext(spr_shadow,0,shadow_draw_x+1,shadow_draw_y-2,0.62-(shadowmultiplier),0.62-(shadowmultiplier),0,c_white,shadowalpha);
 
 
-draw_sprite(sprite_index,image_index,x,y+z);
+draw_sprite_ext(sprite_index,image_index,x,y+z,2,2,0,c_white,1);
 
 //debug
 

@@ -5,7 +5,6 @@
 if zsp < 20 {zsp += grav;}
 if z+zsp > zfloor {zsp = 0; z = zfloor;}  
 z += zsp;
-check_z_collision();
 
 //changing sprite
 var _old_sprite = sprite_index;
@@ -14,13 +13,14 @@ var _old_sprite = sprite_index;
 switch state
 {
 	case "default":
-		
 		if x != xprevious or y != yprevious 
 		{
-			inputmagnitude = 1
-			image_speed = 1;
-			direction = point_direction(xprevious,yprevious,x,y);
 			sprite_index = sprite_run;
+			var dif =  abs(x-xprevious)
+			image_speed = dif/2.5;
+			if image_speed < 0.5 {image_speed = 0.5}
+			direction = point_direction(xprevious,yprevious,x,y);
+			
 		}
 		else {sprite_index = sprite_idle;}
 		if z != zfloor {sprite_index = sprite_jump;}
@@ -51,3 +51,6 @@ switch state
 
 
 #endregion
+
+//SETTING DEPTH
+depth = -y;

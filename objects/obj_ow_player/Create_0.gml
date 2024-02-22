@@ -8,7 +8,8 @@ gui_local_frame = 0;
 sprite_run = spr_paps_ow_move;
 sprite_idle = spr_paps_ow_idle;
 sprite_jump = spr_paps_ow_jump;
-
+image_xscale = 1;
+image_yscale = 1;
 ui_y = -20;
 ui_opacity = 0;
 tween_setup();

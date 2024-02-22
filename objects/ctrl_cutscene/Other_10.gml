@@ -1,6 +1,7 @@
 /// @description Refresh Actions
 timer = 0;
 time_end_action = 1;
+frame = 0;
 
 start_action = false;
 action_info = "";

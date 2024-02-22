@@ -1,5 +1,6 @@
 globaltimer = 0;
 timer = 0;
+frame = 0;
 time_end_action = 1;
 start_action = false;
 

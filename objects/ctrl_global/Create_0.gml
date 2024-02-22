@@ -1,5 +1,7 @@
 global.activeLandmark=-1;
 
+if debug_mode = true {instance_create(x,y,ctrl_debug);}
+
 ticks=0;
 seconds=0;
 

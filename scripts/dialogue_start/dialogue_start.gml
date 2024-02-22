@@ -1,7 +1,20 @@
-/// @description dialogue_start(messageStruct);
-/// @param messageStruct
+
 function dialogue_start(argument0) {
-	
+	/// @description dialogue_start(messageStruct);
+	/// @param messageStruct
+	// ----------------------ATTENTION------------------------------
+	// HERE IS A LIST OF PARAMETERS THAT YOU CAN CHANGE IN A MESSAGE
+	// -------------------------------------------------------------
+	// - char 
+	//     (defaults to noone)
+	//		options:
+	// - talksound
+	// - font
+	// - position
+	//     (defaults to dynamic)
+	// - runcode
+	// - color1 & color2
+	//     
 	
 	if struct_exists(argument0[0],"talkspeed") {var _txtdelay = argument0[0].talkspeed;}
 	else {var _txtdelay = 1;}

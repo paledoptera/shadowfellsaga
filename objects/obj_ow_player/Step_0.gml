@@ -73,13 +73,13 @@ with obj_interact_sensor
 	//jumping (sans)
 	if cancel
 	{
-		if instance_exists(FOLLOWER) {if FOLLOWER.z = FOLLOWER.zfloor {FOLLOWER.zsp = -jumpspeed;}} if audio_is_playing(snd_jump) {audio_stop_sound(snd_jump)}; audio_play_sound(snd_jump,1,false,0.5); //JUMPING SANS
+		if instance_exists(FOLLOWER) {if FOLLOWER.z = FOLLOWER.zfloor {FOLLOWER.zsp = -jumpspeed; if audio_is_playing(snd_jump) {audio_stop_sound(snd_jump)}; audio_play_sound(snd_jump,1,false,0.5);}}  //JUMPING SANS
 	}
 	//full party jump
 	if thought
 	{
-		if z = zfloor {zsp = -jumpspeed;}  if audio_is_playing(snd_jump) {audio_stop_sound(snd_jump)}; audio_play_sound(snd_jump,1,false,0.5);
-		if instance_exists(FOLLOWER) {if FOLLOWER.z = FOLLOWER.zfloor {FOLLOWER.zsp = -jumpspeed;}} if audio_is_playing(snd_jump) {audio_stop_sound(snd_jump)}; audio_play_sound(snd_jump,1,false,0.5);
+		if z = zfloor {zsp = -jumpspeed; if audio_is_playing(snd_jump) {audio_stop_sound(snd_jump)}; audio_play_sound(snd_jump,1,false,0.5);}
+		if instance_exists(FOLLOWER) {if FOLLOWER.z = FOLLOWER.zfloor {FOLLOWER.zsp = -jumpspeed; if audio_is_playing(snd_jump) {audio_stop_sound(snd_jump)}; audio_play_sound(snd_jump,1,false,0.5);}}
 	}
 	//open menu
 	if menu 

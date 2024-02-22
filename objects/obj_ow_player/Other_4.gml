@@ -1,4 +1,4 @@
-ini_open("sfsaga.ini");
+/*ini_open("sfsaga.ini");
 if(global.loaded){
 	switch(global.filechoice){
 	case 0:
@@ -21,12 +21,9 @@ if(global.loaded){
 	break;
 	}
 }
-ini_close();
+ini_close();*/
 
-instance_create(x,y,ctrl_camera);
-//instance_create(x,y,obj_interact);
-//instance_create(0,0,ctrl_debug);
-
+instance_create(x+200,y+200,ctrl_camera);
 if room != LW_skelekitchen and room != DW_wildcliffs1 
 {
 	instance_create(x,y,obj_ow_p_follower);
