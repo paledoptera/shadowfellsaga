@@ -1,4 +1,4 @@
-//----ANIMATION----
+ //----ANIMATION----
 shadow_draw_x = x;
 shadow_draw_y = y;
 local_frame = 0;
@@ -23,7 +23,7 @@ zsp = 0;
 movespeed = 5;
 alt_movespeed = 3;
 jumpspeed = 13;
-grav = 0.95;
+grav = 0.8;
 z = 0;
 zheight = -sprite_height / 2;
 zfloor = 0;

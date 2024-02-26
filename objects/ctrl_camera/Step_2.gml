@@ -1,8 +1,9 @@
 if init = false
 {
 	init = true;
-	x = PLAYER.x
-	y = PLAYER.y
+	x = target.x
+	y = target.y
+	camera_set_view_pos(view_camera[0],x-(camWidth*0.5),y-(camHeight*0.5));
 }
 
 // Follows the player

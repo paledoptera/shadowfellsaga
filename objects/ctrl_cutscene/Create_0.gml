@@ -20,6 +20,7 @@ stored_dialogue_start = 0;
 
 action_info = "";
 action_info_extra = -1;
+action_info_extra_1 = -1;
 paused = false;
 
 stage = 0;
