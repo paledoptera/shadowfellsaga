@@ -16,6 +16,7 @@ if stage > stage_end
 	PLAYER.x = actor_papyrus.x;
 	PLAYER.y = actor_papyrus.y;
 	PLAYER.direction = 270;
+	
 	if instance_exists(FOLLOWER)
 	{
 		actor_sans.direction = 270;
@@ -23,13 +24,8 @@ if stage > stage_end
 		FOLLOWER.y = actor_sans.y;
 		FOLLOWER.direction = 270;
 	}
+	
 	instance_destroy();
 }
 
 for (i=0;i<10;i++) {_value[i] = -1;}
-
-
-
-
-
-

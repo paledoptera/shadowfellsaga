@@ -2,12 +2,11 @@
 shadow_draw_x = x;
 shadow_draw_y = y;
 local_frame = 0;
-shadowalpha = 1;
 ui_visible = true;
 gui_local_frame = 0;
-sprite_run = spr_paps_ow_move;
-sprite_idle = spr_paps_ow_idle;
-sprite_jump = spr_paps_ow_jump;
+sprite_run = spr_papy_ow_move;
+sprite_idle = spr_papy_ow_idle;
+sprite_jump = spr_papy_ow_jump;
 image_xscale = 1;
 image_yscale = 1;
 ui_y = -20;

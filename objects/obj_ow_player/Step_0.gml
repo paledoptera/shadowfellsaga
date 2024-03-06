@@ -2,8 +2,8 @@
 //checking if in light world
 	if flag_get(global.flags,"world") = 0  
 	{
-	sprite_run = spr_paps_lw_move; 
-	sprite_idle = spr_paps_lw_idle;
+	sprite_run = spr_papy_lw_move; 
+	sprite_idle = spr_papy_lw_idle;
 	interact_defaultmode = 1;
 	} 
 //checking if papyrus can jump yet, ONLY if not in light world

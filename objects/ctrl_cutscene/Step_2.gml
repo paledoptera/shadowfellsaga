@@ -12,7 +12,7 @@ switch (action_info)
 	break;
 	
 	case "sequence":
-		action_info_extra_1.x = -500;
+		if frame > 1 {action_info_extra_1.x = -500;}
 		if timer > time_end_action 
 		{
 			if action_info_extra_1 != -1

@@ -2,8 +2,8 @@
 event_inherited();
 
 #region BATTLE POSE IMAGES
-idlePose = spr_paps_battle;
-hurtPose = spr_paps_battle_hurt;
+idlePose = spr_papy_battle;
+hurtPose = spr_papy_battle_hurt;
 #endregion
 
 jumpHeight = -9;

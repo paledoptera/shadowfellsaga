@@ -30,7 +30,7 @@ if world_flag = 1
 	}	
 	
 
-	//draw_sprite_ext(spr_jumpbuttons,2+input.cancel,537,ui_y+15,1,1,0,c_white,ui_opacity/2);
+	//draw_sprite_ext(spr_jumpbuttons,2+input.cancel,537,ui_y+14,1,1,0,c_white,ui_opacity/2);
 	//POTENTIAL SEMI BUTTON????
 	
 	
@@ -38,21 +38,21 @@ if world_flag = 1
 	var jumpmultiplier = (zfloor-z)/10
 	if instance_exists(FOLLOWER) var jumpmultiplier2 = (FOLLOWER.zfloor-FOLLOWER.z)/10
 	else var jumpmultiplier2 = 0;
-	if jumpmultiplier > 2 {jumpmultiplier = 2}
-	if jumpmultiplier2 > 2 {jumpmultiplier2 = 2}
+	if jumpmultiplier > 4 {jumpmultiplier = 4}
+	if jumpmultiplier2 > 4 {jumpmultiplier2 = 4}
 		
 	//drawing bkg
-	draw_sprite_ext(spr_jumpbuttons_bkg,0,525+30+4,ui_y+27+48,1,1,0,c_white,ui_opacity);
+	draw_sprite_ext(spr_jumpbuttons_bkg,0,525+30+4,ui_y+27+48+4,1,1,0,c_white,ui_opacity);
 	
 	
 	//drawing sans' buttons
-	draw_sprite(spr_jumpbuttons,2+input.cancel,585,ui_y+47-4);
-	draw_sprite(spr_jumpbuttons,6,585,ui_y+49-4-jumpmultiplier2);
-	draw_sprite(spr_jumpbuttons,5,585,ui_y+47-4); //X
+	draw_sprite(spr_jumpbuttons,2+input.cancel,585,ui_y+47);
+	draw_sprite(spr_jumpbuttons,6,585,ui_y+49-jumpmultiplier2);
+	draw_sprite(spr_jumpbuttons,5,585,ui_y+47); //X
 	
 	//drawing papyrus' buttons
-	draw_sprite(spr_jumpbuttons,input.interact,537,ui_y+79-4);
-	if interact_mode = 0 {draw_sprite(spr_jumpbuttons,6,537,ui_y+79-4-jumpmultiplier);} //jump icon
+	draw_sprite(spr_jumpbuttons,input.interact,537,ui_y+79);
+	if interact_mode = 0 {draw_sprite(spr_jumpbuttons,6,537,ui_y+79-jumpmultiplier);} //jump icon
 	else if interact_mode = 1 //interact icons
 	{
 		if gui_local_frame < 1.9 {gui_local_frame += 0.1} else {gui_local_frame = 0}

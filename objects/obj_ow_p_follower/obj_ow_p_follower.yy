@@ -34,8 +34,8 @@
     "path": "sprites/spr_sans_battle/spr_sans_battle.yy",
   },
   "spriteMaskId": {
-    "name": "spr_paps_hitbox",
-    "path": "sprites/spr_paps_hitbox/spr_paps_hitbox.yy",
+    "name": "spr_papy_hitbox",
+    "path": "sprites/spr_papy_hitbox/spr_papy_hitbox.yy",
   },
   "visible": true,
 }

@@ -8,7 +8,6 @@ target_y = y;
 hsp = 0;
 vsp = 0;
 zsp = 0;
-shadowalpha = 1;
 
 init = 0;
 
@@ -32,5 +31,5 @@ zfloor = 0;
 
 local_frame = 0;
 
-drawx = x;
-drawy = y;
+shadow_draw_x = x;
+shadow_draw_y = y;

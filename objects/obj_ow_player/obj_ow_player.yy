@@ -32,12 +32,12 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_paps_battle",
-    "path": "sprites/spr_paps_battle/spr_paps_battle.yy",
+    "name": "spr_papy_battle",
+    "path": "sprites/spr_papy_battle/spr_papy_battle.yy",
   },
   "spriteMaskId": {
-    "name": "spr_paps_hitbox",
-    "path": "sprites/spr_paps_hitbox/spr_paps_hitbox.yy",
+    "name": "spr_papy_hitbox",
+    "path": "sprites/spr_papy_hitbox/spr_papy_hitbox.yy",
   },
   "visible": true,
 }

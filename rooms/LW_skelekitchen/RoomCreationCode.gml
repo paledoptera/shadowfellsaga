@@ -57,7 +57,7 @@ dialogue_1 =
 	 runcode : function()
 	 {
 		 audio_play_sound(snd_txtsans, 10, false);
-		 PLAYER.sprite_index = spr_paps_lw_hero;
+		 PLAYER.sprite_index = spr_papy_lw_hero;
 		 PLAYER.x = 320;
 		 PLAYER.y = 240;
 	 }},
@@ -127,7 +127,7 @@ audio_group_load(Talksounds);
 t_scene_info = [
 	[cutscene_move_camera, 640/2, -480, false, 99999],
 	[cutscene_flag_set,global.flags,"world",0],
-	[cutscene_sprite_create, 225, 280, "Instances", spr_paps_lw_cooking, 1, true],
+	[cutscene_sprite_create, 225, 280, "Instances", spr_papy_lw_cooking, 1, true],
 	[cutscene_move_camera, 640/2, 480/2, false, 3],
 	[cutscene_wait,1.1],
 	[cutscene_move_instance, obj_ow_player, 0, -1, true, 999],
@@ -141,7 +141,7 @@ t_scene_info = [
 	[cutscene_move_instance, obj_ow_player, 0, 6, true, 3],
 	[cutscene_wait,0.3],
 	[cutscene_change_variable, obj_ow_player, "animated", false],
-	[cutscene_sprite_index_static,obj_ow_player,spr_paps_lw_cooking2,0],
+	[cutscene_sprite_index_static,obj_ow_player,spr_papy_lw_cooking2,0],
 	//[cutscene_cam_zoom,3,false,20],
 	[cutscene_newChat, dialogue_0],
 	[cutscene_wait_for_dialogue],

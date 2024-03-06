@@ -21,6 +21,8 @@ with actor_base
 	{
 		if char = ctrl_dialogue.char[ctrl_dialogue.message_current] {state = "talking"}
 	}
+	if sprite_custom != -1 {state = "custom";}
+	
 	
 	#region ANIMATION
 	switch state
@@ -30,7 +32,7 @@ with actor_base
 		{
 			sprite_index = sprite_run;
 			var dif =  abs(x-xprevious)
-			image_speed = dif/2.5;
+			img_speed = dif/2.5;
 			direction = point_direction(xprevious,yprevious,x,y);	
 		}
 		else {sprite_index = sprite_idle;}
@@ -49,7 +51,7 @@ with actor_base
 				var _cardinal_direction = round(direction/45);
 				var _facetimer = ctrl_dialogue.facetimer
 				if _facetimer > 1 _facetimer = 1
-				if ctrl_dialogue.cutoff = string_length(ctrl_dialogue.message[ctrl_dialogue.message_current]) _facetimer = 1;
+				if ctrl_dialogue.cutoff = string_length(ctrl_dialogue.message[ctrl_dialogue.message_current]) _facetimer = 0;
 				image_index = floor(_facetimer) + (_cardinal_direction * _total_frames);
 			break;
 			
@@ -60,17 +62,19 @@ with actor_base
 		}
 	break;
 	
-	case "other":
-		image_index = local_frame + (_cardinal_direction * _total_frames);
-		local_frame += sprite_get_speed(sprite_index) / FRAME_RATE * image_speed;
-		var _total_frames = sprite_get_number(sprite_index)
-		if (local_frame >= _total_frames)
+	case "custom":
+		if (_old_sprite != sprite_index) local_frame = sprite_custom_img_start;
+		sprite_index = sprite_custom;
+		image_index = local_frame
+		local_frame += sprite_get_speed(sprite_index) / FRAME_RATE * img_speed;
+		var _total_frames = (sprite_custom_img_end-sprite_custom_img_start)
+		
+		if (local_frame >= sprite_custom_img_end)
 		{
 			animation_end = true;
-			if looping_sprite = true {local_frame -= _total_frames;} else {image_speed = 0; local_frame = _total_frames-1;}
+			if looping_sprite = true {local_frame -= _total_frames;} else {img_speed = 0; local_frame = sprite_custom_img_end}
 		}
 		else animation_end = false;
-		if (_old_sprite != sprite_index) local_frame = 0;
 	break;
 	}
 	#endregion

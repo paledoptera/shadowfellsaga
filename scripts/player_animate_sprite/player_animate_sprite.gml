@@ -19,7 +19,14 @@ if z < zfloor
 if _is_airborne = -1
 {
 	image_index = local_frame + (_cardinal_direction * _total_frames);
-	local_frame += sprite_get_speed(sprite_index) / FRAME_RATE * image_speed;
+	if variable_instance_exists(id,"img_speed")
+	{
+		local_frame += sprite_get_speed(sprite_index) / FRAME_RATE * img_speed;
+	}
+	else
+	{
+		local_frame += sprite_get_speed(sprite_index) / FRAME_RATE * image_speed;
+	}
 }
 else
 {

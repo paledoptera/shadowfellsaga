@@ -1,6 +1,7 @@
 //----ANIMATION----
 shadow_draw_x = x;
 shadow_draw_y = y;
+shadow_sprite = spr_shadow;
 shadowalpha = 1;
 local_frame = 0;
 state = "default"
@@ -9,7 +10,8 @@ visible = true;
 killswitch = -1;
 
 
-image_speed = 1;
+image_speed = 0;
+img_speed = 1;
 image_xscale = 2;
 image_yscale = 2;
 
@@ -21,20 +23,16 @@ sprite_talk[2] = -1;
 
 _old_sprite = sprite_index;
 
-
-current_other_sprite = 0;
-
 char = "noone"
 
 sprite_run = 0;
 sprite_idle = 0;
 sprite_jump = 0;
 
-sprite_other[0] = -1;
-sprite_other[1] = -1;
-sprite_other[2] = -1;
-sprite_other[3] = -1;
+sprite_custom = -1;
 
+sprite_custom_img_start = 0;
+sprite_custom_img_end = -1;
 animation_end = false;
 looping_sprite = true;
 

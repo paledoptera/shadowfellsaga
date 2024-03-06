@@ -55,7 +55,7 @@
     ],
     "top": 0,
   },
-  "origin": 7,
+  "origin": 9,
   "parent": {
     "name": "SANS",
     "path": "folders/Sprites/CHARACTERS/SANS.yy",
@@ -101,7 +101,7 @@
     "visibleRange": null,
     "volume": 1.0,
     "xorigin": 16,
-    "yorigin": 55,
+    "yorigin": 52,
   },
   "swatchColours": null,
   "swfPrecision": 2.525,

@@ -11,10 +11,45 @@ function font_correct(){
 	char_big_value = 0;
 	char_small_value = 0;
 	if argument0 = fnt_papyrus {char_small_value = 8; char_big_value = 4;}
-	if argument0 = fnt_sans {char_small_value = 8;}
+	if argument0 = fnt_sans {char_small_value = 8; char_big_value = 2;}
 	
 	//FONT SPECIFIC - Establishing which characters are larger than normal, which are smaller
-	if font[message_current] = fnt_papyrus {char_big[0] = "O"; char_big[1] = "A"; char_big[2] = "B"; char_big[3] = "Q"; char_big[4] = "W"; char_big[5] = "G"; char_big[6] = "M"; char_big[7] = "L"; char_big[8] = "S";
-						   char_small[0] = "I"; char_small[1] = "'"; char_small[2] = "P"; char_small[3] = "L"; char_small[4] = "'";  char_small[5] = "!"; char_small[6] = ".";}
-	else {char_small[0] = "_"; char_big[0] = "_";}
+	
+	switch font[message_current]
+	{
+	case fnt_papyrus:
+		char_big[0] = "O"; 
+		char_big[1] = "A"; 
+		char_big[2] = "B"; 
+		char_big[3] = "Q"; 
+		char_big[4] = "W"; 
+		char_big[5] = "G"; 
+		char_big[6] = "M"; 
+		char_big[7] = "L"; 
+		char_big[8] = "S";
+		char_small[0] = "I"; 
+		char_small[1] = "'";	
+		char_small[2] = "P"; 
+		char_small[3] = "L"; 
+		char_small[4] = "'";  
+		char_small[5] = "!"; 
+		char_small[6] = ".";
+	break;
+	
+	case fnt_sans:
+		char_small[0] = "i";
+		char_small[1] = "l";
+		char_small[2] = "!";
+		char_small[3] = ",";
+		char_small[4] = ".";
+		char_small[5] = "'";
+		char_big[0] = "m";
+		char_big[1] = "w";
+	break;
+	
+	default:
+		char_small[0] = "_"; 
+		char_big[0] = "_";
+	break;
+	}
 }

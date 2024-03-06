@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_paps_battle",
-    "path": "sprites/spr_paps_battle/spr_paps_battle.yy",
+    "name": "spr_papy_battle",
+    "path": "sprites/spr_papy_battle/spr_papy_battle.yy",
   },
   "spriteMaskId": null,
   "visible": true,
