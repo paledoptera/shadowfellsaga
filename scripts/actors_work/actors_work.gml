@@ -51,7 +51,7 @@ with actor_base
 				var _cardinal_direction = round(direction/45);
 				var _facetimer = ctrl_dialogue.facetimer
 				if _facetimer > 1 _facetimer = 1
-				if ctrl_dialogue.cutoff = string_length(ctrl_dialogue.message[ctrl_dialogue.message_current]) _facetimer = 0;
+				if ctrl_dialogue.cutoff = string_length(ctrl_dialogue.message[ctrl_dialogue.message_current]) _facetimer = 1;
 				image_index = floor(_facetimer) + (_cardinal_direction * _total_frames);
 			break;
 			

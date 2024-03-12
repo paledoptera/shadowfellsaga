@@ -13,8 +13,8 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"57354239-2ad7-4f38-b7ef-5c5dd4dc0b34",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"37c514ca-0568-438f-8b1f-7a9e1497bd63",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"57354239-2ad7-4f38-b7ef-5c5dd4dc0b34",},
   ],
   "gridX": 0,
   "gridY": 0,
@@ -55,8 +55,8 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"57354239-2ad7-4f38-b7ef-5c5dd4dc0b34","path":"sprites/port_papy_curious_alt/port_papy_curious_alt.yy",},},},"Disabled":false,"id":"af9eba7c-9fa6-48d9-9c6e-6c5c6494a71c","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"37c514ca-0568-438f-8b1f-7a9e1497bd63","path":"sprites/port_papy_curious_alt/port_papy_curious_alt.yy",},},},"Disabled":false,"id":"f78d73da-b3d1-44de-b3d2-b27b691d1eaa","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"37c514ca-0568-438f-8b1f-7a9e1497bd63","path":"sprites/port_papy_curious_alt/port_papy_curious_alt.yy",},},},"Disabled":false,"id":"f78d73da-b3d1-44de-b3d2-b27b691d1eaa","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"57354239-2ad7-4f38-b7ef-5c5dd4dc0b34","path":"sprites/port_papy_curious_alt/port_papy_curious_alt.yy",},},},"Disabled":false,"id":"af9eba7c-9fa6-48d9-9c6e-6c5c6494a71c","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

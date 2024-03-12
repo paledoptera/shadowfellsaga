@@ -45,13 +45,21 @@ if world_flag = 1
 	draw_sprite_ext(spr_jumpbuttons_bkg,0,525+30+4,ui_y+27+48+4,1,1,0,c_white,ui_opacity);
 	
 	
+	var _papybuttonimg = 0
+	var _sansbuttonimg = 0
+	
+	if input.interact {_papybuttonimg = 1}
+	if input.cancel {_sansbuttonimg = 1}
+	if input.forward {_papybuttonimg = 1; _sansbuttonimg = 1;}
+	
+	
 	//drawing sans' buttons
-	draw_sprite(spr_jumpbuttons,2+input.cancel,585,ui_y+47);
+	draw_sprite(spr_jumpbuttons,2+_sansbuttonimg,585,ui_y+47);
 	draw_sprite(spr_jumpbuttons,6,585,ui_y+49-jumpmultiplier2);
 	draw_sprite(spr_jumpbuttons,5,585,ui_y+47); //X
 	
 	//drawing papyrus' buttons
-	draw_sprite(spr_jumpbuttons,input.interact,537,ui_y+79);
+	draw_sprite(spr_jumpbuttons,_papybuttonimg,537,ui_y+79);
 	if interact_mode = 0 {draw_sprite(spr_jumpbuttons,6,537,ui_y+79-jumpmultiplier);} //jump icon
 	else if interact_mode = 1 //interact icons
 	{

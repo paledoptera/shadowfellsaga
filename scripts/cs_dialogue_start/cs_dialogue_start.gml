@@ -20,7 +20,6 @@ function cs_dialogue_resume(){
 if CS.action_info = ""
 {
 	dialogue_start(CS.stored_dialogue);
-	
 	ctrl_dialogue.message_current = CS.stored_dialogue_start;
 	CS.action_info = "dialogue"
 	

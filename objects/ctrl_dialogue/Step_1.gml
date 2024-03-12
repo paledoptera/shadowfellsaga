@@ -1,4 +1,5 @@
 /// @description Done
+_input = input.interact_pressed;
 
 //check for dialogue pause (cutscenes)
 
@@ -10,4 +11,3 @@ if (done)
 	instance_destroy();
 }
 
-_input = input.interact_pressed;

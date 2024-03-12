@@ -42,10 +42,15 @@ cutscene =
 dialogue =
 [
     {char : "papy",							
-	 position : "top",						
-	 line : "PENIS COCK PENIS &PENIS COCK PENIS &PENIS COCK PENIS",},								
-	{line : "^",},																								
-	{char : "sans",
-	 position: "bottom",
-	 line: "* abcdefghijklma&nopqrstuvwxyz&!,.'",},								
+	 position : "bottom",						
+	 line : "PENIS COCK PENIS &PENIS... COCK PENIS. &PENIS COCK.| PENIS",},		
+	{line : "PENIS. COCK PENIS &PENIS COCK PENIS. &PENIS COCK. PENIS", }, 	
+	{line : "* abcdefghijklma&nopqrstuvwxyz&!,.'",},	
+	//{line : "^",},																								
+	{line : "* abcdefghijklma&nopqrstuvwxyz&!,.'",},	
+	{line : "* cock.",},	
+	{char : "papy",							
+	 position : "bottom",						
+	 line : "PENIS COCK PENIS &PENIS... COCK PENIS. &PENIS COCK. PENIS",},
+	{line : "* ya like jazz?"}
 ]

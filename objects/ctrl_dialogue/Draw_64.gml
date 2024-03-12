@@ -1,11 +1,4 @@
 /// @description Text
-
-if ran_creation_runcode = false
-{
-	ran_creation_runcode = true;
-	_runcode[message_current]();
-}
-
 //t is for modifiers
 t++;
 
@@ -23,9 +16,9 @@ if (message_end > 0)
 {
     //Draw chat box
 	textboxy = 380
-	if pos = "bottom" {textboxy = 380}
-	if pos = "dynamic" {if obj_ow_player.y > 240 textboxy = 100}
-	if pos = "top" {textboxy = 100}
+	if pos[message_current] = "bottom" {textboxy = 380}
+	if pos[message_current] = "dynamic" {if obj_ow_player.y > 240 textboxy = 100}
+	if pos[message_current] = "top" {textboxy = 100}
 	
 	font_correct(font[message_current]);
 	
@@ -39,15 +32,13 @@ if (message_end > 0)
 		if (portrait[message_current] != "none")
 		{
 			var port_images = sprite_get_number(portrait[message_current])
-			
-			if portrait[message_current] = port_semi {port_speed = 0.18;}
-			
+
 			facetimer += port_speed;
 			if facetimer > port_images facetimer = 0;
 		}
-	
+		if delay = 10 {facetimer = 1.9;}
 	}
-	else facetimer = 0;
+	else facetimer = 1;
     
     //This is for the effects
     var modifier = 0;
@@ -61,7 +52,7 @@ if (message_end > 0)
     var i = 1;
 	
     //Delay time between printing each character
-    var delay = txtdelay;
+	if delay = 0 {delay = txtdelay[message_current];}
     
     //Text Position
     var tY = textboxy-50;
@@ -71,30 +62,30 @@ if (message_end > 0)
     else var tX = 180;
     
     //If we are done printing out the current message
-    if (cutoff == string_length(message[message_current]))
+	if cutoff > string_length(message[message_current]) {cutoff = string_length(message[message_current])}
+    if (cutoff == string_length(message[message_current])) 
     {
         //draw blinking cursor
         timer++;
         if (timer < 15) draw_sprite_ext(spr_cursor, 0, 640-52, textboxy+100-44,2,2,0,c_white,1);
         if (timer > 30) timer = 0;
-        
+    
         //Check player input
-        if (_input)
-        {
+		if (_input) or interrupted[message_current] = true
+		{
 			facetimer = 1;
-            //If we still have messages left, go to next message
-            if (message_current < message_end-1)
-            {
-                message_current++;
-                cutoff = 0;
-				_runcode[message_current]();
-            }
-            //If we dont, make done = true and destroy this object
-            else 
-            {
-                timer = 0;
+			//If we still have messages left, go to next message
+			if (message_current < message_end-1)
+			{
+				message_current++;
+				cutoff = 0;
+			}
+			//If we dont, make done = true and destroy this object
+			else 
+			{
+				timer = 0;
 				done=true;
-            }
+			}
 			//registering the pause
 			if message[message_current] = "^" and instance_exists(CS)
 			{
@@ -102,29 +93,44 @@ if (message_end > 0)
 				timer = 0;
 				done=true;
 			}
-        }
-    }
+		}
+	}
     //Typewriter
     //This is so we print each character one at a time
     if (cutoff < string_length(message[message_current]))
     {
-        if (timer >= delay)
-        {
-			var pitch = 1;
-			randomize();
-			if talk_pitchbends = 1 {pitch = random_range(0.95,1.05);}
-			
-			if string_char_at(message[message_current], cutoff+1) != " " audio_play_sound(talksound[message_current], 10, false,0.75,0,pitch);
-            cutoff++;
-            timer = 0;
-        }
-        else timer++;
-        
+		//randomizing pitch of talksound
+		var pitch = 1;
+		randomize();
+		if talk_pitchbends = 1 {pitch = random_range(0.95,1.05);}
 		
+		if (timer >= delay)
+		{
+			if string_char_at(message[message_current], cutoff+1) != " " audio_play_sound(talksound[message_current], 10, false,0.75,0,pitch);
+			cutoff++;
+			if timer >= (delay*2) {cutoff++;}
+			if timer >= (delay*3) {cutoff++;}
+			if timer >= (delay*4) {cutoff++;}
+			if timer >= (delay*5) {cutoff++;}
+			timer = 0;
+		}
+		else timer++;
+
         //If player presses button, display the entire message.
-        if (_input && cutoff > 2)
+        if (_input && cutoff > 3 && delay != 10 && interrupted[message_current] = false)
         {
-           cutoff = string_length(message[message_current]);
+			if string_count("|",message[message_current]) > 0
+			{
+				for (d=cutoff;d<string_length(message[message_current]);d++)
+				{
+					if (string_char_at(message[message_current], d) == "|")
+					{
+						cutoff = d;
+						break;
+					}
+				}
+			}
+			else cutoff = string_length(message[message_current]);
         }
     }
     
@@ -141,8 +147,6 @@ if (message_end > 0)
 			if string_char_at(message[message_current], i) != "*" and font[message_current] != fnt_papyrus {space = 2;} else space = 0;
 			++i;
         }
-		//check for cutoff
-		if string_char_at(message[message_current], i) = "~" {done = true; break;}
 		///////////////////////////////
 		//check for modifier
         if (string_char_at(message[message_current], i) == "#")
@@ -151,14 +155,25 @@ if (message_end > 0)
             ++i;
         }
 		///////////////////////////////
+		//check for dialogue pause
+		///////////////////////////////
+		if (string_char_at(message[message_current], i) == "|")
+        {
+			delay = 10;
+			++i;
+		}
+		else
+		{delay = txtdelay[message_current];}
+		///////////////////////////////
+		///////////////////////////////
 		///////////////////////////////
 		
-        
-        var length = 0;
+  
+		var length = 0;
         while (string_char_at(message[message_current], i) != " " && i <= string_length(message[message_current]))
         {
-            i++;
-            length++;
+			i++;
+			length++;
         }
         
 		
@@ -241,8 +256,8 @@ if (message_end > 0)
         }
         
         //Move to next character
-        space++;
-        i++;
+		space++;
+		i++;
 		lastline = line;
     }
 }

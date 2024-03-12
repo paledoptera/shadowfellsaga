@@ -13,8 +13,8 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"feb16ed9-ea05-457a-b88c-b6afcfa46c61",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cee993ff-5cfe-454f-bcec-e0d3b6b00953",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"feb16ed9-ea05-457a-b88c-b6afcfa46c61",},
   ],
   "gridX": 0,
   "gridY": 0,
@@ -55,8 +55,8 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"feb16ed9-ea05-457a-b88c-b6afcfa46c61","path":"sprites/port_papy/port_papy.yy",},},},"Disabled":false,"id":"ede358e6-500d-45a6-a40e-becf11dff29a","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"cee993ff-5cfe-454f-bcec-e0d3b6b00953","path":"sprites/port_papy/port_papy.yy",},},},"Disabled":false,"id":"4ab86bba-6776-488e-9776-d504d585cb95","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"cee993ff-5cfe-454f-bcec-e0d3b6b00953","path":"sprites/port_papy/port_papy.yy",},},},"Disabled":false,"id":"4ab86bba-6776-488e-9776-d504d585cb95","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"feb16ed9-ea05-457a-b88c-b6afcfa46c61","path":"sprites/port_papy/port_papy.yy",},},},"Disabled":false,"id":"ede358e6-500d-45a6-a40e-becf11dff29a","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

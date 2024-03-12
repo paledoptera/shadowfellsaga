@@ -38,6 +38,22 @@ swap2_pressed = 0
 swap2 = 0
 swap2_released = 0
 
+forward_pressed = 0
+forward = 0
+forward_released = 0
+
+thought_pressed = 0
+thought = 0
+thought_released = 0
+
+swap_l_pressed = 0
+swap_l = 0
+swap_l_released = 0
+
+swap_r_pressed = 0
+swap_r = 0
+swap_r_released = 0
+
 movement_dir = 0
 
 target = 0

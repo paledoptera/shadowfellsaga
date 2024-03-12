@@ -13,8 +13,8 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4d72b15c-81bf-49e5-8316-1e8c1508d854",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"49fbc263-e57b-4300-9861-8c3c39b0952f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4d72b15c-81bf-49e5-8316-1e8c1508d854",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"78ad1d2f-204e-41f7-9c87-c114bdef04a2",},
   ],
   "gridX": 0,
@@ -56,8 +56,8 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"4d72b15c-81bf-49e5-8316-1e8c1508d854","path":"sprites/port_papy_heartwarmed/port_papy_heartwarmed.yy",},},},"Disabled":false,"id":"f444bf2c-cd0e-4894-8810-334052f1ee36","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"49fbc263-e57b-4300-9861-8c3c39b0952f","path":"sprites/port_papy_heartwarmed/port_papy_heartwarmed.yy",},},},"Disabled":false,"id":"f80e2daa-3a07-466b-9d17-3f0a3b4956f4","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"49fbc263-e57b-4300-9861-8c3c39b0952f","path":"sprites/port_papy_heartwarmed/port_papy_heartwarmed.yy",},},},"Disabled":false,"id":"f80e2daa-3a07-466b-9d17-3f0a3b4956f4","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"4d72b15c-81bf-49e5-8316-1e8c1508d854","path":"sprites/port_papy_heartwarmed/port_papy_heartwarmed.yy",},},},"Disabled":false,"id":"f444bf2c-cd0e-4894-8810-334052f1ee36","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"78ad1d2f-204e-41f7-9c87-c114bdef04a2","path":"sprites/port_papy_heartwarmed/port_papy_heartwarmed.yy",},},},"Disabled":false,"id":"4accab82-88c8-4848-bdba-bd2c71c0e5fa","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],

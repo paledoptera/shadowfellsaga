@@ -13,8 +13,8 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e3d67259-6ca9-4a0e-b1fa-cb5f3055a8d1",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cbd8b974-5d05-410d-8f9a-25d3c8d8f4c2",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e3d67259-6ca9-4a0e-b1fa-cb5f3055a8d1",},
   ],
   "gridX": 0,
   "gridY": 0,
@@ -55,8 +55,8 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e3d67259-6ca9-4a0e-b1fa-cb5f3055a8d1","path":"sprites/port_papy_confident/port_papy_confident.yy",},},},"Disabled":false,"id":"764321a4-d09e-485e-9a33-ecbd6c0ee463","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"cbd8b974-5d05-410d-8f9a-25d3c8d8f4c2","path":"sprites/port_papy_confident/port_papy_confident.yy",},},},"Disabled":false,"id":"abe5a19c-8cae-426e-b903-f99697c402ec","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"cbd8b974-5d05-410d-8f9a-25d3c8d8f4c2","path":"sprites/port_papy_confident/port_papy_confident.yy",},},},"Disabled":false,"id":"abe5a19c-8cae-426e-b903-f99697c402ec","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e3d67259-6ca9-4a0e-b1fa-cb5f3055a8d1","path":"sprites/port_papy_confident/port_papy_confident.yy",},},},"Disabled":false,"id":"764321a4-d09e-485e-9a33-ecbd6c0ee463","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

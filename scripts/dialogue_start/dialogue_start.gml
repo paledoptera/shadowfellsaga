@@ -5,27 +5,32 @@ function dialogue_start(argument0) {
 	// ----------------------ATTENTION------------------------------
 	// HERE IS A LIST OF PARAMETERS THAT YOU CAN CHANGE IN A MESSAGE
 	// -------------------------------------------------------------
+	// - talkspeed
+	//	   (defaults to 1, aka 1 character every frame.)
+	//	   (if you want quicker speech, put the talkspeed to a lower value. ex: talkspeed = 0.5)
+	//     (if you want slower speech, put the talkspeed to a higher value. ex: talkspeed = 3)
 	// - char 
-	//     (defaults to noone)
+	//     (defaults to "noone")
 	//		options:
+	//			- "chefp"
+	//			- "sans"
+	//			- "papy"
+	//			- "toquelle"
 	// - talksound
 	// - font
 	// - position
-	//     (defaults to dynamic)
-	// - runcode
+	//     (defaults to "dynamic")
+	//		options:
+	//			- "bottom"
+	//			- "dynamic"
+	//			- "top"
 	// - color1 & color2
-	//     
-	
-	if struct_exists(argument0[0],"talkspeed") {var _txtdelay = argument0[0].talkspeed;}
-	else {var _txtdelay = 1;}
-	if struct_exists(argument0[0],"position") {var _pos = argument0[0].position;}
-	else {var _pos = "dynamic";}
-	
+	//     (defaults to c_yellow and c_red)
+
 	var text = instance_create(0, 0, ctrl_dialogue);	
-	text.txtdelay = _txtdelay;
-	text.pos = _pos;
 	
 	var _char = -1;
+	var _pos = "dynamic";
 	for (i = 0; i < array_length(argument0); i++)
 	{
 		#region DEFINING CHARACTERS
@@ -40,6 +45,17 @@ function dialogue_start(argument0) {
 			}
 		}
 		else _char = argument0[i].char	
+		//making sure that position is defined
+		if !struct_exists(argument0[i],"position") 
+		{
+			d = i;
+			while (d > 1)
+			{
+				d -= 1;
+				if struct_exists(argument0[d],"position") {_pos = argument0[d].position; break;}
+			}
+		}
+		else _pos = argument0[i].position	
 		//////////////////////////////////////////
 		//////////////////////////////////////////
 		//////////////////////////////////////////
@@ -117,15 +133,12 @@ function dialogue_start(argument0) {
 		}
 		
 		#endregion
+		if struct_exists(argument0[i],"talkspeed") {text.txtdelay[i] = argument0[i].talkspeed;} else {text.txtdelay[i] = 1;}
+		if struct_exists(argument0[i],"interrupted") {text.interrupted[i] = argument0[i].interrupted;} else {text.interrupted[i] = false;}
 		if struct_exists(argument0[i],"talksound") {text.talksound[i] = argument0[i].talksound;}
-		if struct_exists(argument0[i],"runcode") {text._runcode[i] = argument0[i].runcode;} else {text._runcode[i] = function () {var doodoofart = 1; /*do nothing*/}}
-		
-		if struct_exists(argument0[i],"color1") {text.color1[i] = argument0[i].color1;}
-		else {text.color1[i] = c_yellow;}
-		
-		if struct_exists(argument0[i],"color2") {text.color2[i] = argument0[i].color2;}
-		else {text.color2[i] = c_red;}
-	    
+		if struct_exists(argument0[i],"color1") {text.color1[i] = argument0[i].color1;} else {text.color1[i] = c_yellow;}
+		if struct_exists(argument0[i],"color2") {text.color2[i] = argument0[i].color2;} else {text.color2[i] = c_red;}
+	    text.pos[i] = _pos
 		text.message[i] = argument0[i].line
 	}
 

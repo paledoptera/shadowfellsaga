@@ -23,7 +23,7 @@ if input.target = "overworld"
 	var movement_dir = input.movement_dir
 	var interact = input.interact_pressed
 	var cancel = input.cancel_pressed
-	var thought = input.thought_pressed
+	var forward = input.forward_pressed
 	var menu = input.menu_pressed
 	inputmagnitude = (x_axis != 0) || (y_axis != 0);
 	ui_visible = true;
@@ -36,7 +36,7 @@ else
 	var movement_dir = 0;
 	var interact = 0;
 	var cancel = 0;
-	var thought = 0;
+	var forward = 0;
 	var menu = 0;
 	inputmagnitude = 0;
 	ui_visible = false;
@@ -76,7 +76,7 @@ with obj_interact_sensor
 		if instance_exists(FOLLOWER) {if FOLLOWER.z = FOLLOWER.zfloor {FOLLOWER.zsp = -jumpspeed; if audio_is_playing(snd_jump) {audio_stop_sound(snd_jump)}; audio_play_sound(snd_jump,1,false,0.5);}}  //JUMPING SANS
 	}
 	//full party jump
-	if thought
+	if forward
 	{
 		if z = zfloor {zsp = -jumpspeed; if audio_is_playing(snd_jump) {audio_stop_sound(snd_jump)}; audio_play_sound(snd_jump,1,false,0.5);}
 		if instance_exists(FOLLOWER) {if FOLLOWER.z = FOLLOWER.zfloor {FOLLOWER.zsp = -jumpspeed; if audio_is_playing(snd_jump) {audio_stop_sound(snd_jump)}; audio_play_sound(snd_jump,1,false,0.5);}}

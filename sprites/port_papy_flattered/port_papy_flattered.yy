@@ -13,8 +13,8 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d1abbf55-bc7e-4398-8981-0ad3038c54ff",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9d69a195-b0f4-4c14-8490-16e014e42a4c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d1abbf55-bc7e-4398-8981-0ad3038c54ff",},
   ],
   "gridX": 0,
   "gridY": 0,
@@ -55,8 +55,8 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d1abbf55-bc7e-4398-8981-0ad3038c54ff","path":"sprites/port_papy_flattered/port_papy_flattered.yy",},},},"Disabled":false,"id":"895c3223-3f4e-43ea-a11f-ff14a4e01764","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"9d69a195-b0f4-4c14-8490-16e014e42a4c","path":"sprites/port_papy_flattered/port_papy_flattered.yy",},},},"Disabled":false,"id":"dcf8d3c1-27e8-40e1-a1a4-cfcc357b3a6e","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"9d69a195-b0f4-4c14-8490-16e014e42a4c","path":"sprites/port_papy_flattered/port_papy_flattered.yy",},},},"Disabled":false,"id":"dcf8d3c1-27e8-40e1-a1a4-cfcc357b3a6e","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d1abbf55-bc7e-4398-8981-0ad3038c54ff","path":"sprites/port_papy_flattered/port_papy_flattered.yy",},},},"Disabled":false,"id":"895c3223-3f4e-43ea-a11f-ff14a4e01764","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

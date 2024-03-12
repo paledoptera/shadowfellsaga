@@ -13,8 +13,8 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3665a379-7843-45fc-ae11-076ebe890a60",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3038d5c2-4521-4e77-a7f9-f3c86c5661b7",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3665a379-7843-45fc-ae11-076ebe890a60",},
   ],
   "gridX": 0,
   "gridY": 0,
@@ -55,8 +55,8 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"3665a379-7843-45fc-ae11-076ebe890a60","path":"sprites/port_papy_goofycry/port_papy_goofycry.yy",},},},"Disabled":false,"id":"7444f599-96cd-4ffc-b85e-0e08a1b2a2b0","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"3038d5c2-4521-4e77-a7f9-f3c86c5661b7","path":"sprites/port_papy_goofycry/port_papy_goofycry.yy",},},},"Disabled":false,"id":"23b91c71-46e9-4fd5-8690-d6d89cf70d20","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"3038d5c2-4521-4e77-a7f9-f3c86c5661b7","path":"sprites/port_papy_goofycry/port_papy_goofycry.yy",},},},"Disabled":false,"id":"23b91c71-46e9-4fd5-8690-d6d89cf70d20","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"3665a379-7843-45fc-ae11-076ebe890a60","path":"sprites/port_papy_goofycry/port_papy_goofycry.yy",},},},"Disabled":false,"id":"7444f599-96cd-4ffc-b85e-0e08a1b2a2b0","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

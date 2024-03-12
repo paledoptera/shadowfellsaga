@@ -44,7 +44,8 @@ message[0] = "\0Normal \1Shaky \2Color \4Wavy";
 // The text functions follow the same principle.
 // Text functions are as follows:
 & - Line Break
-^ - Dialogue Pause (only used in cutscenes)
+^ - Dialogue Break (only used in cutscenes. stops the dialogue until "cs_dialogue_resume" is called)
+| - Dialogue Pause (for 40 frames)
 */
 
 
@@ -83,18 +84,20 @@ yyscale=2;
 
 timer = 0;
 facetimer = 1;
+pausetimer = 0;
 cutoff = 0;
 
 port_scale_multi = 1;
 port_speed = 0.1;
 
 talk_pitchbends = 1;
-ran_creation_runcode = false;
 
 t = 0;
 //Amplitude & Freq for Wavy Text
 amplitude = 3;
 freq = 2;
+delay = 0;
+txtpaused = false;
 
 done = false;
 
@@ -109,12 +112,13 @@ if (followerExists) {FOLLOWER.image_speed = 0}
 //Input
 _input = false;
 
-if(flag_get(global.flags,"world")==0){
+if(flag_get(global.flags,"world")==0)
+{
 	boxtype=0;
 	style= spr_textbox 
-} else if(flag_get(global.flags,"world")==1){
+} 
+else if(flag_get(global.flags,"world")==1)
+{
 	boxtype=1;
 	style = spr_textbox_DW
 }
-/* */
-/*  */
