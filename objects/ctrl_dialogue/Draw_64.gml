@@ -62,21 +62,25 @@ if (message_end > 0)
     else var tX = 180;
     
     //If we are done printing out the current message
-	if cutoff > string_length(message[message_current]) {cutoff = string_length(message[message_current])}
+	var _skip_message = false;
+	
+	if (cutoff > string_length(message[message_current])) {cutoff = string_length(message[message_current]); timer = 0;}
     if (cutoff == string_length(message[message_current])) 
     {
         //draw blinking cursor
         timer++;
-        if (timer < 15) draw_sprite_ext(spr_cursor, 0, 640-52, textboxy+100-44,2,2,0,c_white,1);
+        if (timer < 15) draw_sprite_ext(spr_cursor, 0, 640-56, textboxy+100-48,2,2,0,c_white,1);
         if (timer > 30) timer = 0;
     
         //Check player input
 		if (_input) or interrupted[message_current] = true
 		{
-			facetimer = 1;
+			_skip_message = true;
+			facetimer = 0;
 			//If we still have messages left, go to next message
 			if (message_current < message_end-1)
 			{
+				timer = 0;
 				message_current++;
 				cutoff = 0;
 			}
@@ -121,19 +125,20 @@ if (message_end > 0)
         {
 			if string_count("|",message[message_current]) > 0
 			{
-				for (d=cutoff;d<string_length(message[message_current]);d++)
+				for (d=cutoff;d<(string_length(message[message_current])+1);d++)
 				{
 					if (string_char_at(message[message_current], d) == "|")
+					or d = string_length(message[message_current])
 					{
 						cutoff = d;
+						timer = 0;
 						break;
 					}
 				}
 			}
-			else cutoff = string_length(message[message_current]);
+			else if _skip_message = false {cutoff = string_length(message[message_current])};
         }
     }
-    
     //Text
     while(i <= string_length(message[message_current]) && i <= cutoff)
     {   

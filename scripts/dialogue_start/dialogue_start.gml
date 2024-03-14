@@ -26,6 +26,11 @@ function dialogue_start(argument0) {
 	//			- "top"
 	// - color1 & color2
 	//     (defaults to c_yellow and c_red)
+	// - interrupted 
+	//     (defaults to false)
+	//      options:
+	//			- true (interrupts the message after it's completed, as if it's being cut off)
+	//			- false
 
 	var text = instance_create(0, 0, ctrl_dialogue);	
 	

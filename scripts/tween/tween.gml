@@ -1,5 +1,3 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function tween(time_in_seconds, var_start_value, var_end_value, loops = false, tween_id = 0, anim_curve = "linear")
 {
 	/// @description tween
@@ -9,6 +7,17 @@ function tween(time_in_seconds, var_start_value, var_end_value, loops = false, t
 	/// @arg loops?
 	/// @arg tween_id
 	/// @arg anim_curve
+	
+	// this tweening system seems a little complicated but it's pretty easy to use
+	// here's how it works:
+	//
+	//	- run tween_setup(); in an object's create event
+	//  - use the tween() script for any variable you want to be tweened
+	//		EXAMPLE: x = tween(1,100,200)
+	//		this will make an object's x tween smoothly from 100 to 200, and it'll take 1 second.
+	//	- if you ever want to fire a tween again, you need to reset the tween's value.
+	//      EXAMPLES: tween_reset(0);
+	//
 		
 	if !variable_instance_exists(self,"_tween") {_tween = array_create(20,0)}
 	

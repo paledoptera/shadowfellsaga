@@ -11,7 +11,7 @@ function fader_fade(){
 		DELAY=argument[3];
 	}
 	if(START==-1){
-		START=ef_fader_generic.alpha;
+		START=handler_fader.alpha;
 	}
-	execute_tween(ef_fader_generic,"alpha",TARGET,"easeLinear",TIME,false,DELAY)
+	execute_tween(handler_fader,"alpha",TARGET,"easeLinear",TIME,false,DELAY)
 }

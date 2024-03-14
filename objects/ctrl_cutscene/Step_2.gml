@@ -37,16 +37,27 @@ switch (action_info)
 		if 	action_info_extra.x = _value[0] and action_info_extra.y = _value[1] {event_user(0);}
 	break;
 	
-	case "screenshake":
-		if CAM.shaking = false {event_user(0);}
-	break;
-	
 	case "dialogue":
 		if !instance_exists(ctrl_dialogue) {event_user(0);}
 	break;
 	
 	case "buffer":
 		event_user(0);
+	break;
+	
+	case "transition":
+		if timer > time_end_action {event_user(0);}
+	break;
+	
+	case "screenshake":
+		if timer > time_end_action 
+		{
+			CAM.shaking = false;
+			CAM.shake_time = 0;
+			CAM.shake_magnitude = 0;
+			CAM.shake_decay = 0;
+			event_user(0);
+		}
 	break;
 }
 

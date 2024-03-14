@@ -13,5 +13,5 @@ if instance_exists(PLAYER) {
 }
 room_goto(target_room)
 global.currentroom = room 
-ef_fader_generic.color = fade_out_color
+handler_fader.color = fade_out_color
 fader_fade(-1,0,fade_out_time)

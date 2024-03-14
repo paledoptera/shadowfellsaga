@@ -229,7 +229,7 @@ switch(subState)
 			snd_play(snd_select,8,false);	
 			switch(subSelection){
 				case 0:
-						ef_fader_generic.color=c_black;
+						handler_fader.color=c_black;
 						fader_fade(-1,1,0);
 						room_goto(STAGE_TITLE)
 				break;
